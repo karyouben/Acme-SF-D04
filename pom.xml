@@ -21,14 +21,14 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	
+	<name>Acme SF D01</name>	
 	<artifactId>Acme-SF-D01</artifactId>
 	<description>This is my first project in Design &amp; Testing.</description>
-	
 	<packaging>war</packaging>
 	
 	<parent>
 		<groupId>Acme</groupId>
-		<artifactId> Parent-Pom </artifactId>
+		<artifactId>Parent-Pom</artifactId>
 		<version>24.1.0</version>
 		<relativePath>../../pom-24.1.0.xml</relativePath>
 	</parent>
