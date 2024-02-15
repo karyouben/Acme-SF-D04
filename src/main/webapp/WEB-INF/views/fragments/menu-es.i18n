@@ -17,10 +17,10 @@ master.menu.sign-out = Salir
 
 # master.menu.anonymous #######################################################
 
+
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.favourite-link1 = 25604244T: Aguayo Orozco, Sergio
-master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.favourite-link-pabferper6 = 54370557Y: Fernández Pérez, Pablo
 
 
