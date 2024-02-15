@@ -22,6 +22,8 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link1" action="https://grugbrain.dev/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-gongarlam" action="https://https://forocoches.com/"/>
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link-pabferper6" action="https://youtube.com/"/>
+
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -31,6 +33,7 @@
 			<acme:menu-suboption code="master.menu.administrator.populate-sample" action="/administrator/system/populate-sample"/>			
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shut-down" action="/administrator/system/shut-down"/>
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
