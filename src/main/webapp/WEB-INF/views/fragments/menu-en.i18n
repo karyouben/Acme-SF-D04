@@ -20,7 +20,11 @@ master.menu.sign-out = Sign out
 master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.favourite-link1 = 25604244T: Aguayo Orozco, Sergio
-master.menu.anonymous.favourite-link2 = 28823709V: Youssafi Benichikh, Karim
+master.menu.anonymous.favourite-karyouben = 28823709V: Youssafi Benichikh, Karim
+master.menu.anonymous.favourite-tomhuecal = 17476993Y : Huecas Calderón, Tomás
+master.menu.anonymous.favourite-link-gongarlam = 47267072W: García Lama, Gonzalo
+master.menu.anonymous.favourite-link-pabferper6 = 54370557Y: Fernández Pérez, Pablo
+
 
 # master.menu.administrator ###################################################
 
