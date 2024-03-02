@@ -22,10 +22,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<name>Acme SF</name>
-	<description>Acme - Software Factory - D01 of the group C1.033</description>	
+	<description>Acme - Software Factory - D02 of the group C1.033</description>	
 	
 	<artifactId>Acme-SF</artifactId>
-	<version>D01</version>
+	<version>D02</version>
 	<packaging>war</packaging>
 	
 	<parent>
