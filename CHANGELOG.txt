@@ -10,5 +10,9 @@
 
 ** Year 2024
 
+D02	This is the second version of the Acme framework.
+
+------------------------------------------------------------------
+
 D01	This is the first version of the Acme framework.
 
