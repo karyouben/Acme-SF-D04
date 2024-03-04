@@ -1,0 +1,3 @@
+key,key:userAccount,identification,companyName,type,email,link
+client-01,user-account-client-01,CLI-0001,US,COMPANY,tomhuecal@alum.us.es,https://www.google.com/
+client-02,user-account-client-02,CLI-0002,GOOGLE,INDIVIDUAL,tomhuecal@alum.us.es,https://www.google.com/

@@ -19,6 +19,7 @@ import org.hibernate.validator.constraints.Length;
 
 import acme.client.data.AbstractEntity;
 import acme.entities.project.Project;
+import acme.roles.client.Client;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -31,7 +32,7 @@ public class Contract extends AbstractEntity {
 
 	@NotBlank
 	@Column(unique = true)
-	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
+	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$")
 	protected String			code;
 
 	@Past
@@ -54,6 +55,11 @@ public class Contract extends AbstractEntity {
 	@ManyToOne
 	@JoinColumn(name = "project_id", nullable = false)
 	private Project				project;
+
+	@Valid
+	@ManyToOne
+	@JoinColumn(name = "client_id", nullable = false)
+	private Client				client;
 
 	//Custom restriction buget must be less than the project cost, that will be implemented on services, on future deliverable
 	@Min(1)
