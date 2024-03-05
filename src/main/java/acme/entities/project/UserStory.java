@@ -6,7 +6,6 @@ import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -37,7 +36,6 @@ public class UserStory extends AbstractEntity {
 	protected String			description;
 
 	//Tenia int pero creo que es Money
-	@Positive
 	@NotNull
 	protected Money				costPerHour;
 
