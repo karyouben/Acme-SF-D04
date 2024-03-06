@@ -1,0 +1,2 @@
+user-account-auditor-01,true,"UserIdentity{name: 'Richard', surname: 'Dawkins', email: 'rdawkins@acme.com'}",auditor1,auditor1
+user-account-auditor-02,true,"UserIdentity{name: 'John', surname: 'Doe', email: 'jdoe@acme.com'}",auditor2,auditor2
