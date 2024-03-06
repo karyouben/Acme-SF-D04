@@ -1,11 +1,12 @@
 
-package acme.entities.banner;
+package acme.entities.notice;
 
 import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
@@ -20,37 +21,34 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Banner extends AbstractEntity {
+public class Notice extends AbstractEntity {
+
 	// Serialisation identifier -----------------------------------------------
 
 	protected static final long	serialVersionUID	= 1L;
-
-	// Attributes -------------------------------------------------------------
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@PastOrPresent
 	@NotNull
 	protected Date				instantiation;
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@NotNull
-	protected Date				startDisplayPeriod;
-
-	@Temporal(TemporalType.TIMESTAMP)
-	@NotNull
-	protected Date				endDisplayPeriod;
+	@NotBlank
+	@Length(max = 75)
+	protected String			title;
 
 	@NotBlank
 	@Length(max = 75)
-	protected String			slogan;
+	protected String			author;
+
+	@NotBlank
+	@Length(max = 100)
+	protected String			message;
+
+	@Email
+	protected String			email;
 
 	@URL
-	@NotBlank
 	@Length(max = 255)
-	protected String			linkPicture;
+	protected String			link;
 
-	@URL
-	@NotBlank
-	@Length(max = 255)
-	protected String			linkWebDoc;
 }

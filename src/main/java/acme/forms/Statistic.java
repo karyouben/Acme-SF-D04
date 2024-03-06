@@ -7,7 +7,6 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Statistic {
-
 	// Serialisation identifier -----------------------------------------------
 
 	protected static final long	serialVersionUID	= 1L;

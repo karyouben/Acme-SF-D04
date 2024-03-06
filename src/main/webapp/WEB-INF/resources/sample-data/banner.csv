@@ -1,0 +1,28 @@
+key,instantiation,start-display-period,end-display-period,slogan,link-picture,link-web-doc
+banner-01,2022/07/18 00:00,2022/07/20 10:00,2022/07/31 10:00,Get 10% off on all products!,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-02,1970/01/01 00:00,2022/01/02 10:00,2022/01/09 10:00,Get 10% off on all products!,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-03,1970/01/01 00:01,2022/01/02 10:00,2022/01/09 10:00,Get 10% off on all products!,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-04,2022/07/30 00:00,2022/08/30 10:00,2022/09/30 10:00,Get 10% off on all products!,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-05,2022/07/29 23:59,2022/08/30 10:00,2022/09/30 10:00,Get 10% off on all products!,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-06,1970/01/01 00:00,1970/01/01 00:00,1970/01/07 00:00,Get 10% off on all products!,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-07,1970/01/01 00:00,1970/01/01 00:01,1970/01/07 00:01,Get 10% off on all products!,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-08,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,Este texto tiene 75 caracteres. Quiero probar los límites superiores.......,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-09,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,Este texto tiene 74 caracteres. Quiero probar los límites superiores......,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-10,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,A,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-11,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,Ab,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-12,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,<h1>hola</h1>,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-13,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,"<script>alert(""hola"")</script>",https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-14,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,你好,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-15,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,Здравейте,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-16,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,Get 10% off on all products!,http://www.1231231231231231231231231231231232131232131231232132131231232133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333sasdd3333333333333333333333333333333333333333333313123123123123123ssadsadd.com,https://example.com/offers
+banner-17,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,Get 10% off on all products!,http://www.1231231231231231231231231231231232131232131231232132131231232133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333sasdd3333333333333333333333333333333333333333333313123123123123123ssadsad.com,https://example.com/offers
+banner-18,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,Get 10% off on all products!,https://a.a,https://example.com/offers
+banner-19,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,Get 10% off on all products!,https://ab.a,https://example.com/offers
+banner-20,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,Get 10% off on all products!,https://i.imgur.com/sgx1bFo.png,http://www.1231231231231231231231231231231232131232131231232132131231232133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333sasdd3333333333333333333333333333333333333333333313123123123123123ssadsadd.com
+banner-21,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,Get 10% off on all products!,https://i.imgur.com/sgx1bFo.png,http://www.1231231231231231231231231231231232131232131231232132131231232133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333sasdd3333333333333333333333333333333333333333333313123123123123123ssadsad.com
+banner-22,2022/01/01 10:00,2022/01/02 10:00,2022/08/01 10:00,Get 10% off on all products!,https://www.searchenginejournal.com/wp-content/uploads/2019/07/the-essential-guide-to-using-images-legally-online-760x400.webp,https://a.a
+banner-23,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,Get 10% off on all products!,https://i.imgur.com/sgx1bFo.png,https://ab.a
+banner-25,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,Get 10% off on all products!,https://i.imgur.com/sgx1bFo.png,ftp://aaasdb.a
+banner-29,2022/01/01 10:00,2022/01/02 10:00,2022/01/09 10:00,Get 10% off on all products!,ftp://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-32,2022/07/18 00:00,2022/07/18 00:01,2022/07/18 00:01,Get 10% off on all products!,https://i.imgur.com/sgx1bFo.png,https://example.com/offers
+banner-33,2022/07/18 00:00,2022/07/18 00:00,2022/07/18 00:01,Get 10% off on all products!,https://i.imgur.com/sgx1bFo.png,https://example.com/offers

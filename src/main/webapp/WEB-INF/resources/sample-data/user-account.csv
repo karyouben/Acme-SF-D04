@@ -7,3 +7,6 @@ user-account-client-01,true,"UserIdentity{name: 'Tomas', surname: 'Huecas', emai
 user-account-client-02,true,"UserIdentity{name: 'Tomas2', surname: 'Huecas', email: 'tomhuecal@alum.us.es'}",client2,client2
 user-account-admin-01,true,"UserIdentity{name: 'Administrator1', surname: 'Acme', email: 'administrator@acme.com'}",administrator1,administrator1
 user-account-admin-02,true,"UserIdentity{name: 'Administrator2', surname: 'Acme', email: 'administrator@acme.com'}",administrator2,administrator2
+user-account-manager-01,true,"UserIdentity{name: 'Sergio', surname: 'Aguayo', email: 'ser@acme.com'}",manager1,manager1
+user-account-manager-02,true,"UserIdentity{name: 'Antonio', surname: 'Casas', email: 'ant@acme.com'}",manager2,manager2
+user-account-manager-03,true,"UserIdentity{name: 'Antonio2', surname: 'Casas2', email: 'ant2@acme.com'}",manager3,manager3
