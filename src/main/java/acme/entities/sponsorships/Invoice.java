@@ -3,6 +3,7 @@ package acme.entities.sponsorships;
 
 import java.time.LocalDateTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.persistence.PrePersist;
@@ -13,7 +14,6 @@ import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
 
@@ -36,9 +36,9 @@ public class Invoice extends AbstractEntity {
 	@NotBlank
 	@NotNull
 	@Pattern(regexp = "IN-[0-9]{4}-[0-9]{4}")
+	@Column(unique = true)
 	protected String			code;
 
-	@Past
 	@NotNull
 	protected LocalDateTime		registrationTime;
 

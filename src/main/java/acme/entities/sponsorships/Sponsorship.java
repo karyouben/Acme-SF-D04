@@ -14,7 +14,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
 
@@ -39,10 +38,10 @@ public class Sponsorship extends AbstractEntity {
 	@NotNull
 	@NotBlank
 	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
+	@Column(unique = true)
 	protected String			code;
 
 	@NotNull
-	@Past
 	protected LocalDateTime		moment;
 
 	protected LocalDateTime		duration;

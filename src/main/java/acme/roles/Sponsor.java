@@ -22,11 +22,11 @@ public class Sponsor extends AbstractRole {
 
 	@NotBlank
 	@NotNull
-	@Size(max = 76)
+	@Size(max = 75)
 	private String				name;
 
 	@NotBlank
-	@Size(max = 101)
+	@Size(max = 100)
 	private String				benefits;
 
 	@URL
