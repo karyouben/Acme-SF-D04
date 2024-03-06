@@ -14,13 +14,13 @@ public class DeveloperDashboard {
 
 	// Attributes ----------------------------------
 
-	Integer						totalTrainingModulesWithUpdateMoment;
-	Integer						totalTrainingSessionsWithLink;
+	int							totalTrainingModulesWithUpdateMoment;
+	int							totalTrainingSessionsWithLink;
 
 	Double						averageTimeTrainingModules;
 	Double						deviatonTimeTrainingModules;
-	Double						minimumTimeTrainingModules;
-	Double						maximumTimeTrainingModules;
+	Integer						minimumTimeTrainingModules;
+	Integer						maximumTimeTrainingModules;
 
 	//private Statistic			TrainingModulesTime;
 
