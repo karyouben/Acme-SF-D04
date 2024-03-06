@@ -1,5 +1,5 @@
 
-package acme.entities.trainingModule;
+package acme.entities.claim;
 
 import java.util.Date;
 
@@ -12,19 +12,21 @@ import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
+import acme.client.data.accounts.UserAccount;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-public class TrainingSessions extends AbstractEntity {
+public class Claim extends AbstractEntity {
 
 	// Serialisation identifier ----------------------------------
 
@@ -34,28 +36,28 @@ public class TrainingSessions extends AbstractEntity {
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "^TS-[A-Z]{1,3}-[0-9]{3}$")
+	@Pattern(regexp = "^C-[0-9]{4}$")
 	private String				code;
 
-	@NotNull
+	@Past
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				startPeriod;
-
 	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
-	private Date				endPeriod;
+	private Date				instantiationMoment;
 
 	@NotBlank
 	@Length(max = 75)
-	private String				location;
+	private String				heading;
 
 	@NotBlank
-	@Length(max = 75)
-	private String				instructor;
+	@Length(max = 100)
+	private String				description;
 
 	@NotBlank
+	@Length(max = 100)
+	private String				department;
+
 	@Email
-	private String				contactEmail;
+	private String				email;
 
 	@URL
 	private String				link;
@@ -65,6 +67,6 @@ public class TrainingSessions extends AbstractEntity {
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	private TrainingModule		trainingModule;
+	private UserAccount			userAccount;
 
 }

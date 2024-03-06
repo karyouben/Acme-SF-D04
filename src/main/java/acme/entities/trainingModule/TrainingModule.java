@@ -1,7 +1,7 @@
 
 package acme.entities.trainingModule;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,7 +12,6 @@ import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
-import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
@@ -51,7 +50,7 @@ public class TrainingModule extends AbstractEntity {
 	@NotNull
 	private DifficultyLevel		difficultyLevel;
 
-	@PastOrPresent
+	@Past
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				updateMoment;
 
@@ -61,11 +60,12 @@ public class TrainingModule extends AbstractEntity {
 	@Temporal(TemporalType.TIME)
 	@NotNull
 	private Date				totalTime;
-	
+
 	/*
-	@NotNull
-	@Min(1)
-	private Integer				totalTime;
+	 * @NotNull
+	 * 
+	 * @Min(1)
+	 * private Integer totalTime;
 	 */
 
 	// Relationships ----------------------------------
