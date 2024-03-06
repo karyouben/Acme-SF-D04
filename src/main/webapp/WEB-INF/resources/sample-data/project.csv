@@ -1,30 +1,33 @@
 key,code,title,abstract$,hasErrors,draftMode,link,totalCost,remainingCost,key:manager
-project-01,ABC-0001,Title,Abstract,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-02,ABC-0002,1,Abstract,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-03,ABC-0003,12,Abstract,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-04,ABC-0004,Este texto tiene 75 caracteres. Quiero probar los límites superiores.......,Abstract,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-05,ABC-0005,Este texto tiene 74 caracteres. Quiero probar los límites superiores......,Abstract,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-06,ABC-0006,<h1>hola</h1>,Abstract,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-07,ABC-0007,"<script>alert(""hola"")</script>",Abstract,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-08,ABC-0008,你好,Abstract,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-09,ABC-0009,Здравейте,Abstract,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-10,ABC-0010,Title,1,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-11,ABC-0011,Title,12,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-12,ABC-0012,Title,Este texto tiene 100 caracteres. Quiero probar los límites superiores de un texto bastante largo....,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-13,ABC-0013,Title,Este texto tiene 99 caracteres. Quiero probar los límites superiores de un texto bastante largo...,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-14,ABC-0014,Title,<h1>hola</h1>,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-15,ABC-0015,Title,"<script>alert(""hola"")</script>",false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-16,ABC-0016,Title,你好,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-17,ABC-0017,Title,Здравейте,false,false,https://www.example.com,1EUR,1EUR,manager-01
-project-18,ABC-0018,Title,Abstract,true,false,https://www.example.com,1EUR,1EUR,manager-01
-project-19,ABC-0019,Title,Abstract,false,true,https://www.example.com,1EUR,1EUR,manager-01
-project-20,ABC-0020,Title,Abstract,false,false,https://www.1.com,1EUR,1EUR,manager-01
-project-21,ABC-0021,Title,Abstract,false,false,https://www.123121231231231231231231231231232131232131231232132131231232133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333sasdd3333333333333333333333333333333333333333333313123123123123123ssadsadd.com,1EUR,1EUR,manager-01
-project-22,ABC-0022,Title,Abstract,false,false,https://www.123121231231231231231231231231232131232131231232132131231232133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333sasdd3333333333333333333333333333333333333333333313123123123123123ssadsad.com,1EUR,1EUR,manager-01
-project-25,ABC-0025,Title,Abstract,false,false,https://www.你好.com,1EUR,1EUR,manager-01
-project-26,ABC-0026,Title,Abstract,false,false,https://www.Здравейте.com,1EUR,1EUR,manager-01
-project-27,ABC-0027,Title,Abstract,false,false,https://www.12.com,1EUR,1EUR,manager-01
-project-28,ABC-0028,Title,Abstract,false,false,https://www.example.com,1USD,1EUR,manager-01
-project-29,ABC-0029,Title,Abstract,false,false,https://www.example.com,1EUR,1USD,manager-01
-project-23,ABC-0023,Title,Abstract,false,false,https://www.example.com,1EUR,1EUR,manager-02
-project-24,ABC-0024,Title,Abstract,false,false,https://www.example.com,1EUR,1EUR,manager-01
+project-01,ABC-0001,Title,Abstract,false,false,https://www.example.com,100,100,manager-01
+project-02,ABC-0002,1,Abstract,false,false,https://www.example.com,1,1,manager-01
+project-03,ABC-0003,12,Abstract,false,false,https://www.example.com,1,1,manager-01
+project-04,ABC-0004,Este texto tiene 75 caracteres. Quiero probar los límites superiores.......,Abstract,false,false,https://www.example.com,1,1,manager-01
+project-05,ABC-0005,Este texto tiene 74 caracteres. Quiero probar los límites superiores......,Abstract,false,false,https://www.example.com,1,1,manager-01
+project-06,ABC-0006,<h1>hola</h1>,Abstract,false,false,https://www.example.com,1,1,manager-01
+project-07,ABC-0007,"<script>alert(""hola"")</script>",Abstract,false,false,https://www.example.com,1,1,manager-01
+project-08,ABC-0008,你好,Abstract,false,false,https://www.example.com,1,1,manager-01
+project-09,ABC-0009,Здравейте,Abstract,false,false,https://www.example.com,1,1,manager-01
+project-10,ABC-0010,Title,1,false,false,https://www.example.com,1,1,manager-01
+project-11,ABC-0011,Title,12,false,false,https://www.example.com,1,1,manager-01
+project-12,ABC-0012,Title,Este texto tiene 100 caracteres. Quiero probar los límites superiores de un texto bastante largo....,false,false,https://www.example.com,1,1,manager-01
+project-13,ABC-0013,Title,Este texto tiene 99 caracteres. Quiero probar los límites superiores de un texto bastante largo...,false,false,https://www.example.com,1,1,manager-01
+project-14,ABC-0014,Title,<h1>hola</h1>,false,false,https://www.example.com,1,1,manager-01
+project-15,ABC-0015,Title,"<script>alert(""hola"")</script>",false,false,https://www.example.com,1,1,manager-01
+project-16,ABC-0016,Title,你好,false,false,https://www.example.com,1,1,manager-01
+project-17,ABC-0017,Title,Здравейте,false,false,https://www.example.com,1,1,manager-01
+project-18,ABC-0018,Title,Abstract,true,false,https://www.example.com,1,1,manager-01
+project-19,ABC-0019,Title,Abstract,false,true,https://www.example.com,1,1,manager-01
+project-20,ABC-0020,Title,Abstract,false,false,https://www.1.com,1,1,manager-01
+project-21,ABC-0021,Title,Abstract,false,false,https://www.123121231231231231231231231231232131232131231232132131231232133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333sasdd3333333333333333333333333333333333333333333313123123123123123ssadsadd.com,1,1,manager-01
+project-22,ABC-0022,Title,Abstract,false,false,https://www.123121231231231231231231231231232131232131231232132131231232133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333sasdd3333333333333333333333333333333333333333333313123123123123123ssadsad.com,1,1,manager-01
+project-25,ABC-0025,Title,Abstract,false,false,https://www.你好.com,1,1,manager-01
+project-26,ABC-0026,Title,Abstract,false,false,https://www.Здравейте.com,1,1,manager-01
+project-27,ABC-0027,Title,Abstract,false,false,https://www.12.com,1,1,manager-01
+project-28,ABC-0028,Title,Abstract,false,false,https://www.example.com,1,1,manager-02
+project-29,ABC-0029,Title,Abstract,false,false,https://www.example.com,0,1,manager-01
+project-23,ABC-0023,Title,Abstract,false,false,https://www.example.com,1000000000,1,manager-01
+project-24,ABC-0024,Title,Abstract,false,false,https://www.example.com,999999999,1,manager-01
+project-30,ABC-0030,Title,Abstract,false,false,https://www.example.com,1,0,manager-01
+project-31,ABC-0031,Title,Abstract,false,false,https://www.example.com,1000000000,1000000000,manager-01
+project-32,ABC-0032,Title,Abstract,false,false,https://www.example.com,1000000000,999999999,manager-01

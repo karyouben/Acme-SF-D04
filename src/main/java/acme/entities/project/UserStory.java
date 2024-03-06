@@ -4,14 +4,15 @@ package acme.entities.project;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
-import acme.client.data.datatypes.Money;
 import acme.roles.Manager;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,9 +36,9 @@ public class UserStory extends AbstractEntity {
 	@Length(max = 100)
 	protected String			description;
 
-	//Tenia int pero creo que es Money
-	@NotNull
-	protected Money				costPerHour;
+	@Positive
+	@Max(value = 1000000000)
+	protected int				cost;
 
 	@NotBlank
 	@Length(max = 100)
