@@ -4,6 +4,7 @@ package acme.entities.contract;
 import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
@@ -17,15 +18,20 @@ import javax.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
 
 import acme.client.data.AbstractEntity;
+import lombok.Getter;
+import lombok.Setter;
 
-public class ProgresLog extends AbstractEntity {
+@Getter
+@Setter
+@Entity
+public class Progress extends AbstractEntity {
 
 	protected static final long	serialVersionUID	= 1L;
 
 	@NotBlank
 	@Column(unique = true)
 	@Pattern(regexp = "^PG-[A-Z]{1,2}-[0-9]{4}$")
-	protected String			record_id;
+	protected String			record;
 
 	@Min(1)
 	private double				completeness;
