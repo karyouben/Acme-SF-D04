@@ -5,3 +5,4 @@ user-account-provider-01,true,"UserIdentity{name: 'Laurel', surname: 'Provider',
 user-account-provider-02,true,"UserIdentity{name: 'Martina', surname: 'коза თხა', email: 'martina@acme.com'}",provider2,provider2
 user-account-manager-01,true,"UserIdentity{name: 'Sergio', surname: 'Aguayo', email: 'ser@acme.com'}",manager1,manager1
 user-account-manager-02,true,"UserIdentity{name: 'Antonio', surname: 'Casas', email: 'ant@acme.com'}",manager2,manager2
+user-account-manager-03,true,"UserIdentity{name: 'Antonio2', surname: 'Casas2', email: 'ant2@acme.com'}",manager3,manager3

@@ -1,4 +1,4 @@
-key,title,description,cost,acceptanceCriteria,priority,link,key:manager
+key,title,description,cost,acceptance-criteria,priority,link,key:manager
 user-story-01,Title,Description,1,Criteria,MUST,https://www.example.com,manager-01
 user-story-02,1,Description,1,Criteria,MUST,https://www.example.com,manager-01
 user-story-03,12,Description,1,Criteria,MUST,https://www.example.com,manager-01
@@ -34,7 +34,10 @@ user-story-32,Title,Description,1,Criteria,MUST,https://www.12312123123123123123
 user-story-33,Title,Description,1,Criteria,MUST,https://www.123121231231231231231231231231232131232131231232132131231232133333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333sasdd3333333333333333333333333333333333333333333313123123123123123ssadsad.com,manager-01
 user-story-34,Title,Description,1,Criteria,MUST,https://www.你好.com,manager-01
 user-story-35,Title,Description,1,Criteria,MUST,https://www.Здравейте.com,manager-01
-user-story-36,Title,Description,1,Criteria,MUST,https://www.example.com,manager-02
-user-story-37,Title,Description,2,Criteria,MUST,https://www.example.com,manager-02
-user-story-38,Title,Description,1000000000,Criteria,MUST,https://www.example.com,manager-02
-user-story-39,Title,Description,999999999,Criteria,MUST,https://www.example.com,manager-02
+user-story-36,Title,Description,1,Criteria,MUST,https://www.example.com,manager-01
+user-story-37,Title,Description,2,Criteria,MUST,https://www.example.com,manager-01
+user-story-38,Title,Description,1000000000,Criteria,MUST,https://www.example.com,manager-01
+user-story-39,Title,Description,999999999,Criteria,MUST,https://www.example.com,manager-01
+user-story-40,Title,Description,1,Criteria,MUST,null,manager-01
+user-story-41,Title,Description,1,Criteria,MUST,ftp://www.example.com,manager-01
+user-story-42,Title,Description,1,Criteria,MUST,http://www.example.com,manager-02
