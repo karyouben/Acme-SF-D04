@@ -3,7 +3,7 @@ sponsor-01,user-account-sponsor-01,"""ValidName""","""ValidBenefits""","""https:
 sponsor-02,user-account-sponsor-02,"""ValidName2""","""ValidBenefits2""","""https://www.validwebpage2.com""","""validemail2@example.com"""
 sponsor-03,user-account-sponsor-03,"""""","""ValidBenefits3""","""https://www.validwebpage3.com""","""validemail3@example.com"""
 sponsor-04,user-account-sponsor-04,"""NameThatIsWayTooLongForTheGivenSizeLimitOfThisFieldWhichIs76Characters""","""ValidBenefits4""","""https://www.validwebpage4.com""","""validemail4@example.com"""
-sponsor-05,user-account-sponsor-05,"""ValidName5""","""Benefits description that is too lengthy and exceeds the maximum allowed size of one hundred and one characters.""","""https://www.validwebpage5.com""","""validemail5@example.com"""
+sponsor-05,user-account-sponsor-05,"""ValidName5""","""Benefits description that is too lengthy and exceeds the maximum allowed size of one hundred and one characters""","""https://www.validwebpage5.com""","""validemail5@example.com"""
 sponsor-06,user-account-sponsor-06,"""ValidName6""","""ValidBenefits6""","""invalidwebpage""","""validemail6@example.com"""
 sponsor-07,user-account-sponsor-07,"""ValidName7""","""ValidBenefits7""","""https://www.validwebpage7.com""","""invalidemail"""
 sponsor-08,user-account-sponsor-08,"""ValidName8""","""ValidBenefits8""","""""","""validemail8@example.com"""

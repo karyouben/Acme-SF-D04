@@ -1,19 +1,20 @@
 
 package acme.entities.sponsorships;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.ManyToOne;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
 
@@ -42,16 +43,25 @@ public class Sponsorship extends AbstractEntity {
 	protected String			code;
 
 	@NotNull
-	protected LocalDateTime		moment;
+	@Past
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				moment;
 
-	protected LocalDateTime		duration;
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				durationStart;
 
-	@Column(nullable = false)
+	@NotNull
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				durationEnd;
+
+	@NotNull
 	@Positive
 	protected Double			amount;
 
 	@Enumerated(EnumType.STRING)
-	protected SponsorshipType	typeOfSponsorship; // Assuming SponsorshipType is an enum with "Financial" and "In kind"
+	@NotNull
+	protected SponsorshipType	typeOfSponsorship;
 
 	@Email
 	protected String			contactEmail;
@@ -59,28 +69,11 @@ public class Sponsorship extends AbstractEntity {
 	@URL
 	protected String			infoLink;
 
-	// Constructors, getters, and setters
-
-
-	public enum SponsorshipType {
-		FINANCIAL, IN_KIND
-	}
-
-
-	// Ensure duration is at least one month after the moment
-	@PrePersist
-	@PreUpdate
-	private void validateDuration() {
-		if (this.duration.isBefore(this.moment.plusMonths(1)))
-			throw new IllegalArgumentException("Duration must be at least one month after the moment");
-	}
-
 	// Relationships ----------------------------------------------------------
 
-
-	@ManyToOne
+	@ManyToOne(optional = false)
 	@NotNull
 	@Valid
-	protected Project project;
+	protected Project			project;
 
 }

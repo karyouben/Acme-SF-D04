@@ -1,25 +1,27 @@
 
-package acme.entities.sponsorships;
+package acme.entities.invoices;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
+import acme.entities.sponsorships.Sponsorship;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -40,17 +42,22 @@ public class Invoice extends AbstractEntity {
 	protected String			code;
 
 	@NotNull
-	protected LocalDateTime		registrationTime;
+	@Past
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				registrationTime;
 
 	@NotNull
-	protected LocalDateTime		dueDate;
+	@Temporal(TemporalType.TIMESTAMP)
+	protected Date				dueDate;
 
 	@Positive
 	@Min(0)
+	@NotNull
 	protected Double			quantity;
 
 	@Positive
 	@DecimalMin(value = "0.0")
+	@NotNull
 	protected Double			tax;
 
 	@URL
@@ -61,18 +68,11 @@ public class Invoice extends AbstractEntity {
 	public Double getTotalAmount() {
 		return this.quantity + this.tax;
 	}
-	//1 mes despues del registro
-	@PrePersist
-	@PreUpdate
-	protected void validateDueDate() {
-		if (this.dueDate.isBefore(this.registrationTime.plusMonths(1)))
-			throw new IllegalArgumentException("Due date must be at least one month ahead of the registration time");
-	}
 
 	// Relationships ----------------------------------------------------------
 
 
-	@ManyToOne
+	@ManyToOne(optional = false)
 	@NotNull
 	@Valid
 	private Sponsorship sponsorship;
