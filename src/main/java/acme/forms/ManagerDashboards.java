@@ -4,7 +4,6 @@ package acme.forms;
 import java.util.Map;
 
 import acme.client.data.AbstractForm;
-import acme.datatypes.Statistics;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,10 +21,10 @@ public class ManagerDashboards extends AbstractForm {
 	private Map<String, Integer>	totalPriorities;
 
 	//	Average, deviation, minimum, and maximum estimated cost of the user stories
-	private Map<String, Statistics>	costOfUserStories;
+	private Map<String, Statistic>	costOfUserStories;
 
 	//	Average, deviation, minimum, and maximum estimated cost of the project
 
-	private Map<String, Statistics>	costOfProjects;
+	private Map<String, Statistic>	costOfProjects;
 
 }
