@@ -1,0 +1,4 @@
+key,code,initialMoment,finalMoment,mark,link,duration,key:codeAudit
+audit-record-01,AU-2018-001,2018/03/07 10:00,2018/03/07 11:30,A_PLUS,https://example.com,90,code-audit-01
+audit-record-02,AU-2019-002,2019/03/07 13:45,2019/03/07 15:15,C,https://example.com,90,code-audit-02
+audit-record-03,AU-2017-003,2017/03/07 09:15,2017/03/07 10:45,A,https://example.com,90,code-audit-03

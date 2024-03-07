@@ -54,8 +54,8 @@ public class AuditRecord extends AbstractEntity {
 	@Length(max = 255)
 	private String				link;
 	// Derived Attributes -------------------------------------------------------------
-	@NotNull
-	private Integer				duration;
+
+	private int					duration;
 
 	//Relationships  -------------------------------------------------------------
 	@NotNull
