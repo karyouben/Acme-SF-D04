@@ -1,3 +1,5 @@
 key,code,instantiation,providerName,customerName,goals,key:project,key:client,budget
 contract-01,OK-398,2022/01/01 00:00,Tomas,Tomas,goal1-goal2-goal3,project-01,client-01,10.0
 contract-02,OK-378,2022/01/01 00:00,Tomas,Tomas,goal1-goal2-goal3,project-02,client-02,10.0
+contract-03,OK-368,1970/01/01 00:01,Este texto tiene 75 caracteres. Quiero probar los límites superiores.......,Este texto tiene 75 caracteres. Quiero probar los límites superiores.......,Lorem ipsum dolor sit amet. consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean m,project-02,client-02,1.0
+contract-04,OK-358,1970/01/01 00:01,a,a,a,project-02,client-02,1.0
