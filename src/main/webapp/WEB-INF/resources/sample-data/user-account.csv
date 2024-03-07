@@ -14,3 +14,5 @@ user-account-developer-01,true,"UserIdentity{name:'Denji',surname:'Seiyū',email
 user-account-developer-02,true,"UserIdentity{name:'Asuka',surname:'Langley',email:'evangelion@acme.com'}",developer2,developer2
 user-account-auditor-01,true,"UserIdentity{name: 'Richard', surname: 'Dawkins', email: 'rdawkins@acme.com'}",auditor1,auditor1
 user-account-auditor-02,true,"UserIdentity{name: 'John', surname: 'Doe', email: 'jdoe@acme.com'}",auditor2,auditor2
+user-account-sponsor-01,true,"UserIdentity{name: 'Manolo', surname: 'El del Bombo', email: 'manolin@acme.com'}",sponsor1,sponsor1
+user-account-sponsor-02,true,"UserIdentity{name: 'LosLadrones', surname: 'VanArobar', email: 'losladronesvan@acme.com'}",sponsor2,sponsor2

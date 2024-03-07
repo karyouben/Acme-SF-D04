@@ -42,10 +42,12 @@ public class Risk extends AbstractEntity {
 	@Past
 	protected Date				identificationDate;
 
+	// Custom validation, the impact will be between 0,0 and 10,0 (at the moment)
 	@NotNull
 	@Min(0)
 	protected Double			impact;
 
+	// Custom validation, the probability will be calculated within the range of 0,0 to 1,0
 	@NotNull
 	@Min(0)
 	protected Double			probability;
