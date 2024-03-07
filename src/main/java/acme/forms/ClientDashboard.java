@@ -2,6 +2,7 @@
 package acme.forms;
 
 import acme.client.data.AbstractForm;
+import acme.datatypes.Statistics;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -28,5 +29,5 @@ public class ClientDashboard extends AbstractForm {
 	private Integer				totalNumProgressLogAbove75;
 
 	// average, deviation, minimum, and maximum budget of the contracts
-	private Statistic			budget;
+	private Statistics			budget;
 }

@@ -13,8 +13,6 @@ public class Statistics {
 
 	// Attributes -------------------------------------------------------------
 
-	int							count;
-
 	Double						average;
 
 	Double						deviation;

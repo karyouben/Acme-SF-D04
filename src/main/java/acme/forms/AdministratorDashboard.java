@@ -4,6 +4,7 @@ package acme.forms;
 import java.util.Map;
 
 import acme.client.data.AbstractForm;
+import acme.datatypes.Statistics;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -26,9 +27,9 @@ public class AdministratorDashboard extends AbstractForm {
 	private Double					criticalAndNonCriticalObjetives;
 
 	// average, minimum, maximum, and standard deviation of the value in the risks; 
-	private Map<String, Statistic>	risk;
+	private Map<String, Statistics>	risk;
 
 	// average, minimum, maximum, and standard deviation of the number of claims posted over the last 10 weeks
-	private Statistic				claimsInLast10WeeksData;
+	private Statistics				claimsInLast10WeeksData;
 
 }
