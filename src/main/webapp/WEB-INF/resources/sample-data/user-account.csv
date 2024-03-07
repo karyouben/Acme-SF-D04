@@ -3,5 +3,18 @@ user-account-consumer-01,true,"UserIdentity{name: 'Peter', surname: 'Consumer', 
 user-account-consumer-02,true,"UserIdentity{name: 'Mary', surname: '貸んい建濯よ芝弾テソ Λορεμ ιπσθμ', email: 'mary@acme.com'}",consumer2,consumer2
 user-account-provider-01,true,"UserIdentity{name: 'Laurel', surname: 'Provider', email: 'laurel@acme.com'}",provider1,provider1
 user-account-provider-02,true,"UserIdentity{name: 'Martina', surname: 'коза თხა', email: 'martina@acme.com'}",provider2,provider2
+user-account-manager-01,true,"UserIdentity{name: 'Sergio', surname: 'Aguayo', email: 'ser@acme.com'}",manager1,manager1
+user-account-manager-02,true,"UserIdentity{name: 'Antonio', surname: 'Casas', email: 'ant@acme.com'}",manager2,manager2
+user-account-manager-03,true,"UserIdentity{name: 'Antonio2', surname: 'Casas2', email: 'ant2@acme.com'}",manager3,manager3
+user-account-auditor-01,true,"UserIdentity{name: 'Richard', surname: 'Dawkins', email: 'rdawkins@acme.com'}",auditor1,auditor1
+user-account-auditor-02,true,"UserIdentity{name: 'John', surname: 'Doe', email: 'jdoe@acme.com'}",auditor2,auditor2
+user-account-client-01,true,"UserIdentity{name: 'Tomas', surname: 'Huecas', email: 'tomhuecal@alum.us.es'}",client1,client1
+user-account-client-02,true,"UserIdentity{name: 'Tomas2', surname: 'Huecas', email: 'tomhuecal@alum.us.es'}",client2,client2
+user-account-client-03,true,"UserIdentity{name: 'Tomas2', surname: 'Huecas', email: 'tomhuecal@alum.us.es'}",client3,client3
+user-account-client-04,true,"UserIdentity{name: 'Tomas2', surname: 'Huecas', email: 'tomhuecal@alum.us.es'}",client4,client4
+user-account-admin-01,true,"UserIdentity{name: 'Administrator1', surname: 'Acme', email: 'administrator@acme.com'}",administrator1,administrator1
+user-account-admin-02,true,"UserIdentity{name: 'Administrator2', surname: 'Acme', email: 'administrator@acme.com'}",administrator2,administrator2
 user-account-developer-01,true,"UserIdentity{name:'Denji',surname:'Seiyū',email:'pochitaTheBestPet@acme.com'}",developer1,developer1
 user-account-developer-02,true,"UserIdentity{name:'Asuka',surname:'Langley',email:'evangelion@acme.com'}",developer2,developer2
+user-account-sponsor-01,true,"UserIdentity{name: 'Manolo', surname: 'El del Bombo', email: 'manolin@acme.com'}",sponsor1,sponsor1
+user-account-sponsor-02,true,"UserIdentity{name: 'LosLadrones', surname: 'VanArobar', email: 'losladronesvan@acme.com'}",sponsor2,sponsor2

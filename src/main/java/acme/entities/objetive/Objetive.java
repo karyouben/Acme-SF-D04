@@ -1,32 +1,39 @@
 
-package acme.entities.project;
+package acme.entities.objetive;
+
+import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.Max;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
+import javax.validation.constraints.Past;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
-import acme.roles.Manager;
+import acme.entities.project.Project;
 import lombok.Getter;
 import lombok.Setter;
 
+@Entity
 @Getter
 @Setter
-@Entity
-public class UserStory extends AbstractEntity {
+public class Objetive extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
 	protected static final long	serialVersionUID	= 1L;
 
-	// Attributes -------------------------------------------------------------
+	@Temporal(TemporalType.TIMESTAMP)
+	@Past
+	@NotNull
+	protected Date				instantiation;
 
 	@NotBlank
 	@Length(max = 75)
@@ -36,26 +43,26 @@ public class UserStory extends AbstractEntity {
 	@Length(max = 100)
 	protected String			description;
 
-	@Positive
-	@Max(value = 1000000000)
-	protected int				cost;
-
-	@NotBlank
-	@Length(max = 100)
-	protected String			acceptanceCriteria;
-
 	@NotNull
 	protected Priority			priority;
+
+	protected boolean			isCritical;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	protected Date				startDurationPeriod;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@NotNull
+	protected Date				endDurationPeriod;
 
 	@URL
 	@Length(max = 255)
 	protected String			link;
 
-	// Relationships -------------------------------------------------------------
-
 	@Valid
-	@NotNull
-	@ManyToOne(optional = false)
-	protected Manager			manager;
+	@ManyToOne
+	@JoinColumn(name = "project_id", nullable = false)
+	private Project				project;
 
 }
