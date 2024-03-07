@@ -1,12 +1,12 @@
 
-package acme.forms;
+package acme.datatypes;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-public class Statistic {
+public class Statistics {
 	// Serialisation identifier -----------------------------------------------
 
 	protected static final long	serialVersionUID	= 1L;
@@ -17,10 +17,10 @@ public class Statistic {
 
 	Double						average;
 
+	Double						deviation;
+
 	Double						minimum;
 
 	Double						maximum;
-
-	Double						deviation;
 
 }

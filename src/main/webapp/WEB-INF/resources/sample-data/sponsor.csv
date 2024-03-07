@@ -1,3 +1,3 @@
-key,key:userAccount,name,benefits,webpage,contactEmail
+key,key:userAccount,name,benefits,webPage,contactEmail
 sponsor-01,user-account-sponsor-01,"""CorchuFramework""","""Maravailloso Framework que cuando menos te lo espera te genera un Error de compilacion""",https://dp2.com,dp2@acme.com
 sponsor-02,user-account-sponsor-02,"""X""","""Identidad misteriosa que pretende hacer repositorios sin verlos en teoria""",https://forocoches.com,x@acme.com

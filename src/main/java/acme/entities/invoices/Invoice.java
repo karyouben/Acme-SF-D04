@@ -10,7 +10,6 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
-import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
@@ -51,17 +50,18 @@ public class Invoice extends AbstractEntity {
 	@NotNull
 	protected Money				quantity;
 
-	@DecimalMin(value = "0.0")
+	@Valid
 	@NotNull
-	protected double			tax;
+	protected Money				tax;
 
 	@URL
 	protected String			infoLink;
 
 
 	@Transient
+	@NotNull
 	public Double totalAmount() {
-		return this.quantity.getAmount() + this.quantity.getAmount() * (this.tax / 100);
+		return this.quantity.getAmount() + this.tax.getAmount() * (this.tax.getAmount() / 100);
 	}
 
 	// Relationships ----------------------------------------------------------

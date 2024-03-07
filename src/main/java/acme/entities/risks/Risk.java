@@ -17,13 +17,18 @@ import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.Range;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
 import acme.client.data.accounts.Administrator;
 import acme.entities.project.Project;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Risk extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
@@ -38,9 +43,9 @@ public class Risk extends AbstractEntity {
 	protected String			reference;
 
 	@NotNull
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@Past
-	protected Date				identificationDate;
+	private Date				identificationDate;
 
 	// Custom validation, the impact will be between 0,0 and 10,0 (at the moment)
 	@NotNull
@@ -49,7 +54,7 @@ public class Risk extends AbstractEntity {
 
 	// Custom validation, the probability will be calculated within the range of 0,0 to 1,0
 	@NotNull
-	@Min(0)
+	@Range(min = 0, max = 1)
 	protected Double			probability;
 
 	@NotBlank
@@ -62,6 +67,7 @@ public class Risk extends AbstractEntity {
 	// Derived attributes -----------------------------------------------------
 
 
+	@NotNull
 	@Transient
 	public Double value() {
 		return this.impact * this.probability;
