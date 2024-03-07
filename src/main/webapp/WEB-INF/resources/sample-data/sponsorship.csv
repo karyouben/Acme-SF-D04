@@ -1,0 +1,22 @@
+key,code,moment,durationStart,durationEnd,amount,type,emailContact,link,key:project
+sponsorship-01,ACS-1234,2013/06/24 14:40,2013/06/27 12:00,2013/08/27 12:00,LIB 3500.80,FINANCIAL,gongarlam@alum.us.es,https://forocoches.com,project-02
+sponsorship-02,ZC-9392,2013/06/24 14:40,2013/06/27 12:00,2013/08/27 12:00,USD 500.00,FINANCIAL,gongarlam@alum.us.es,https://forocoches.com,project-01
+sponsorship-03,X-1234,2013/06/24 14:40,2013/06/27 12:00,2013/08/27 12:00,EUR 1500.00,FINANCIAL,gongarlam@alum.us.es,https://forocoches.com,project-01
+sponsorship-04,BCS-0123,2001/07/30 00:00,2013/06/27 12:00,2013/08/27 12:00,AUD 2500.00,IN_KIND,gongarlam@alum.us.es,https://forocoches.com,project-02
+sponsorship-05,CCS-2222,2022/06/29 12:00,2022/06/29 23:59,2022/07/29 23:59,USD 2000.00,FINANCIAL,gongarlam@alum.us.es,https://forocoches.com,project-01
+sponsorship-06,XYZ-4567,2022/06/29 12:00,2022/06/29 23:59,2022/07/29 22:59,EUR 1000.00,IN_KIND,gongarlam@alum.us.es,https://forocoches.com,project-02
+sponsorship-07,ECS-222,2001/07/30 01:00,2013/06/27 12:00,2013/08/27 12:00,EUR 1700.00,FINANCIAL,gongarlam@alum.us.es,https://forocoches.com,project-01
+sponsorship-08,DCS-3333,2013/06/24 14:40,2013/06/27 12:00,2013/08/27 12:00,GBP 1500.00,IN_KIND,gongarlam@alum.us.es,https://forocoches.com,project-01
+sponsorship-09,GCS-0234,2013/06/24 14:40,2010/06/27 12:00,2010/07/27 12:00,JPY 80000.00,FINANCIAL,gongarlam@alum.us.es,https://www.百度.中国,project-01
+sponsorship-10,ECS-4444,2013/06/24 14:40,2013/06/24 14:41,2013/06/24 14:41,CAD 1800.00,FINANCIAL,gongarlam@alum.us.es,https://forocoches.com,project-02
+sponsorship-25,ICS-9843,2013/06/24 14:40,2013/06/27 12:00,2013/08/27 12:00,PSD 1000.00,IN_KIND,gongarlam@alum.us.es,https://forocoches.com,project-01
+sponsorship-11,FCS-5555,2013/06/24 14:40,2013/06/27 12:00,2019/08/27 12:00,EUR 2500.00,FINANCIAL,gongarlam@alum.us.es,https://www.한국.한국,project-02
+sponsorship-12,KCS-666,2013/06/24 14:40,2013/06/27 12:00,2013/08/27 12:00,EUR 0.00,FINANCIAL,gongarlam@alum.us.es,https://forocoches.com,project-01
+sponsorship-13,LCS-3456,2013/06/24 14:40,2013/06/27 12:00,2013/08/27 12:00,EUR 1000000000.99,FINANCIAL,gongarlam@alum.us.es,https://forocoches.com,project-02
+sponsorship-14,ABC-789,2013/06/24 14:40,2013/06/27 12:00,2013/08/27 12:00,EUR 1.00,FINANCIAL,gongarlam@alum.us.es,https://forocoches.com,project-01
+sponsorship-15,UCS-1579,2013/06/24 14:40,2013/06/27 12:00,2013/08/27 12:00,SEK 20000.00,FINANCIAL,null,https://forocoches.com,project-01
+sponsorship-16,UUU-7456,2013/06/24 14:40,2013/06/27 12:00,2013/08/27 12:00,EUR 1000.00,FINANCIAL,Eメール@alum.us.es,https://forocoches.com,project-01
+sponsorship-17,CCS-2222,2013/06/24 14:40,2013/06/27 12:00,2013/08/27 12:00,LIB 3000.00,FINANCIAL,gongarlam@alum.us.es,https://forocoches.com,project-01
+sponsorship-18,VCS-333,2013/06/24 14:40,2013/06/27 12:00,2013/08/27 12:00,NZD 1700.00,FINANCIAL,null,"""https://www.яндекс.рф",project-01
+sponsorship-19,HCS-7777,2013/06/24 14:40,2023/06/27 12:00,2013/08/27 12:00,EUR 1000.00,FINANCIAL,gongarlam@alum.us.es,null,project-02
+sponsorship-20,JCS-9999,2013/06/24 14:40,2013/06/27 12:00,2013/08/27 12:00,USD 1234.50,IN_KIND,gongarlam@alum.us.es,null,project-01

@@ -10,13 +10,11 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
-import javax.validation.constraints.DecimalMax;
-import javax.validation.constraints.DecimalMin;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -34,7 +32,6 @@ public class Risk extends AbstractEntity {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotNull
 	@NotBlank
 	@Pattern(regexp = "R-[0-9]{3}")
 	@Column(unique = true)
@@ -46,15 +43,11 @@ public class Risk extends AbstractEntity {
 	protected Date				identificationDate;
 
 	@NotNull
-	@DecimalMin("0.0")
-	@Positive
+	@Min(0)
 	protected Double			impact;
 
-	//Asumiendo una probabilidad entre 0 y 1
 	@NotNull
-	@DecimalMin("0.0")
-	@DecimalMax("1.0")
-	@Positive
+	@Min(0)
 	protected Double			probability;
 
 	@NotBlank
@@ -63,6 +56,8 @@ public class Risk extends AbstractEntity {
 
 	@URL
 	protected String			infoLink;
+
+	// Derived attributes -----------------------------------------------------
 
 
 	@Transient

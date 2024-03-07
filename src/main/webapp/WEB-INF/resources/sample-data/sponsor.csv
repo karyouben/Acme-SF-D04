@@ -1,11 +1,3 @@
 key,key:userAccount,name,benefits,webpage,contactEmail
-sponsor-01,user-account-sponsor-01,"""ValidName""","""ValidBenefits""","""https://www.validwebpage.com""","""validemail@example.com"""
-sponsor-02,user-account-sponsor-02,"""ValidName2""","""ValidBenefits2""","""https://www.validwebpage2.com""","""validemail2@example.com"""
-sponsor-03,user-account-sponsor-03,"""""","""ValidBenefits3""","""https://www.validwebpage3.com""","""validemail3@example.com"""
-sponsor-04,user-account-sponsor-04,"""NameThatIsWayTooLongForTheGivenSizeLimitOfThisFieldWhichIs76Characters""","""ValidBenefits4""","""https://www.validwebpage4.com""","""validemail4@example.com"""
-sponsor-05,user-account-sponsor-05,"""ValidName5""","""Benefits description that is too lengthy and exceeds the maximum allowed size of one hundred and one characters""","""https://www.validwebpage5.com""","""validemail5@example.com"""
-sponsor-06,user-account-sponsor-06,"""ValidName6""","""ValidBenefits6""","""invalidwebpage""","""validemail6@example.com"""
-sponsor-07,user-account-sponsor-07,"""ValidName7""","""ValidBenefits7""","""https://www.validwebpage7.com""","""invalidemail"""
-sponsor-08,user-account-sponsor-08,"""ValidName8""","""ValidBenefits8""","""""","""validemail8@example.com"""
-sponsor-09,user-account-sponsor-09,"""ValidName9""","""ValidBenefits9""","""https://www.validwebpage9.com""",""""""
-sponsor-10,user-account-sponsor-10,""" ""","""ValidBenefits10""","""https://www.validwebpage10.com""","""validemail10@example.com"""
+sponsor-01,user-account-sponsor-01,"""CorchuFramework""","""Maravailloso Framework que cuando menos te lo espera te genera un Error de compilacion en Build Path""",https://forocoches.com,"""gongarlam@alum.us.es"""
+sponsor-02,user-account-sponsor-02,"""X""","""Identidad misteriosa que pretende hacer repositorios sin verlos en teoria""",https://forocoches.com,"""gongarlam2@alum.us.es"""

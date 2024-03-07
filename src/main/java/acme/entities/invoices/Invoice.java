@@ -14,11 +14,11 @@ import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
+import acme.client.data.datatypes.Money;
 import acme.entities.sponsorships.Sponsorship;
 import lombok.Getter;
 import lombok.Setter;
@@ -47,23 +47,21 @@ public class Invoice extends AbstractEntity {
 	@Temporal(TemporalType.TIMESTAMP)
 	protected Date				dueDate;
 
-	@Positive
-	@DecimalMin(value = "0.0")
+	@Valid
 	@NotNull
-	protected Double			quantity;
+	protected Money				quantity;
 
-	@Positive
 	@DecimalMin(value = "0.0")
 	@NotNull
-	protected Double			tax;
+	protected double			tax;
 
 	@URL
 	protected String			infoLink;
 
 
 	@Transient
-	public Double getTotalAmount() {
-		return this.quantity + this.tax;
+	public Double totalAmount() {
+		return this.quantity.getAmount() + this.quantity.getAmount() * (this.tax / 100);
 	}
 
 	// Relationships ----------------------------------------------------------
