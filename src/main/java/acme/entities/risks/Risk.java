@@ -15,6 +15,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Positive;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.Range;
@@ -50,10 +51,12 @@ public class Risk extends AbstractEntity {
 	// Custom validation, the impact will be between 0,0 and 10,0 (at the moment)
 	@NotNull
 	@Min(0)
+	@Positive
 	protected Double			impact;
 
 	// Custom validation, the probability will be calculated within the range of 0,0 to 1,0
 	@NotNull
+	@Positive
 	@Range(min = 0, max = 1)
 	protected Double			probability;
 
