@@ -3,7 +3,7 @@ package acme.entities.project;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -45,6 +45,8 @@ public class Project extends AbstractEntity {
 	//Business rule: Projects containing fatal errors must be rejected by the system
 	protected boolean			hasErrors;
 
+	protected boolean			draftMode;
+
 	@URL
 	@Length(max = 255)
 	protected String			link;
@@ -59,7 +61,7 @@ public class Project extends AbstractEntity {
 
 	@Valid
 	@NotNull
-	@OneToOne(optional = false)
+	@ManyToOne(optional = false)
 	protected Manager			manager;
 
 }
