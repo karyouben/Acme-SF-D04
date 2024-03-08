@@ -96,9 +96,9 @@ bg=green
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 DifficultyLevel
 --
-+ BASIC
-+ INTERMIEDATE
-+ ADVANCED
+BASIC
+INTERMIEDATE
+ADVANCED
 
 bg=#2F5AE0</panel_attributes>
     <additional_attributes/>
