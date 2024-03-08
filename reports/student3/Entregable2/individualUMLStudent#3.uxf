@@ -209,7 +209,7 @@ bg=yellow
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1188</x>
+      <x>1177</x>
       <y>627</y>
       <w>99</w>
       <h>143</h>
@@ -217,23 +217,23 @@ bg=yellow
     <panel_attributes>lt=&lt;-x
 
 created by v
-m1= 0..*
-m2=  1
+m1= 1
+m2= 1..*
 </panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1177</x>
       <y>231</y>
-      <w>154</w>
+      <w>66</w>
       <h>242</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
-increases knowledge of ^
+Has v
 m1=1
-m2= 0..*
+m2= 1..*
 </panel_attributes>
     <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
   </element>
