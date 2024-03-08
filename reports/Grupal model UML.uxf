@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
+<<<<<<< Updated upstream
   <zoom_level>2</zoom_level>
   <element>
     <id>UMLClass</id>
@@ -264,6 +265,16 @@ bg=#FFD444
       <y>386</y>
       <w>12</w>
       <h>6</h>
+=======
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>128</x>
+      <y>1264</y>
+      <w>48</w>
+      <h>24</h>
+>>>>>>> Stashed changes
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
@@ -271,6 +282,7 @@ bg=#FFD444
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>162</x>
       <y>388</y>
       <w>30</w>
@@ -646,6 +658,12 @@ bg=#FFD444</panel_attributes>
       <y>250</y>
       <w>12</w>
       <h>10</h>
+=======
+      <x>168</x>
+      <y>712</y>
+      <w>48</w>
+      <h>40</h>
+>>>>>>> Stashed changes
     </coordinates>
     <panel_attributes>lt=.
 
@@ -653,6 +671,7 @@ bg=#FFD444</panel_attributes>
     <additional_attributes>40.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
+<<<<<<< Updated upstream
     <id>Relation</id>
     <coordinates>
       <x>322</x>
@@ -987,87 +1006,136 @@ bg=red</panel_attributes>
       <h>38</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
+=======
+    <id>UMLClass</id>
+    <coordinates>
+      <x>200</x>
+      <y>328</y>
+      <w>256</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+>>>>>>> Stashed changes
 Objective
 --
-+ instantiationMoment: Date {NotNull, Past, Temporal(TIMESTAMP)}
-+ title: String {NotNull, NotBlank, length(1,75)}
-+ description: String {NotNull, NotBlank, length(1,100)}
-+ priority: PrioType {NotNull}
-+ status: boolean {NotNull}
-+ / duration: Integer {NotNull, Transient}
-+ startPeriod: Date {NotNull, Temporal(TIMESTAMP)}
-+ endPeriod: Date {NotNull, Temporal(TIMESTAMP)}
-+ link: String {URL}
++ instantiation: Date {Not null, PastOrPresent}
++ title: String {Not blank, Length 75}
++ description: String {Not blank, Length 75}
++ priority: Enum Priority
++ isCritical: boolean
++ startDurationPeriod: Date
++ endDurationPeriod: Date
+ - link: String {URL, Length 255}
+
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>124</x>
       <y>130</y>
       <w>30</w>
       <h>14</h>
+=======
+      <x>272</x>
+      <y>232</y>
+      <w>128</w>
+      <h>56</h>
+>>>>>>> Stashed changes
     </coordinates>
-    <panel_attributes>The startPeriod must
-start at any moment
-after the instantiation
-moment.
-bg=#FFD444
+    <panel_attributes>endPeriod date has to 
+be after startPeriod date, 
+start date has to be after 
+instantiation date
+
+bg=#67F7F5
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>138</x>
       <y>142</y>
       <w>6</w>
       <h>12</h>
+=======
+      <x>328</x>
+      <y>280</y>
+      <w>24</w>
+      <h>64</h>
+>>>>>>> Stashed changes
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>180</x>
       <y>160</y>
       <w>74</w>
       <h>28</h>
+=======
+      <x>608</x>
+      <y>360</y>
+      <w>256</w>
+      <h>112</h>
+>>>>>>> Stashed changes
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Notice
 --
-+ title: String {NotNull, NotBlank,length(1,75)}
-+ author: String {NotNull, NotBlank,length(1,75)}
-+ message: String {NotNull, NotBlank,length(1,100)}
-+ moment : Date {NotNull, Past, Temporal(TIMESTAMP)}
-+ link : String {URL}
-+ email: String {Email}
++ instantiation: Date {Not null, PastOrPresent}
++ title: String {Not blank, Length 75}
++ author: String {Not blank, Length 75}
++ message: String {Not blank, Length 100}
+- link: String {URL, Length 255}
+- email: String {Email}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>192</x>
       <y>140</y>
       <w>52</w>
       <h>8</h>
+=======
+      <x>552</x>
+      <y>264</y>
+      <w>400</w>
+      <h>48</h>
+>>>>>>> Stashed changes
     </coordinates>
-    <panel_attributes>Author must follow this format:
-Author: 〈username〉 - 〈surname, name〉
-bg=#FFD444</panel_attributes>
+    <panel_attributes>The author must be computed as follows: "&lt;username&gt; - &lt;surname, name&gt;", 
+where &lt;username&gt; denotes the username of the principal who has posted the 
+note and &lt;surname, name&gt; denotes his or her full name
+bg=#67F7F5
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>216</x>
       <y>146</y>
       <w>6</w>
       <h>18</h>
+=======
+      <x>728</x>
+      <y>304</y>
+      <w>24</w>
+      <h>72</h>
+>>>>>>> Stashed changes
     </coordinates>
     <panel_attributes>lt=.
 
@@ -1077,68 +1145,96 @@ bg=#FFD444</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>258</x>
       <y>160</y>
       <w>88</w>
       <h>28</h>
+=======
+      <x>616</x>
+      <y>544</y>
+      <w>256</w>
+      <h>120</h>
+>>>>>>> Stashed changes
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Banner
 --
-+ instantiationMoment: Date {NotNull, Temporal(TIMESTAMP), Past}
-+ startDisplayPeriod: Date {NotNull, Temporal{TIMESTAMP}}
-+ endDisplayPeriod: Date {NotNull, Temporal{TIMESTAMP}}
-+ pictureLink: String {NotNull, URL, NotBlank}
-+ slogan: String {NotNull, NotBlank, length(1,75)}
-+ webLink: String {NotNull, URL, NotBlank}
++ instantiation: Date {Not null, PastOrPresent}
++ startDisplayPeriod: Date {Not null}
++ endDisplayPeriod: Date {Not null}
++ slogan: String {Not blank, Length 75}
+- linkPicture: String {URL, Length 255}        
+- linkWebDoc: String {URL, Length 255}
 bg=green</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>276</x>
       <y>138</y>
       <w>48</w>
       <h>14</h>
+=======
+      <x>568</x>
+      <y>736</y>
+      <w>168</w>
+      <h>56</h>
+>>>>>>> Stashed changes
     </coordinates>
-    <panel_attributes>The startDisplayPeriod must start 
-at any moment after the instantiation
-moment and must last for at least one 
-week
-bg=#FFD444
+    <panel_attributes>startDisplayPeriod must start at 
+anymoment after the 
+instantiation/update moment.
+
+bg=#67F7F5
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>300</x>
       <y>150</y>
       <w>6</w>
       <h>14</h>
+=======
+      <x>656</x>
+      <y>656</y>
+      <w>104</w>
+      <h>96</h>
+>>>>>>> Stashed changes
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;50.0</additional_attributes>
+    <additional_attributes>10.0;100.0;10.0;70.0;110.0;70.0;110.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>350</x>
       <y>156</y>
       <w>82</w>
       <h>32</h>
+=======
+      <x>1000</x>
+      <y>496</y>
+      <w>296</w>
+      <h>128</h>
+>>>>>>> Stashed changes
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Risk
 --
-+ reference:String {NotBlank, Unique, Pattern("R-[0-9]{3}")}
-+ identificationDate: Date{NotNull, Past, Temporal(TIMESTAMP)}
-+ impact: double {NotNull, Min(1)}
-+ probability: double {NotNull, Range(min = 0, max = 1)}
-+ / value: double {NotNull, Transient}
-+ description: String {NotNull, NotBlank, Length(1,100)}
-+ link: String {URL}
++ reference: String{Not blank, Not Null, Unique}
++ identificationDate: Date {Not Null, Temporal(DATE)}
++ impact: Double {Not Null}
++ probability: Double{Not Null, Range(0,0-1,0)}
++ description: String{Not Blank, Length 100}
+- infoLink: String {URL}
++/ value: double {Transient}
 
 bg=green</panel_attributes>
     <additional_attributes/>
@@ -1146,87 +1242,116 @@ bg=green</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>372</x>
       <y>138</y>
       <w>38</w>
       <h>12</h>
+=======
+      <x>896</x>
+      <y>416</y>
+      <w>168</w>
+      <h>40</h>
+>>>>>>> Stashed changes
     </coordinates>
-    <panel_attributes>The value is the result of the 
-multiplication of impact and 
-probability
-bg=#FFD444
+    <panel_attributes>The impact attribute will be 
+calculated between 0.0 and 10.0
+bg=#67F7F5
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>388</x>
       <y>148</y>
       <w>6</w>
       <h>12</h>
+=======
+      <x>976</x>
+      <y>448</y>
+      <w>200</w>
+      <h>64</h>
+>>>>>>> Stashed changes
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;230.0;40.0;230.0;60.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>436</x>
       <y>156</y>
       <w>88</w>
       <h>32</h>
+=======
+      <x>168</x>
+      <y>536</y>
+      <w>352</w>
+      <h>128</h>
+>>>>>>> Stashed changes
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Claim
 --
-+ code: String {NotNull, NotBlank, Unique, Pattern("C-[0-9]{4}")}
++ Code : String {unique, NotBlank, Pattern(C-[0-9]{4})}
 + instantiationMoment: Date {NotNull, Past, Temporal(TIMESTAMP)}
-+ heading: String {NotNull, NotBlank, length(1,75)}
-+ description: String {NotNull, NotBlank, length(1,100)}
-+ department: String {NotNull, NotBlank, length(1,100)}
-+ email: String {Email}
-+ link: String {URL}
++ heading: String {NotBlank, Length 75}
++ description: String {NotBlank, Length 100}
++ department: String {NotBlank, Length 100}
+- email: String {Email}
+- link: String {URL}
 bg=green
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
-    <id>UMLClass</id>
+    <id>Relation</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>128</x>
       <y>324</y>
       <w>72</w>
       <h>26</h>
+=======
+      <x>1216</x>
+      <y>1264</y>
+      <w>32</w>
+      <h>24</h>
+>>>>>>> Stashed changes
     </coordinates>
-    <panel_attributes>&lt;&lt;Form&gt;&gt;
-AdministratorDashboard
---
-+ totalPrincipalsWithEachRole: Map&lt;String, Integer&gt;
-+ ratioNoticesWithEmailAndLink: double
-+ ratioCriticalNonCriticalObjectives: Map&lt;String, double&gt;
-+ riskValueStats: Stats
-+ numClaimsLastTenWeeksStats: Stats
-bg=pink</panel_attributes>
-    <additional_attributes/>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;20.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>308</x>
       <y>376</y>
       <w>36</w>
       <h>10</h>
+=======
+      <x>1288</x>
+      <y>408</y>
+      <w>152</w>
+      <h>48</h>
+>>>>>>> Stashed changes
     </coordinates>
-    <panel_attributes>Budget must be lower or 
-equal than the project cost.
-bg=#FFD444
+    <panel_attributes>The value attribute is the 
+result of the multiplication of 
+impact and probability
+bg=#67F7F5
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>342</x>
       <y>380</y>
       <w>8</w>
@@ -1234,61 +1359,128 @@ bg=#FFD444
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;20.0;90.0</additional_attributes>
+=======
+      <x>1152</x>
+      <y>448</y>
+      <w>24</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0</additional_attributes>
+>>>>>>> Stashed changes
   </element>
   <element>
-    <id>UMLClass</id>
+    <id>UMLNote</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>372</x>
       <y>328</y>
       <w>22</w>
       <h>8</h>
+=======
+      <x>1096</x>
+      <y>408</y>
+      <w>152</w>
+      <h>48</h>
+>>>>>>> Stashed changes
     </coordinates>
-    <panel_attributes>&lt;&lt;Entity&gt;&gt;
-ProjectUserStory
-bg=green</panel_attributes>
+    <panel_attributes>The probability attribute will 
+be calculated between 0.0 
+and 1.0
+bg=#67F7F5
+
+</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>392</x>
       <y>328</y>
       <w>22</w>
       <h>10</h>
+=======
+      <x>1152</x>
+      <y>448</y>
+      <w>224</w>
+      <h>48</h>
+>>>>>>> Stashed changes
     </coordinates>
-    <panel_attributes>lt=x-&gt;
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>260.0;10.0;260.0;40.0;10.0;40.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>768</x>
+      <y>736</y>
+      <w>216</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>the difference between startDisplayPeriod
+and endDisplayPeriodmust be at least 
+one week.
 
-m2=1
-m1= 1..*</panel_attributes>
-    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+
+bg=#67F7F5
+</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>352</x>
       <y>328</y>
       <w>24</w>
       <h>10</h>
+=======
+      <x>736</x>
+      <y>704</y>
+      <w>160</w>
+      <h>48</h>
+>>>>>>> Stashed changes
     </coordinates>
-    <panel_attributes>lt=x-&gt;
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>180.0;40.0;180.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>72</x>
+      <y>344</y>
+      <w>64</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Enum&gt;&gt;
+Priority
+--
++ LOW
++ MEDIUM
++ HIGH
 
-m2=1
-m1= 1..*</panel_attributes>
-    <additional_attributes>100.0;20.0;10.0;20.0</additional_attributes>
+bg=#2F5AE0
+</panel_attributes>
+    <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
+<<<<<<< Updated upstream
       <x>480</x>
       <y>308</y>
       <w>36</w>
       <h>36</h>
+=======
+      <x>128</x>
+      <y>360</y>
+      <w>88</w>
+      <h>24</h>
+>>>>>>> Stashed changes
     </coordinates>
-    <panel_attributes>lt=x-&gt;
-created by &gt;
-m2=1
-m1= 0..*</panel_attributes>
-    <additional_attributes>40.0;150.0;80.0;150.0;80.0;10.0;10.0;10.0</additional_attributes>
+    <panel_attributes>lt=.</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
