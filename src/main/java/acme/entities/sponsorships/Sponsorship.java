@@ -15,6 +15,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
@@ -59,9 +60,11 @@ public class Sponsorship extends AbstractEntity {
 	protected SponsorshipType	typeOfSponsorship;
 
 	@Email
+	@Length(max = 255)
 	protected String			contactEmail;
 
 	@URL
+	@Length(max = 255)
 	protected String			infoLink;
 
 	// Relationships ----------------------------------------------------------

@@ -65,6 +65,7 @@ public class Risk extends AbstractEntity {
 	protected String			description;
 
 	@URL
+	@Length(max = 255)
 	protected String			infoLink;
 
 	// Derived attributes -----------------------------------------------------
