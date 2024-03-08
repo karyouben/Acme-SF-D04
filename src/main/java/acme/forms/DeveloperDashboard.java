@@ -1,6 +1,7 @@
 
 package acme.forms;
 
+import acme.datatypes.Statistics;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,11 +18,6 @@ public class DeveloperDashboard {
 	int							totalTrainingModulesWithUpdateMoment;
 	int							totalTrainingSessionsWithLink;
 
-	Double						averageTimeTrainingModules;
-	Double						deviatonTimeTrainingModules;
-	Integer						minimumTimeTrainingModules;
-	Integer						maximumTimeTrainingModules;
-
-	//private Statistic			TrainingModulesTime;
+	private Statistics			TrainingModulesTime;
 
 }

@@ -1,31 +1,27 @@
-key,code,creation-moment,details,update-moment,link,total-time
-training-module-01,"AW-001",2020/05/16 00:00,"training details 01",2021/05/16 00:00,"https://twitter.com/Palworld_EN",2
-training-module-02,"A-000",2020/02/19 01:10,"training details 02",2022/02/19 01:10,"https://twitter.com/Palworld_EN",3
-training-module-03,"AB-666",2020/08/16 02:00,"training details 03",2020/10/16 02:00,"https://twitter.com/Palworld_EN",4
-training-module-04,"AZC-420",2021/05/30 03:00,"training details 04",2021/05/30 08:00,"https://twitter.com/Palworld_EN",6
-training-module-05,"A-005",1980/01/01 09:00,"training details 05",1980/01/01 12:00,"https://twitter.com/Palworld_EN",7
-training-module-06,"A-006",1980/02/01 12:00,"training details 06",1980/02/01 15:00,"https://twitter.com/Palworld_EN",8
-training-module-07,"A-007",2001/07/09 23:00,"training details 07",2001/07/09 23:59,"https://twitter.com/Palworld_EN",8
-training-module-08,"A-008",2000/06/20 22:00,"training details 08",2000/06/20 23:01,"https://twitter.com/Palworld_EN",4
-training-module-09,"A-009",2022/04/19 23:59,"training details 09",2023/04/19 23:59,"https://twitter.com/Palworld_EN",5
-training-module-10,"A-010",2022/03/30 01:00,"training details 10",2023/03/30 01:00,"https://twitter.com/Palworld_EN",6
-training-module-11,"A-011",2022/05/20 00:59,"unicorns will rule the world",2022/05/20 04:59,"https://twitter.com/Palworld_EN",6
-training-module-12,"A-012",2022/05/20 00:20,"アニメが好きです",2022/05/20 05:20,"https://twitter.com/Palworld_EN",7
-training-module-13,"A-013",2022/05/20 00:24,"training details 11",2022/05/20 06:24,"https://twitter.com/Palworld_EN",8
-training-module-14,"A-014",2022/05/20 00:33,"hello world",2022/06/20 00:33,"https://twitter.com/Palworld_EN",12
-training-module-15,"A-015",2022/03/20 15:00,"training details 12",2022/07/20 15:00,"https://twitter.com/Palworld_EN",4
-training-module-16,"A-016",2022/02/20 16:00,"training details 13",,"https://twitter.com/Palworld_EN",3
-training-module-17,"A-017",2000/01/01 17:00,"training details 14",2000/08/01 17:00,"https://twitter.com/Palworld_EN",5
-training-module-18,"A-018",2000/02/15 18:00,"training details 15",2000/07/15 18:00,"https://twitter.com/Palworld_EN",6
-training-module-19,"A-019",2000/07/09 19:00,"training details 16",2000/09/09 19:00,"https://twitter.com/Palworld_EN",4
-training-module-20,"A-020",1980/06/22 21:00,"training details 17",1980/07/22 21:00,"https://twitter.com/Palworld_EN",2
-training-module-21,"A-021",1980/04/09 23:00,"training details 18",1980/06/09 23:00,"https://twitter.com/Palworld_EN",4
-training-module-22,"A-022",2021/03/20 22:30,"training details 19",2021/03/20 22:50,,2
-training-module-23,"A-023",2022/04/10 12:30,"training details 20",2022/04/10 12:58,"https://twitter.com/Palworld_EN",111
-training-module-24,"A-024",2022/02/10 16:18,"training details 21",2023/05/10 16:18,"https://twitter.com/Palworld_EN",42
-training-module-25,"A-025",2022/05/20 00:46,"training details 22",2023/05/20 00:46,"https://twitter.com/Palworld_EN",523
-training-module-26,"A-026",2023/02/20 17:02,"training details 23",2023/05/20 17:02,"https://twitter.com/Palworld_EN",95123123
-training-module-27,"A-027",2022/07/30 11:09,"training details 24",2022/12/30 11:09,"https://twitter.com/Palworld_EN",12
-training-module-28,"A-028",2021/05/20 00:46,"training details 25",2022/06/20 00:46,"https://twitter.com/Palworld_EN",5
-training-module-29,"A-029",2022/02/20 17:02,"training details 26",2021/06/20 17:02,"https://twitter.com/Palworld_EN",951
-training-module-30,"A-030",2020/07/30 11:09,"training details 27",2020/12/30 11:09,"https://twitter.com/Palworld_EN",1
+key,code,creation-moment,details,difficulty-level,update-moment,link,total-time,key:project,key:developer
+training-module-01,AA-000,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-02,AA-001,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-03,A-000,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-04,A-001,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-05,AAA-001,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-06,AB-000,2022/07/29 23:58,detalles,BASIC,2022/07/29 23:59,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-07,AB-001,2022/07/29 23:57,detalles,BASIC,2022/07/29 23:59,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-08,AB-002,2010/07/29 23:58,detalles,BASIC,2022/07/29 23:59,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-09,AB-003,2001/07/29 23:58,detalles,BASIC,2022/07/29 23:59,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-10,AB-004,2001/07/29 23:57,detalles,BASIC,2022/07/29 23:59,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-11,AB-005,2022/03/01 00:00,detalles,INTERMEDIATE,2022/03/02 00:00,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-12,AB-006,2022/03/01 00:00,detalles,ADVANCED,2022/03/02 00:00,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-13,AB-007,2001/07/01 00:00,detalles,BASIC,,,10,project-01,developer-01
+training-module-14,AB-008,2001/07/01 00:00,detalles,BASIC,2010/07/29 23:59,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-15,AB-009,2001/07/01 00:00,detalles,BASIC,2022/07/29 23:58,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-16,AB-010,2001/07/01 00:00,detalles,BASIC,2001/07/29 23:59,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-17,AB-011,2001/07/01 00:00,detalles,BASIC,2001/07/29 23:58,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-18,AB-012,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,https://twitter.com/Palworld_EN,1,project-01,developer-01
+training-module-19,AB-013,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,https://twitter.com/Palworld_EN,2,project-01,developer-01
+training-module-20,AB-014,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,https://twitter.com/Palworld_EN,10,project-02,developer-01
+training-module-21,AB-015,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,https://twitter.com/Palworld_EN,10,project-01,developer-02
+training-module-22,AB-016,2022/07/01 00:00,detallesdetallesdetallesdetallesdetallesdetallesde,BASIC,2022/07/02 00:00,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-23,AB-017,2022/07/01 00:00,d,BASIC,2022/07/02 00:00,,10,project-01,developer-01
+training-module-24,AB-018,2022/07/01 00:00,de,BASIC,2022/07/02 00:00,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-25,AB-019,2022/07/01 00:00,detallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdeta,BASIC,2022/07/02 00:00,https://twitter.com/Palworld_EN,10,project-01,developer-01
+training-module-26,AB-020,2022/07/01 00:00,detallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdet,BASIC,2022/07/02 00:00,,10,project-01,developer-01
