@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.1">
-  <zoom_level>10</zoom_level>
+  <zoom_level>7</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1030</x>
-      <y>530</y>
-      <w>440</w>
-      <h>160</h>
+      <x>721</x>
+      <y>406</y>
+      <w>308</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Project
@@ -19,10 +19,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2200</x>
-      <y>90</y>
-      <w>140</w>
-      <h>110</h>
+      <x>1540</x>
+      <y>98</y>
+      <w>98</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Datatype&gt;&gt;
 Statistics
@@ -38,9 +38,9 @@ bg=#AD2F2F</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>0</x>
-      <y>920</y>
-      <w>60</w>
-      <h>30</h>
+      <y>679</y>
+      <w>42</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>lt=.</panel_attributes>
     <additional_attributes>10.0;10.0;40.0;10.0</additional_attributes>
@@ -48,10 +48,10 @@ bg=#AD2F2F</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1760</x>
-      <y>270</y>
-      <w>330</w>
-      <h>110</h>
+      <x>1232</x>
+      <y>224</y>
+      <w>231</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Role&gt;&gt;
 Sponsor
@@ -66,10 +66,10 @@ bg=yellow</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1690</x>
-      <y>490</y>
-      <w>450</w>
-      <h>190</h>
+      <x>1183</x>
+      <y>378</y>
+      <w>315</w>
+      <h>133</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Sponsorships 
@@ -88,10 +88,10 @@ bg=green</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1560</x>
-      <y>370</y>
-      <w>120</w>
-      <h>80</h>
+      <x>1092</x>
+      <y>294</y>
+      <w>84</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Enum&gt;&gt;
 SponsorshipType
@@ -107,10 +107,10 @@ bg=#2F5AE0
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>2280</x>
-      <y>510</y>
-      <w>420</w>
-      <h>160</h>
+      <x>1596</x>
+      <y>392</y>
+      <w>294</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Entity&gt;&gt;
 Invoices 
@@ -128,10 +128,10 @@ bg=green</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2130</x>
-      <y>580</y>
-      <w>170</w>
-      <h>50</h>
+      <x>1491</x>
+      <y>441</y>
+      <w>119</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-x
 
@@ -141,10 +141,10 @@ m2= 1..*</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1900</x>
-      <y>370</y>
-      <w>110</w>
-      <h>140</h>
+      <x>1330</x>
+      <y>294</y>
+      <w>77</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 created by ^
@@ -155,10 +155,10 @@ m1= 1</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1530</x>
-      <y>840</y>
-      <w>230</w>
-      <h>30</h>
+      <x>1071</x>
+      <y>623</y>
+      <w>161</w>
+      <h>21</h>
     </coordinates>
     <panel_attributes>durationStart must be after moment
 bg=#67F7F5
@@ -168,10 +168,10 @@ bg=#67F7F5
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1580</x>
-      <y>780</y>
-      <w>180</w>
-      <h>40</h>
+      <x>1106</x>
+      <y>581</y>
+      <w>126</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>durationEnd is at least 
 one month after startPeriod
@@ -182,10 +182,10 @@ bg=#67F7F5
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1750</x>
-      <y>670</y>
-      <w>180</w>
-      <h>210</h>
+      <x>1225</x>
+      <y>504</y>
+      <w>126</w>
+      <h>147</h>
     </coordinates>
     <panel_attributes>lt=.
 
@@ -195,10 +195,10 @@ bg=#67F7F5
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1750</x>
-      <y>670</y>
-      <w>180</w>
-      <h>160</h>
+      <x>1225</x>
+      <y>504</y>
+      <w>126</w>
+      <h>112</h>
     </coordinates>
     <panel_attributes>lt=.
 
@@ -208,10 +208,10 @@ bg=#67F7F5
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>2610</x>
-      <y>780</y>
-      <w>230</w>
-      <h>40</h>
+      <x>1827</x>
+      <y>581</y>
+      <w>161</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>dueDate is at least one month 
 after registrationTime
@@ -222,10 +222,10 @@ bg=#67F7F5
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2470</x>
-      <y>660</y>
-      <w>270</w>
-      <h>140</h>
+      <x>1729</x>
+      <y>497</y>
+      <w>189</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=.
 
@@ -235,10 +235,10 @@ bg=#67F7F5
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1460</x>
-      <y>580</y>
-      <w>250</w>
-      <h>50</h>
+      <x>1022</x>
+      <y>441</y>
+      <w>175</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=&lt;-x
 provides finance v
@@ -249,10 +249,10 @@ m1= 1</panel_attributes>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>1530</x>
-      <y>880</y>
-      <w>230</w>
-      <h>40</h>
+      <x>1071</x>
+      <y>651</y>
+      <w>161</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>Amount must have a positive value
 bg=#67F7F5
@@ -262,10 +262,10 @@ bg=#67F7F5
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1750</x>
-      <y>670</y>
-      <w>180</w>
-      <h>250</h>
+      <x>1225</x>
+      <y>504</y>
+      <w>126</w>
+      <h>175</h>
     </coordinates>
     <panel_attributes>lt=.
 
@@ -275,10 +275,10 @@ bg=#67F7F5
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>2380</x>
-      <y>780</y>
-      <w>210</w>
-      <h>50</h>
+      <x>1666</x>
+      <y>581</y>
+      <w>147</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>quantity attribute must have a 
 positive value and not null
@@ -289,10 +289,10 @@ bg=#67F7F5
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2470</x>
-      <y>660</y>
-      <w>30</w>
-      <h>140</h>
+      <x>1729</x>
+      <y>497</y>
+      <w>21</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=.
 
@@ -302,10 +302,10 @@ bg=#67F7F5
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>2150</x>
-      <y>780</y>
-      <w>210</w>
-      <h>40</h>
+      <x>1505</x>
+      <y>581</y>
+      <w>147</w>
+      <h>28</h>
     </coordinates>
     <panel_attributes>tax attribue must have a positive value
 or not null
@@ -316,10 +316,10 @@ bg=#67F7F5
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2240</x>
-      <y>660</y>
-      <w>260</w>
-      <h>140</h>
+      <x>1568</x>
+      <y>497</y>
+      <w>182</w>
+      <h>98</h>
     </coordinates>
     <panel_attributes>lt=.
 
@@ -329,10 +329,10 @@ bg=#67F7F5
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1740</x>
-      <y>100</y>
-      <w>360</w>
-      <h>110</h>
+      <x>1218</x>
+      <y>105</y>
+      <w>252</w>
+      <h>77</h>
     </coordinates>
     <panel_attributes>&lt;&lt;Form&gt;&gt;
 SponsorDashboard
@@ -351,10 +351,10 @@ bg=#AD2F2F
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>50</x>
-      <y>230</y>
-      <w>60</w>
-      <h>50</h>
+      <x>35</x>
+      <y>196</y>
+      <w>42</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=.
 
@@ -364,10 +364,10 @@ bg=#AD2F2F
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1670</x>
-      <y>390</y>
-      <w>160</w>
-      <h>120</h>
+      <x>1169</x>
+      <y>308</y>
+      <w>112</w>
+      <h>84</h>
     </coordinates>
     <panel_attributes>lt=.
 
@@ -377,10 +377,10 @@ bg=#AD2F2F
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>2090</x>
-      <y>140</y>
-      <w>130</w>
-      <h>50</h>
+      <x>1463</x>
+      <y>133</y>
+      <w>91</w>
+      <h>35</h>
     </coordinates>
     <panel_attributes>lt=.
 
