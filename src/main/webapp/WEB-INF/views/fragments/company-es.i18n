@@ -13,7 +13,7 @@ master.company.text = \
 	Acme SF, Inc. es una empresa ficticia que ofrece un proyecto starter para los \
 	estudiantes de la asignatura Diseño y Pruebas de la titulación de \
 	Ingeniería del Software en la Universidad de Seville. 
-master.company.name = Acme, Inc.
-master.company.address = 01 Acme Drive, Wondercity, Wonderland
+master.company.name = Acme SF, Inc.
+master.company.address = 01 Acme SF Drive, Wondercity, Wonderland
 master.company.phone = +1 000 111 222
-master.company.email = contact@acme.com
+master.company.email = contact@acme-sf.com
