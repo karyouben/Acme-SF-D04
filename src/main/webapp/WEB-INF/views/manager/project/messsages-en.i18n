@@ -1,0 +1,34 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+manager.project.form.label.code = Code
+manager.project.list.label.code = Code
+manager.project.form.label.title = Title
+manager.project.list.label.title = Title
+manager.project.form.label.abstract = Abstract
+manager.project.form.label.link = Link
+manager.project.form.label.totalCost = Total cost
+manager.project.form.label.hasErrors = Has errors
+manager.project.form.label.draftMode = Is draft
+
+manager.project.form.button.update = Update
+manager.project.form.button.create = Create
+manager.project.list.button.create = Create
+manager.project.form.button.delete = Delete
+manager.project.form.button.publish = Publish
+
+manager.project.form.error.duplicated-code = Duplicated code
+manager.project.form.error.negative-total-cost = Total cost must be positive or nought
+
+manager.project.form.button.userstories = List user stories
+manager.project.form.button.add-userstories = Add user story
+
+manager.project.form.title = Proyect
+manager.project.list.title = Proyects
