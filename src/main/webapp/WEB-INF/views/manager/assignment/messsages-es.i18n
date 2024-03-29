@@ -14,5 +14,6 @@ manager.assignment.form.label.userStory = Historia de usuario
 manager.assignment.form.button.create = Asignar
 
 manager.project.form.error.duplicated-userStory = Historia de usuario duplicada
+manager.project.form.error.cost-exceeded = La suma de costes de las historias de usuario excede el coste total del proyecto
 
 manager.assignment.form.title = Asignación

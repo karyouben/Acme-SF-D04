@@ -61,10 +61,17 @@ public class ManagerAssignmentCreateService extends AbstractService<Manager, Ass
 		assert object != null;
 		final int projectId = super.getRequest().getData("projectId", int.class);
 
-		if (!super.getBuffer().getErrors().hasErrors("code")) {
+		if (!super.getBuffer().getErrors().hasErrors("userStory")) {
 			final boolean duplicatedUS = this.repository.findAssignmentsByProjectId(projectId).stream().anyMatch(a -> a.getUserStory().equals(object.getUserStory()));
 
 			super.state(!duplicatedUS, "userStory", "manager.project.form.error.duplicated-userStory");
+
+			Project project = this.repository.findProjectById(projectId);
+			int addedCost = this.repository.findAssignmentsByProjectId(projectId).stream().mapToInt(a -> a.getUserStory().getCost()).sum();
+
+			final boolean costExceeded = project.getTotalCost().getAmount() < addedCost + object.getUserStory().getCost();
+
+			super.state(!costExceeded, "userStory", "manager.project.form.error.cost-exceeded");
 		}
 
 	}

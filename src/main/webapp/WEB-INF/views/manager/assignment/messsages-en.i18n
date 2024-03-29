@@ -13,5 +13,6 @@ manager.assignment.form.label.userStory = User story
 manager.assignment.form.button.create = Assign
 
 manager.project.form.error.duplicated-userStory = Duplicated user story
+manager.project.form.error.cost-exceeded = The user story added cost exceeds the total cost of the project
 
 manager.assignment.form.title = Assignment
