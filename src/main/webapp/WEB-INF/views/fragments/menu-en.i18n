@@ -24,7 +24,7 @@ master.menu.anonymous.favourite-link-karyouben = 28823709V: Youssafi Benichikh, 
 master.menu.anonymous.favourite-tomhuecal = 17476993Y : Huecas Calderón, Tomás
 master.menu.anonymous.favourite-link-gongarlam = 47267072W: García Lama, Gonzalo
 master.menu.anonymous.favourite-link-pabferper6 = 54370557Y: Fernández Pérez, Pablo
-
+master.menu.any.list.project = List unpublished projects
 
 # master.menu.administrator ###################################################
 
@@ -45,6 +45,13 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
+# master.menu.manager ##########################################################
+
+master.menu.manager = Manager
+master.menu.list.project = List your proyects
+master.menu.list.user-story = List your user stories
+master.menu.show.manager-dashboard = Show dashboard
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
@@ -53,3 +60,5 @@ master.menu.user-account.provider = Provider data
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
+master.menu.user-account.manager = Manager data
+master.menu.user-account.become-manager = Become a manager
