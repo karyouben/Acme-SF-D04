@@ -17,6 +17,7 @@ manager.project.form.label.link = Link
 manager.project.form.label.totalCost = Total cost
 manager.project.form.label.hasErrors = Has errors
 manager.project.form.label.draftMode = Is draft
+manager.project.list.label.draftMode = Is draft
 
 manager.project.form.button.update = Update
 manager.project.form.button.create = Create

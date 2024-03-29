@@ -25,7 +25,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-tomhuecal" action="https://www.google.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-gongarlam" action="https://forocoches.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-pabferper6" action="https://youtube.com/"/>
-
+			<acme:menu-suboption code="master.menu.any.list.project" action="/any/project/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
