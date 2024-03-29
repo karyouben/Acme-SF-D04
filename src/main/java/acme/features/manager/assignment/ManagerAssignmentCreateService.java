@@ -66,6 +66,7 @@ public class ManagerAssignmentCreateService extends AbstractService<Manager, Ass
 
 			super.state(!duplicatedUS, "userStory", "manager.project.form.error.duplicated-userStory");
 
+			//TODO: Calculate the cost in money to compare it correctly to cost
 			Project project = this.repository.findProjectById(projectId);
 			int addedCost = this.repository.findAssignmentsByProjectId(projectId).stream().mapToInt(a -> a.getUserStory().getCost()).sum();
 
