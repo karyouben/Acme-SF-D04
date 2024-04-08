@@ -10,12 +10,15 @@
 - they accept any liabilities with respect to them.
 --%>
 
-<%@page language="java"%>
+<%@page%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="any.trainingModule.list.label.code" path="code"/>
-	<acme:list-column code="any.trainingModule.list.label.draftMode" path="draftMode"/>
+	<acme:list-column code="authenticated.developer.list.label.skills" path="skills"/>
 </acme:list>
+
+<jstl:if test="${_command == 'list'}">
+	<acme:button code="authenticated.developer.list.button.create" action="/authenticated/developer/create"/>
+</jstl:if>
