@@ -15,16 +15,7 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
-<acme:form>				
-	<jstl:choose>
-		<jstl:when test="${_command == 'show'}">
-			<acme:submit code="manager.assignment.form.button.delete" action="/manager/assignment/delete?projectId=${projectId}"/>
-		</jstl:when>		
+<acme:list>
+	<acme:list-column code="manager.assignment.form.label.userStory" path="userStory"/>
+</acme:list>
 
-		<jstl:when test="${_command == 'create'}">
-			<acme:input-select code="manager.assignment.form.label.userStory" path="userStory" choices="${userStories}"/>	
-			<acme:submit code="manager.assignment.form.button.create" action="/manager/assignment/create?projectId=${projectId}"/>
-		</jstl:when>		
-	</jstl:choose>	
-				
-</acme:form>

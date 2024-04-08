@@ -1,6 +1,9 @@
 
 package acme.features.manager.project;
 
+import java.util.List;
+import java.util.stream.Stream;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,6 +11,7 @@ import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.entities.project.Project;
+import acme.entities.systemconf.SystemConfiguration;
 import acme.roles.Manager;
 
 @Service
@@ -49,7 +53,7 @@ public class ManagerProjectUpdateService extends AbstractService<Manager, Projec
 	public void bind(final Project object) {
 		assert object != null;
 
-		super.bind(object, "code", "title", "abstract$", "link", "totalCost");
+		super.bind(object, "code", "title", "abstract$", "link", "totalCost", "hasErrors");
 	}
 
 	@Override
@@ -67,6 +71,11 @@ public class ManagerProjectUpdateService extends AbstractService<Manager, Projec
 			final boolean duplicatedCode = object.getTotalCost().getAmount() < 0;
 
 			super.state(!duplicatedCode, "totalCost", "manager.project.form.error.negative-total-cost");
+
+			List<SystemConfiguration> sc = this.repository.findSystemConfiguration();
+			final boolean foundCurrency = Stream.of(sc.get(0).acceptedCurrencies.split(",")).anyMatch(c -> c.equals(object.getTotalCost().getCurrency()));
+
+			super.state(foundCurrency, "totalCost", "manager.project.form.error.currency-not-supported");
 		}
 
 	}
@@ -84,7 +93,7 @@ public class ManagerProjectUpdateService extends AbstractService<Manager, Projec
 	public void unbind(final Project object) {
 		assert object != null;
 
-		Dataset dataset = super.unbind(object, "code", "title", "abstract$", "link", "totalCost", "draftMode");
+		Dataset dataset = super.unbind(object, "code", "title", "abstract$", "link", "totalCost", "draftMode", "hasErrors");
 
 		super.getResponse().addData(dataset);
 	}

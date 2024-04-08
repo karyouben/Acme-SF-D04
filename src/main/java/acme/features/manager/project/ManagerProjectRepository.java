@@ -2,6 +2,7 @@
 package acme.features.manager.project;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -9,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import acme.client.repositories.AbstractRepository;
 import acme.entities.project.Assignment;
 import acme.entities.project.Project;
+import acme.entities.systemconf.SystemConfiguration;
 import acme.roles.Manager;
 
 @Repository
@@ -28,5 +30,8 @@ public interface ManagerProjectRepository extends AbstractRepository {
 
 	@Query("SELECT p FROM Project p")
 	Collection<Project> findAllProjects();
+
+	@Query("SELECT s FROM SystemConfiguration s")
+	List<SystemConfiguration> findSystemConfiguration();
 
 }

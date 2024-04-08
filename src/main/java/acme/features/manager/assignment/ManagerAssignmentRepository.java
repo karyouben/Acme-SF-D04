@@ -20,6 +20,9 @@ public interface ManagerAssignmentRepository extends AbstractRepository {
 	@Query("SELECT us FROM UserStory us WHERE us.id = :id")
 	UserStory findUserStoryById(int id);
 
+	@Query("SELECT a FROM Assignment a WHERE a.id = :id")
+	Assignment findAssignmentById(int id);
+
 	@Query("SELECT us FROM UserStory us WHERE us.manager.userAccount.id = :id")
 	Collection<UserStory> findUserStoriesByManagerId(int id);
 

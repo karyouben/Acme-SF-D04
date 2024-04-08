@@ -49,7 +49,7 @@ public class ManagerProjectDeleteService extends AbstractService<Manager, Projec
 	public void bind(final Project object) {
 		assert object != null;
 
-		super.bind(object, "code", "title", "abstract$", "link", "totalCost");
+		super.bind(object, "code", "title", "abstract$", "link", "totalCost", "hasErrors");
 	}
 
 	@Override
@@ -68,15 +68,9 @@ public class ManagerProjectDeleteService extends AbstractService<Manager, Projec
 	public void unbind(final Project object) {
 		assert object != null;
 
-		Dataset dataset = super.unbind(object, "code", "title", "abstract$", "link", "totalCost", "draftMode");
+		Dataset dataset = super.unbind(object, "code", "title", "abstract$", "link", "totalCost", "draftMode", "hasErrors");
 
 		super.getResponse().addData(dataset);
 	}
-
-	//	@Override
-	//	public void onSuccess() {
-	//		if (super.getRequest().getMethod().equals("POST"))
-	//			PrincipalHelper.handleUpdate();
-	//	}
 
 }

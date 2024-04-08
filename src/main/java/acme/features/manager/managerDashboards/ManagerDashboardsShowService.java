@@ -1,6 +1,9 @@
 
 package acme.features.manager.managerDashboards;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -55,16 +58,22 @@ public class ManagerDashboardsShowService extends AbstractService<Manager, Manag
 		userStoryCostStatistics.setMaximum(maximumUserStoryCost);
 		userStoryCostStatistics.setMinimum(minimumUserStoryCost);
 
-		Double averageProjectCost = this.repository.findAverageProjectCost(userAccountId);
-		Double deviationProjectCost = this.repository.findDeviationProjectCost(userAccountId);
-		Double minimumProjectCost = this.repository.findMinimumProjectCost(userAccountId);
-		Double maximumProjectCost = this.repository.findMaximumProjectCost(userAccountId);
+		Map<String, Statistics> projectCostStatistics = new HashMap<>();
 
-		final Statistics projectCostStatistics = new Statistics();
-		projectCostStatistics.setAverage(averageProjectCost);
-		projectCostStatistics.setDeviation(deviationProjectCost);
-		projectCostStatistics.setMaximum(maximumProjectCost);
-		projectCostStatistics.setMinimum(minimumProjectCost);
+		for (String currency : this.repository.findSystemConfiguration().get(0).getAcceptedCurrencies().split(",")) {
+			Double averageProjectCost = this.repository.findAverageProjectCost(userAccountId, currency);
+			Double deviationProjectCost = this.repository.findDeviationProjectCost(userAccountId, currency);
+			Double minimumProjectCost = this.repository.findMinimumProjectCost(userAccountId, currency);
+			Double maximumProjectCost = this.repository.findMaximumProjectCost(userAccountId, currency);
+
+			final Statistics statistics = new Statistics();
+			statistics.setAverage(averageProjectCost);
+			statistics.setDeviation(deviationProjectCost);
+			statistics.setMaximum(maximumProjectCost);
+			statistics.setMinimum(minimumProjectCost);
+
+			projectCostStatistics.put(currency, statistics);
+		}
 
 		final ManagerDashboards dashboard = new ManagerDashboards();
 

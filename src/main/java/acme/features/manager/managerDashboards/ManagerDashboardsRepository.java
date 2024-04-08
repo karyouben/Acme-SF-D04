@@ -1,11 +1,14 @@
 
 package acme.features.manager.managerDashboards;
 
+import java.util.List;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
 import acme.entities.project.Priority;
+import acme.entities.systemconf.SystemConfiguration;
 import acme.roles.Manager;
 
 @Repository
@@ -29,15 +32,19 @@ public interface ManagerDashboardsRepository extends AbstractRepository {
 	@Query("select min(us.cost) FROM UserStory us WHERE us.manager.userAccount.id = :id")
 	Double findMinimumUserStoryCost(int id);
 
-	@Query("select avg(p.totalCost.amount) FROM Project p WHERE p.manager.userAccount.id = :id")
-	Double findAverageProjectCost(int id);
+	@Query("select avg(p.totalCost.amount) FROM Project p WHERE p.manager.userAccount.id = :id and p.totalCost.currency = :currency")
+	Double findAverageProjectCost(int id, String currency);
 
-	@Query("select stddev(p.totalCost.amount) FROM Project p WHERE p.manager.userAccount.id = :id")
-	Double findDeviationProjectCost(int id);
+	@Query("select stddev(p.totalCost.amount) FROM Project p WHERE p.manager.userAccount.id = :id and p.totalCost.currency = :currency")
+	Double findDeviationProjectCost(int id, String currency);
 
-	@Query("select max(p.totalCost.amount) FROM Project p WHERE p.manager.userAccount.id = :id")
-	Double findMaximumProjectCost(int id);
+	@Query("select max(p.totalCost.amount) FROM Project p WHERE p.manager.userAccount.id = :id and p.totalCost.currency = :currency")
+	Double findMaximumProjectCost(int id, String currency);
 
-	@Query("select min(p.totalCost.amount) FROM Project p WHERE p.manager.userAccount.id = :id")
-	Double findMinimumProjectCost(int id);
+	@Query("select min(p.totalCost.amount) FROM Project p WHERE p.manager.userAccount.id = :id and p.totalCost.currency = :currency")
+	Double findMinimumProjectCost(int id, String currency);
+
+	@Query("SELECT s FROM SystemConfiguration s")
+	List<SystemConfiguration> findSystemConfiguration();
+
 }

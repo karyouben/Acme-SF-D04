@@ -17,6 +17,7 @@ manager.project.form.label.link = Link
 manager.project.form.label.totalCost = Total cost
 manager.project.form.label.hasErrors = Has errors
 manager.project.form.label.draftMode = Is draft
+manager.project.form.label.hasErrors = Has errors
 manager.project.list.label.draftMode = Is draft
 
 manager.project.form.button.update = Update
@@ -27,9 +28,14 @@ manager.project.form.button.publish = Publish
 
 manager.project.form.error.duplicated-code = Duplicated code
 manager.project.form.error.negative-total-cost = Total cost must be positive or nought
+manager.project.form.error.currency-not-supported = Currency not supported
+manager.project.form.error.hasErrors = Project has errors
+manager.project.form.error.userStories-draft = There are unpublished user stories assigned to the project
+manager.project.form.error.userStories-empty = Project has no user stories assigned
 
 manager.project.form.button.userstories = List user stories
 manager.project.form.button.add-userstories = Add user story
+manager.project.form.button.remove-userstories = Remove user stories
 
 manager.project.form.title = Proyect
 manager.project.list.title = Proyects

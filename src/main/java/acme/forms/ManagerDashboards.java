@@ -1,6 +1,8 @@
 
 package acme.forms;
 
+import java.util.Map;
+
 import acme.client.data.AbstractForm;
 import acme.datatypes.Statistics;
 import lombok.Getter;
@@ -12,21 +14,21 @@ public class ManagerDashboards extends AbstractForm {
 
 	// Serialisation identifier -----------------------------------------------
 
-	private static final long	serialVersionUID	= 1L;
+	private static final long		serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 
 	// Total number of userStory with each Priority
 
-	private Integer				totalMustUserStories;
-	private Integer				totalShouldUserStories;
-	private Integer				totalCouldUserStories;
-	private Integer				totalWontUserStories;
+	private Integer					totalMustUserStories;
+	private Integer					totalShouldUserStories;
+	private Integer					totalCouldUserStories;
+	private Integer					totalWontUserStories;
 
 	//	Average, deviation, minimum, and maximum estimated cost of the user stories
-	private Statistics			userStoryCostStatistics;
+	private Statistics				userStoryCostStatistics;
 
 	//	Average, deviation, minimum, and maximum estimated cost of the project
-	private Statistics			projectCostStatistics;
+	private Map<String, Statistics>	projectCostStatistics;
 
 }
