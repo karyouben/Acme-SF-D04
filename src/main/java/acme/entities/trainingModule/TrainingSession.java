@@ -18,6 +18,7 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
+import acme.roles.Developer;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -34,7 +35,7 @@ public class TrainingSession extends AbstractEntity {
 
 	@Column(unique = true)
 	@NotBlank
-	@Pattern(regexp = "^TS-[A-Z]{1,3}-[0-9]{3}$")
+	@Pattern(regexp = "^TS-[A-Z]{1,3}-\\d{3}$")
 	private String				code;
 
 	@NotNull
@@ -60,11 +61,18 @@ public class TrainingSession extends AbstractEntity {
 	@URL
 	private String				link;
 
+	private boolean				draftMode;
+
 	// Relationships ----------------------------------
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
 	private TrainingModule		trainingModule;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Developer			developer;
 
 }
