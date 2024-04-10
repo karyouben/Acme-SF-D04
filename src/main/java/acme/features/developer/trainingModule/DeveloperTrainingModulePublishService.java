@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
 import acme.entities.trainingModule.DifficultyLevel;
@@ -61,6 +62,14 @@ public class DeveloperTrainingModulePublishService extends AbstractService<Devel
 	@Override
 	public void validate(final TrainingModule object) {
 		assert object != null;
+
+		final String CREATION_MOMENT = "creationMoment";
+		final String UPDATE_MOMENT = "updateMoment";
+
+		if (!super.getBuffer().getErrors().hasErrors(CREATION_MOMENT) && !super.getBuffer().getErrors().hasErrors(UPDATE_MOMENT)) {
+			final boolean startBeforeEnd = MomentHelper.isAfter(object.getUpdateMoment(), object.getCreationMoment());
+			super.state(startBeforeEnd, UPDATE_MOMENT, "developer.trainingModule.form.error.end-before-start");
+		}
 
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			final int trainingModuleId = super.getRequest().getData("id", int.class);

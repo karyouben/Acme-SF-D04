@@ -27,6 +27,7 @@ developer.trainingModule.form.button.publish = Publish
 
 developer.trainingModule.form.error.duplicated-code = Duplicated code
 developer.trainingModule.form.error.negative-total-time = Total time must be positive or nought
+developer.trainingModule.form.error.end-before-start = The update moment must be after the creation moment
 
 developer.trainingModule.form.button.trainingsessions = List training sessions
 developer.trainingModule.form.button.add-trainingsessions = Add training sessions

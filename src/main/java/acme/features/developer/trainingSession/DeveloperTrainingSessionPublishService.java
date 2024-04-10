@@ -1,11 +1,14 @@
 
 package acme.features.developer.trainingSession;
 
+import java.time.temporal.ChronoUnit;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.trainingModule.TrainingSession;
 import acme.roles.Developer;
@@ -52,6 +55,20 @@ public class DeveloperTrainingSessionPublishService extends AbstractService<Deve
 	@Override
 	public void validate(final TrainingSession object) {
 		assert object != null;
+
+		final String PERIOD_START = "startPeriod";
+		final String PERIOD_END = "endPeriod";
+
+		if (!super.getBuffer().getErrors().hasErrors(PERIOD_START) && !super.getBuffer().getErrors().hasErrors(PERIOD_END)) {
+			final boolean startBeforeEnd = MomentHelper.isAfter(object.getEndPeriod(), object.getStartPeriod());
+			super.state(startBeforeEnd, PERIOD_END, "developer.trainingSession.form.error.end-before-start");
+
+			if (startBeforeEnd) {
+				final boolean startOneWeekBeforeEndMinimum = MomentHelper.isLongEnough(object.getStartPeriod(), object.getEndPeriod(), 7, ChronoUnit.DAYS);
+
+				super.state(startOneWeekBeforeEndMinimum, PERIOD_END, "developer.trainingSession.form.error.small-display-period");
+			}
+		}
 
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			final int trainingSessionId = super.getRequest().getData("id", int.class);

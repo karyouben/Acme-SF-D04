@@ -25,6 +25,8 @@ developer.trainingsession.form.button.delete = Eliminar
 developer.trainingsession.form.button.publish = Publicar
 
 developer.trainingsession.form.error.duplicated-code = Código duplicado
+developer.trainingSession.form.error.end-before-start = El período de finalización debe ser posterior al período de inicio.
+developer.trainingSession.form.error.small-display-period = El período debe durar al menos una semana.
 
 developer.training-session.list.title = Sesión de entrenamiento
 developer.training-session.list.title = Sesiones de entrenamiento
