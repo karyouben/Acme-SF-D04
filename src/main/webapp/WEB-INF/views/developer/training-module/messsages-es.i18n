@@ -31,5 +31,5 @@ developer.trainingModule.form.error.negative-total-time = El tiempo total debe s
 developer.trainingModule.form.button.trainingsessions = Listar sesiones de entrenamiento
 developer.trainingModule.form.button.add-trainingsessions = Agregar sesiones de entrenamiento
 
-developer.trainingModule.form.title = Modulo de entrenamiento
-developer.trainingModule.list.title = Modulos de entrenamiento
+developer.training-module.form.title = Modulo de entrenamiento
+developer.training-module.list.title = Modulos de entrenamiento

@@ -19,5 +19,5 @@ any.trainingModule.form.label.totalTime = Tiempo Total
 any.trainingModule.form.label.draftMode = Es borrador
 any.trainingModule.list.label.draftMode = Es borrador
 
-any.trainingModule.form.title = Modulo de entrenamiento
-any.trainingModule.list.title = Modulos de entrenamiento
+any.training-module.form.title = Modulo de entrenamiento
+any.training-module.list.title = Modulos de entrenamiento

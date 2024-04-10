@@ -31,5 +31,5 @@ developer.trainingModule.form.error.negative-total-time = Total time must be pos
 developer.trainingModule.form.button.trainingsessions = List training sessions
 developer.trainingModule.form.button.add-trainingsessions = Add training sessions
 
-developer.trainingModule.form.title = Training module
-developer.trainingModule.list.title = Training modules
+developer.training-module.form.title = Training module
+developer.training-module.list.title = Training modules

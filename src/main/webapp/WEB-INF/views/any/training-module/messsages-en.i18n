@@ -19,5 +19,5 @@ any.trainingModule.form.label.totalTime = Total time
 any.trainingModule.form.label.draftMode = Is draft
 any.trainingModule.list.label.draftMode = Is draft
 
-any.trainingModule.form.title = Training module
-any.trainingModule.list.title = Training modules
+any.training-module.form.title = Training module
+any.training-module.list.title = Training modules
