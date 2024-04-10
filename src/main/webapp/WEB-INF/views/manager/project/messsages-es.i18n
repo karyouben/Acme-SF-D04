@@ -18,6 +18,8 @@ manager.project.form.label.link = Link
 manager.project.form.label.totalCost = Coste total
 manager.project.form.label.hasErrors = Tiene errores
 manager.project.form.label.draftMode = Es borrador 
+manager.project.form.label.hasErrors = Tiene errores
+
 manager.project.list.label.draftMode = Es borrador
 
 manager.project.form.button.update = Actualizar
@@ -28,9 +30,14 @@ manager.project.form.button.publish = Publicar
 
 manager.project.form.error.duplicated-code = Código duplicado
 manager.project.form.error.negative-total-cost = El coste total debe ser positivo o cero
+manager.project.form.error.currency-not-supported = Divisa no permitida
+manager.project.form.error.hasErrors = El proyecto tiene errores
+manager.project.form.error.userStories-draft = Hay historias de usuario no publicadas asignadas a este proyecto
+manager.project.form.error.userStories-empty = El proyecto no tiene historias de usuario asignadas
 
 manager.project.form.button.userstories = Listar historias de usuario
 manager.project.form.button.add-userstories = Añadir historia de usuario
+manager.project.form.button.remove-userstories = Eliminar historias de usuario
 
 
 manager.project.form.title = Proyecto

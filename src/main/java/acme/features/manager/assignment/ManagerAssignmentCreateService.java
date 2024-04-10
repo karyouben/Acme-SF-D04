@@ -33,7 +33,7 @@ public class ManagerAssignmentCreateService extends AbstractService<Manager, Ass
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = project != null && principal.hasRole(Manager.class) && project.getManager().getUserAccount().getId() == userAccountId;
+		final boolean authorise = project != null && project.isDraftMode() && principal.hasRole(Manager.class) && project.getManager().getUserAccount().getId() == userAccountId;
 
 		super.getResponse().setAuthorised(authorise);
 	}
@@ -65,14 +65,6 @@ public class ManagerAssignmentCreateService extends AbstractService<Manager, Ass
 			final boolean duplicatedUS = this.repository.findAssignmentsByProjectId(projectId).stream().anyMatch(a -> a.getUserStory().equals(object.getUserStory()));
 
 			super.state(!duplicatedUS, "userStory", "manager.project.form.error.duplicated-userStory");
-
-			//TODO: Calculate the cost in money to compare it correctly to cost
-			Project project = this.repository.findProjectById(projectId);
-			int addedCost = this.repository.findAssignmentsByProjectId(projectId).stream().mapToInt(a -> a.getUserStory().getCost()).sum();
-
-			final boolean costExceeded = project.getTotalCost().getAmount() < addedCost + object.getUserStory().getCost();
-
-			super.state(!costExceeded, "userStory", "manager.project.form.error.cost-exceeded");
 		}
 
 	}
@@ -90,7 +82,10 @@ public class ManagerAssignmentCreateService extends AbstractService<Manager, Ass
 		final int projectId = super.getRequest().getData("projectId", int.class);
 
 		int managerID = object.getProject().getManager().getUserAccount().getId();
-		Collection<UserStory> userStories = this.repository.findUserStoriesByManagerId(managerID);
+		Collection<UserStory> userStories = this.repository.findUserStoriesByManagerId(managerID).stream() //
+			.filter(us -> !this.repository.findAssignmentsByProjectId(projectId).stream().map(Assignment::getUserStory).anyMatch(us2 -> us2.equals(us))) //
+			.toList();
+
 		SelectChoices choices = SelectChoices.from(userStories, "title", object.getUserStory());
 
 		Dataset dataset = super.unbind(object, "userStory");

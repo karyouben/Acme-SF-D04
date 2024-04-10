@@ -55,14 +55,15 @@
 </table>
 
 <h2>
-	<acme:message code="manager.dashboard.form.title.statistics"/>
+	<acme:message code="manager.dashboard.form.title.statistics"/>	
 </h2>
+
+<h3>
+	<acme:message code="manager.dashboard.form.label.statistics-object-user-story"/>
+</h3>
 
 <table class="table table-sm">
 	<tr>
-		<th>
-			<acme:message code="manager.dashboard.form.label.statistics-object"/>
-		</th>
 		<th>
 			<acme:message code="manager.dashboard.form.label.statistics-average"/>
 		</th>
@@ -78,9 +79,6 @@
 	</tr>
 	<tr>
 		<td>
-			<acme:message code="manager.dashboard.form.label.statistics-object-user-story"/>
-		</td>
-		<td>
 			<acme:print value="${userStoryCostStatistics.getAverageString()} hours"/>
 		</td>
 		<td>
@@ -93,23 +91,50 @@
 			<acme:print value="${userStoryCostStatistics.getMinimumString()} hours"/>
 		</td>
 	</tr>
+</table>
+
+<h3>
+	<acme:message code="manager.dashboard.form.label.statistics-object-user-story"/>
+</h3>
+
+<table class="table table-sm">
 	<tr>
-		<td>
-			<acme:message code="manager.dashboard.form.label.statistics-object-project"/>
-		</td>
-		<td>
-			<acme:print value="${projectCostStatistics.getAverageString()} EUR"/>
-		</td>
-		<td>
-			<acme:print value="${projectCostStatistics.getDeviationString()} EUR"/>
-		</td>
-		<td>
-			<acme:print value="${projectCostStatistics.getMaximumString()} EUR"/>
-		</td>
-		<td>
-			<acme:print value="${projectCostStatistics.getMinimumString()} EUR"/>
-		</td>
-	</tr>	
+		<th>
+			<acme:message code="manager.dashboard.form.label.statistics-currency"/>
+		</th>
+		<th>
+			<acme:message code="manager.dashboard.form.label.statistics-average"/>
+		</th>
+		<th>
+			<acme:message code="manager.dashboard.form.label.statistics-deviation"/>
+		</th>
+		<th>
+			<acme:message code="manager.dashboard.form.label.statistics-maximum"/>
+		</th>
+		<th>
+			<acme:message code="manager.dashboard.form.label.statistics-minimum"/>
+		</th>
+	</tr>
+	
+	<jstl:forEach var="entry" items="${projectCostStatistics}">
+	  	<tr>
+			<td>
+				<acme:print value="${entry.key}"/>
+			</td>
+			<td>
+				<acme:print value="${entry.value.getAverageString()}"/>
+			</td>
+			<td>
+				<acme:print value="${entry.value.getDeviationString()}"/>
+			</td>
+			<td>
+				<acme:print value="${entry.value.getMaximumString()}"/>
+			</td>
+			<td>
+				<acme:print value="${entry.value.getMinimumString()}"/>
+			</td>
+		</tr>	
+	</jstl:forEach>
 </table>
 
 

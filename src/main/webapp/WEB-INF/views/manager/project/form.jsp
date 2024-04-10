@@ -21,22 +21,22 @@
 	<acme:input-textbox code="manager.project.form.label.abstract" path="abstract$"/>
 	<acme:input-url code="manager.project.form.label.link" path="link"/>
 	<acme:input-money code="manager.project.form.label.totalCost" path="totalCost"/>
+	<acme:input-checkbox code="manager.project.form.label.hasErrors" path="hasErrors"/>
 	
 						
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
 			<acme:button code="manager.project.form.button.add-userstories" action="/manager/assignment/create?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.remove-userstories" action="/manager/assignment/list-by-proyect?projectId=${id}"/>
 			<acme:button code="manager.project.form.button.userstories" action="/manager/user-story/list-by-proyect?projectId=${id}"/>
-		
 			<acme:submit code="manager.project.form.button.update" action="/manager/project/update"/>
 			<acme:submit code="manager.project.form.button.delete" action="/manager/project/delete"/>
-			<acme:button code="manager.project.form.button.publish" action="/manager/project/publish?id=${id}"/>
+			<acme:submit code="manager.project.form.button.publish" action="/manager/project/publish?id=${id}"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
 			<acme:submit code="manager.project.form.button.create" action="/manager/project/create"/>
 		</jstl:when>		
 		<jstl:otherwise>
-			<acme:button code="manager.project.form.button.add-userstories" action="/manager/assignment/create?projectId=${id}"/>
 			<acme:button code="manager.project.form.button.userstories" action="/manager/user-story/list-by-proyect?projectId=${id}"/>
 		</jstl:otherwise>		
 	</jstl:choose>	

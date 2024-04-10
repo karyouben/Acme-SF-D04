@@ -16,14 +16,26 @@ public class ManagerAssignmentController extends AbstractController<Manager, Ass
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected ManagerAssignmentCreateService createService;
+	protected ManagerAssignmentListService		listService;
+
+	@Autowired
+	protected ManagerAssignmentShowService		showService;
+
+	@Autowired
+	protected ManagerAssignmentCreateService	createService;
+
+	@Autowired
+	protected ManagerAssignmentDeleteService	deleteService;
 
 	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
+		super.addCustomCommand("list-by-proyect", "list", this.listService);
+		super.addBasicCommand("show", this.showService);
 		super.addBasicCommand("create", this.createService);
+		super.addBasicCommand("delete", this.deleteService);
 	}
 
 }
