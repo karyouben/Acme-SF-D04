@@ -37,4 +37,14 @@
 	<acme:footer-logo logo="images/logo.png" alt="master.company.name">
 		<acme:footer-copyright code="master.company.name"/>
 	</acme:footer-logo>
+		
 </acme:footer-panel>
+
+<jstl:if test="${banner != null}">
+	<div class="panel-body" style="margin: 1em 0em 1em 0em; text-align: center;">				
+		<a href="javascript: redirect('${banner.linkWebDoc}', '_blank')" style="text-decoration: underline; cursor: pointer">
+			<img src="${banner.linkPicture}" alt="<acme:message code='${banner.slogan}'/>" class="img-fluid rounded" style="border-style: solid; max-height: 120px; width: 80%; object-fit: cover;"/>
+		</a>
+	</div>
+</jstl:if>
+
