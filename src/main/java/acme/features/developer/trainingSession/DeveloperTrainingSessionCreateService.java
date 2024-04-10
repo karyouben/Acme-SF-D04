@@ -35,7 +35,7 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 		final int id = super.getRequest().getPrincipal().getActiveRoleId();
 
 		TrainingSession trainingSession = new TrainingSession();
-		trainingSession.setDeveloper(this.repository.findDeveloperById(id));
+		trainingSession.getTrainingModule().setDeveloper(this.repository.findDeveloperById(id));
 		trainingSession.setDraftMode(true);
 
 		super.getBuffer().addData(trainingSession);

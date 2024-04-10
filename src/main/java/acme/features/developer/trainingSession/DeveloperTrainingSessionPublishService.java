@@ -29,7 +29,7 @@ public class DeveloperTrainingSessionPublishService extends AbstractService<Deve
 		int id = super.getRequest().getData("id", int.class);
 		TrainingSession trainingSession = this.repository.findTrainingSessionById(id);
 
-		final boolean authorise = trainingSession != null && trainingSession.isDraftMode() && principal.hasRole(Developer.class) && trainingSession.getDeveloper().getUserAccount().getId() == userAccountId;
+		final boolean authorise = trainingSession != null && trainingSession.isDraftMode() && principal.hasRole(Developer.class) && trainingSession.getTrainingModule().getDeveloper().getUserAccount().getId() == userAccountId;
 
 		super.getResponse().setAuthorised(authorise);
 	}
