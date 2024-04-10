@@ -16,7 +16,7 @@ public interface DeveloperDashboardsRepository extends AbstractRepository {
 	@Query("SELECT count(t) FROM TrainingModule t WHERE t.developer.userAccount.id = :id and t.updateMoment IS NOT NULL")
 	int totalTrainingModulesWithUpdateMoment(int id);
 
-	@Query("SELECT count(t) FROM TrainingSession t WHERE t.developer.userAccount.id = :id and t.link IS NOT NULL")
+	@Query("SELECT count(t) FROM TrainingSession t WHERE t.trainingModule.developer.userAccount.id = :id and t.link IS NOT NULL")
 	int totalTrainingSessionsWithLink(int id);
 
 	@Query("select avg(t.totalTime) FROM TrainingModule t WHERE t.developer.userAccount.id = :id")
