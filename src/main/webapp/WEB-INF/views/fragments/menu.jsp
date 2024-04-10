@@ -26,6 +26,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-gongarlam" action="https://forocoches.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-pabferper6" action="https://youtube.com/"/>
 			<acme:menu-suboption code="master.menu.any.list.project" action="/any/project/list"/>
+			<acme:menu-suboption code="master.menu.any.list.trainingModule" action="/any/training-module/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
@@ -51,6 +52,12 @@
 			<acme:menu-suboption code="master.menu.list.user-story" action="/manager/user-story/list"/>
 			<acme:menu-suboption code="master.menu.show.manager-dashboard" action="/manager/manager-dashboards/show"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.developer" access="hasRole('Developer')">
+			<acme:menu-suboption code="master.menu.list.trainingModule" action="/developer/training-module/list"/>
+			<acme:menu-suboption code="master.menu.list.training-session" action="/developer/training-session/list"/>
+			<acme:menu-suboption code="master.menu.show.developer-dashboard" action="/developer/developer-dashboards/show"/>
+		</acme:menu-option>
 	</acme:menu-left>
 
 	<acme:menu-right>
@@ -65,6 +72,8 @@
 			<acme:menu-suboption code="master.menu.user-account.consumer" action="/authenticated/consumer/update" access="hasRole('Consumer')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-manager" action="/authenticated/manager/create" access="!hasRole('Manager')"/>
 			<acme:menu-suboption code="master.menu.user-account.manager" action="/authenticated/manager/update" access="hasRole('Manager')"/>
+			<acme:menu-suboption code="master.menu.training-session.become-developer" action="/authenticated/developer/create" access="!hasRole('Developer')"/>
+			<acme:menu-suboption code="master.menu.training-session.developer" action="/authenticated/developer/update" access="hasRole('Developer')"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/authenticated/system/sign-out" access="isAuthenticated()"/>

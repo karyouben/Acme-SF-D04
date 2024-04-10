@@ -25,6 +25,7 @@ master.menu.anonymous.favourite-tomhuecal = 17476993Y : Huecas Calderón, Tomás
 master.menu.anonymous.favourite-link-gongarlam = 47267072W: García Lama, Gonzalo
 master.menu.anonymous.favourite-link-pabferper6 = 54370557Y: Fernández Pérez, Pablo
 master.menu.any.list.project = List unpublished projects
+master.menu.any.list.trainingModule = List unpublished training modules
 
 # master.menu.administrator ###################################################
 
@@ -52,6 +53,13 @@ master.menu.list.project = List your proyects
 master.menu.list.user-story = List your user stories
 master.menu.show.manager-dashboard = Show dashboard
 
+# master.menu.developer ##########################################################
+
+master.menu.developer = Developer
+master.menu.list.trainingModule = List your training modules
+master.menu.list.training-session = List your training sessions
+master.menu.show.developer-dashboard = Show dashboard
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
@@ -62,3 +70,5 @@ master.menu.user-account.consumer = Consumer data
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.manager = Manager data
 master.menu.user-account.become-manager = Become a manager
+master.menu.user-account.developer = Developer data
+master.menu.user-account.become-developer = Become a developer
