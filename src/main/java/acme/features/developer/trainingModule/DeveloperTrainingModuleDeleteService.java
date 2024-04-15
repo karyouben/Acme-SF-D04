@@ -1,6 +1,8 @@
 
 package acme.features.developer.trainingModule;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -8,8 +10,10 @@ import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
+import acme.entities.project.Project;
 import acme.entities.trainingModule.DifficultyLevel;
 import acme.entities.trainingModule.TrainingModule;
+import acme.entities.trainingModule.TrainingSession;
 import acme.roles.Developer;
 
 @Service
@@ -52,7 +56,11 @@ public class DeveloperTrainingModuleDeleteService extends AbstractService<Develo
 	public void bind(final TrainingModule object) {
 		assert object != null;
 
-		super.bind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "totalTime");
+		int projectId = super.getRequest().getData("project", int.class);
+		Project project = this.repository.findProjectById(projectId);
+
+		super.bind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "totalTime", "project");
+		object.setProject(project);
 	}
 
 	@Override
@@ -64,6 +72,10 @@ public class DeveloperTrainingModuleDeleteService extends AbstractService<Develo
 	public void perform(final TrainingModule object) {
 		assert object != null;
 
+		Collection<TrainingSession> sessions = this.repository.findTrainingSessionsByTrainingModuleId(object.getId());
+
+		this.repository.deleteAll(sessions);
+
 		this.repository.delete(object);
 	}
 
@@ -71,11 +83,16 @@ public class DeveloperTrainingModuleDeleteService extends AbstractService<Develo
 	public void unbind(final TrainingModule object) {
 		assert object != null;
 
+		Collection<Project> projects = this.repository.findAllProjects();
+		SelectChoices projectsChoices = SelectChoices.from(projects, "code", object.getProject());
+
 		SelectChoices choices = SelectChoices.from(DifficultyLevel.class, object.getDifficultyLevel());
 
-		Dataset dataset = super.unbind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "totalTime");
+		Dataset dataset = super.unbind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "totalTime", "project");
 
 		dataset.put("difficultyLevelOptions", choices);
+		dataset.put("project", projectsChoices.getSelected().getKey());
+		dataset.put("projects", projectsChoices);
 
 		super.getResponse().addData(dataset);
 	}

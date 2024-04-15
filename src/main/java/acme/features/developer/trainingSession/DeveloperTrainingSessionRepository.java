@@ -7,6 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
+import acme.entities.project.Project;
 import acme.entities.trainingModule.TrainingModule;
 import acme.entities.trainingModule.TrainingSession;
 import acme.roles.Developer;
@@ -32,9 +33,10 @@ public interface DeveloperTrainingSessionRepository extends AbstractRepository {
 	@Query("SELECT t FROM TrainingSession t")
 	Collection<TrainingSession> findAllTrainingSessions();
 
-	/*
-	 * @Query("SELECT DISTINCT d FROM Developer d JOIN d.trainingModules tm JOIN tm.trainingSessions ts WHERE ts.id = :id")
-	 * Developer findDeveloperBySessionId(int id);
-	 */
+	@Query("select p from Project p")
+	Collection<Project> findAllProjects();
+
+	@Query("select p from Project p where p.id = :id")
+	Project findProjectById(int id);
 
 }

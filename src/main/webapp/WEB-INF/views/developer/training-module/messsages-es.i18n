@@ -16,6 +16,8 @@ developer.trainingModule.form.label.difficultyLevel = Nivel de dificultad
 developer.trainingModule.form.label.updateMoment = Momento de actualización
 developer.trainingModule.form.label.link = Link
 developer.trainingModule.form.label.totalTime = Tiempo Total
+developer.training-module.list.label.project = Proyecto
+developer.training-module.form.label.project = Proyecto
 developer.trainingModule.form.label.draftMode = Es borrador
 developer.trainingModule.list.label.draftMode = Es borrador
 

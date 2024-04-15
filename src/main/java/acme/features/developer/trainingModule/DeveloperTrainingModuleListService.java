@@ -25,11 +25,8 @@ public class DeveloperTrainingModuleListService extends AbstractService<Develope
 
 	@Override
 	public void authorise() {
-		boolean status;
 
-		status = super.getRequest().getPrincipal().hasRole(Developer.class);
-
-		super.getResponse().setAuthorised(status);
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override

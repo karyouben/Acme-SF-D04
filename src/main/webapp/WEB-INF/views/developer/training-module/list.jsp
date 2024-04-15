@@ -18,6 +18,7 @@
 <acme:list>
 	<acme:list-column code="developer.trainingModule.list.label.code" path="code"/>
 	<acme:list-column code="developer.trainingModule.list.label.draftMode" path="draftMode"/>
+	<acme:list-column code="developer.training-module.list.label.project" path="project" width="10%"/>
 </acme:list>
 
 <jstl:if test="${_command == 'list'}">
