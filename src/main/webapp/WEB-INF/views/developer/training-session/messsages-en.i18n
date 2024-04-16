@@ -1,0 +1,37 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+developer.trainingsession.list.label.code = Code
+developer.trainingsession.form.label.code = Code
+developer.trainingsession.form.label.startPeriod = Start period
+developer.trainingsession.form.label.endPeriod = End period
+developer.trainingsession.form.label.location = Location
+developer.trainingsession.form.label.instructor = Instructor
+developer.trainingsession.form.label.contactEmail = Contact email
+developer.trainingsession.form.label.link = Link
+
+
+developer.trainingsession.form.button.update = Update
+developer.trainingsession.form.button.create = Create
+developer.trainingsession.list.button.create = Create
+developer.trainingsession.form.button.delete = Delete
+developer.trainingsession.form.button.publish = Publish
+
+developer.trainingsession.form.error.duplicated-code = Duplicated code
+developer.trainingSession.form.error.end-before-start = The end period must be after the start period
+developer.trainingSession.form.error.small-display-period = The period must last at least one week.
+
+developer.training-session.list.title = Training session
+developer.training-session.list.title = Training sessions
+
+developer.training-session.form.title = Training session
+developer.training-session.form.title = Training sessions
+
+developer.trainingModule.list.label.draftMode = Is draft

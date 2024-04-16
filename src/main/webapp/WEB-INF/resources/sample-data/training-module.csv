@@ -1,28 +1,28 @@
-key,code,creation-moment,details,difficulty-level,update-moment,link,total-time,key:project,key:developer
-training-module-01,AA-000,2000/01/01 00:00,detalles1,ADVANCED,2022/07/29 23:59,https://www.sport.es,10,project-01,developer-01
-training-module-02,AA-001,2000/01/01 00:01,detalles2,ADVANCED,2022/07/29 23:58,https://www.pocketpair.jp,11,project-01,developer-01
-training-module-03,A-000,2000/01/01 00:00,detalles3,BASIC,2022/07/02 06:22,https://www.nintendo.com,1,project-01,developer-01
-training-module-04,A-001,2012/11/22 16:22,detalle,BASIC,2022/07/02 18:37,https://twitter.com/avogado6,12,project-01,developer-01
-training-module-05,AAA-001,2000/01/01 00:00,detalles,BASIC,2022/07/02 00:00,https://twitter.com/avogado6,12,project-01,developer-01
-training-module-06,AB-000,2015/05/26 23:58,detallesdetallesdetalles,BASIC,2022/07/29 23:59,https://twitter.com/elonmusk,100,project-01,developer-01
-training-module-07,AZB-001,2018/02/26 23:57,deta,BASIC,2022/07/29 23:59,https://twitter.com/JeffBezos,324,project-01,developer-01
-training-module-08,AB-002,2010/07/29 23:58,detalles,BASIC,2022/07/29 23:59,https://twitter.com/Tesla,666,project-01,developer-01
-training-module-09,AAA-000,2001/07/29 23:58,สวัสดีชาวโลก,BASIC,2022/07/29 23:59,https://twitter.com/Google,9,project-01,developer-01
-training-module-10,AB-004,2001/07/29 23:57,fGhI三AbCdEfGhI四AbCdEfGhI五AbCdEfGhI六Ab,BASIC,2022/07/29 23:59,https://twitter.com/X,99,project-01,developer-01
-training-module-11,YYY-000,2005/03/01 00:00,detalles,INTERMEDIATE,2022/03/02 00:00,https://twitter.com/cnnbrk,999,project-01,developer-01
-training-module-12,YYY-001,2004/03/01 00:00,detalles,ADVANCED,2022/03/02 00:00,https://twitter.com/Windows,573,project-01,developer-01
-training-module-13,ZZZ-000,2007/07/01 00:00,世界多米纳兰独角兽,BASIC,,,978573,project-01,developer-01
-training-module-14,ZZZ-001,2000/01/01 00:01,detalles,BASIC,2010/07/29 23:59,https://twitter.com/Microsoft,238462384,project-01,developer-01
-training-module-15,YY-000,2000/01/01 00:00,detalles,INTERMEDIATE,2000/01/01 00:01,https://twitter.com/Windows,999999999,project-01,developer-01
-training-module-16,ZZ-000,2000/01/01 00:01,detalles,BASIC,2000/01/01 00:02,https://twitter.com/NVIDIAGeForce,32,project-01,developer-01
-training-module-17,ZY-001,2001/01/01 23:58,Лос-единороги доминируют в Эль-Мундо,BASIC,2001/01/01 23:59,https://twitter.com/OpenAI,20,project-01,developer-01
-training-module-18,AB-012,2001/01/01 23:59,detalles,INTERMEDIATE,2001/01/02 00:00,https://twitter.com/GoogleAI,1,project-01,developer-01
-training-module-19,AC-013,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,http://第1节.com,2,project-01,developer-01
-training-module-20,AD-998,2022/07/02 00:00,detalles,ADVANCED,2022/07/03 00:00,https://module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1modul.com,3,project-02,developer-01
-training-module-21,AB-523,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,https://module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1modu.com,4,project-01,developer-02
-training-module-22,AJ-999,2022/07/01 00:00,detallesdetallesdetallesdetallesdetallesdetallesde,BASIC,2022/07/02 00:00,http://S.com,40,project-01,developer-01
-training-module-23,AH-099,2022/07/01 00:00,d,BASIC,2022/07/02 00:00,,48,project-01,developer-01
-training-module-24,AB-018,2022/07/01 00:00,de,BASIC,2022/07/02 00:00,http://se.com,10,project-01,developer-01
-training-module-25,AN-009,2022/07/01 08:22,detallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdeta,BASIC,2022/07/02 15:00,http://Андрей.com,6,project-01,developer-01
-training-module-26,AB-920,2022/07/01 13:21,detallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdet,INTERMEDIATE,2022/07/02 04:37,,4000,project-01,developer-01
-training-module-27,AHN-263,2022/07/01 00:00,deTAILS,BASIC,,https://www.sport.es,333,project-02,developer-02
+key,code,creation-moment,details,difficulty-level,update-moment,link,total-time,draft-mode,key:project,key:developer
+training-module-01,AA-000,2000/01/01 00:00,detalles1,ADVANCED,2022/07/29 23:59,https://www.sport.es,10,false,project-01,developer-01
+training-module-02,AA-001,2000/01/01 00:01,detalles2,ADVANCED,2022/07/29 23:58,https://www.pocketpair.jp,11,true,project-01,developer-01
+training-module-03,A-000,2000/01/01 00:00,detalles3,BASIC,2022/07/02 06:22,https://www.nintendo.com,1,false,project-01,developer-01
+training-module-04,A-001,2012/11/22 16:22,detalle,BASIC,2022/07/02 18:37,https://twitter.com/avogado6,12,false,project-01,developer-01
+training-module-05,AAA-001,2000/01/01 00:00,detalles,BASIC,2022/07/02 00:00,https://twitter.com/avogado6,12,false,project-01,developer-01
+training-module-06,AB-000,2015/05/26 23:58,detallesdetallesdetalles,BASIC,2022/07/29 23:59,https://twitter.com/elonmusk,100,false,project-01,developer-01
+training-module-07,AZB-001,2018/02/26 23:57,deta,BASIC,2022/07/29 23:59,https://twitter.com/JeffBezos,324,false,project-01,developer-01
+training-module-08,AB-002,2010/07/29 23:58,detalles,BASIC,2022/07/29 23:59,https://twitter.com/Tesla,666,false,project-01,developer-01
+training-module-09,AAA-000,2001/07/29 23:58,สวัสดีชาวโลก,BASIC,2022/07/29 23:59,https://twitter.com/Google,9,false,project-01,developer-01
+training-module-10,AB-004,2001/07/29 23:57,fGhI三AbCdEfGhI四AbCdEfGhI五AbCdEfGhI六Ab,BASIC,2022/07/29 23:59,https://twitter.com/X,99,false,project-01,developer-01
+training-module-11,YYY-000,2005/03/01 00:00,detalles,INTERMEDIATE,2022/03/02 00:00,https://twitter.com/cnnbrk,999,false,project-01,developer-01
+training-module-12,YYY-001,2004/03/01 00:00,detalles,ADVANCED,2022/03/02 00:00,https://twitter.com/Windows,573,false,project-01,developer-01
+training-module-13,ZZZ-000,2007/07/01 00:00,世界多米纳兰独角兽,BASIC,,,978573,false,project-01,developer-01
+training-module-14,ZZZ-001,2000/01/01 00:01,detalles,BASIC,2010/07/29 23:59,https://twitter.com/Microsoft,238462384,false,project-01,developer-01
+training-module-15,YY-000,2000/01/01 00:00,detalles,INTERMEDIATE,2000/01/01 00:01,https://twitter.com/Windows,999999999,false,project-01,developer-01
+training-module-16,ZZ-000,2000/01/01 00:01,detalles,BASIC,2000/01/01 00:02,https://twitter.com/NVIDIAGeForce,32,false,project-01,developer-01
+training-module-17,ZY-001,2001/01/01 23:58,Лос-единороги доминируют в Эль-Мундо,BASIC,2001/01/01 23:59,https://twitter.com/OpenAI,20,false,project-01,developer-01
+training-module-18,AB-012,2001/01/01 23:59,detalles,INTERMEDIATE,2001/01/02 00:00,https://twitter.com/GoogleAI,1,false,project-01,developer-01
+training-module-19,AC-013,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,http://第1节.com,2,false,project-01,developer-01
+training-module-20,AD-998,2022/07/02 00:00,detalles,ADVANCED,2022/07/03 00:00,https://module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1modul.com,3,false,project-02,developer-01
+training-module-21,AB-523,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,https://module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1modu.com,4,false,project-01,developer-02
+training-module-22,AJ-999,2022/07/01 00:00,detallesdetallesdetallesdetallesdetallesdetallesde,BASIC,2022/07/02 00:00,http://S.com,40,false,project-01,developer-01
+training-module-23,AH-099,2022/07/01 00:00,d,BASIC,2022/07/02 00:00,,48,false,project-01,developer-01
+training-module-24,AB-018,2022/07/01 00:00,de,BASIC,2022/07/02 00:00,http://se.com,10,false,project-01,developer-01
+training-module-25,AN-009,2022/07/01 08:22,detallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdeta,BASIC,2022/07/02 15:00,http://Андрей.com,6,false,project-01,developer-01
+training-module-26,AB-920,2022/07/01 13:21,detallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdet,INTERMEDIATE,2022/07/02 04:37,,4000,false,project-01,developer-01
+training-module-27,AHN-263,2022/07/01 00:00,deTAILS,BASIC,,https://www.sport.es,333,false,project-02,developer-02
