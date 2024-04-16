@@ -25,8 +25,9 @@ master.menu.anonymous.favourite-tomhuecal = 17476993Y : Huecas Calderón, Tomás
 master.menu.anonymous.favourite-link-gongarlam = 47267072W: García Lama, Gonzalo
 master.menu.anonymous.favourite-link-pabferper6 = 54370557Y: Fernández Pérez, Pablo
 master.menu.any.list.project = Listar proyectos no publicados
-master.menu.any.list.claim = Listar reclamaciones
 master.menu.any.list.trainingModule = Listar módulos de entrenamiento no publicados
+master.menu.any.list.claim = Listar reclamaciones
+
 
 # master.menu.administrator ###################################################
 
