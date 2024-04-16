@@ -27,6 +27,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link-pabferper6" action="https://youtube.com/"/>
 			<acme:menu-suboption code="master.menu.any.list.project" action="/any/project/list"/>
 			<acme:menu-suboption code="master.menu.any.list.trainingModule" action="/any/training-module/list"/>
+			<acme:menu-suboption code="master.menu.any.list.contract" action="/any/contract/list"/>
 			<acme:menu-suboption code="master.menu.any.list.claim" action="/any/claim/list"/>
 		</acme:menu-option>
 
@@ -62,6 +63,13 @@
 			<acme:menu-suboption code="master.menu.list.training-session" action="/developer/training-session/list"/>
 			<acme:menu-suboption code="master.menu.show.developer-dashboard" action="/developer/developer-dashboards/show"/>
 		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.client" access="hasRole('Client')">
+			<acme:menu-suboption code="master.menu.list.contract" action="/client/contract/list"/>
+			<acme:menu-suboption code="master.menu.list.progress" action="/client/progress/list"/>
+			<acme:menu-suboption code="master.menu.show.client-dashboard" action="/client/client-dashboards/show"/>
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>
@@ -78,6 +86,8 @@
 			<acme:menu-suboption code="master.menu.user-account.manager" action="/authenticated/manager/update" access="hasRole('Manager')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-developer" action="/authenticated/developer/create" access="!hasRole('Developer')"/>
 			<acme:menu-suboption code="master.menu.user-account.developer" action="/authenticated/developer/update" access="hasRole('Developer')"/>
+			<acme:menu-suboption code="master.menu.user-account.become-client" action="/authenticated/client/create" access="!hasRole('Client')"/>
+			<acme:menu-suboption code="master.menu.user-account.client" action="/authenticated/client/update" access="hasRole('Client')"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sign-out" action="/authenticated/system/sign-out" access="isAuthenticated()"/>

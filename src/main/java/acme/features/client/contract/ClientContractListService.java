@@ -1,6 +1,57 @@
+
 package acme.features.client.contract;
 
+import java.util.Collection;
+import java.util.Locale;
 
-public class ClientContractListService {
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import acme.client.data.models.Dataset;
+import acme.client.services.AbstractService;
+import acme.entities.contract.Contract;
+import acme.roles.client.Client;
+
+@Service
+public class ClientContractListService extends AbstractService<Client, Contract> {
+
+	// Internal state ---------------------------------------------------------
+
+	@Autowired
+	protected ClientContractRepository repository;
+
+	// AbstractService<Authenticated, Consumer> ---------------------------
+
+
+	@Override
+	public void authorise() {
+
+		super.getResponse().setAuthorised(true);
+	}
+
+	@Override
+	public void load() {
+		Collection<Contract> contracts;
+
+		final int id = super.getRequest().getPrincipal().getAccountId();
+		contracts = this.repository.findAllContractsByClientId(id);
+
+		super.getBuffer().addData(contracts);
+	}
+
+	@Override
+	public void unbind(final Contract object) {
+		assert object != null;
+
+		final Dataset dataset = super.unbind(object, "code");
+
+		if (object.isDraftMode()) {
+			final Locale local = super.getRequest().getLocale();
+			dataset.put("draftMode", local.equals(Locale.ENGLISH) ? "Yes" : "Sí");
+		} else
+			dataset.put("draftMode", "No");
+
+		super.getResponse().addData(dataset);
+	}
 
 }

@@ -1,0 +1,38 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+client.contract.form.label.code = Code
+client.contract.list.label.code = Code
+client.contract.form.label.details = Details
+client.contract.form.label.providerName = Provider
+client.contract.form.label.customerName = Customer
+client.contract.form.label.instantiation = Instantation
+client.contract.form.label.goals = Goals
+client.contract.form.label.budget = Budget
+client.contract.list.label.project = Project
+client.contract.form.label.project = Project
+client.contract.form.label.draftMode = Is draft
+client.contract.list.label.draftMode = Is draft
+
+client.contract.form.button.update = Update
+client.contract.form.button.create = Create
+client.contract.list.button.create = Create
+client.contract.form.button.delete = Delete
+client.contract.form.button.publish = Publish
+
+client.contract.form.error.duplicated-code = Duplicated code
+client.contract.form.error.budget-total-cost = Error budget must be less than the total project cost
+
+client.contract.form.button.progress = List progress log contract
+client.contract.form.button.add-progress = Add progress log
+
+client.contract.form.title = Contract module
+client.contract.list.title = Contracts modules
+

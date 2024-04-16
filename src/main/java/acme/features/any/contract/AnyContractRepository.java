@@ -1,6 +1,21 @@
+
 package acme.features.any.contract;
 
+import java.util.Collection;
 
-public interface AnyContractRepository {
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import acme.client.repositories.AbstractRepository;
+import acme.entities.contract.Contract;
+
+@Repository
+public interface AnyContractRepository extends AbstractRepository {
+
+	@Query("SELECT c FROM Contract c")
+	Collection<Contract> findAllPublishedContract();
+
+	@Query("SELECT c FROM Contract c WHERE c.id = :id")
+	Contract findContractById(int id);
 
 }

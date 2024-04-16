@@ -51,6 +51,8 @@ public class Contract extends AbstractEntity {
 	@NotBlank
 	protected String			goals;
 
+	private boolean				draftMode;
+
 	@Valid
 	@ManyToOne
 	@JoinColumn(name = "project_id", nullable = false)

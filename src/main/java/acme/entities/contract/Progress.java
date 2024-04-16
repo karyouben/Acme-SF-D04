@@ -48,6 +48,8 @@ public class Progress extends AbstractEntity {
 	@NotBlank
 	protected String			responsable;
 
+	private boolean				draftMode;
+
 	@Valid
 	@ManyToOne
 	@JoinColumn(name = "contract_id", nullable = false)
