@@ -63,7 +63,7 @@ public class ClientProgressLogDeleteService extends AbstractService<Client, Prog
 	public void unbind(final Progress object) {
 		assert object != null;
 
-		Dataset dataset = super.unbind(object, "record", "completeness", "comment", "responsable", "draftMode");
+		Dataset dataset = super.unbind(object, "record", "completeness", "comment", "registration", "responsable", "draftMode");
 
 		super.getResponse().addData(dataset);
 	}

@@ -36,7 +36,6 @@
 				action="/client/progress/create?contractId=${id}" />
 			<acme:button code="client.contract.form.button.progress"
 				action="/client/progress/list-by-contract?contractId=${id}" />
-
 			<acme:submit code="client.contract.form.button.update"
 				action="/client/contract/update" />
 			<acme:submit code="client.contract.form.button.delete"

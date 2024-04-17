@@ -64,9 +64,9 @@ public class ClientContractCreateService extends AbstractService<Client, Contrac
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("budget")) {
-			final boolean duplicatedCode = object.getBudget() < object.getProject().getTotalCost().getAmount();
+			final boolean budget = object.getBudget() < object.getProject().getTotalCost().getAmount();
 
-			super.state(!duplicatedCode, "budget", "client.contract.form.error.budget-total-cost");
+			super.state(!budget, "budget", "client.contract.form.error.budget-total-cost");
 		}
 
 	}

@@ -46,7 +46,7 @@ public class ClientProgressLogShowService extends AbstractService<Client, Progre
 	public void unbind(final Progress object) {
 		assert object != null;
 
-		Dataset dataset = super.unbind(object, "record", "completeness", "comment", "responsable", "draftMode");
+		Dataset dataset = super.unbind(object, "record", "completeness", "comment", "registration", "responsable", "draftMode");
 
 		super.getResponse().addData(dataset);
 	}

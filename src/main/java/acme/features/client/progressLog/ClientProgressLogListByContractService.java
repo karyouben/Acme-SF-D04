@@ -43,7 +43,7 @@ public class ClientProgressLogListByContractService extends AbstractService<Clie
 		Collection<Progress> progress;
 
 		final int contractId = super.getRequest().getData("contractId", int.class);
-		progress = this.repository.findProgresssByClientId(contractId).stream().toList();
+		progress = this.repository.findProgresssByContractId(contractId).stream().toList();
 
 		super.getBuffer().addData(progress);
 	}

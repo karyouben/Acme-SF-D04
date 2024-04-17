@@ -61,15 +61,6 @@ public class ClientContractUpdateService extends AbstractService<Client, Contrac
 	public void validate(final Contract object) {
 		assert object != null;
 
-		final String CREATION_MOMENT = "creationMoment";
-		final String UPDATE_MOMENT = "updateMoment";
-
-		if (!super.getBuffer().getErrors().hasErrors("code")) {
-			final boolean duplicatedCode = this.repository.findAllContracts().stream().anyMatch(e -> e.getCode().equals(object.getCode()));
-
-			super.state(!duplicatedCode, "code", "client.contract.form.error.duplicated-code");
-		}
-
 		if (!super.getBuffer().getErrors().hasErrors("budget")) {
 			final boolean duplicatedCode = object.getBudget() < object.getProject().getTotalCost().getAmount();
 

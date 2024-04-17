@@ -44,20 +44,12 @@ public class ClientProgressLogUpdateService extends AbstractService<Client, Prog
 	public void bind(final Progress object) {
 		assert object != null;
 
-		super.bind(object, "record", "completeness", "comment", "responsable");
+		super.bind(object, "record", "completeness", "comment", "registration", "responsable");
 	}
 
 	@Override
 	public void validate(final Progress object) {
 		assert object != null;
-
-		assert object != null;
-
-		if (!super.getBuffer().getErrors().hasErrors("record")) {
-			final boolean duplicatedCode = this.repository.findAllProgresss().stream().anyMatch(e -> e.getRecord().equals(object.getRecord()));
-
-			super.state(!duplicatedCode, "record", "client.progress.form.error.duplicated-record");
-		}
 	}
 
 	@Override

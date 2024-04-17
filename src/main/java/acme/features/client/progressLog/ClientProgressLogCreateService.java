@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
+import acme.entities.contract.Contract;
 import acme.entities.contract.Progress;
 import acme.roles.client.Client;
 
@@ -30,12 +31,10 @@ public class ClientProgressLogCreateService extends AbstractService<Client, Prog
 
 	@Override
 	public void load() {
-		final int id = super.getRequest().getPrincipal().getActiveRoleId();
-
+		Contract contract = this.repository.findContractById(409);
 		Progress progress = new Progress();
-		progress.getContract().setClient(this.repository.findClientById(id));
+		progress.setContract(contract);
 		progress.setDraftMode(true);
-
 		super.getBuffer().addData(progress);
 	}
 
@@ -43,7 +42,7 @@ public class ClientProgressLogCreateService extends AbstractService<Client, Prog
 	public void bind(final Progress object) {
 		assert object != null;
 
-		super.bind(object, "record", "completeness", "comment", "responsable");
+		super.bind(object, "record", "completeness", "comment", "registration", "responsable");
 	}
 
 	@Override
@@ -68,7 +67,7 @@ public class ClientProgressLogCreateService extends AbstractService<Client, Prog
 	public void unbind(final Progress object) {
 		assert object != null;
 
-		Dataset dataset = super.unbind(object, "record", "completeness", "comment", "responsable", "draftMode");
+		Dataset dataset = super.unbind(object, "record", "completeness", "comment", "registration", "responsable", "draftMode");
 
 		super.getResponse().addData(dataset);
 	}

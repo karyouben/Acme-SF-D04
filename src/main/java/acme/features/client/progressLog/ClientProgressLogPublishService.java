@@ -42,7 +42,7 @@ public class ClientProgressLogPublishService extends AbstractService<Client, Pro
 	public void bind(final Progress object) {
 		assert object != null;
 
-		super.bind(object, "record", "completeness", "comment", "responsable");
+		super.bind(object, "record", "completeness", "comment", "registration", "responsable");
 	}
 
 	@Override
@@ -69,7 +69,7 @@ public class ClientProgressLogPublishService extends AbstractService<Client, Pro
 	public void unbind(final Progress object) {
 		assert object != null;
 
-		Dataset dataset = super.unbind(object, "record", "completeness", "comment", "responsable", "draftMode");
+		Dataset dataset = super.unbind(object, "record", "completeness", "comment", "registration", "responsable", "draftMode");
 
 		super.getResponse().addData(dataset);
 	}
