@@ -6,7 +6,6 @@ import java.time.temporal.ChronoUnit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
@@ -27,11 +26,8 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 
 	@Override
 	public void authorise() {
-		final Principal principal = super.getRequest().getPrincipal();
 
-		final boolean authorise = principal.hasRole(Developer.class);
-
-		super.getResponse().setAuthorised(authorise);
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
@@ -91,6 +87,7 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 		assert object != null;
 
 		Dataset dataset = super.unbind(object, "code", "startPeriod", "endPeriod", "location", "instructor", "contactEmail", "link", "draftMode");
+		dataset.put("trainingModuleId", object.getTrainingModule().getId());
 
 		super.getResponse().addData(dataset);
 	}
