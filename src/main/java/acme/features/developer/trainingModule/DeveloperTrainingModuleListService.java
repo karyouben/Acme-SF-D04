@@ -9,6 +9,8 @@ import org.springframework.stereotype.Service;
 
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
+import acme.client.views.SelectChoices;
+import acme.entities.project.Project;
 import acme.entities.trainingModule.TrainingModule;
 import acme.roles.Developer;
 
@@ -43,7 +45,12 @@ public class DeveloperTrainingModuleListService extends AbstractService<Develope
 	public void unbind(final TrainingModule object) {
 		assert object != null;
 
-		final Dataset dataset = super.unbind(object, "code");
+		Collection<Project> projects = this.repository.findAllProjects();
+		SelectChoices projectsChoices = SelectChoices.from(projects, "code", object.getProject());
+
+		final Dataset dataset = super.unbind(object, "code", "project");
+		dataset.put("project", projectsChoices.getSelected().getLabel());
+		dataset.put("projects", projectsChoices);
 
 		if (object.isDraftMode()) {
 			final Locale local = super.getRequest().getLocale();

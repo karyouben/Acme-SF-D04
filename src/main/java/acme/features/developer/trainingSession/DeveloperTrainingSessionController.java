@@ -47,7 +47,7 @@ public class DeveloperTrainingSessionController extends AbstractController<Devel
 		super.addBasicCommand("update", this.updateService);
 		super.addBasicCommand("delete", this.deleteService);
 
-		super.addCustomCommand("list-by-proyect", "list", this.listByProyectService);
+		super.addCustomCommand("list-by-training-module", "list", this.listByProyectService);
 		super.addCustomCommand("publish", "update", this.publishService);
 	}
 

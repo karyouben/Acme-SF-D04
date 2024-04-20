@@ -20,7 +20,6 @@ developer.trainingsession.form.label.link = Link
 
 developer.trainingsession.form.button.update = Actualizar
 developer.trainingsession.form.button.create = Crear
-developer.trainingsession.list.button.create = Crear
 developer.trainingsession.form.button.delete = Eliminar
 developer.trainingsession.form.button.publish = Publicar
 
@@ -35,3 +34,4 @@ developer.training-session.form.title = Sesión de entrenamiento
 developer.training-session.form.title = Sesiones de entrenamiento
 
 developer.trainingModule.list.label.draftMode = Es borrador
+developer.trainingModule.list.label.trainingModule = Modulo de entrenamiento
