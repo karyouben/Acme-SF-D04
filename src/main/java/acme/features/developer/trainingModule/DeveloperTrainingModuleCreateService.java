@@ -2,6 +2,7 @@
 package acme.features.developer.trainingModule;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -51,20 +52,17 @@ public class DeveloperTrainingModuleCreateService extends AbstractService<Develo
 		Project project = this.repository.findProjectById(projectId);
 
 		super.bind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "totalTime", "project");
+
+		Date currentMoment = MomentHelper.getCurrentMoment();
+		Date creationMoment = new Date(currentMoment.getTime() - 600000); //Substracts 9 minutes to ensure the moment is in the past
+
+		object.setCreationMoment(creationMoment);
 		object.setProject(project);
 	}
 
 	@Override
 	public void validate(final TrainingModule object) {
 		assert object != null;
-
-		final String CREATION_MOMENT = "creationMoment";
-		final String UPDATE_MOMENT = "updateMoment";
-
-		if (!super.getBuffer().getErrors().hasErrors(CREATION_MOMENT) && !super.getBuffer().getErrors().hasErrors(UPDATE_MOMENT)) {
-			final boolean startBeforeEnd = MomentHelper.isAfter(object.getUpdateMoment(), object.getCreationMoment());
-			super.state(startBeforeEnd, UPDATE_MOMENT, "developer.trainingModule.form.error.end-before-start");
-		}
 
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			final boolean duplicatedCode = this.repository.findAllTrainingModules().stream().anyMatch(e -> e.getCode().equals(object.getCode()));
