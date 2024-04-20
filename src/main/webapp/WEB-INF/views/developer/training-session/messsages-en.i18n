@@ -20,7 +20,6 @@ developer.trainingsession.form.label.link = Link
 
 developer.trainingsession.form.button.update = Update
 developer.trainingsession.form.button.create = Create
-developer.trainingsession.list.button.create = Create
 developer.trainingsession.form.button.delete = Delete
 developer.trainingsession.form.button.publish = Publish
 

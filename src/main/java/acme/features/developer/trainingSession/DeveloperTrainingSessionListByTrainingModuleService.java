@@ -60,6 +60,12 @@ public class DeveloperTrainingSessionListByTrainingModuleService extends Abstrac
 		} else
 			dataset.put("draftMode", "No");
 
+		int trainingModuleId;
+
+		trainingModuleId = super.getRequest().getData("trainingModuleId", int.class);
+
+		super.getResponse().addGlobal("trainingModuleId", trainingModuleId);
+
 		super.getResponse().addData(dataset);
 	}
 
