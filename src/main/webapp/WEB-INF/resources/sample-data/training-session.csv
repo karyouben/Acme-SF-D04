@@ -1,6 +1,6 @@
 key,code,start-period,end-period,location,instructor,contact-email,link,draft-mode,key:trainingModule
 training-session-01,TS-AA-000,2000/01/01 00:00,2200/12/31 23:59,Sevilla,Pochita,evangelion@acme.com,https://www.sport.es,false,training-module-01
-training-session-02,TS-AA-001,2000/01/01 00:01,2200/12/31 23:58,Sevilla,Pochita,CarlFriedrichGauss@hotmail.com,https://www.pocketpair.jp,false,training-module-01
+training-session-02,TS-AA-001,2000/01/01 00:01,2200/12/31 23:58,Sevilla,Pochita,CarlFriedrichGauss@hotmail.com,https://www.pocketpair.jp,true,training-module-01
 training-session-03,TS-AZB-001,2000/01/01 00:00,2000/01/08 00:00,Madrid,Asuka,Euclides@hotmail.es,https://www.nintendo.com,false,training-module-05
 training-session-04,TS-A-000,2022/07/03 00:00,2022/07/17 00:00,Sevilla,Pochita,RenéDescartes@gmail.com,https://twitter.com/avogado6,false,training-module-01
 training-session-05,TS-A-001,2000/01/01 00:00,2000/01/08 00:01,Tokyo,Denji,AlanTuring@acme.com,https://twitter.com/avogado6,false,training-module-03

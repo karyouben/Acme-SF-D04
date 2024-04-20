@@ -10,6 +10,7 @@ import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
+import acme.entities.trainingModule.TrainingModule;
 import acme.entities.trainingModule.TrainingSession;
 import acme.roles.Developer;
 
@@ -35,10 +36,12 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 
 	@Override
 	public void load() {
-		final int id = super.getRequest().getPrincipal().getActiveRoleId();
+
+		final int trainingModuleId = super.getRequest().getData("trainingModuleId", int.class);
+		TrainingModule trainingModule = this.repository.findTrainingModuleById(trainingModuleId);
 
 		TrainingSession trainingSession = new TrainingSession();
-		trainingSession.getTrainingModule().setDeveloper(this.repository.findDeveloperById(id));
+		trainingSession.setTrainingModule(trainingModule);
 		trainingSession.setDraftMode(true);
 
 		super.getBuffer().addData(trainingSession);

@@ -32,7 +32,7 @@
 			<acme:button code="developer.trainingsession.form.button.publish" action="/developer/training-session/publish?id=${id}"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
-			<acme:submit code="developer.trainingsession.form.button.create" action="/developer/training-session/create"/>
+			<acme:submit code="developer.trainingsession.form.button.create" action="/developer/training-session/create?trainingModuleId=${id}"/>
 		</jstl:when>		
 	</jstl:choose>
 			
