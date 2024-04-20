@@ -2,6 +2,7 @@
 package acme.features.developer.trainingModule;
 
 import java.util.Collection;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -59,7 +60,12 @@ public class DeveloperTrainingModuleUpdateService extends AbstractService<Develo
 		int projectId = super.getRequest().getData("project", int.class);
 		Project project = this.repository.findProjectById(projectId);
 
+		Date currentMoment = MomentHelper.getCurrentMoment();
+		Date updateMoment = new Date(currentMoment.getTime() - 1000); //Substracts one second to ensure the moment is in the past
+
 		super.bind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "totalTime", "project");
+
+		object.setUpdateMoment(updateMoment);
 		object.setProject(project);
 	}
 
