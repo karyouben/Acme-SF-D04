@@ -48,12 +48,6 @@ public class ClientProgressLogPublishService extends AbstractService<Client, Pro
 	@Override
 	public void validate(final Progress object) {
 		assert object != null;
-
-		if (!super.getBuffer().getErrors().hasErrors("record")) {
-			final boolean duplicatedCode = this.repository.findAllProgresss().stream().anyMatch(e -> e.getRecord().equals(object.getRecord()));
-
-			super.state(!duplicatedCode, "record", "client.progress.form.error.duplicated-record");
-		}
 	}
 
 	@Override

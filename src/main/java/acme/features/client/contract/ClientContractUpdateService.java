@@ -53,7 +53,7 @@ public class ClientContractUpdateService extends AbstractService<Client, Contrac
 		int projectId = super.getRequest().getData("project", int.class);
 		Project project = this.repository.findProjectById(projectId);
 
-		super.bind(object, "code", "instantiation", "providerName", "customerName", "goals", "project");
+		super.bind(object, "code", "instantiation", "providerName", "customerName", "goals", "budget", "project");
 		object.setProject(project);
 	}
 
@@ -62,9 +62,9 @@ public class ClientContractUpdateService extends AbstractService<Client, Contrac
 		assert object != null;
 
 		if (!super.getBuffer().getErrors().hasErrors("budget")) {
-			final boolean duplicatedCode = object.getBudget() < object.getProject().getTotalCost().getAmount();
+			final boolean budget = object.getBudget() > object.getProject().getTotalCost().getAmount();
 
-			super.state(!duplicatedCode, "budget", "client.contract.form.error.budget-total-cost");
+			super.state(!budget, "budget", "client.contract.form.error.budget-total-cost");
 		}
 
 	}

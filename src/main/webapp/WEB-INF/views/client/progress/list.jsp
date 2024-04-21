@@ -21,5 +21,4 @@
 </acme:list>
 
 <jstl:if test="${_command == 'list'}">
-	<acme:button code="client.progress.list.button.create" action="/client/progress/create"/>
 </jstl:if>

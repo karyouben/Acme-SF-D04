@@ -40,7 +40,7 @@
 				action="/client/contract/update" />
 			<acme:submit code="client.contract.form.button.delete"
 				action="/client/contract/delete" />
-			<acme:button code="client.contract.form.button.publish"
+			<acme:submit code="client.contract.form.button.publish"
 				action="/client/contract/publish?id=${id}" />
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">

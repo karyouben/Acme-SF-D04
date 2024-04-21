@@ -4,7 +4,6 @@ package acme.features.client.progressLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.entities.contract.Contract;
@@ -22,19 +21,18 @@ public class ClientProgressLogCreateService extends AbstractService<Client, Prog
 
 	@Override
 	public void authorise() {
-		final Principal principal = super.getRequest().getPrincipal();
-
-		final boolean authorise = principal.hasRole(Client.class);
-
-		super.getResponse().setAuthorised(authorise);
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
 	public void load() {
-		Contract contract = this.repository.findContractById(409);
+		final int contractId = super.getRequest().getData("contractId", int.class);
+		Contract contract = this.repository.findContractById(contractId);
+
 		Progress progress = new Progress();
 		progress.setContract(contract);
 		progress.setDraftMode(true);
+
 		super.getBuffer().addData(progress);
 	}
 
@@ -68,6 +66,7 @@ public class ClientProgressLogCreateService extends AbstractService<Client, Prog
 		assert object != null;
 
 		Dataset dataset = super.unbind(object, "record", "completeness", "comment", "registration", "responsable", "draftMode");
+		dataset.put("contractId", super.getRequest().getData("contractId", int.class));
 
 		super.getResponse().addData(dataset);
 	}

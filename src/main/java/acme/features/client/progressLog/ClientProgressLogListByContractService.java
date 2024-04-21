@@ -60,6 +60,12 @@ public class ClientProgressLogListByContractService extends AbstractService<Clie
 		} else
 			dataset.put("draftMode", "No");
 
+		int contractId;
+
+		contractId = super.getRequest().getData("contractId", int.class);
+
+		super.getResponse().addGlobal("contractId", contractId);
+
 		super.getResponse().addData(dataset);
 	}
 
