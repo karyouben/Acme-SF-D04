@@ -12,7 +12,7 @@ import acme.entities.trainingModule.TrainingModule;
 @Repository
 public interface AnyTrainingModuleRepository extends AbstractRepository {
 
-	@Query("SELECT t FROM TrainingModule t WHERE t.draftMode = true")
+	@Query("SELECT t FROM TrainingModule t WHERE t.draftMode = false")
 	Collection<TrainingModule> findAllPublishedTrainingModules();
 
 	@Query("SELECT t FROM TrainingModule t WHERE t.id = :id")
