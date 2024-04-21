@@ -32,7 +32,7 @@ public class DeveloperTrainingSessionUpdateService extends AbstractService<Devel
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = trainingSession != null && trainingSession.isDraftMode() && principal.hasRole(Developer.class) && trainingSession.getTrainingModule().getDeveloper().getUserAccount().getId() == userAccountId;
+		final boolean authorise = trainingSession != null && trainingSession.isDraftMode() && trainingSession.getTrainingModule().getDeveloper().getUserAccount().getId() == userAccountId;
 
 		super.getResponse().setAuthorised(authorise);
 	}

@@ -60,8 +60,8 @@ master.menu.show.manager-dashboard = Mostrar panel
 # master.menu.developer ##########################################################
 
 master.menu.developer = Desarrollador
-master.menu.list.trainingModule = Listar tus módulos de entrenamiento
-master.menu.list.training-session = Listar tus sesiones de entrenamiento
+master.menu.list.trainingModule = Listar mis módulos de entrenamiento
+master.menu.list.training-session = Listar mis sesiones de entrenamiento
 master.menu.show.developer-dashboard = Mostrar panel
 
 # master.menu.user-account ####################################################

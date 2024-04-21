@@ -36,10 +36,7 @@ public class DeveloperTrainingModulePublishService extends AbstractService<Devel
 		int masterId = super.getRequest().getData("id", int.class);
 		TrainingModule trainingModule = this.repository.findTrainingModuleById(masterId);
 
-		List<TrainingSession> ls = this.repository.findTrainingSessionsByTrainingModuleId(masterId).stream().toList();
-
-		boolean status = trainingModule != null && trainingModule.isDraftMode() && principal.hasRole(trainingModule.getDeveloper()) && trainingModule.getDeveloper().getUserAccount().getId() == userAccountId && !ls.isEmpty()
-			&& ls.stream().anyMatch(us -> !us.isDraftMode());
+		boolean status = trainingModule != null && trainingModule.isDraftMode() && trainingModule.getDeveloper().getUserAccount().getId() == userAccountId;
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -80,6 +77,13 @@ public class DeveloperTrainingModulePublishService extends AbstractService<Devel
 
 			super.state(!duplicatedCode, "totalTime", "developer.trainingModule.form.error.negative-total-time");
 		}
+
+		int masterId = super.getRequest().getData("id", int.class);
+		List<TrainingSession> ls = this.repository.findTrainingSessionsByTrainingModuleId(masterId).stream().toList();
+		final boolean someDraftTrainingSession = ls.stream().anyMatch(Session -> Session.isDraftMode());
+		final boolean noSession = ls.isEmpty();
+		super.state(!noSession, "*", "developer.trainingModule.form.error.trainingSession-empty");
+		super.state(!someDraftTrainingSession, "*", "developer.trainingModule.form.error.trainingSession-draft");
 
 	}
 
