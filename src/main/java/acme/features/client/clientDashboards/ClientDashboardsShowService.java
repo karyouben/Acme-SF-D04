@@ -45,8 +45,8 @@ public class ClientDashboardsShowService extends AbstractService<Client, ClientD
 
 		Double findAverageContractBudget = this.repository.findAverageContractBudget(userAccountId);
 		Double findDeviationContractBudget = this.repository.findDeviationContractBudget(userAccountId);
-		Double findMaximumContractBudget = this.repository.findMinimumContractBudget(userAccountId);
-		Double findMinimumContractBudget = this.repository.findMaximumContractBudget(userAccountId);
+		Double findMaximumContractBudget = this.repository.findMaximumContractBudget(userAccountId);
+		Double findMinimumContractBudget = this.repository.findMinimumContractBudget(userAccountId);
 
 		final Statistics contractTimeStatistics = new Statistics();
 		contractTimeStatistics.setAverage(findAverageContractBudget);
