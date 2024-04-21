@@ -1,0 +1,24 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+manager.dashboard.form.title.total-user-stories = Número de historias de usuario
+manager.dashboard.form.label.total-must-user-stories = Número total de historias de usuario tipo must
+manager.dashboard.form.label.total-should-user-stories = Número total de historias de usuario tipo should
+manager.dashboard.form.label.total-could-user-stories = Número total de historias de usuario tipo could
+manager.dashboard.form.label.total-wont-user-stories = Número total de historias de usuario tipo wont
+manager.dashboard.form.title.statistics = Estadísticas
+manager.dashboard.form.label.statistics-object = Objeto
+manager.dashboard.form.label.statistics-average = Media
+manager.dashboard.form.label.statistics-deviation = Desviación
+manager.dashboard.form.label.statistics-maximum = Máximo
+manager.dashboard.form.label.statistics-minimum = Mínimo
+manager.dashboard.form.label.statistics-object-user-story = Historias de usuario
+manager.dashboard.form.label.statistics-object-project = Proyectos
+manager.manager-dashboards.form.title = Panel de Gestor

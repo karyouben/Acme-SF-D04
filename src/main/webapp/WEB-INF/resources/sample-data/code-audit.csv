@@ -1,4 +1,5 @@
-key,code,execution,type,correctiveActions,link,mark,key:project,key:auditor
-code-audit-01,ABC-123,2018/01/01 10:00,STATIC,"Lorem ipsum dolor sit amet consectetur adipiscing elit.",https://example.com,A_PLUS,project-01,auditor-02
-code-audit-02,DEF-456,2017/12/31 23:59,DYNAMIC,"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",https://anotherexample.com,B,project-01,auditor-01
-code-audit-03,GHI-789,2019/06/15 15:30,STATIC,"Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi.",,C,project-01,auditor-02
+key,code,execution,type,correctiveActions,link,key:project,key:auditor,draftMode
+code-audit-01,ABC-123,2018/01/01 10:00,STATIC,Lorem ipsum dolor sit amet consectetur adipiscing elit.,https://example.com,project-01,auditor-02,true
+code-audit-02,DEF-456,2017/12/31 23:59,DYNAMIC,Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.,https://anotherexample.com,project-01,auditor-01,false
+code-audit-03,GHI-789,2019/06/15 15:30,STATIC,Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi.,,project-01,auditor-02,true
+code-audit-04,AGH-082,2016/02/13 09:30,STATIC,corrective actions for audit 03,,project-01,auditor-01,true
