@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
+import acme.client.views.SelectChoices;
 import acme.entities.trainingModule.TrainingModule;
 import acme.entities.trainingModule.TrainingSession;
 import acme.roles.Developer;
@@ -52,13 +53,24 @@ public class DeveloperTrainingSessionListByTrainingModuleService extends Abstrac
 	public void unbind(final TrainingSession object) {
 		assert object != null;
 
-		final Dataset dataset = super.unbind(object, "code");
+		Collection<TrainingModule> trainingModules = this.repository.findAllTrainingModules();
+		SelectChoices trainingModulesChoices = SelectChoices.from(trainingModules, "code", object.getTrainingModule());
+
+		final Dataset dataset = super.unbind(object, "code", "trainingModule");
+		dataset.put("trainingModule", trainingModulesChoices.getSelected().getLabel());
+		dataset.put("trainingModules", trainingModulesChoices);
 
 		if (object.isDraftMode()) {
 			final Locale local = super.getRequest().getLocale();
 			dataset.put("draftMode", local.equals(Locale.ENGLISH) ? "Yes" : "Sí");
 		} else
 			dataset.put("draftMode", "No");
+
+		int trainingModuleId;
+
+		trainingModuleId = super.getRequest().getData("trainingModuleId", int.class);
+
+		super.getResponse().addGlobal("trainingModuleId", trainingModuleId);
 
 		super.getResponse().addData(dataset);
 	}

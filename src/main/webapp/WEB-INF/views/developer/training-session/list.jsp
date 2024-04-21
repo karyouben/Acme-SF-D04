@@ -18,8 +18,8 @@
 <acme:list>
 	<acme:list-column code="developer.trainingsession.list.label.code" path="code"/>
 	<acme:list-column code="developer.trainingModule.list.label.draftMode" path="draftMode"/>
+	<acme:list-column code="developer.trainingModule.list.label.trainingModule" path="trainingModule" width="10%"/>
 </acme:list>
 
 <jstl:if test="${_command == 'list'}">
-	<acme:button code="developer.trainingsession.list.button.create" action="/developer/training-session/create"/>
 </jstl:if>
