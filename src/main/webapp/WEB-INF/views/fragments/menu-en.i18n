@@ -52,15 +52,15 @@ master.menu.consumer.favourite-link = Favourite link
 # master.menu.manager ##########################################################
 
 master.menu.manager = Manager
-master.menu.list.project = List your proyects
-master.menu.list.user-story = List your user stories
+master.menu.list.project = List my proyects
+master.menu.list.user-story = List my user stories
 master.menu.show.manager-dashboard = Show dashboard
 
 # master.menu.developer ##########################################################
 
 master.menu.developer = Developer
-master.menu.list.trainingModule = List your training modules
-master.menu.list.training-session = List your training sessions
+master.menu.list.trainingModule = List my training modules
+master.menu.list.training-session = List my training sessions
 master.menu.show.developer-dashboard = Show dashboard
 
 # master.menu.user-account ####################################################
