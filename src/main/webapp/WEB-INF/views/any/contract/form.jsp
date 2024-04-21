@@ -21,5 +21,5 @@
 	<acme:input-textbox code="any.contract.form.label.providerName" path="providerName" readonly="true"/>
 	<acme:input-textbox code="any.contract.form.label.customerName" path="customerName" readonly="true"/>
 	<acme:input-textbox code="any.contract.form.label.goals" path="goals" readonly="true"/>
-	<acme:input-double code="any.contract.form.label.budget" path="budget" readonly="true"/>		
+	<acme:input-money code="any.contract.form.label.budget" path="budget" readonly="true"/>		
 </acme:form>

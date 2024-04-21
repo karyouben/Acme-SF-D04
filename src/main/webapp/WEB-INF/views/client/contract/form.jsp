@@ -22,7 +22,7 @@
 	<acme:input-textbox code="any.contract.form.label.customerName"
 		path="customerName" />
 	<acme:input-textbox code="any.contract.form.label.goals" path="goals" />
-	<acme:input-double code="any.contract.form.label.budget" path="budget" />
+	<acme:input-money code="any.contract.form.label.budget" path="budget" />
 	<acme:input-select code="client.contract.form.label.project"
 		path="project" choices="${projects}" />
 

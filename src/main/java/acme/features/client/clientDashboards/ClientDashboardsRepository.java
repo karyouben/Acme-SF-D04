@@ -25,16 +25,16 @@ public interface ClientDashboardsRepository extends AbstractRepository {
 	@Query("SELECT count(p) FROM Progress p WHERE p.contract.client.userAccount.id = :id and p.completeness > 75 and p.draftMode = false")
 	int totalNumProgressLogAbove75(int id);
 
-	@Query("select avg(c.budget) FROM Contract c WHERE c.client.userAccount.id = :id and c.draftMode = false")
+	@Query("select avg(c.budget.amount) FROM Contract c WHERE c.client.userAccount.id = :id and c.draftMode = false")
 	Double findAverageContractBudget(int id);
 
-	@Query("select stddev(c.budget) FROM Contract c WHERE c.client.userAccount.id = :id and c.draftMode = false")
+	@Query("select stddev(c.budget.amount) FROM Contract c WHERE c.client.userAccount.id = :id and c.draftMode = false")
 	Double findDeviationContractBudget(int id);
 
-	@Query("select max(c.budget) FROM Contract c WHERE c.client.userAccount.id = :id and c.draftMode = false")
+	@Query("select max(c.budget.amount) FROM Contract c WHERE c.client.userAccount.id = :id and c.draftMode = false")
 	Double findMaximumContractBudget(int id);
 
-	@Query("select min(c.budget) FROM Contract c WHERE c.client.userAccount.id = :id and c.draftMode = false")
+	@Query("select min(c.budget.amount) FROM Contract c WHERE c.client.userAccount.id = :id and c.draftMode = false")
 	Double findMinimumContractBudget(int id);
 
 }
