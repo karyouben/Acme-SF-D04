@@ -25,5 +25,5 @@ client.progress.form.error.duplicated-code = Código duplicado
 
 client.progress.list.title = Registros de progreso
 client.progress.form.title = Registro de progreso
-
+client.progress.list.label.project = Proyecto
 client.progress.list.label.draftMode = Es borrador

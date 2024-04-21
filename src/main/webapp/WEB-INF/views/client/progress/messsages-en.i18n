@@ -25,5 +25,5 @@ client.progress.form.error.duplicated-code = Duplicated code
 
 client.progress.list.title = Progress logs
 client.progress.form.title = Progress log
-
+client.progress.list.label.project = Project
 client.progress.list.label.draftMode = Is draft

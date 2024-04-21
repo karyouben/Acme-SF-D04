@@ -17,8 +17,6 @@
 
 <acme:form>
 	<acme:input-textbox code="any.contract.form.label.code" path="code" />
-	<acme:input-moment code="any.contract.form.label.instantiation"
-		path="instantiation" />
 	<acme:input-textbox code="any.contract.form.label.providerName"
 		path="providerName" />
 	<acme:input-textbox code="any.contract.form.label.customerName"
@@ -32,6 +30,8 @@
 	<jstl:choose>
 		<jstl:when
 			test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
+										<acme:input-moment code="any.contract.form.label.instantiation"
+		path="instantiation" readonly = "true"/>
 			<acme:button code="client.contract.form.button.add-progress"
 				action="/client/progress/create?contractId=${id}" />
 			<acme:button code="client.contract.form.button.progress"
@@ -47,7 +47,9 @@
 			<acme:submit code="client.contract.form.button.create"
 				action="/client/contract/create" />
 		</jstl:when>
-		<jstl:otherwise>
+		<jstl:otherwise> 
+			<acme:input-moment code="any.contract.form.label.instantiation"
+		path="instantiation" readonly = "true"/>
 			<acme:button code="client.contract.form.button.add-progress"
 				action="/client/progress/create?contractId=${id}" />
 			<acme:button code="client.contract.form.button.progress"

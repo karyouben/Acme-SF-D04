@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
+import acme.client.views.SelectChoices;
 import acme.entities.contract.Contract;
 import acme.entities.contract.Progress;
 import acme.roles.client.Client;
@@ -52,7 +53,12 @@ public class ClientProgressLogListByContractService extends AbstractService<Clie
 	public void unbind(final Progress object) {
 		assert object != null;
 
-		final Dataset dataset = super.unbind(object, "record");
+		Collection<Contract> contracts = this.repository.findAllContract();
+		SelectChoices contractsChoices = SelectChoices.from(contracts, "code", object.getContract());
+
+		final Dataset dataset = super.unbind(object, "record", "contract");
+		dataset.put("contract", contractsChoices.getSelected().getLabel());
+		dataset.put("contracts", contractsChoices);
 
 		if (object.isDraftMode()) {
 			final Locale local = super.getRequest().getLocale();

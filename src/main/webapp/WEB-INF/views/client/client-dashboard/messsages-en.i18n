@@ -9,7 +9,7 @@
 # they accept any liabilities with respect to them.
 
 client.dashboard.form.title.total-contracts-completness-less-25 = Number total of progress log with completness below 25 
-client.dashboard.form.label.ttotal-contracts-completness-less-25 = Number total of progress log with completness below 25
+client.dashboard.form.label.total-contracts-completness-less-25 = Number total of progress log with completness below 25
 client.dashboard.form.title.total-contracts-completness-between-25-50 = Number total of progress log with completness between 25 and 50
 client.dashboard.form.label.total-contracts-completness-between-25-50 = Number total of progress log with completness between 25 and 50
 client.dashboard.form.title.total-contracts-completness-between-50-75 = Number total of progress log with completness between 50 and 75
@@ -23,4 +23,4 @@ client.dashboard.form.label.statistics-deviation = Deviation
 client.dashboard.form.label.statistics-maximum = Maximum
 client.dashboard.form.label.statistics-minimum = Minimum
 client.dashboard.form.label.statistics-object-contract = Contract modules
-client.client-dashboards.form.title = Client dashboard
+client.client-dashboard.form.title = Client dashboard

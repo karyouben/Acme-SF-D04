@@ -22,7 +22,7 @@
 <table class="table table-sm">
 	<tr>
 		<th>
-			<acme:message code="client.dashboard.form.label.ttotal-contracts-completness-less-25"/>
+			<acme:message code="client.dashboard.form.label.total-contracts-completness-less-25"/>
 		</th>
 		<td>
 			<acme:print value="${totalNumProgressLogLessThan25}"/>
@@ -52,7 +52,7 @@
 <table class="table table-sm">
 	<tr>
 		<th>
-			<acme:message code="client.dashboard.form.label.ttotal-contracts-completness-between-50-75"/>
+			<acme:message code="client.dashboard.form.label.total-contracts-completness-between-50-75"/>
 		</th>
 		<td>
 			<acme:print value="${totalNumProgressLogLessBetween50And75}"/>
@@ -67,7 +67,7 @@
 <table class="table table-sm">
 	<tr>
 		<th>
-			<acme:message code="client.dashboard.form.label.ttotal-contracts-completness-above-75"/>
+			<acme:message code="client.dashboard.form.label.total-contracts-completness-above-75"/>
 		</th>
 		<td>
 			<acme:print value="${totalNumProgressLogAbove75}"/>

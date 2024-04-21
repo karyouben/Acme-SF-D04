@@ -23,4 +23,4 @@ client.dashboard.form.label.statistics-deviation = Desviación
 client.dashboard.form.label.statistics-maximum = Máximo
 client.dashboard.form.label.statistics-minimum = Mínimo
 client.dashboard.form.label.statistics-object-contract = Módulos de contrato
-client.client-dashboards.form.title = Panel de Cliente
+client.client-dashboard.form.title = Panel de Cliente

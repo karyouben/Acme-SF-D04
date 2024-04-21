@@ -27,7 +27,7 @@ master.menu.anonymous.favourite-link-pabferper6 = 54370557Y: Fernández Pérez, 
 master.menu.any.list.project = Listar proyectos no publicados
 master.menu.any.list.claim = Listar reclamaciones
 master.menu.any.list.trainingModule = Listar módulos de entrenamiento no publicados
-master.menu.any.list.contract = Listar módulos de contratos no publicados
+master.menu.any.list.contract = Listar módulos de contratos publicados
 
 
 # master.menu.administrator ###################################################

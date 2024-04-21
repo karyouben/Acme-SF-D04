@@ -60,7 +60,7 @@ public class ClientDashboardsShowService extends AbstractService<Client, ClientD
 		dashboard.setTotalNumProgressLogLessBetween25And50(totalNumProgressLogLessBetween25And50);
 		dashboard.setTotalNumProgressLogLessBetween50And75(totalNumProgressLogLessBetween50And75);
 		dashboard.setTotalNumProgressLogAbove75(totalNumProgressLogAbove75);
-		dashboard.setBudget(contractTimeStatistics);
+		dashboard.setContractTimeStatistics(contractTimeStatistics);
 
 		super.getBuffer().addData(dashboard);
 	}

@@ -26,7 +26,7 @@ master.menu.anonymous.favourite-link-gongarlam = 47267072W: García Lama, Gonzal
 master.menu.anonymous.favourite-link-pabferper6 = 54370557Y: Fernández Pérez, Pablo
 master.menu.any.list.project = List unpublished projects
 master.menu.any.list.trainingModule = List unpublished training modules
-master.menu.any.list.contract = List unpublished contract modules
+master.menu.any.list.contract = List publish contract modules
 
 # master.menu.administrator ###################################################
 
