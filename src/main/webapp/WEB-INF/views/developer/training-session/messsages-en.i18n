@@ -23,7 +23,7 @@ developer.trainingsession.form.button.create = Create
 developer.trainingsession.form.button.delete = Delete
 developer.trainingsession.form.button.publish = Publish
 
-developer.trainingsession.form.error.duplicated-code = Duplicated code
+developer.trainingSession.form.error.duplicated-code = Duplicated code
 developer.trainingSession.form.error.end-before-start = The end period must be after the start period
 developer.trainingSession.form.error.small-display-period = The period must last at least one week.
 
