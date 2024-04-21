@@ -18,6 +18,8 @@ any.trainingModule.form.label.link = Link
 any.trainingModule.form.label.totalTime = Tiempo Total
 any.trainingModule.form.label.draftMode = Es borrador
 any.trainingModule.list.label.draftMode = Es borrador
+any.training-module.list.label.project = Proyecto
+any.training-module.form.label.project = Proyecto
 
 any.training-module.form.title = Modulo de entrenamiento
 any.training-module.list.title = Modulos de entrenamiento

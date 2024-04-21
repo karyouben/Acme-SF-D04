@@ -22,5 +22,6 @@
 	<acme:input-select code="any.trainingModule.form.label.difficultyLevel" path="difficultyLevel" choices="${difficultyLevelOptions}"/>
 	<acme:input-moment code="any.trainingModule.form.label.updateMoment" path="updateMoment" readonly="true"/>
 	<acme:input-url code="any.trainingModule.form.label.link" path="link" readonly="true"/>
-	<acme:input-integer code="any.trainingModule.form.label.totalTime" path="totalTime" readonly="true"/>		
+	<acme:input-integer code="any.trainingModule.form.label.totalTime" path="totalTime" readonly="true"/>
+	<acme:input-select code="any.training-module.form.label.project" path="project" choices="${projects}"/>		
 </acme:form>
