@@ -18,4 +18,5 @@
 <acme:list>
 	<acme:list-column code="any.trainingModule.list.label.code" path="code"/>
 	<acme:list-column code="any.trainingModule.list.label.draftMode" path="draftMode"/>
+	<acme:list-column code="any.training-module.list.label.project" path="project" width="10%"/>
 </acme:list>
