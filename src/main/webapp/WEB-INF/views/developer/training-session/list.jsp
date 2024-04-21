@@ -21,5 +21,6 @@
 	<acme:list-column code="developer.trainingModule.list.label.trainingModule" path="trainingModule" width="10%"/>
 </acme:list>
 
-<jstl:if test="${_command == 'list'}">
+<jstl:if test="${_command == 'list-by-training-module'}">
+	<acme:button code="developer.training-session.list.button.create" action="/developer/training-session/create?trainingModuleId=${trainingModuleId}"/>
 </jstl:if>
