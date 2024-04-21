@@ -8,16 +8,15 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.contract.form.label.code = Code
-any.contract.list.label.code = Code
-any.contract.form.label.instantiation = Creacion
+any.contract.form.label.code = Código
+any.contract.list.label.code = Código
+any.contract.form.label.instantiation = Momento de creación
 any.contract.form.label.details = Detalles
-any.contract.form.label.providerName = Provedor
-any.contract.form.label.customerName = Cliente
+any.contract.form.label.providerName = Nombre del proveedor
+any.contract.form.label.customerName = Nombre del cliente
 any.contract.form.label.goals = Objetivos
 any.contract.form.label.budget = Presupuesto
 any.contract.form.label.draftMode = Es borrador
 any.contract.list.label.draftMode = Es borrador
-
-any.contract.form.title = Modulo contrato
-any.contract.list.title = Modulos contratos
+any.contract.form.title = Módulo de contrato
+any.contract.list.title = Módulos de contrato

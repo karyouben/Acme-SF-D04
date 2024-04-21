@@ -14,15 +14,13 @@ client.progress.form.label.completeness = Completitud
 client.progress.form.label.comment = Comentario
 client.progress.form.label.registration = Fecha de registro
 client.progress.form.label.responsable = Persona responsable
-
 client.progress.form.button.update = Actualizar
 client.progress.form.button.create = Crear
 client.progress.list.button.create = Crear
-client.progress.form.button.delete = Borrar
+client.progress.form.button.delete = Eliminar
 client.progress.form.button.publish = Publicar
-
 client.progress.form.error.duplicated-code = Código duplicado
-
+any.contract.form.label.registration = Fecha de registro
 client.progress.list.title = Registros de progreso
 client.progress.form.title = Registro de progreso
 client.progress.list.label.project = Proyecto

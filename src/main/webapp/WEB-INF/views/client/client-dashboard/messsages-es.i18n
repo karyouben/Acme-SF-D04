@@ -8,14 +8,14 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-client.dashboard.form.title.total-contracts-completness-less-25 = Número total de registros de progreso con completitud por debajo del 25 
-client.dashboard.form.label.ttotal-contracts-completness-less-25 = Número total de registros de progreso con completitud por debajo del 25
+client.dashboard.form.title.total-contracts-completness-less-25 = Número total de registros de progreso con completitud inferior al 25
+client.dashboard.form.label.total-contracts-completness-less-25 = Número total de registros de progreso con completitud inferior al 25
 client.dashboard.form.title.total-contracts-completness-between-25-50 = Número total de registros de progreso con completitud entre 25 y 50
 client.dashboard.form.label.total-contracts-completness-between-25-50 = Número total de registros de progreso con completitud entre 25 y 50
 client.dashboard.form.title.total-contracts-completness-between-50-75 = Número total de registros de progreso con completitud entre 50 y 75
 client.dashboard.form.label.total-contracts-completness-between-50-75 = Número total de registros de progreso con completitud entre 50 y 75
-client.dashboard.form.title.total-contracts-completness-above-75 = Número total de registros de progreso con completitud por encima del 75
-client.dashboard.form.label.total-contracts-completness-above-75 = Número total de registros de progreso con completitud por encima del 75
+client.dashboard.form.title.total-contracts-completness-above-75 = Número total de registros de progreso con completitud superior al 75
+client.dashboard.form.label.total-contracts-completness-above-75 = Número total de registros de progreso con completitud superior al 75
 client.dashboard.form.title.statistics = Estadísticas
 client.dashboard.form.label.statistics-object = Objeto
 client.dashboard.form.label.statistics-average = Promedio
@@ -23,4 +23,4 @@ client.dashboard.form.label.statistics-deviation = Desviación
 client.dashboard.form.label.statistics-maximum = Máximo
 client.dashboard.form.label.statistics-minimum = Mínimo
 client.dashboard.form.label.statistics-object-contract = Módulos de contrato
-client.client-dashboard.form.title = Panel de Cliente
+client.client-dashboard.form.title = Panel de cliente

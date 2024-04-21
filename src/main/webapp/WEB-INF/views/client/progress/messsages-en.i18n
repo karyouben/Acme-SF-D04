@@ -22,7 +22,7 @@ client.progress.form.button.delete = Delete
 client.progress.form.button.publish = Publish
 
 client.progress.form.error.duplicated-code = Duplicated code
-
+any.contract.form.label.registration
 client.progress.list.title = Progress logs
 client.progress.form.title = Progress log
 client.progress.list.label.project = Project

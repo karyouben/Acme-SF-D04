@@ -20,18 +20,14 @@ client.contract.list.label.project = Proyecto
 client.contract.form.label.project = Proyecto
 client.contract.form.label.draftMode = Es borrador
 client.contract.list.label.draftMode = Es borrador
-
 client.contract.form.button.update = Actualizar
 client.contract.form.button.create = Crear
 client.contract.list.button.create = Crear
-client.contract.form.button.delete = Borrar
+client.contract.form.button.delete = Eliminar
 client.contract.form.button.publish = Publicar
-
 client.contract.form.error.duplicated-code = Código duplicado
-client.contract.form.error.budget-total-cost = Error el presupuesto debe ser menor que el precio total del proyecto
-
-client.contract.form.button.progress = Listar registro de progreso del contrato
+client.contract.form.error.budget-total-cost = Error: el presupuesto debe ser menor que el costo total del proyecto
+client.contract.form.button.progress = Lista de registros de progreso del contrato
 client.contract.form.button.add-progress = Agregar registro de progreso
-
 client.contract.form.title = Módulo de contrato
 client.contract.list.title = Módulos de contratos

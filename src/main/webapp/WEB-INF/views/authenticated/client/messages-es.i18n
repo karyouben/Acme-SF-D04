@@ -8,13 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-authenticated.client.form.title = Client form
-
-authenticated.client.form.label.identification = Identificacion: 
-authenticated.client.form.label.companyName = Compania:
+authenticated.client.form.title = Formulario de Cliente
+authenticated.client.form.label.identification = Identificación:
+authenticated.client.form.label.companyName = Empresa:
 authenticated.client.form.label.type = Tipo:
-authenticated.client.form.label.email = Email:
-authenticated.client.form.label.link = Link:
-
-authenticated.client.form.button.create = Crear
+authenticated.client.form.label.email = Correo electrónico:
+authenticated.client.form.label.link = Enlace:
+authenticated.client.form.button.create = Registrar
 authenticated.client.form.button.update = Actualizar
