@@ -70,7 +70,7 @@ public class DeveloperTrainingModuleDeleteService extends AbstractService<Develo
 
 		int masterId = super.getRequest().getData("id", int.class);
 		List<TrainingSession> ls = this.repository.findTrainingSessionsByTrainingModuleId(masterId).stream().toList();
-		final boolean someDraftTrainingSession = ls.stream().anyMatch(Session -> Session.isDraftMode());
+		final boolean someDraftTrainingSession = ls.stream().allMatch(Session -> Session.isDraftMode());
 		super.state(someDraftTrainingSession, "*", "developer.trainingModule.form.error.trainingSession-Nodraft");
 	}
 
@@ -94,7 +94,7 @@ public class DeveloperTrainingModuleDeleteService extends AbstractService<Develo
 
 		SelectChoices choices = SelectChoices.from(DifficultyLevel.class, object.getDifficultyLevel());
 
-		Dataset dataset = super.unbind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "totalTime", "project");
+		Dataset dataset = super.unbind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "totalTime", "project", "draftMode");
 
 		dataset.put("difficultyLevelOptions", choices);
 		dataset.put("project", projectsChoices.getSelected().getKey());

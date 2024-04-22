@@ -84,6 +84,11 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 
 			super.state(!duplicatedCode, "code", "developer.trainingSession.form.error.duplicated-code");
 		}
+
+		int masterId = super.getRequest().getData("trainingModuleId", int.class);
+		TrainingModule trainingModule = this.repository.findTrainingModuleById(masterId);
+		final boolean noDraftTrainingModule = trainingModule.isDraftMode();
+		super.state(noDraftTrainingModule, "*", "developer.trainingSession.form.error.trainingModule-noDraft");
 	}
 
 	@Override
