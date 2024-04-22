@@ -46,19 +46,36 @@ public class DeveloperDashboardsShowService extends AbstractService<Developer, D
 		Double minimumTrainingModuleTime = this.repository.findMinimumTrainingModuleTime(userAccountId);
 		Double maximumTrainingModuleTime = this.repository.findMaximumTrainingModuleTime(userAccountId);
 
-		final Statistics trainingModuleTimeStatistics = new Statistics();
-		trainingModuleTimeStatistics.setAverage(averageTrainingModuleTime);
-		trainingModuleTimeStatistics.setDeviation(deviationTrainingModuleTime);
-		trainingModuleTimeStatistics.setMaximum(maximumTrainingModuleTime);
-		trainingModuleTimeStatistics.setMinimum(minimumTrainingModuleTime);
+		if (averageTrainingModuleTime != null && deviationTrainingModuleTime != null && minimumTrainingModuleTime != null && maximumTrainingModuleTime != null) {
 
-		final DeveloperDashboards dashboard = new DeveloperDashboards();
+			final Statistics trainingModuleTimeStatistics = new Statistics();
+			trainingModuleTimeStatistics.setAverage(averageTrainingModuleTime);
+			trainingModuleTimeStatistics.setDeviation(deviationTrainingModuleTime);
+			trainingModuleTimeStatistics.setMaximum(maximumTrainingModuleTime);
+			trainingModuleTimeStatistics.setMinimum(minimumTrainingModuleTime);
 
-		dashboard.setTotalTrainingModulesWithUpdateMoment(totalTrainingModulesWithUpdateMoment);
-		dashboard.setTotalTrainingSessionsWithLink(totalTrainingSessionsWithLink);
-		dashboard.setTrainingModuleTimeStatistics(trainingModuleTimeStatistics);
+			final DeveloperDashboards dashboard = new DeveloperDashboards();
 
-		super.getBuffer().addData(dashboard);
+			dashboard.setTotalTrainingModulesWithUpdateMoment(totalTrainingModulesWithUpdateMoment);
+			dashboard.setTotalTrainingSessionsWithLink(totalTrainingSessionsWithLink);
+			dashboard.setTrainingModuleTimeStatistics(trainingModuleTimeStatistics);
+
+			super.getBuffer().addData(dashboard);
+		} else {
+			final Statistics trainingModuleTimeStatistics = new Statistics();
+			trainingModuleTimeStatistics.setAverage(0.0);
+			trainingModuleTimeStatistics.setDeviation(0.0);
+			trainingModuleTimeStatistics.setMaximum(0.0);
+			trainingModuleTimeStatistics.setMinimum(0.0);
+
+			final DeveloperDashboards dashboard = new DeveloperDashboards();
+
+			dashboard.setTotalTrainingModulesWithUpdateMoment(totalTrainingModulesWithUpdateMoment);
+			dashboard.setTotalTrainingSessionsWithLink(totalTrainingSessionsWithLink);
+			dashboard.setTrainingModuleTimeStatistics(trainingModuleTimeStatistics);
+			super.getBuffer().addData(dashboard);
+
+		}
 	}
 
 	@Override

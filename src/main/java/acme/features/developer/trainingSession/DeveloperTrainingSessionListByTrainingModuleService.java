@@ -41,12 +41,11 @@ public class DeveloperTrainingSessionListByTrainingModuleService extends Abstrac
 
 	@Override
 	public void load() {
-		Collection<TrainingSession> trainingSession;
-
 		final int trainingModuleId = super.getRequest().getData("trainingModuleId", int.class);
-		trainingSession = this.repository.findTrainingSessionsByTrainingModuleId(trainingModuleId).stream().toList();
 
+		Collection<TrainingSession> trainingSession = this.repository.findTrainingSessionsByTrainingModuleId(trainingModuleId);
 		super.getBuffer().addData(trainingSession);
+		super.getResponse().addGlobal("trainingModuleId", trainingModuleId);
 	}
 
 	@Override
