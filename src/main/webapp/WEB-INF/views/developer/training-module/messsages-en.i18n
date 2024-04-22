@@ -32,6 +32,7 @@ developer.trainingModule.form.error.negative-total-time = Total time must be pos
 developer.trainingModule.form.error.end-before-start = The update moment must be after the creation moment
 developer.trainingModule.form.error.trainingSession-empty = Training module has no training session assigned
 developer.trainingModule.form.error.trainingSession-draft = There are unpublished training session assigned to the training module
+developer.trainingModule.form.error.trainingSession-Nodraft = There are published training session assigned to the training module
 
 developer.trainingModule.form.button.trainingsessions = List training sessions
 developer.trainingModule.form.button.add-trainingsessions = Add training sessions

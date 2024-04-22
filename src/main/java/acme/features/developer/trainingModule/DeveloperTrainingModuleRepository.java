@@ -30,7 +30,7 @@ public interface DeveloperTrainingModuleRepository extends AbstractRepository {
 	@Query("SELECT t FROM TrainingModule t")
 	Collection<TrainingModule> findAllTrainingModules();
 
-	@Query("select p from Project p and p.draftMode = false")
+	@Query("select p from Project p WHERE p.draftMode = false")
 	Collection<Project> findAllProjects();
 
 	@Query("select p from Project p where p.id = :id and p.draftMode = false")
