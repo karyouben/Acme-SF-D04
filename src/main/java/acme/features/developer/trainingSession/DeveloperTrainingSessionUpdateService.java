@@ -58,6 +58,7 @@ public class DeveloperTrainingSessionUpdateService extends AbstractService<Devel
 
 		final String PERIOD_START = "startPeriod";
 		final String PERIOD_END = "endPeriod";
+		final String CREATION_MOMENT = "creationMoment";
 
 		if (!super.getBuffer().getErrors().hasErrors(PERIOD_START) && !super.getBuffer().getErrors().hasErrors(PERIOD_END)) {
 			final boolean startBeforeEnd = MomentHelper.isAfter(object.getEndPeriod(), object.getStartPeriod());
@@ -68,6 +69,16 @@ public class DeveloperTrainingSessionUpdateService extends AbstractService<Devel
 
 				super.state(startOneWeekBeforeEndMinimum, PERIOD_END, "developer.trainingSession.form.error.small-display-period");
 			}
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors(CREATION_MOMENT) && !super.getBuffer().getErrors().hasErrors(PERIOD_START)) {
+			final boolean startBeforeCreation = MomentHelper.isAfter(object.getStartPeriod(), object.getTrainingModule().getCreationMoment());
+			super.state(startBeforeCreation, PERIOD_START, "developer.trainingSession.form.error.start-before-creation");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors(CREATION_MOMENT) && !super.getBuffer().getErrors().hasErrors(PERIOD_END)) {
+			final boolean endBeforeCreation = MomentHelper.isAfter(object.getEndPeriod(), object.getTrainingModule().getCreationMoment());
+			super.state(endBeforeCreation, PERIOD_END, "developer.trainingSession.form.error.end-before-creation");
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
