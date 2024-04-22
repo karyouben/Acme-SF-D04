@@ -27,8 +27,9 @@ developer.trainingsession.form.button.publish = Publish
 developer.trainingSession.form.error.duplicated-code = Duplicated code
 developer.trainingSession.form.error.end-before-start = The end period must be after the start period
 developer.trainingSession.form.error.small-display-period = The period must last at least one week
-developer.trainingSession.form.error.start-before-creation = The creation moment must be after the start period
-developer.trainingSession.form.error.end-before-creation = The creation moment must be after the end period
+developer.trainingSession.form.error.start-before-creation = The start period must be after the creation moment 
+developer.trainingSession.form.error.end-before-creation = The end period must be after the creation moment
+developer.trainingSession.form.error.trainingModule-noDraft = The training module assigned is published
 
 developer.training-session.list.title = Training session
 developer.training-session.list.title = Training sessions
