@@ -52,7 +52,7 @@
 <table class="table table-sm">
 	<tr>
 		<th>
-			<acme:message code="developer.dashboard.form.label.statistics-object"/>
+			<acme:message code="developer.dashboard.form.label.statistics-title"/>
 		</th>
 		<th>
 			<acme:message code="developer.dashboard.form.label.statistics-average"/>
