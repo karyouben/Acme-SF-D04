@@ -1,0 +1,40 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+developer.trainingModule.form.label.code = Código
+developer.trainingModule.list.label.code = Código
+developer.trainingModule.form.label.creationMoment = Momento de creación
+developer.trainingModule.form.label.details = Detalles
+developer.trainingModule.form.label.difficultyLevel = Nivel de dificultad
+developer.trainingModule.form.label.updateMoment = Momento de actualización
+developer.trainingModule.form.label.link = Link
+developer.trainingModule.form.label.totalTime = Tiempo Total
+developer.training-module.list.label.project = Proyecto
+developer.training-module.form.label.project = Proyecto
+developer.trainingModule.form.label.draftMode = Es borrador
+developer.trainingModule.list.label.draftMode = Es borrador
+
+developer.trainingModule.form.button.update = Actualizar
+developer.trainingModule.form.button.create = Crear
+developer.trainingModule.list.button.create = Crear
+developer.trainingModule.form.button.delete = Eliminar
+developer.trainingModule.form.button.publish = Publicar
+
+developer.trainingModule.form.error.duplicated-code = Código duplicado
+developer.trainingModule.form.error.negative-total-time = El tiempo total debe ser positivo o nulo
+developer.trainingModule.form.error.end-before-start = El momento de actualización debe ser posterior al momento de creación
+developer.trainingModule.form.error.trainingSession-empty =  El módulo de entrenamiento no tiene sesiones de entrenamiento asignadas
+developer.trainingModule.form.error.trainingSession-draft = Hay sesiones de entrenamiento no publicadas asignadas a este módulo de entrenamiento
+
+developer.trainingModule.form.button.trainingsessions = Listar sesiones de entrenamiento
+developer.trainingModule.form.button.add-trainingsessions = Agregar sesiones de entrenamiento
+
+developer.training-module.form.title = Modulo de entrenamiento
+developer.training-module.list.title = Modulos de entrenamiento
