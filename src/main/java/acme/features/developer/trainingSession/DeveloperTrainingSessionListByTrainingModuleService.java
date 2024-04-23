@@ -59,7 +59,7 @@ public class DeveloperTrainingSessionListByTrainingModuleService extends Abstrac
 		dataset.put("trainingModule", trainingModulesChoices.getSelected().getLabel());
 		dataset.put("trainingModules", trainingModulesChoices);
 
-		if (object.isDraftMode()) {
+		if (!object.isDraftMode()) {
 			final Locale local = super.getRequest().getLocale();
 			dataset.put("draftMode", local.equals(Locale.ENGLISH) ? "Yes" : "Sí");
 		} else

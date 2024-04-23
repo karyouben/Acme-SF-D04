@@ -18,8 +18,7 @@ developer.trainingModule.form.label.link = Link
 developer.trainingModule.form.label.totalTime = Tiempo Total
 developer.training-module.list.label.project = Proyecto
 developer.training-module.form.label.project = Proyecto
-developer.trainingModule.form.label.draftMode = Es borrador
-developer.trainingModule.list.label.draftMode = Es borrador
+developer.trainingModule.list.label.draftMode = Está publicado
 
 developer.trainingModule.form.button.update = Actualizar
 developer.trainingModule.form.button.create = Crear

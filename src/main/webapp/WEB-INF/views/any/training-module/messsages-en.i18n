@@ -16,8 +16,6 @@ any.trainingModule.form.label.difficultyLevel = Difficulty level
 any.trainingModule.form.label.updateMoment = Update moment
 any.trainingModule.form.label.link = Link
 any.trainingModule.form.label.totalTime = Total time
-any.trainingModule.form.label.draftMode = Is draft
-any.trainingModule.list.label.draftMode = Is draft
 any.training-module.list.label.project = Project
 any.training-module.form.label.project = Project
 
