@@ -2,6 +2,7 @@
 package acme.features.client.contract;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -63,6 +64,11 @@ public class ClientContractDeleteService extends AbstractService<Client, Contrac
 	@Override
 	public void validate(final Contract object) {
 		assert object != null;
+
+		int masterId = super.getRequest().getData("id", int.class);
+		List<Progress> ls = this.repository.findProgresssByContractId(masterId).stream().toList();
+		final boolean someDraftProgress = ls.stream().anyMatch(progress -> progress.isDraftMode());
+		super.state(!someDraftProgress, "*", "client.contract.form.error.child-draft");
 	}
 
 	@Override

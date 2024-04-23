@@ -29,6 +29,7 @@ client.contract.form.button.publish = Publish
 
 client.contract.form.error.duplicated-code = Duplicated code
 client.contract.form.error.budget-total-cost = Error budget must be less than the total project cost
+client.contract.form.error.child-draft = Error publish first all of this contract`s progress
 
 client.contract.form.button.progress = List progress log contract
 client.contract.form.button.add-progress = Add progress log

@@ -67,9 +67,13 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 		if (!super.getBuffer().getErrors().hasErrors("budget")) {
 			Collection<Contract> contracts = this.repository.findAllContractsByProjectId(object.getProject().getId());
 			final boolean budget = object.getBudget().getAmount() + contracts.stream().mapToDouble(x -> x.getBudget().getAmount()).sum() > object.getProject().getTotalCost().getAmount();
-
 			super.state(!budget, "budget", "client.contract.form.error.budget-total-cost");
 		}
+
+		int masterId = super.getRequest().getData("id", int.class);
+		List<Progress> ls = this.repository.findProgresssByContractId(masterId).stream().toList();
+		final boolean someDraftProgress = ls.stream().anyMatch(progress -> progress.isDraftMode());
+		super.state(!someDraftProgress, "*", "client.contract.form.error.child-draft");
 	}
 
 	@Override
