@@ -10,14 +10,15 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
-import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
 
 import acme.client.data.AbstractEntity;
+import acme.client.data.datatypes.Money;
 import acme.entities.project.Project;
 import acme.roles.client.Client;
 import lombok.Getter;
@@ -51,6 +52,8 @@ public class Contract extends AbstractEntity {
 	@NotBlank
 	protected String			goals;
 
+	private boolean				draftMode;
+
 	@Valid
 	@ManyToOne
 	@JoinColumn(name = "project_id", nullable = false)
@@ -62,7 +65,7 @@ public class Contract extends AbstractEntity {
 	private Client				client;
 
 	//Custom restriction buget must be less than the project cost, that will be implemented on services, on future deliverable
-	@Min(1)
-	private double				budget;
+	@NotNull
+	private Money				budget;
 
 }

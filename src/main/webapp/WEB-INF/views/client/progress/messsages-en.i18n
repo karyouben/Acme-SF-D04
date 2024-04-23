@@ -1,0 +1,29 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# In line with the traditional purpose of fostering education and research, it is
+# the policy of the copyright holder to allow non-commercial use and redistribution of
+# this software. It has been carefully tested, but it is not guaranteed for any particular
+# purposes. The copyright holder does not offer any warranties or representations, nor
+# do they accept any liabilities with respect to them.
+
+client.progress.list.label.record = Record
+client.progress.form.label.record = Record
+client.progress.form.label.completeness = Completeness
+client.progress.form.label.comment = Comment
+client.progress.form.label.registration = Registration date
+client.progress.form.label.responsable = Responsible person
+
+client.progress.form.button.update = Update
+client.progress.form.button.create = Create
+client.progress.list.button.create = Create
+client.progress.form.button.delete = Delete
+client.progress.form.button.publish = Publish
+
+client.progress.form.error.duplicated-code = Duplicated code
+any.contract.form.label.registration
+client.progress.list.title = Progress logs
+client.progress.form.title = Progress log
+client.progress.list.label.project = Project
+client.progress.list.label.draftMode = Is draft

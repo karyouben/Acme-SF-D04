@@ -29,5 +29,5 @@ public class ClientDashboard extends AbstractForm {
 	private Integer				totalNumProgressLogAbove75;
 
 	// average, deviation, minimum, and maximum budget of the contracts
-	private Statistics			budget;
+	private Statistics			contractTimeStatistics;
 }
