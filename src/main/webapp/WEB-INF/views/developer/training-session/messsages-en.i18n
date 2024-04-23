@@ -37,5 +37,5 @@ developer.training-session.list.title = Training sessions
 developer.training-session.form.title = Training session
 developer.training-session.form.title = Training sessions
 
-developer.trainingModule.list.label.draftMode = Is draft
+developer.trainingModule.list.label.draftMode = Is publish
 developer.trainingModule.list.label.trainingModule = Training module

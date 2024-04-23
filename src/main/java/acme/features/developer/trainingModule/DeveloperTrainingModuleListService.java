@@ -52,7 +52,7 @@ public class DeveloperTrainingModuleListService extends AbstractService<Develope
 		dataset.put("project", projectsChoices.getSelected().getLabel());
 		dataset.put("projects", projectsChoices);
 
-		if (object.isDraftMode()) {
+		if (!object.isDraftMode()) {
 			final Locale local = super.getRequest().getLocale();
 			dataset.put("draftMode", local.equals(Locale.ENGLISH) ? "Yes" : "Sí");
 		} else

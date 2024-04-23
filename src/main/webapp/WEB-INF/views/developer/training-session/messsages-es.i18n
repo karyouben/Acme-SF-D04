@@ -37,5 +37,5 @@ developer.training-session.list.title = Sesiones de entrenamiento
 developer.training-session.form.title = Sesión de entrenamiento
 developer.training-session.form.title = Sesiones de entrenamiento
 
-developer.trainingModule.list.label.draftMode = Es borrador
+developer.trainingModule.list.label.draftMode = Está publicado
 developer.trainingModule.list.label.trainingModule = Modulo de entrenamiento
