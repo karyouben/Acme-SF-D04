@@ -55,6 +55,16 @@ public class ManagerProjectDeleteService extends AbstractService<Manager, Projec
 	@Override
 	public void validate(final Project object) {
 		assert object != null;
+
+		int id = object.getId();
+
+		// In case the other students implement wrong their part
+		super.state(this.repository.codeAuditExist(id) == 0, "*", "manager.project.form.error.has-code-audit");
+		super.state(this.repository.contractExist(id) == 0, "*", "manager.project.form.error.has-contract");
+		super.state(this.repository.sponsorshipExist(id) == 0, "*", "manager.project.form.error.has-sponsorship");
+		super.state(this.repository.trainingModuleExist(id) == 0, "*", "manager.project.form.error.has-training-module");
+		super.state(this.repository.riskExist(id) == 0, "*", "manager.project.form.error.has-risk");
+		super.state(this.repository.objectiveExist(id) == 0, "*", "manager.project.form.error.has-objective");
 	}
 
 	@Override

@@ -34,4 +34,22 @@ public interface ManagerProjectRepository extends AbstractRepository {
 	@Query("SELECT s FROM SystemConfiguration s")
 	List<SystemConfiguration> findSystemConfiguration();
 
+	@Query("SELECT COUNT(1) FROM TrainingModule tm where tm.project.id = :id")
+	int trainingModuleExist(int id);
+
+	@Query("SELECT COUNT(1) FROM CodeAudit a where a.project.id = :id")
+	int codeAuditExist(int id);
+
+	@Query("SELECT COUNT(1) FROM Contract a where a.project.id = :id")
+	int contractExist(int id);
+
+	@Query("SELECT COUNT(1) FROM Objetive a where a.project.id = :id")
+	int objectiveExist(int id);
+
+	@Query("SELECT COUNT(1) FROM Risk a where a.project.id = :id")
+	int riskExist(int id);
+
+	@Query("SELECT COUNT(1) FROM Sponsorship a where a.project.id = :id")
+	int sponsorshipExist(int id);
+
 }
