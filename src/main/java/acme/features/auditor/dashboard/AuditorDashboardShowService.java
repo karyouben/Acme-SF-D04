@@ -40,7 +40,7 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 		Map<Type, Integer> numAuditsPerType;
 		Double averageAuditRecords;
 		Double deviationAuditRecords;
-		int minimumAuditRecords;
+		Integer minimumAuditRecords;
 		Integer maximumAuditRecords;
 		Double averageRecordPeriod;
 		Double deviationRecordPeriod;
@@ -59,15 +59,27 @@ public class AuditorDashboardShowService extends AbstractService<Auditor, Audito
 
 		dashboard = new AuditorDashboard();
 		dashboard.setNumAuditsPerType(numAuditsPerType);
-		dashboard.setAverageNumAuditRecords(averageAuditRecords);
-		dashboard.setDeviationNumAuditRecords(deviationAuditRecords);
-		dashboard.setMinNumAuditRecords(minimumAuditRecords);
-		dashboard.setMaxNumAuditRecords(maximumAuditRecords);
-		dashboard.setAveragePeriodLength(averageRecordPeriod);
-		dashboard.setDeviationPeriodLength(deviationRecordPeriod);
-		dashboard.setMinPeriodLength(minimumRecordPeriod);
-		dashboard.setMaxPeriodLength(maximumRecordPeriod);
 
+		if (!(numAuditsPerType.get(Type.STATIC) == 0 && numAuditsPerType.get(Type.DYNAMIC) == 0)) {
+			dashboard.setAverageNumAuditRecords(averageAuditRecords);
+			dashboard.setDeviationNumAuditRecords(deviationAuditRecords);
+			dashboard.setMinNumAuditRecords(minimumAuditRecords);
+			dashboard.setMaxNumAuditRecords(maximumAuditRecords);
+			dashboard.setAveragePeriodLength(averageRecordPeriod);
+			dashboard.setDeviationPeriodLength(deviationRecordPeriod);
+			dashboard.setMinPeriodLength(minimumRecordPeriod);
+			dashboard.setMaxPeriodLength(maximumRecordPeriod);
+		} else {
+
+			dashboard.setAverageNumAuditRecords(0.);
+			dashboard.setDeviationNumAuditRecords(0.);
+			dashboard.setMinNumAuditRecords(0);
+			dashboard.setMaxNumAuditRecords(0);
+			dashboard.setAveragePeriodLength(0.);
+			dashboard.setDeviationPeriodLength(0.);
+			dashboard.setMinPeriodLength(0.);
+			dashboard.setMaxPeriodLength(0.);
+		}
 		super.getBuffer().addData(dashboard);
 	}
 

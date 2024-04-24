@@ -17,11 +17,11 @@
 
 <acme:list>
 	<acme:list-column code="auditor.auditrecord.label.code" path="code" width="10%"/>
-	<acme:list-column code="auditor.auditrecord.label.mark" path="mark"/>
+	<acme:list-column code="auditor.auditrecord.label.mark" path="mark" width="10%"/>
 	<acme:list-column code="auditor.auditrecord.label.draftMode" path="draftMode" width="10%"/>
 </acme:list>
 
-	<jstl:if test="${_command != 'list-for-code-audits'}">
+	
 		<acme:button code="auditor.auditrecord.list.button.create" action="/auditor/audit-record/create"/>
-	</jstl:if>
+	
 	

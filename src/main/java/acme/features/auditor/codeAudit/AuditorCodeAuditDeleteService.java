@@ -64,6 +64,12 @@ public class AuditorCodeAuditDeleteService extends AbstractService<Auditor, Code
 
 		if (!super.getBuffer().getErrors().hasErrors("draftMode"))
 			super.state(object.isDraftMode(), "draftMode", "validation.codeaudit.draftMode");
+
+		Collection<AuditRecord> codeAuditsRecords;
+
+		codeAuditsRecords = this.repository.findAuditRecordsByCodeAuditId(object.getId());
+		final boolean someDraftCodeAudit = codeAuditsRecords.stream().allMatch(ar -> ar.isDraftMode());
+		super.state(someDraftCodeAudit, "*", "validation.codeaudit.auditRecordDraftMode");
 	}
 
 	@Override

@@ -2,6 +2,7 @@
 package acme.features.auditor.auditRecord;
 
 import java.util.Collection;
+import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,7 +43,12 @@ public class AuditorAuditRecordListMineService extends AbstractService<Auditor, 
 
 		Dataset dataset;
 
-		dataset = super.unbind(object, "code", "mark", "draftMode");
+		dataset = super.unbind(object, "code", "mark");
+		if (object.isDraftMode()) {
+			final Locale local = super.getRequest().getLocale();
+			dataset.put("draftMode", local.equals(Locale.ENGLISH) ? "Yes" : "Sí");
+		} else
+			dataset.put("draftMode", "No");
 
 		super.getResponse().addData(dataset);
 	}

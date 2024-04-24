@@ -74,9 +74,9 @@ master.menu.show.client-dashboard = Show dashboard
 # master.menu.auditor ########################################################
 
 master.menu.auditor = Auditor
-master.menu.auditor.codeaudit.list-mine = Listar mis auditorías de código
-master.menu.auditor.auditrecord.list-my-audit-records = Listar mis registros de auditoría
-master.menu.auditor.show-dashboard = Panel de estadísticas
+master.menu.auditor.codeaudit.list-mine = List my code audits
+master.menu.auditor.auditrecord.list-my-audit-records = List my audit records
+master.menu.auditor.show-dashboard = Dashboard
 
 
 # master.menu.user-account ####################################################
