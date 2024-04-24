@@ -39,6 +39,12 @@ manager.project.form.button.userstories = Listar historias de usuario
 manager.project.form.button.add-userstories = Añadir historia de usuario
 manager.project.form.button.remove-userstories = Eliminar historias de usuario
 
-
 manager.project.form.title = Proyecto
 manager.project.list.title = Proyectos
+
+manager.project.form.error.has-risk = El proyecto tiene un riesgo asociado. No puede eliminarse
+manager.project.form.error.has-contract = El proyecto tiene un contrato asociado. No puede eliminarse
+manager.project.form.error.has-sponsorship = El proyecto tiene un patrocinio asociado. No puede eliminarse
+manager.project.form.error.has-training-module = El proyecto tiene un modulo de entrenamiento asociado. No puede eliminarse
+manager.project.form.error.has-code-audit = El proyecto tiene una autoría de código asociado. No puede eliminarse
+manager.project.form.error.has-objective = El proyecto tiene un objetivo asociado. No puede eliminarse

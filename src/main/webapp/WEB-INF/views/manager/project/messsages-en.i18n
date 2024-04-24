@@ -1,4 +1,4 @@
-# messages-en.i18n
+	# messages-en.i18n
 #
 # Copyright (C) 2012-2023 Rafael Corchuelo.
 #
@@ -39,3 +39,10 @@ manager.project.form.button.remove-userstories = Remove user stories
 
 manager.project.form.title = Proyect
 manager.project.list.title = Proyects
+
+manager.project.form.error.has-risk = The project has a risk assigned. It can't be deleted
+manager.project.form.error.has-contract = The project has a contract assigned. It can't be deleted
+manager.project.form.error.has-sponsorship = The project has a sponsorship assigned. It can't be deleted
+manager.project.form.error.has-training-module = The project has a training module assigned. It can't be deleted
+manager.project.form.error.has-code-audit = The project has a code audit assigned. It can't be deleted
+manager.project.form.error.has-objective = The project has an objective assigned. It can't be deleted
