@@ -71,6 +71,14 @@ master.menu.list.contract = List your contract modules
 master.menu.list.progress = List your progress
 master.menu.show.client-dashboard = Show dashboard
 
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.codeaudit.list-mine = Listar mis auditorías de código
+master.menu.auditor.auditrecord.list-my-audit-records = Listar mis registros de auditoría
+master.menu.auditor.show-dashboard = Panel de estadísticas
+
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account

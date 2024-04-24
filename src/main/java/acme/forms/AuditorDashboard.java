@@ -1,7 +1,10 @@
 
 package acme.forms;
 
+import java.util.Map;
+
 import acme.client.data.AbstractForm;
+import acme.entities.codeAudits.Type;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -12,8 +15,7 @@ public class AuditorDashboard extends AbstractForm {
 
 	private static final long	serialVersionUID	= 1L;
 
-	private int					numStaticAudits;
-	private int					numDynamicAudits;
+	private Map<Type, Integer>	numAuditsPerType;
 
 	private Double				averageNumAuditRecords;
 	private Double				deviationNumAuditRecords;

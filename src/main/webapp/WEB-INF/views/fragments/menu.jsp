@@ -70,6 +70,12 @@
 			<acme:menu-suboption code="master.menu.show.client-dashboard" action="/client/client-dashboard/show"/>
 		</acme:menu-option>
 		
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">
+			<acme:menu-suboption code="master.menu.auditor.codeaudit.list-mine" action="/auditor/code-audit/list-mine"/>
+			<acme:menu-suboption code="master.menu.auditor.auditrecord.list-my-audit-records" action="/auditor/audit-record/list-mine"/>
+			<acme:menu-suboption code="master.menu.auditor.show-dashboard" action="/auditor/auditor-dashboard/show"/>
+		</acme:menu-option>
+		
 	</acme:menu-left>
 
 	<acme:menu-right>
