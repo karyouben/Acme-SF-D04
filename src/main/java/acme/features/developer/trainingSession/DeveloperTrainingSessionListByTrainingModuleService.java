@@ -34,7 +34,7 @@ public class DeveloperTrainingSessionListByTrainingModuleService extends Abstrac
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = trainingModule != null && principal.hasRole(Developer.class) && trainingModule.getDeveloper().getUserAccount().getId() == userAccountId;
+		final boolean authorise = trainingModule != null && trainingModule.getDeveloper().getUserAccount().getId() == userAccountId;
 
 		super.getResponse().setAuthorised(authorise);
 	}
@@ -59,6 +59,7 @@ public class DeveloperTrainingSessionListByTrainingModuleService extends Abstrac
 		dataset.put("trainingModule", trainingModulesChoices.getSelected().getLabel());
 		dataset.put("trainingModules", trainingModulesChoices);
 
+		// TODO internacionalizar de isDraft a publish en el front
 		if (!object.isDraftMode()) {
 			final Locale local = super.getRequest().getLocale();
 			dataset.put("draftMode", local.equals(Locale.ENGLISH) ? "Yes" : "Sí");
@@ -72,6 +73,22 @@ public class DeveloperTrainingSessionListByTrainingModuleService extends Abstrac
 		super.getResponse().addGlobal("trainingModuleId", trainingModuleId);
 
 		super.getResponse().addData(dataset);
+	}
+
+	@Override
+	public void unbind(final Collection<TrainingSession> objects) {
+		assert objects != null;
+
+		int trainingModuleId;
+		TrainingModule trainingModule;
+		final boolean showCreate;
+
+		trainingModuleId = super.getRequest().getData("trainingModuleId", int.class);
+		trainingModule = this.repository.findTrainingModuleById(trainingModuleId);
+		showCreate = trainingModule.isDraftMode() && super.getRequest().getPrincipal().hasRole(trainingModule.getDeveloper());
+
+		super.getResponse().addGlobal("trainingModuleId", trainingModuleId);
+		super.getResponse().addGlobal("showCreate", showCreate);
 	}
 
 }
