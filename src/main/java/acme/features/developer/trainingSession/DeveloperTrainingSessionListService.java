@@ -54,7 +54,8 @@ public class DeveloperTrainingSessionListService extends AbstractService<Develop
 		dataset.put("trainingModule", trainingModulesChoices.getSelected().getLabel());
 		dataset.put("trainingModules", trainingModulesChoices);
 
-		if (object.isDraftMode()) {
+		// TODO internacionalizar de isDraft a publish en el front
+		if (!object.isDraftMode()) {
 			final Locale local = super.getRequest().getLocale();
 			dataset.put("draftMode", local.equals(Locale.ENGLISH) ? "Yes" : "Sí");
 		} else

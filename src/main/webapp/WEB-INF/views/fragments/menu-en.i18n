@@ -27,6 +27,7 @@ master.menu.anonymous.favourite-link-pabferper6 = 54370557Y: Fernández Pérez, 
 master.menu.any.list.project = List published projects
 master.menu.any.list.trainingModule = List published training modules
 master.menu.any.list.claim = List claims
+master.menu.any.list.contract = List publish contract modules
 
 # master.menu.administrator ###################################################
 
@@ -63,6 +64,21 @@ master.menu.list.trainingModule = List my training modules
 master.menu.list.training-session = List my training sessions
 master.menu.show.developer-dashboard = Show dashboard
 
+# master.menu.client ##########################################################
+
+master.menu.client = Client
+master.menu.list.contract = List your contract modules
+master.menu.list.progress = List your progress
+master.menu.show.client-dashboard = Show dashboard
+
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.codeaudit.list-mine = List my code audits
+master.menu.auditor.auditrecord.list-my-audit-records = List my audit records
+master.menu.auditor.show-dashboard = Dashboard
+
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
@@ -75,3 +91,5 @@ master.menu.user-account.manager = Manager data
 master.menu.user-account.become-manager = Become a manager
 master.menu.user-account.developer = Developer data
 master.menu.user-account.become-developer = Become a developer
+master.menu.user-account.client = Client data
+master.menu.user-account.become-client = Become a client

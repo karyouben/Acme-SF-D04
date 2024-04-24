@@ -1,0 +1,35 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2023 Rafael Corchuelo.
+#
+# En línea con el propósito tradicional de fomentar la educación y la investigación, es
+# la política del propietario de los derechos de autor permitir el uso no comercial y la redistribución de
+# este software. Se ha probado cuidadosamente, pero no se garantiza para ningún propósito en particular.
+# El propietario de los derechos de autor no ofrece ninguna garantía o representación, ni
+# acepta ninguna responsabilidad con respecto a ellas.
+
+client.contract.form.label.code = Código
+client.contract.list.label.code = Código
+client.contract.form.label.details = Detalles
+client.contract.form.label.providerName = Proveedor
+client.contract.form.label.customerName = Cliente
+client.contract.form.label.instantiation = Instantánea
+client.contract.form.label.goals = Objetivos
+client.contract.form.label.budget = Presupuesto
+client.contract.list.label.project = Proyecto
+client.contract.form.label.project = Proyecto
+client.contract.form.label.draftMode = Es borrador
+client.contract.list.label.draftMode = Es borrador
+client.contract.form.button.update = Actualizar
+client.contract.form.button.create = Crear
+client.contract.list.button.create = Crear
+client.contract.form.button.delete = Eliminar
+client.contract.form.button.publish = Publicar
+client.contract.form.error.duplicated-code = Código duplicado
+client.contract.form.error.budget-total-cost = Error: el presupuesto debe ser menor que el costo total del proyecto
+client.contract.form.error.child-draft = Error, publica antes todos los progresos asociados a este contrato
+client.contract.form.error.some-publish = Error, ya hay algunos progresos publicados para el contrato
+client.contract.form.button.progress = Lista de registros de progreso del contrato
+client.contract.form.button.add-progress = Agregar registro de progreso
+client.contract.form.title = Módulo de contrato
+client.contract.list.title = Módulos de contratos

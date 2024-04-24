@@ -27,6 +27,8 @@ master.menu.anonymous.favourite-link-pabferper6 = 54370557Y: Fernández Pérez, 
 master.menu.any.list.project = Listar proyectos publicados
 master.menu.any.list.trainingModule = Listar módulos de entrenamiento publicados
 master.menu.any.list.claim = Listar reclamaciones
+master.menu.any.list.contract = Listar módulos de contratos publicados
+
 
 
 # master.menu.administrator ###################################################
@@ -64,6 +66,21 @@ master.menu.list.trainingModule = Listar mis módulos de entrenamiento
 master.menu.list.training-session = Listar mis sesiones de entrenamiento
 master.menu.show.developer-dashboard = Mostrar panel
 
+# master.menu.client ##########################################################
+
+master.menu.client = Client
+master.menu.list.contract = Listar tus módulos de contratos
+master.menu.list.progress = Listar tus progresos
+master.menu.show.client-dashboard = Mostrar panel
+
+
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.codeaudit.list-mine = Listar mis auditorías de código
+master.menu.auditor.auditrecord.list-my-audit-records = Listar mis registros de auditoría
+master.menu.auditor.show-dashboard = Panel de estadísticas
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
@@ -76,3 +93,5 @@ master.menu.user-account.manager = Datos de gerente
 master.menu.user-account.become-manager = Hazte gerente
 master.menu.user-account.developer = Datos de desarrollador
 master.menu.user-account.become-developer = Hazte desarrollador
+master.menu.user-account.client = Datos de cliente
+master.menu.user-account.become-client = Hazte cliente

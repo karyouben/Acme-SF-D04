@@ -18,7 +18,6 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractEntity;
-import acme.entities.auditRecords.Mark;
 import acme.entities.project.Project;
 import acme.roles.Auditor;
 import lombok.Getter;
@@ -55,10 +54,7 @@ public class CodeAudit extends AbstractEntity {
 	@Length(max = 255)
 	private String				link;
 
-	// Derived Attributes -------------------------------------------------------------
-	//Must be computed as the mode of the related AuditRecords
-	@NotNull
-	private Mark				mark;
+	private boolean				draftMode;
 
 	// Relationships -------------------------------------------------------------
 	@NotNull

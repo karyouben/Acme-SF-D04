@@ -50,12 +50,11 @@ public class AuditRecord extends AbstractEntity {
 	@NotNull
 	private Mark				mark;
 
+	private boolean				draftMode;
+
 	@URL
 	@Length(max = 255)
 	private String				link;
-	// Derived Attributes -------------------------------------------------------------
-
-	private int					duration;
 
 	//Relationships  -------------------------------------------------------------
 	@NotNull

@@ -2,6 +2,7 @@
 package acme.features.developer.trainingModule;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -37,8 +38,7 @@ public class DeveloperTrainingModuleDeleteService extends AbstractService<Develo
 
 		masterId = super.getRequest().getData("id", int.class);
 		TrainingModule trainingModule = this.repository.findTrainingModuleById(masterId);
-		Developer developer = trainingModule == null ? null : trainingModule.getDeveloper();
-		status = trainingModule != null && trainingModule.isDraftMode() && principal.hasRole(developer) && trainingModule.getDeveloper().getUserAccount().getId() == userAccountId;
+		status = trainingModule != null && trainingModule.isDraftMode() && trainingModule.getDeveloper().getUserAccount().getId() == userAccountId;
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -66,6 +66,11 @@ public class DeveloperTrainingModuleDeleteService extends AbstractService<Develo
 	@Override
 	public void validate(final TrainingModule object) {
 		assert object != null;
+
+		int masterId = super.getRequest().getData("id", int.class);
+		List<TrainingSession> ls = this.repository.findTrainingSessionsByTrainingModuleId(masterId).stream().toList();
+		final boolean someDraftTrainingSession = ls.stream().allMatch(Session -> Session.isDraftMode());
+		super.state(someDraftTrainingSession, "*", "developer.trainingModule.form.error.trainingSession-Nodraft");
 	}
 
 	@Override
@@ -88,7 +93,7 @@ public class DeveloperTrainingModuleDeleteService extends AbstractService<Develo
 
 		SelectChoices choices = SelectChoices.from(DifficultyLevel.class, object.getDifficultyLevel());
 
-		Dataset dataset = super.unbind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "totalTime", "project");
+		Dataset dataset = super.unbind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "totalTime", "project", "draftMode");
 
 		dataset.put("difficultyLevelOptions", choices);
 		dataset.put("project", projectsChoices.getSelected().getKey());

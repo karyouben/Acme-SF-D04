@@ -27,6 +27,9 @@ developer.trainingsession.form.button.publish = Publicar
 developer.trainingSession.form.error.duplicated-code = Código duplicado
 developer.trainingSession.form.error.end-before-start = El período de finalización debe ser posterior al período de inicio
 developer.trainingSession.form.error.small-display-period = El período debe durar al menos una semana
+developer.trainingSession.form.error.start-before-creation = El período de inicio debe ser posterior al momento de creación
+developer.trainingSession.form.error.end-before-creation = El período de finalización debe ser posterior al momento de creación
+developer.trainingSession.form.error.trainingModule-noDraft = El módulo de entrenamiento asignado está publicado
 
 developer.training-session.list.title = Sesión de entrenamiento
 developer.training-session.list.title = Sesiones de entrenamiento
@@ -34,5 +37,5 @@ developer.training-session.list.title = Sesiones de entrenamiento
 developer.training-session.form.title = Sesión de entrenamiento
 developer.training-session.form.title = Sesiones de entrenamiento
 
-developer.trainingModule.list.label.draftMode = Es borrador
+developer.trainingModule.list.label.draftMode = Está publicado
 developer.trainingModule.list.label.trainingModule = Modulo de entrenamiento

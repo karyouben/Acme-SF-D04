@@ -18,8 +18,7 @@ developer.trainingModule.form.label.link = Link
 developer.trainingModule.form.label.totalTime = Tiempo Total
 developer.training-module.list.label.project = Proyecto
 developer.training-module.form.label.project = Proyecto
-developer.trainingModule.form.label.draftMode = Es borrador
-developer.trainingModule.list.label.draftMode = Es borrador
+developer.trainingModule.list.label.draftMode = Está publicado
 
 developer.trainingModule.form.button.update = Actualizar
 developer.trainingModule.form.button.create = Crear
@@ -32,6 +31,7 @@ developer.trainingModule.form.error.negative-total-time = El tiempo total debe s
 developer.trainingModule.form.error.end-before-start = El momento de actualización debe ser posterior al momento de creación
 developer.trainingModule.form.error.trainingSession-empty =  El módulo de entrenamiento no tiene sesiones de entrenamiento asignadas
 developer.trainingModule.form.error.trainingSession-draft = Hay sesiones de entrenamiento no publicadas asignadas a este módulo de entrenamiento
+developer.trainingModule.form.error.trainingSession-Nodraft = Hay sesiones de entrenamiento publicadas asignadas a este módulo de entrenamiento
 
 developer.trainingModule.form.button.trainingsessions = Listar sesiones de entrenamiento
 developer.trainingModule.form.button.add-trainingsessions = Agregar sesiones de entrenamiento

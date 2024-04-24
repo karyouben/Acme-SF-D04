@@ -56,6 +56,7 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 
 		final String PERIOD_START = "startPeriod";
 		final String PERIOD_END = "endPeriod";
+		final String CREATION_MOMENT = "creationMoment";
 
 		if (!super.getBuffer().getErrors().hasErrors(PERIOD_START) && !super.getBuffer().getErrors().hasErrors(PERIOD_END)) {
 			final boolean startBeforeEnd = MomentHelper.isAfter(object.getEndPeriod(), object.getStartPeriod());
@@ -68,11 +69,26 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 			}
 		}
 
+		if (!super.getBuffer().getErrors().hasErrors(CREATION_MOMENT) && !super.getBuffer().getErrors().hasErrors(PERIOD_START)) {
+			final boolean startBeforeCreation = MomentHelper.isAfter(object.getStartPeriod(), object.getTrainingModule().getCreationMoment());
+			super.state(startBeforeCreation, PERIOD_START, "developer.trainingSession.form.error.start-before-creation");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors(CREATION_MOMENT) && !super.getBuffer().getErrors().hasErrors(PERIOD_END)) {
+			final boolean endBeforeCreation = MomentHelper.isAfter(object.getEndPeriod(), object.getTrainingModule().getCreationMoment());
+			super.state(endBeforeCreation, PERIOD_END, "developer.trainingSession.form.error.end-before-creation");
+		}
+
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
 			final boolean duplicatedCode = this.repository.findAllTrainingSessions().stream().anyMatch(e -> e.getCode().equals(object.getCode()));
 
 			super.state(!duplicatedCode, "code", "developer.trainingSession.form.error.duplicated-code");
 		}
+
+		int masterId = super.getRequest().getData("trainingModuleId", int.class);
+		TrainingModule trainingModule = this.repository.findTrainingModuleById(masterId);
+		final boolean noDraftTrainingModule = trainingModule.isDraftMode();
+		super.state(noDraftTrainingModule, "*", "developer.trainingSession.form.error.trainingModule-noDraft");
 	}
 
 	@Override

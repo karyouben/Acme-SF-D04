@@ -41,7 +41,6 @@
 		<jstl:otherwise>
 			<acme:input-moment code="developer.trainingModule.form.label.creationMoment" path="creationMoment" readonly="true"/>
 			<acme:input-moment code="developer.trainingModule.form.label.updateMoment" path="updateMoment" readonly="true"/>
-			<acme:button code="developer.trainingModule.form.button.add-trainingsessions" action="/developer/training-session/create?trainingModuleId=${id}"/>
 			<acme:button code="developer.trainingModule.form.button.trainingsessions" action="/developer/training-session/list-by-training-module?trainingModuleId=${id}"/>
 		</jstl:otherwise>		
 	</jstl:choose>	
