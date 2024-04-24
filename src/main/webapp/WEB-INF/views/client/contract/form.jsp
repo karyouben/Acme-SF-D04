@@ -50,8 +50,6 @@
 		<jstl:otherwise> 
 			<acme:input-moment code="any.contract.form.label.instantiation"
 		path="instantiation" readonly = "true"/>
-			<acme:button code="client.contract.form.button.add-progress"
-				action="/client/progress/create?contractId=${id}" />
 			<acme:button code="client.contract.form.button.progress"
 				action="/client/progress/list-by-contract?contractId=${id}" />
 		</jstl:otherwise>
