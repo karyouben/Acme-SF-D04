@@ -25,7 +25,11 @@ public class AuthenticatedDeveloperCreateService extends AbstractService<Authent
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		final Principal principal = super.getRequest().getPrincipal();
+
+		final boolean authorise = principal.hasRole(Developer.class);
+
+		super.getResponse().setAuthorised(!authorise);
 	}
 
 	@Override

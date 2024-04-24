@@ -7,7 +7,6 @@ import java.util.Locale;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
@@ -28,11 +27,8 @@ public class DeveloperTrainingSessionListService extends AbstractService<Develop
 
 	@Override
 	public void authorise() {
-		final Principal principal = super.getRequest().getPrincipal();
 
-		final boolean authorise = principal.hasRole(Developer.class);
-
-		super.getResponse().setAuthorised(authorise);
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
