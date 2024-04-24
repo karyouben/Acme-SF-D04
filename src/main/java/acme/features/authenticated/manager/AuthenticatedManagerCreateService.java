@@ -24,7 +24,9 @@ public class AuthenticatedManagerCreateService extends AbstractService<Authentic
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		final Principal principal = super.getRequest().getPrincipal();
+
+		super.getResponse().setAuthorised(!principal.hasRole(Manager.class));
 	}
 
 	@Override
