@@ -67,8 +67,8 @@ public class ClientContractDeleteService extends AbstractService<Client, Contrac
 
 		int masterId = super.getRequest().getData("id", int.class);
 		List<Progress> ls = this.repository.findProgresssByContractId(masterId).stream().toList();
-		final boolean someDraftProgress = ls.stream().anyMatch(progress -> progress.isDraftMode());
-		super.state(!someDraftProgress, "*", "client.contract.form.error.child-draft");
+		final boolean someDraftProgress = ls.stream().anyMatch(progress -> !progress.isDraftMode());
+		super.state(!someDraftProgress, "*", "client.contract.form.error.some-publish");
 	}
 
 	@Override

@@ -28,6 +28,7 @@ client.contract.form.button.publish = Publicar
 client.contract.form.error.duplicated-code = Código duplicado
 client.contract.form.error.budget-total-cost = Error: el presupuesto debe ser menor que el costo total del proyecto
 client.contract.form.error.child-draft = Error, publica antes todos los progresos asociados a este contrato
+client.contract.form.error.some-publish = Error, ya hay algunos progresos publicados para el contrato
 client.contract.form.button.progress = Lista de registros de progreso del contrato
 client.contract.form.button.add-progress = Agregar registro de progreso
 client.contract.form.title = Módulo de contrato
