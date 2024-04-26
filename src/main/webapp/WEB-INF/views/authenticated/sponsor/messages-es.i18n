@@ -1,0 +1,12 @@
+
+authenticated.sponsor.form.title = Detalles de sponsor
+
+authenticated.sponsor.form.label.name = Nombre
+authenticated.sponsor.form.label.benefits = Beneficios
+authenticated.sponsor.form.label.link = Enlace
+authenticated.sponsor.form.label.email = Correo electrónico
+
+authenticated.sponsor.form.button.create = Crear
+authenticated.sponsor.form.button.update = Actualizar
+
+authenticated.sponsor.form.error.spam = El texto introducido está considerado como Spam

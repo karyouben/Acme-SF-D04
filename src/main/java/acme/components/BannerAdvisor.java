@@ -1,5 +1,5 @@
 
-package acme.component;
+package acme.components;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ControllerAdvice;

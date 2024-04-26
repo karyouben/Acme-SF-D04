@@ -1,0 +1,15 @@
+
+any.sponsorship.list.title = Patrocinios Publicados
+any.sponsorship.form.title = Detalles del Patrocinio
+authenticated.sponsorship.list.label.code = Código
+authenticated.sponsorship.list.label.type = Tipo
+authenticated.sponsorship.list.label.amount = Cantidad
+
+any.sponsorship.form.label.code = Código
+any.sponsorship.form.label.moment=Momento
+any.sponsorship.form.label.startPeriod = Periodo de comienzo
+any.sponsorship.form.label.endPeriod = Periodo de Fin
+any.sponsorship.form.label.amount = Cantidad
+any.sponsorship.form.label.link = Link
+any.sponsorship.form.label.email = Email
+sponsor.sponsorship.form.label.money = Coste en la divisa del sistema

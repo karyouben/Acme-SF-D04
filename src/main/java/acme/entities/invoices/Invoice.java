@@ -53,17 +53,23 @@ public class Invoice extends AbstractEntity {
 
 	@Valid
 	@NotNull
-	protected Money				tax;
+	protected double			tax;
 
 	@URL
 	@Length(max = 255)
-	protected String			infoLink;
+	protected String			link;
+
+	protected boolean			draftMode;
 
 
 	@Transient
-	@NotNull
-	public Double totalAmount() {
-		return this.quantity.getAmount() + this.tax.getAmount() * (this.tax.getAmount() / 100);
+	public Money totalAmount() {
+		double total;
+		total = this.quantity.getAmount() + this.tax / 100 * this.quantity.getAmount();
+		Money totalAmount = new Money();
+		totalAmount.setAmount(total);
+		totalAmount.setCurrency(this.quantity.getCurrency());
+		return totalAmount;
 	}
 
 	// Relationships ----------------------------------------------------------

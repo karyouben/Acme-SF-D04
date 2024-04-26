@@ -1,0 +1,35 @@
+sponsor.sponsorship.list.title = Tu lista de Patrocinios
+sponsor.sponsorship.list.label.code = Código
+sponsor.sponsorship.list.label.type = Tipo
+sponsor.sponsorship.list.label.amount = Cantidad
+
+sponsor.sponsorship.form.title = Detalles del Patrocinio
+sponsor.sponsorship.form.label.code = Código
+sponsor.sponsorship.form.label.moment = Momento
+sponsor.sponsorship.form.label.startPeriod = Periodo de comienzo
+sponsor.sponsorship.form.label.endPeriod = Periodo de final
+sponsor.sponsorship.form.label.amount = Cantidad
+sponsor.sponsorship.form.label.link = Link
+sponsor.sponsorship.form.label.email = Email
+sponsor.sponsorship.form.label.type = Tipo
+sponsor.sponsorship.form.label.project = Proyecto
+sponsor.sponsorship.form.label.money = Coste en la moneda del sistema
+
+sponsor.sponsorship.form.error.noInvoice = Este patrocinio no tiene facturas
+sponsor.sponsorship.form.error.invoicenp = Algunas facturas de este patrocinio no están publicadas
+
+sponsor.sponsorship.form.error.spam = El texto introducido es considerado Spam
+
+sponsor.sponsorship.invoice = Facturas
+
+sponsor.sponsorship.form.error.code = Existe un patrocinio con el mismo código
+sponsor.sponsorship.form.error.cost = La cantidad debe ser positivo y menor que 1000000
+sponsor.sponsorship.form.error.cost2 = La divisa introducida no es aceptada por el sistema
+sponsor.sponsorship.form.error.end-period= El periodo de final es incorrecto
+validation.sponsorship.code = El código debe ser 3 mayúsculas y 4 números unidos por -
+
+sponsor.sponsorship.create = Crear
+sponsor.sponsorship.form.button.delete = Eliminar
+sponsor.sponsorship.form.button.update = Actualizar
+sponsor.sponsorship.form.button.publish = Publicar
+sponsor.sponsorship.form.button.create = Crear
