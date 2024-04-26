@@ -1,5 +1,5 @@
 
-package acme.component;
+package acme.components;
 
 import java.util.Date;
 import java.util.List;

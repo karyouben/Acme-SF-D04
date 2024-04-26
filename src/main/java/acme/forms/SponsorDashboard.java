@@ -1,8 +1,6 @@
 
 package acme.forms;
 
-import java.util.Map;
-
 import acme.client.data.AbstractForm;
 import acme.datatypes.Statistics;
 import lombok.Getter;
@@ -14,20 +12,20 @@ public class SponsorDashboard extends AbstractForm {
 
 	// Serialisation identifier -----------------------------------------------
 
-	protected static final long			serialVersionUID	= 1L;
+	protected static final long	serialVersionUID	= 1L;
 
 	// Attributes -------------------------------------------------------------
 
 	// Total number of invoices with a tax less than or equal to 21.00%
-	protected Integer					totalNumberInvoicesTax21orLess;
+	protected Integer			numInvoicesWithTaxLessOrEqualThan21;
 
 	// Total number of sponsorships with a link
-	protected Integer					totalNumberSponsorshipsWithLink;
+	protected Integer			numSponsorshipsWithLink;
 
 	// Statistics for the amount of the sponsorships
-	protected Map<String, Statistics>	sponsorshipAmountstatistics;
+	protected Statistics		sponsorshipAmountStats;
 
 	// Statistics for the quantity of the invoices
-	protected Map<String, Statistics>	invoiceQuanitityStatistics;
+	protected Statistics		invoicesQuantityStats;
 
 }

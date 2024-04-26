@@ -28,6 +28,7 @@ master.menu.any.list.project = List published projects
 master.menu.any.list.trainingModule = List published training modules
 master.menu.any.list.claim = List claims
 master.menu.any.list.contract = List publish contract modules
+master.menu.any.sponsorship = List of Sponsorships
 
 # master.menu.administrator ###################################################
 
@@ -71,6 +72,12 @@ master.menu.list.contract = List your contract modules
 master.menu.list.progress = List your progress
 master.menu.show.client-dashboard = Show dashboard
 
+# master.menu.sponsor #######################################################
+master.menu.sponsor = Sponsor
+master.menu.sponsor.sponsorship = My sponsorship
+master.menu.sponsor.invoice = My invoices
+master.menu.sponsor.sponsor-dashboard = Sponsor dashboard
+
 # master.menu.auditor ########################################################
 
 master.menu.auditor = Auditor
@@ -93,3 +100,5 @@ master.menu.user-account.developer = Developer data
 master.menu.user-account.become-developer = Become a developer
 master.menu.user-account.client = Client data
 master.menu.user-account.become-client = Become a client
+master.menu.user-account.become-sponsor = Become a sponsor
+master.menu.user-account.sponsor = Sponsor data
