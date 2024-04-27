@@ -1,4 +1,4 @@
-key,reference,identificationDate,impact,probability,description,infoLink,key:admin,key:project
+key,reference,identificationDate,impact,probability,description,link,key:admin,key:project
 risk-01,R-001,2011/05/15 08:27,2.34,0.74,Descripción de riesgo 1,https://risk.com/risk-01,administrator-01,project-01
 risk-02,R-002,2007/08/22 17:13,7.65,0.22,Descripción de riesgo 2,https://risk.com/risk-02,administrator-01,project-02
 risk-03,R-003,2021/11/02 17:00,3.0,0.5,<script>alert("hi!")</script>,https://risk.com-03,administrator-01,project-03

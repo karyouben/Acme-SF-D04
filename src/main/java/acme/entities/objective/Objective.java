@@ -1,5 +1,5 @@
 
-package acme.entities.objetive;
+package acme.entities.objective;
 
 import java.util.Date;
 
@@ -11,7 +11,7 @@ import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
+import javax.validation.constraints.PastOrPresent;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
@@ -24,45 +24,46 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Objetive extends AbstractEntity {
+public class Objective extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
-	protected static final long	serialVersionUID	= 1L;
+	private static final long	serialVersionUID	= 1L;
 
-	@Temporal(TemporalType.TIMESTAMP)
-	@Past
+	// Attributes -------------------------------------------------------------
+
 	@NotNull
-	protected Date				instantiation;
+	@PastOrPresent
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				instantiationMoment;
 
 	@NotBlank
 	@Length(max = 75)
-	protected String			title;
+	private String				title;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			description;
+	private String				description;
 
 	@NotNull
-	protected Priority			priority;
+	private Priority			priority;
 
-	protected boolean			isCritical;
+	private boolean				critical;
 
+	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	@NotNull
-	protected Date				startDurationPeriod;
+	private Date				startDate;
 
-	@Temporal(TemporalType.TIMESTAMP)
 	@NotNull
-	protected Date				endDurationPeriod;
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date				endDate;
 
 	@URL
 	@Length(max = 255)
-	protected String			link;
+	private String				link;
 
 	@Valid
 	@ManyToOne
 	@JoinColumn(name = "project_id", nullable = false)
 	private Project				project;
-
 }
