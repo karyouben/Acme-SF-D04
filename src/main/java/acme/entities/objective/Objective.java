@@ -35,35 +35,35 @@ public class Objective extends AbstractEntity {
 	@NotNull
 	@PastOrPresent
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				instantiationMoment;
+	protected Date				instantiationMoment;
 
 	@NotBlank
 	@Length(max = 75)
-	private String				title;
+	protected String			title;
 
 	@NotBlank
 	@Length(max = 100)
-	private String				description;
+	protected String			description;
 
 	@NotNull
-	private Priority			priority;
+	protected Priority			priority;
 
 	private boolean				critical;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				startDate;
+	protected Date				startDate;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				endDate;
+	protected Date				endDate;
 
 	@URL
 	@Length(max = 255)
-	private String				link;
+	protected String			link;
 
 	@Valid
 	@ManyToOne
 	@JoinColumn(name = "project_id", nullable = false)
-	private Project				project;
+	protected Project			project;
 }
