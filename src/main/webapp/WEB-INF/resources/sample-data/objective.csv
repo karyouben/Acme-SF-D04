@@ -1,4 +1,4 @@
-key,instantiation,title,description,priority,isCritical,startDurationPeriod,endDurationPeriod,link,key:project
+key,instantiationMoment,title,description,priority,critical,startDate,endDate,link,key:project
 objetive-01,2022/01/01 00:00,Objetivo a cumplir,Valoracion de poker 5,High,true,2022/01/01 00:00,2022/02/01 00:00,https://www.google.com/,project-01
 objetive-02,2022/01/01 00:00,Objetivo menos prioritario a cumplir,Valoracion de poker 3,Medium,false,2022/01/01 00:00,2022/02/01 00:00,https://www.google.com/,project-02
 objetive-03,1970/01/01 00:01,hglftdcooltpkjnjwcaiullroipjhajbwircxclmdedencwbduufgqznhxdlrpnyscwyvgthipu,dqgxuykpemcdsutvohhcltkaqofxmadxecbefdptwfdsdtbzgkownvytnvicwvojntkttvrucbkztzaryodgfcwzgutjfdrrcaer,Medium,false,1970/01/01 00:01,1970/01/01 00:01,null,project-02

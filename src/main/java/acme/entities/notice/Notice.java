@@ -25,30 +25,32 @@ public class Notice extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 
-	protected static final long	serialVersionUID	= 1L;
+	private static final long	serialVersionUID	= 1L;
+
+	// Attributes -------------------------------------------------------------
 
 	@Temporal(TemporalType.TIMESTAMP)
 	@PastOrPresent
 	@NotNull
-	protected Date				instantiation;
+	private Date				instantiation;
 
 	@NotBlank
 	@Length(max = 75)
-	protected String			title;
-
-	@NotBlank
-	@Length(max = 75)
-	protected String			author;
+	private String				title;
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			message;
+	private String				message;
 
 	@Email
-	protected String			email;
+	private String				email;
 
 	@URL
 	@Length(max = 255)
-	protected String			link;
+	private String				link;
+
+	@NotBlank
+	@Length(max = 75)
+	private String				author;
 
 }

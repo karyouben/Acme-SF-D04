@@ -43,7 +43,7 @@ public interface ManagerProjectRepository extends AbstractRepository {
 	@Query("SELECT COUNT(1) FROM Contract a where a.project.id = :id")
 	int contractExist(int id);
 
-	@Query("SELECT COUNT(1) FROM Objetive a where a.project.id = :id")
+	@Query("SELECT COUNT(1) FROM Objective a where a.project.id = :id")
 	int objectiveExist(int id);
 
 	@Query("SELECT COUNT(1) FROM Risk a where a.project.id = :id")

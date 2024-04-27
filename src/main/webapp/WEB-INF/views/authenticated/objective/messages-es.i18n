@@ -1,0 +1,26 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.objective.list.title = Listado de Objetivos
+authenticated.objective.form.title = Formulario de Objetivos
+
+authenticated.objective.list.label.title = Título
+authenticated.objective.list.label.startDate = Fecha de comienzo
+authenticated.objective.list.label.endDate = Fecha de finalización
+authenticated.objective.list.label.priority = Prioridad
+
+authenticated.objective.form.label.instantiationMoment = Momento de Creación
+authenticated.objective.form.label.title = Título
+authenticated.objective.form.label.description = Descripción
+authenticated.objective.form.label.priority = Prioridad
+authenticated.objective.form.label.critical = Crítico
+authenticated.objective.form.label.startDate = Fecha de comienzo
+authenticated.objective.form.label.endDate = Fecha de finalización
+authenticated.objective.form.label.link = Enlace

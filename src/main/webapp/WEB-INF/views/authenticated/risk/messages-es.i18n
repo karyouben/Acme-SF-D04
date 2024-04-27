@@ -1,0 +1,25 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+authenticated.risk.list.title = Listado de riesgos
+authenticated.risk.form.title = Detalles de riesgo
+
+authenticated.risk.list.label.reference = Referencia
+authenticated.risk.list.label.identificationDate = Fecha de identificación
+authenticated.risk.list.label.impact = Impacto
+authenticated.risk.list.label.probability = Probabilidad
+
+authenticated.risk.form.label.reference = Referencia
+authenticated.risk.form.label.identificationDate = Fecha de identificación
+authenticated.risk.form.label.impact = Impacto
+authenticated.risk.form.label.probability = Probabilidad
+authenticated.risk.form.label.value = Valor
+authenticated.risk.form.label.description = Descripción
+authenticated.risk.form.label.link = Enlace
