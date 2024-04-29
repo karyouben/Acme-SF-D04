@@ -11,21 +11,21 @@
 administrator.objective.form.title = Formulario de Objetivos
 
 
-administrator.objective.form.label.instantiationMoment = Momento de Creación
+administrator.objective.form.label.instantiation = Momento de Creación
 administrator.objective.form.label.title = Título
 administrator.objective.form.label.description = Descripción
 administrator.objective.form.label.priority = Prioridad
-administrator.objective.form.label.critical = Crítico
-administrator.objective.form.label.startDate = Fecha de comienzo
-administrator.objective.form.label.endDate = Fecha de finalización
+administrator.objective.form.label.isCritical = Crítico
+administrator.objective.form.label.startDurationPeriod = Fecha de comienzo
+administrator.objective.form.label.endDurationPeriod = Fecha de finalización
 administrator.objective.form.label.link = Enlace
 administrator.objective.form.label.confirmation = Confirmación
 
 administrator.objective.form.button.create = Publicar
 
 administrator.objective.form.error.confirmation = Debes confirmar el objetivo antes de publicarlo
-validation.objective.moment.startDate = La fecha de cominezo debe estar en el futuro
+validation.objective.moment.startDurationPeriod = La fecha de cominezo debe estar en el futuro
 validation.objective.moment.start-after-end = La fecha de cominezo debe ser anterior a la fecha de finalización
 validation.objective.moment.minimum-one-hour = El tiempo entre la fecha de comienzo y la fecha de finalización debe ser de al menos una hora
 admininstrator.objective.form.error.dateOutOfBounds =  Todas las fechas deben ser anteriores a 2200/12/31 23:59
-validation.objective.moment.endDate = La fecha de finalización debe estar en el futuro
+validation.objective.moment.endDurationPeriod = La fecha de finalización debe estar en el futuro

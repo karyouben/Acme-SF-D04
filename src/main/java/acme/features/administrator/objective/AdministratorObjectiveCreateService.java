@@ -42,7 +42,7 @@ public class AdministratorObjectiveCreateService extends AbstractService<Adminis
 		Date instantiationMoment;
 		instantiationMoment = MomentHelper.getCurrentMoment();
 		object = new Objective();
-		object.setInstantiationMoment(instantiationMoment);
+		object.setInstantiation(instantiationMoment);
 
 		super.getBuffer().addData(object);
 	}
@@ -51,7 +51,7 @@ public class AdministratorObjectiveCreateService extends AbstractService<Adminis
 	public void bind(final Objective object) {
 		assert object != null;
 
-		super.bind(object, "title", "description", "priority", "critical", "startDate", "endDate", "link");
+		super.bind(object, "title", "description", "priority", "isCritical", "startDurationPeriod", "endDurationPeriod", "link");
 	}
 
 	@Override
@@ -66,21 +66,21 @@ public class AdministratorObjectiveCreateService extends AbstractService<Adminis
 			confirmation = super.getRequest().getData("confirmation", boolean.class);
 			super.state(confirmation, "confirmation", "administrator.objective.form.error.confirmation");
 		}
-		Date instantiationMoment = MomentHelper.getCurrentMoment();
-		if (!super.getBuffer().getErrors().hasErrors("startDate"))
-			super.state(MomentHelper.isAfter(object.getStartDate(), instantiationMoment), "startDate", "validation.objective.moment.startDate");
+		Date instantiation = MomentHelper.getCurrentMoment();
+		if (!super.getBuffer().getErrors().hasErrors("startDurationPeriod"))
+			super.state(MomentHelper.isAfter(object.getStartDurationPeriod(), instantiation), "startDurationPeriod", "validation.objective.moment.startDate");
 
-		if (!super.getBuffer().getErrors().hasErrors("endDate"))
-			super.state(MomentHelper.isAfter(object.getEndDate(), instantiationMoment), "endDate", "validation.objective.moment.endDate");
+		if (!super.getBuffer().getErrors().hasErrors("endDurationPeriod"))
+			super.state(MomentHelper.isAfter(object.getEndDurationPeriod(), instantiation), "endDurationPeriod", "validation.objective.moment.endDate");
 
-		if (!super.getBuffer().getErrors().hasErrors("endDate")) {
+		if (!super.getBuffer().getErrors().hasErrors("endDurationPeriod")) {
 			Date minimumEnd;
-			minimumEnd = MomentHelper.deltaFromMoment(object.getStartDate(), 1, ChronoUnit.HOURS);
-			super.state(MomentHelper.isAfterOrEqual(object.getEndDate(), minimumEnd), "endDate", "validation.objective.moment.minimum-one-hour");
+			minimumEnd = MomentHelper.deltaFromMoment(object.getStartDurationPeriod(), 1, ChronoUnit.HOURS);
+			super.state(MomentHelper.isAfterOrEqual(object.getEndDurationPeriod(), minimumEnd), "endDurationPeriod", "validation.objective.moment.minimum-one-hour");
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("endDate"))
-			super.state(MomentHelper.isBefore(object.getEndDate(), futureMostDate), "endDate", "admininstrator.objective.form.error.dateOutOfBounds");
+			super.state(MomentHelper.isBefore(object.getEndDurationPeriod(), futureMostDate), "endDurationPeriod", "admininstrator.objective.form.error.dateOutOfBounds");
 	}
 
 	@Override
@@ -98,7 +98,7 @@ public class AdministratorObjectiveCreateService extends AbstractService<Adminis
 		SelectChoices choices;
 		choices = SelectChoices.from(Priority.class, object.getPriority());
 
-		dataset = super.unbind(object, "title", "description", "priority", "critical", "startDate", "endDate", "link");
+		dataset = super.unbind(object, "title", "description", "priority", "isCritical", "startDurationPeriod", "endDurationPeriod", "link");
 		dataset.put("confirmation", false);
 		dataset.put("priorities", choices);
 
