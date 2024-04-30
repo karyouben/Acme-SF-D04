@@ -2,6 +2,7 @@
 package acme.features.administrator.administratordashboard;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import acme.client.data.accounts.Administrator;
 import acme.client.data.models.Dataset;
@@ -9,6 +10,7 @@ import acme.client.services.AbstractService;
 import acme.datatypes.Statistics;
 import acme.forms.AdministratorDashboard;
 
+@Service
 public class AdministratorDashboardShowService extends AbstractService<Administrator, AdministratorDashboard> {
 
 	// Internal state ---------------------------------------------------------
@@ -56,16 +58,16 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		minimumClaimPosted10 = minimumClaimPosted10 != null ? minimumClaimPosted10 : 0.0;
 		maximumClaimPosted10 = maximumClaimPosted10 != null ? maximumClaimPosted10 : 0.0;
 
-		double totalNoticeWithEmailAndLink = (double) this.repository.totalNoticeWithEmailAndLink();
-		double totalNotice = (double) this.repository.totalNotice();
+		double totalNoticeWithEmailAndLink = this.repository.totalNoticeWithEmailAndLink();
+		double totalNotice = this.repository.totalNotice();
 		Double linkAndEmailNoticesRatio = totalNotice != 0.0 ? totalNoticeWithEmailAndLink / totalNotice : 0.0;
 
-		double totalCriticalObjectives = (double) this.repository.totalCriticalObjectives();
-		double totalObjectives = (double) this.repository.totalObjectives();
-		Double criticalObjetivesRatio = totalObjectives != 0.0 ? totalCriticalObjectives / totalObjectives : 0.0;
+		double totalCriticalObjectives = this.repository.totalCriticalObjectives();
+		double totalObjectives = this.repository.totalObjectives();
+		Double criticalObjectivesRatio = totalObjectives != 0.0 ? totalCriticalObjectives / totalObjectives : 0.0;
 
-		double totalNonCriticalObjectives = (double) this.repository.totalNonCriticalObjectives();
-		Double nonCriticalObjetivesRatio = totalObjectives != 0.0 ? totalNonCriticalObjectives / totalObjectives : 0.0;
+		double totalNonCriticalObjectives = this.repository.totalNonCriticalObjectives();
+		Double nonCriticalObjectivesRatio = totalObjectives != 0.0 ? totalNonCriticalObjectives / totalObjectives : 0.0;
 
 		final Statistics riskValueStatistics = new Statistics();
 		riskValueStatistics.setAverage(averageRiskValue);
@@ -82,8 +84,8 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		final AdministratorDashboard dashboard = new AdministratorDashboard();
 
 		dashboard.setLinkAndEmailNoticesRatio(linkAndEmailNoticesRatio);
-		dashboard.setCriticalObjetivesRatio(criticalObjetivesRatio);
-		dashboard.setNonCriticalObjetivesRatio(nonCriticalObjetivesRatio);
+		dashboard.setCriticalObjetivesRatio(criticalObjectivesRatio);
+		dashboard.setNonCriticalObjetivesRatio(nonCriticalObjectivesRatio);
 
 		dashboard.setTotalAdministrators(totalAdministrators);
 		dashboard.setTotalAuditors(totalAuditors);
@@ -94,6 +96,7 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		dashboard.setTotalSponsors(totalSponsors);
 		dashboard.setTotalClients(totalClients);
 		dashboard.setRisk(riskValueStatistics);
+		dashboard.setClaimsInLast10WeeksData(claimPosted10Statistics);
 
 		super.getBuffer().addData(dashboard);
 
@@ -104,11 +107,11 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		Dataset dataset;
 
 		dataset = super.unbind(object, //
-			"linkAndEmailNoticesRatio", "criticalObjetivesRatio", // 
-			"nonCriticalObjetivesRatio", "totalAdministrators", "totalAuditors", // 
+			"linkAndEmailNoticesRatio", "criticalObjectivesRatio", // 
+			"nonCriticalObjectivesRatio", "totalAdministrators", "totalAuditors", // 
 			"totalConsumers", "totalDevelopers", "totalManagers", // 
 			"totalProviders", "totalSponsors", "totalClients", // 
-			"riskValueStatistics");
+			"riskValueStatistics", "claimPosted10Statistics");
 
 		super.getResponse().addData(dataset);
 	}

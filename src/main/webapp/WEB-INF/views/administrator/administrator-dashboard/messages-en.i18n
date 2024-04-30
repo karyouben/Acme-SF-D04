@@ -1,0 +1,47 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.link-and-email-notices-ratio = Ratio of notices with link and email
+administrator.dashboard.form.label.link-and-email-notices-ratio = Ratio of notices with link and email
+
+administrator.dashboard.form.title.critical-objectives-ratio = Ratio of critical and non-critical objectives
+administrator.dashboard.form.label.title = Title
+administrator.dashboard.form.label.critical-objectives-ratio = Critical 
+administrator.dashboard.form.label.critical-no-objectives-ratio = non-critical
+administrator.dashboard.form.label.critical-and-non-critical-objectives-ratio = Objectives ratio
+
+administrator.dashboard.form.title.statistics-risk = Statistics risks
+administrator.dashboard.form.label.statistics-risk-title = Title
+administrator.dashboard.form.label.statistics-risk-average = Average
+administrator.dashboard.form.label.statistics-risk-deviation = Deviation
+administrator.dashboard.form.label.statistics-risk-maximum = Maximum
+administrator.dashboard.form.label.statistics-risk-minimum = Minimum
+administrator.dashboard.form.label.statistics-object-risk = Risks
+
+
+administrator.dashboard.form.title.statistics-notice = Statistics notices
+administrator.dashboard.form.label.statistics-notice-title = Title
+administrator.dashboard.form.label.statistics-notice-average = Average
+administrator.dashboard.form.label.statistics-notice-deviation = Deviation
+administrator.dashboard.form.label.statistics-notice-maximum = Maximum
+administrator.dashboard.form.label.statistics-notice-minimum = Minimum
+administrator.dashboard.form.label.statistics-object-notice = Notices
+
+administrator.dashboard.form.title.statistics-users = Statistics users
+administrator.dashboard.form.label.statistics-title-users= Title
+administrator.dashboard.form.label.totalAdministrators = Administrators
+administrator.dashboard.form.label.totalAuditors = Auditors
+administrator.dashboard.form.label.totalConsumers = Consumers
+administrator.dashboard.form.label.totalDevelopers = Developers
+administrator.dashboard.form.label.totalManagers = Managers
+administrator.dashboard.form.label.totalProviders = Providers 
+administrator.dashboard.form.label.totalSponsors = Sponsors
+administrator.dashboard.form.label.totalClients = Clients
+administrator.dashboard.form.label.statistics-object-users = Roles
