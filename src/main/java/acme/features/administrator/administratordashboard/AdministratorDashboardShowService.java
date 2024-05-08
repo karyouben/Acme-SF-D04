@@ -84,8 +84,8 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		final AdministratorDashboard dashboard = new AdministratorDashboard();
 
 		dashboard.setLinkAndEmailNoticesRatio(linkAndEmailNoticesRatio);
-		dashboard.setCriticalObjetivesRatio(criticalObjectivesRatio);
-		dashboard.setNonCriticalObjetivesRatio(nonCriticalObjectivesRatio);
+		dashboard.setCriticalObjectivesRatio(criticalObjectivesRatio);
+		dashboard.setNonCriticalObjectivesRatio(nonCriticalObjectivesRatio);
 
 		dashboard.setTotalAdministrators(totalAdministrators);
 		dashboard.setTotalAuditors(totalAuditors);
@@ -95,8 +95,8 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		dashboard.setTotalProviders(totalProviders);
 		dashboard.setTotalSponsors(totalSponsors);
 		dashboard.setTotalClients(totalClients);
-		dashboard.setRisk(riskValueStatistics);
-		dashboard.setClaimsInLast10WeeksData(claimPosted10Statistics);
+		dashboard.setRiskValueStatistics(riskValueStatistics);
+		dashboard.setClaimPosted10Statistics(claimPosted10Statistics);
 
 		super.getBuffer().addData(dashboard);
 

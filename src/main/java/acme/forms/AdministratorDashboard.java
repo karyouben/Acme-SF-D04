@@ -29,13 +29,13 @@ public class AdministratorDashboard extends AbstractForm {
 	private Double				linkAndEmailNoticesRatio;
 
 	// ratios of critical and non-critical objectives
-	private Double				criticalObjetivesRatio;
-	private Double				nonCriticalObjetivesRatio;
+	private Double				criticalObjectivesRatio;
+	private Double				nonCriticalObjectivesRatio;
 
 	// average, minimum, maximum, and standard deviation of the value in the risks; 
-	private Statistics			risk;
+	private Statistics			riskValueStatistics;
 
 	// average, minimum, maximum, and standard deviation of the number of claims posted over the last 10 weeks
-	private Statistics			claimsInLast10WeeksData;
+	private Statistics			claimPosted10Statistics;
 
 }

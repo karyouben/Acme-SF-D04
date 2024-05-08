@@ -45,6 +45,8 @@
 		<th>
 			<acme:message code="administrator.dashboard.form.label.critical-no-objectives-ratio"/>
 		</th>
+	</tr>
+	<tr>
 		<td>
 			<acme:message code="administrator.dashboard.form.label.critical-and-non-critical-objectives-ratio"/>
 		</td>

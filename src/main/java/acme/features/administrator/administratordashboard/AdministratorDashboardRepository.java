@@ -49,7 +49,7 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("SELECT COUNT(o) FROM Objective o WHERE o.critical = FALSE")
 	int totalNonCriticalObjectives();
 
-	@Query("SELECT COUNT(o) FROM Objective")
+	@Query("SELECT COUNT(o) FROM Objective o")
 	int totalObjectives();
 
 	@Query("select avg(r.impact * r.probability) FROM Risk r")
@@ -64,16 +64,16 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select min(r.impact * r.probability) FROM Risk r")
 	Double findMinimumRiskValue();
 
-	@Query("select avg(c) FROM Claim c WHERE c.instantiationMoment >= CURRENT_DATE() - 70 ")
+	@Query("select COUNT(c) FROM Claim c")
 	Double findAverageClaimPosted10();
 
-	@Query("select stddev(c) FROM Claim c WHERE c.instantiationMoment >= CURRENT_DATE() - 70 ")
+	@Query("select COUNT(c) FROM Claim c")
 	Double findDeviationClaimPosted10();
 
-	@Query("select max(c) FROM Claim c WHERE c.instantiationMoment >= CURRENT_DATE() - 70 ")
+	@Query("select COUNT(c) FROM Claim c")
 	Double findMaximumClaimPosted10();
 
-	@Query("select min(c) FROM Claim c WHERE c.instantiationMoment >= CURRENT_DATE() - 70 ")
+	@Query("select COUNT(c) FROM Claim c")
 	Double findMinimumClaimPosted10();
 
 }
