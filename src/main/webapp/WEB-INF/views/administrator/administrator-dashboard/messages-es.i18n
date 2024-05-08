@@ -8,6 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
+administrator.administrator-dashboard.form.title = Panel de administrador
+
 administrator.dashboard.form.title.link-and-email-notices-ratio = Ratio de avisos con enlace y correo electrónico
 administrator.dashboard.form.label.link-and-email-notices-ratio = Ratio de avisos con enlace y correo electrónico
 
