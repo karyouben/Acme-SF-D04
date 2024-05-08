@@ -1,0 +1,47 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.dashboard.form.title.link-and-email-notices-ratio = Ratio de avisos con enlace y correo electrónico
+administrator.dashboard.form.label.link-and-email-notices-ratio = Ratio de avisos con enlace y correo electrónico
+
+administrator.dashboard.form.title.critical-objectives-ratio = Ratio de objetivos críticos y no críticos
+administrator.dashboard.form.label.title = Título
+administrator.dashboard.form.label.critical-objectives-ratio = Crítico
+administrator.dashboard.form.label.critical-no-objectives-ratio = No crítico
+administrator.dashboard.form.label.critical-and-non-critical-objectives-ratio = Ratio de objetivos
+
+administrator.dashboard.form.title.statistics-risk = Riesgos estadísticos
+administrator.dashboard.form.label.statistics-risk-title = Título
+administrator.dashboard.form.label.statistics-risk-average = Media
+administrator.dashboard.form.label.statistics-risk-deviation = Desviación
+administrator.dashboard.form.label.statistics-risk-maximum = Máximo
+administrator.dashboard.form.label.statistics-risk-minimum = Mínimo
+administrator.dashboard.form.label.statistics-object-risk = Riesgos
+
+
+administrator.dashboard.form.title.statistics-notice = Estadísticas de avisos
+administrator.dashboard.form.label.statistics-notice-title = Título
+administrator.dashboard.form.label.statistics-notice-average = Media
+administrator.dashboard.form.label.statistics-notice-deviation = Desviación
+administrator.dashboard.form.label.statistics-notice-maximum = Máximo
+administrator.dashboard.form.label.statistics-notice-minimum = Mínimo
+administrator.dashboard.form.label.statistics-object-notice = Avisos
+
+administrator.dashboard.form.title.statistics-users = Estadísticas de usuarios
+administrator.dashboard.form.label.statistics-title-users= Título
+administrator.dashboard.form.label.totalAdministrators = Administradores
+administrator.dashboard.form.label.totalAuditors = Auditores
+administrator.dashboard.form.label.totalConsumers = Consumidores
+administrator.dashboard.form.label.totalDevelopers = Desarrolladores
+administrator.dashboard.form.label.totalManagers = Gerentes
+administrator.dashboard.form.label.totalProviders = Proveedores 
+administrator.dashboard.form.label.totalSponsors = Patrocinadores
+administrator.dashboard.form.label.totalClients = Clientes
+administrator.dashboard.form.label.statistics-object-users = Roles
