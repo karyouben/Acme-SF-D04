@@ -44,7 +44,7 @@ public class Risk extends AbstractEntity {
 	protected String			reference;
 
 	@NotNull
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.DATE)
 	@Past
 	private Date				identificationDate;
 
@@ -66,14 +66,14 @@ public class Risk extends AbstractEntity {
 
 	@URL
 	@Length(max = 255)
-	protected String			infoLink;
+	protected String			link;
 
 	// Derived attributes -----------------------------------------------------
 
 
 	@NotNull
 	@Transient
-	public Double value() {
+	public Double getValue() {
 		return this.impact * this.probability;
 	}
 

@@ -21,6 +21,7 @@ import org.hibernate.validator.constraints.URL;
 import acme.client.data.AbstractEntity;
 import acme.client.data.datatypes.Money;
 import acme.entities.project.Project;
+import acme.roles.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -29,49 +30,51 @@ import lombok.Setter;
 @Setter
 public class Sponsorship extends AbstractEntity {
 
-	// Serialisation identifier -----------------------------------------------
-
 	protected static final long	serialVersionUID	= 1L;
 
-	// Attributes -------------------------------------------------------------
-
 	@NotBlank
-	@Pattern(regexp = "[A-Z]{1,3}-[0-9]{3}")
 	@Column(unique = true)
+	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$")
 	protected String			code;
 
 	@NotNull
-	@Past
 	@Temporal(TemporalType.TIMESTAMP)
+	@Past
 	protected Date				moment;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				durationStart;
+	protected Date				startPeriod;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				durationEnd;
+	protected Date				endPeriod;
 
+	@Valid
 	@NotNull
 	protected Money				amount;
 
 	@NotNull
-	protected SponsorshipType	typeOfSponsorship;
+	protected SponsorshipType	type;
 
 	@Email
 	@Length(max = 255)
-	protected String			contactEmail;
+	protected String			email;
 
 	@URL
 	@Length(max = 255)
-	protected String			infoLink;
+	protected String			link;
 
-	// Relationships ----------------------------------------------------------
+	protected boolean			draftMode;
 
-	@ManyToOne(optional = false)
 	@NotNull
 	@Valid
+	@ManyToOne(optional = false)
 	protected Project			project;
+
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	protected Sponsor			sponsor;
 
 }

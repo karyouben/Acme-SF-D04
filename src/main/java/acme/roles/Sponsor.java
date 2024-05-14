@@ -9,8 +9,12 @@ import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
 import acme.client.data.AbstractRole;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
 public class Sponsor extends AbstractRole {
 
 	// Serialisation identifier -----------------------------------------------
@@ -28,10 +32,10 @@ public class Sponsor extends AbstractRole {
 	private String				benefits;
 
 	@URL
-	private String				webPage;
+	private String				link;
 
 	@Email
-	private String				contactEmail;
+	private String				email;
 
 	// Constructors, getters, and setters
 }

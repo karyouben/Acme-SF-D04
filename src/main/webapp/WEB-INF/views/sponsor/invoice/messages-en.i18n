@@ -1,0 +1,32 @@
+sponsor.invoice.list.title = Your invoices list
+sponsor.invoice.list.label.code = Code
+sponsor.invoice.list.label.dueDate = Due Date
+sponsor.invoice.list.label.quantity = Quantity
+
+sponsor.invoice.form.title = Invoice details
+sponsor.invoice.form.label.code = Code
+sponsor.invoice.form.label.registrationTime = RegistrationTime
+sponsor.invoice.form.label.dueDate = Due Date
+sponsor.invoice.form.label.quantity = Quantity
+sponsor.invoice.form.label.link = Link
+sponsor.invoice.form.label.tax = Tax
+sponsor.invoice.form.label.type = Type
+sponsor.invoice.form.label.totalAmount = Total Amount the system currency
+
+sponsor.invoice.form.error.noInvoices = This sponsorship has no invoices
+sponsor.invoice.form.error.invoicesnp = Some invoices of this sponsorship is not published
+
+sponsor.sponsorship.form.error.spam = The introduced text is considered Spam
+
+sponsor.invoice.form.error.code = It exists a invoice with the same code
+sponsor.invoice.form.error.cost = The cost must be positive and lower than 1000000
+sponsor.invoice.form.error.cost2 = The introduced currency is not accepted by the system
+sponsor.invoice.form.error.end-period= The end period is incorrect
+sponsor.invoice.form.error.start-period= The start period is incorrect
+validation.invoice.code = The code must be 3 capital letter and 4 numbers joined by -
+
+sponsor.invoice.create = Create
+sponsor.invoice.form.button.delete = Delete
+sponsor.invoice.form.button.update = Update
+sponsor.invoice.form.button.publish = Publish
+sponsor.invoice.form.button.create = Create

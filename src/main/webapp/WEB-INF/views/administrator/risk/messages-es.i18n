@@ -1,0 +1,35 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2024 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.risk.list.title = Listado de riesgos
+administrator.risk.form.title = Detalles de riesgo
+
+administrator.risk.list.label.reference = Referencia
+administrator.risk.list.label.identificationDate = Fecha de identificación
+administrator.risk.list.label.impact = Impacto
+administrator.risk.list.label.probability = Probabilidad
+
+administrator.risk.form.label.reference = Referencia
+administrator.risk.form.label.identificationDate = Fecha de identificación
+administrator.risk.form.label.impact = Impacto
+administrator.risk.form.label.probability = Probabilidad
+administrator.risk.form.label.value = Valor
+administrator.risk.form.label.description = Descripción
+administrator.risk.form.label.link = Enlace
+
+administrator.risk.list.button.create = Crear
+administrator.risk.form.button.create = Crear
+administrator.risk.form.button.update = Guardar cambios
+administrator.risk.form.button.delete = Eliminar
+
+administrator.risk.form.error.duplicate = La referencia de un riesgo debe ser única
+administrator.risk.form.error.identification-date = La fecha de identificación tiene que ser posterior a 01/01/2000
+administrator.risk.form.error.impact = El impacto debe estar en el rango [0'0, 1'0] 
+administrator.risk.form.error.probability = La probabilidad debe estar en el rango [0'0, 1'0]

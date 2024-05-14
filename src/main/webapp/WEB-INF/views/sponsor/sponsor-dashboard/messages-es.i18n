@@ -1,0 +1,11 @@
+sponsor.sponsor-dashboard.form.title= Panel de Patrocinador
+sponsor.sponsorDashboard.form.label.average-sponsorship-cost= Media cantidad del patrocinio
+sponsor.sponsorDashboard.form.label.min-sponsorship-cost= Minimo cantidad del patrocinio
+sponsor.sponsorDashboard.form.label.max-sponsorship-cost= Maximo cantidad del patrocinio
+sponsor.sponsorDashboard.form.label.lin-dev-sponsorship-cost= Desviación Linear de la cantidad del patrocinio
+sponsor.sponsorDashboard.form.label.average-invoice-cost= Media de la cantidad de la factura
+sponsor.sponsorDashboard.form.label.max-invoice-cost= Minimo de la cantidad de la factura
+sponsor.sponsorDashboard.form.label.min-invoice-cost= Maximo de la cantidad de la factura
+sponsor.sponsorDashboard.form.label.lin-dev-invoice-cost= Desviación Linear de la cantidad de la factura
+sponsor.sponsorDashboard.form.label.21orless-invoice= Numero de facturas con 21% o menos de impuestos
+sponsor.sponsorDashboard.form.label.link-sponsorship= Numero de patrocinios con link
