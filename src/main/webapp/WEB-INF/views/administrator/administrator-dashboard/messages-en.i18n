@@ -28,13 +28,13 @@ administrator.dashboard.form.label.statistics-risk-minimum = Minimum
 administrator.dashboard.form.label.statistics-object-risk = Risks
 
 
-administrator.dashboard.form.title.statistics-notice = Statistics notices
-administrator.dashboard.form.label.statistics-notice-title = Title
-administrator.dashboard.form.label.statistics-notice-average = Average
-administrator.dashboard.form.label.statistics-notice-deviation = Deviation
-administrator.dashboard.form.label.statistics-notice-maximum = Maximum
-administrator.dashboard.form.label.statistics-notice-minimum = Minimum
-administrator.dashboard.form.label.statistics-object-notice = Notices
+administrator.dashboard.form.title.statistics-claim = Statistics claims
+administrator.dashboard.form.label.statistics-claim-title = Title
+administrator.dashboard.form.label.statistics-claim-average = Average
+administrator.dashboard.form.label.statistics-claim-deviation = Deviation
+administrator.dashboard.form.label.statistics-claim-maximum = Maximum
+administrator.dashboard.form.label.statistics-claim-minimum = Minimum
+administrator.dashboard.form.label.statistics-object-claim = Claims
 
 administrator.dashboard.form.title.statistics-users = Statistics users
 administrator.dashboard.form.label.statistics-title-users= Title

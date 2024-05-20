@@ -19,7 +19,7 @@ administrator.dashboard.form.label.critical-objectives-ratio = Crítico
 administrator.dashboard.form.label.critical-no-objectives-ratio = No crítico
 administrator.dashboard.form.label.critical-and-non-critical-objectives-ratio = Ratio de objetivos
 
-administrator.dashboard.form.title.statistics-risk = Riesgos estadísticos
+administrator.dashboard.form.title.statistics-risk = Estadísticas de riesgos
 administrator.dashboard.form.label.statistics-risk-title = Título
 administrator.dashboard.form.label.statistics-risk-average = Media
 administrator.dashboard.form.label.statistics-risk-deviation = Desviación
@@ -28,13 +28,13 @@ administrator.dashboard.form.label.statistics-risk-minimum = Mínimo
 administrator.dashboard.form.label.statistics-object-risk = Riesgos
 
 
-administrator.dashboard.form.title.statistics-notice = Estadísticas de avisos
-administrator.dashboard.form.label.statistics-notice-title = Título
-administrator.dashboard.form.label.statistics-notice-average = Media
-administrator.dashboard.form.label.statistics-notice-deviation = Desviación
-administrator.dashboard.form.label.statistics-notice-maximum = Máximo
-administrator.dashboard.form.label.statistics-notice-minimum = Mínimo
-administrator.dashboard.form.label.statistics-object-notice = Avisos
+administrator.dashboard.form.title.statistics-claim = Estadísticas de reclamaciones
+administrator.dashboard.form.label.statistics-claim-title = Título
+administrator.dashboard.form.label.statistics-claim-average = Media
+administrator.dashboard.form.label.statistics-claim-deviation = Desviación
+administrator.dashboard.form.label.statistics-claim-maximum = Máximo
+administrator.dashboard.form.label.statistics-claim-minimum = Mínimo
+administrator.dashboard.form.label.statistics-object-claim = Reclamaciones
 
 administrator.dashboard.form.title.statistics-users = Estadísticas de usuarios
 administrator.dashboard.form.label.statistics-title-users= Título

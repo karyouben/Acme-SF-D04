@@ -35,7 +35,7 @@ public class Objective extends AbstractEntity {
 	@NotNull
 	@PastOrPresent
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				instantiationMoment;
+	protected Date				instantiation;
 
 	@NotBlank
 	@Length(max = 75)
@@ -48,15 +48,15 @@ public class Objective extends AbstractEntity {
 	@NotNull
 	protected Priority			priority;
 
-	private boolean				critical;
+	private boolean				isCritical;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				startDate;
+	protected Date				startDurationPeriod;
 
 	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				endDate;
+	protected Date				endDurationPeriod;
 
 	@URL
 	@Length(max = 255)

@@ -43,10 +43,10 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("SELECT COUNT(n) FROM Notice n")
 	int totalNotice();
 
-	@Query("SELECT COUNT(o) FROM Objective o WHERE o.critical = TRUE")
+	@Query("SELECT COUNT(o) FROM Objective o WHERE o.isCritical = TRUE")
 	int totalCriticalObjectives();
 
-	@Query("SELECT COUNT(o) FROM Objective o WHERE o.critical = FALSE")
+	@Query("SELECT COUNT(o) FROM Objective o WHERE o.isCritical = FALSE")
 	int totalNonCriticalObjectives();
 
 	@Query("SELECT COUNT(o) FROM Objective o")

@@ -101,30 +101,30 @@
 </table>
 
 <h2>
-	<acme:message code="administrator.dashboard.form.title.statistics-notice"/>
+	<acme:message code="administrator.dashboard.form.title.statistics-claim"/>
 </h2>
 
 <table class="table table-sm">
 	<tr>
 		<th>
-			<acme:message code="administrator.dashboard.form.label.statistics-notice-title"/>
+			<acme:message code="administrator.dashboard.form.label.statistics-claim-title"/>
 		</th>
 		<th>
-			<acme:message code="administrator.dashboard.form.label.statistics-notice-average"/>
+			<acme:message code="administrator.dashboard.form.label.statistics-claim-average"/>
 		</th>
 		<th>
-			<acme:message code="administrator.dashboard.form.label.statistics-notice-deviation"/>
+			<acme:message code="administrator.dashboard.form.label.statistics-claim-deviation"/>
 		</th>
 		<th>
-			<acme:message code="administrator.dashboard.form.label.statistics-notice-maximum"/>
+			<acme:message code="administrator.dashboard.form.label.statistics-claim-maximum"/>
 		</th>
 		<th>
-			<acme:message code="administrator.dashboard.form.label.statistics-notice-minimum"/>
+			<acme:message code="administrator.dashboard.form.label.statistics-claim-minimum"/>
 		</th>
 	</tr>
 	<tr>
 		<td>
-			<acme:message code="administrator.dashboard.form.label.statistics-object-notice"/>
+			<acme:message code="administrator.dashboard.form.label.statistics-object-claim"/>
 		</td>
 		<td>
 			<acme:print value="${claimPosted10Statistics.getAverageString()}"/>

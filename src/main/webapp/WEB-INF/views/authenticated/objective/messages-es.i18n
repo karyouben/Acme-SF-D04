@@ -12,15 +12,15 @@ authenticated.objective.list.title = Listado de Objetivos
 authenticated.objective.form.title = Formulario de Objetivos
 
 authenticated.objective.list.label.title = Título
-authenticated.objective.list.label.startDate = Fecha de comienzo
-authenticated.objective.list.label.endDate = Fecha de finalización
+authenticated.objective.list.label.startDurationPeriod = Fecha de comienzo
+authenticated.objective.list.label.endDurationPeriod = Fecha de finalización
 authenticated.objective.list.label.priority = Prioridad
 
-authenticated.objective.form.label.instantiationMoment = Momento de Creación
+authenticated.objective.form.label.instantiation = Momento de Creación
 authenticated.objective.form.label.title = Título
 authenticated.objective.form.label.description = Descripción
 authenticated.objective.form.label.priority = Prioridad
-authenticated.objective.form.label.critical = Crítico
-authenticated.objective.form.label.startDate = Fecha de comienzo
-authenticated.objective.form.label.endDate = Fecha de finalización
+authenticated.objective.form.label.isCritical = Crítico
+authenticated.objective.form.label.startDurationPeriod = Fecha de comienzo
+authenticated.objective.form.label.endDurationPeriod = Fecha de finalización
 authenticated.objective.form.label.link = Enlace

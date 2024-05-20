@@ -22,17 +22,17 @@
 	<modelVersion>4.0.0</modelVersion>
 	
 	<name>Acme SF</name>
-	<description>Acme - Software Factory - D03 of the group C1.033</description>	
+	<description>Acme - Software Factory - D04 of the group C1.033</description>	
 	
 	<artifactId>Acme-SF</artifactId>
-	<version>D03</version>
+	<version>D04</version>
 	<packaging>war</packaging>
 	
 	<parent>
 		<groupId>Acme</groupId>
 		<artifactId>Parent-Pom</artifactId>
-		<version>24.1.0</version>
-		<relativePath>../../pom-24.1.0.xml</relativePath>
+		<version>24.4.0</version>
+		<relativePath>../../pom-24.4.0.xml</relativePath>
 	</parent>
 
 	<!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->

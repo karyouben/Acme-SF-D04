@@ -17,7 +17,7 @@
 
 <acme:list>
 	<acme:list-column code="authenticated.objective.list.label.title" path="title" width="10%"/>
-	<acme:list-column code="authenticated.objective.list.label.startDate" path="startDate" width="10%"/>
-	<acme:list-column code="authenticated.objective.list.label.endDate" path="endDate" width="10%"/>
+	<acme:list-column code="authenticated.objective.list.label.startDurationPeriod" path="startDurationPeriod" width="10%"/>
+	<acme:list-column code="authenticated.objective.list.label.endDurationPeriod" path="endDurationPeriod" width="10%"/>
 	<acme:list-column code="authenticated.objective.list.label.priority" path="priority" width="10%"/>
 </acme:list>
