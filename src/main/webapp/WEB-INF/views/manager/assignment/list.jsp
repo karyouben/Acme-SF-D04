@@ -17,6 +17,6 @@
 
 <acme:list>
 	<acme:list-column code="manager.assignment.form.label.userStory" path="title"/>
-	<acme:list-column code="manager.assignment.form.label.userStory" path="isDraftMode"/>
+	<acme:list-column code="manager.assignment.form.label.isDraftMode" path="isDraftMode"/>
 </acme:list>
 
