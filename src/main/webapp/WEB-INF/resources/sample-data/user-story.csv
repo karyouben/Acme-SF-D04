@@ -42,3 +42,15 @@ user-story-40,Title,Description,1,Criteria,MUST,null,manager-01,false
 user-story-41,Title,Description,1,Criteria,MUST,ftp://www.example.com,manager-01,false
 user-story-42,Title,Description,1,Criteria,MUST,http://www.example.com,manager-02,false
 user-story-43,Title,Description,1,Criteria,MUST,https://www.example.com,manager-01,true
+user-story-44,Title,Description,1,Criteria,MUST,ftp://www.lorem-ipsum.org,manager-01,false
+user-story-45,Title,Description,1,Criteria,MUST,http://www.lorem-ipsum.org/dolor/sit.html,manager-01,false
+user-story-46,Title,Description,1,Criteria,MUST,http://www.lorem-ipsum.org/dolor/sit.html#dolor,manager-01,false
+user-story-47,Title,Description,1,Criteria,MUST,http://example.org?a=1&b=2,manager-01,false
+user-story-48,Title,Description,1,Criteria,MUST,http://example.org?,manager-01,false
+user-story-49,Title,Description,1,Criteria,MUST,http://example.org?a,manager-01,false
+user-story-50,Title,Description,1,Criteria,MUST,http://example.org?a&b,manager-01,false
+user-story-51,Title,Description,1,Criteria,MUST,http://example.org/,manager-01,true
+user-story-52,Title,Description,1,Criteria,MUST,http://example.org/a,manager-01,true
+user-story-53,Title,Description,1,Criteria,MUST,http://example.org/a/b,manager-01,true
+user-story-54,Title,Description,1,Criteria,MUST,http://example.org/a/b?,manager-01,true
+user-story-55,Title,Description,1,Criteria,MUST,http://example.org/a/b?a&b,manager-01,true
