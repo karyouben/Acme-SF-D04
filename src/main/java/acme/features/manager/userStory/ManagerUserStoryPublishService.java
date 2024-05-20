@@ -30,7 +30,7 @@ public class ManagerUserStoryPublishService extends AbstractService<Manager, Use
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = userStory != null && userStory.isDraftMode() && userStory.getManager().getUserAccount().getId() == userAccountId;
+		final boolean authorise = userStory != null && userStory.getManager().getUserAccount().getId() == userAccountId && userStory.isDraftMode();
 
 		super.getResponse().setAuthorised(authorise);
 	}
@@ -47,7 +47,7 @@ public class ManagerUserStoryPublishService extends AbstractService<Manager, Use
 	public void bind(final UserStory object) {
 		assert object != null;
 
-		super.bind(object, "title", "description", "cost", "acceptanceCriteria", "link", "priority");
+		//super.bind(object, "title", "description", "cost", "acceptanceCriteria", "link", "priority");
 	}
 
 	@Override

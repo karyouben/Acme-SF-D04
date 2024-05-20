@@ -2,6 +2,7 @@
 package acme.features.manager.assignment;
 
 import java.util.Collection;
+import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,7 +32,7 @@ public class ManagerAssignmentListService extends AbstractService<Manager, Assig
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = project != null && principal.hasRole(Manager.class) && project.getManager().getUserAccount().getId() == userAccountId;
+		final boolean authorise = project != null && project.getManager().getUserAccount().getId() == userAccountId;
 
 		super.getResponse().setAuthorised(authorise);
 	}
@@ -49,6 +50,12 @@ public class ManagerAssignmentListService extends AbstractService<Manager, Assig
 		assert object != null;
 
 		Dataset dataset = super.unbind(object, "userStory");
+		dataset.put("title", object.getUserStory().getTitle());
+		if (object.getUserStory().isDraftMode()) {
+			final Locale local = super.getRequest().getLocale();
+			dataset.put("isDraftMode", local.equals(Locale.ENGLISH) ? "Yes" : "Sí");
+		} else
+			dataset.put("isDraftMode", "No");
 
 		super.getResponse().addData(dataset);
 	}

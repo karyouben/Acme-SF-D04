@@ -18,4 +18,4 @@ manager.project.form.error.duplicated-userStory = Historia de usuario duplicada
 manager.project.form.error.cost-exceeded = La suma de costes de las historias de usuario excede el coste total del proyecto
 
 manager.assignment.form.title = Asignación
-manager.assignment.list.title = ASignaciones
+manager.assignment.list.title = Asignaciones

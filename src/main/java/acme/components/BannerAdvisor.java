@@ -20,10 +20,11 @@ public class BannerAdvisor {
 
 		try {
 			result = this.repository.findRandomBanner();
-		} catch (final Exception oops) {
+		} catch (final Throwable oops) {
 			result = null;
 		}
 
 		return result;
 	}
+
 }

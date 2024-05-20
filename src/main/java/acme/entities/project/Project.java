@@ -40,7 +40,7 @@ public class Project extends AbstractEntity {
 
 	@NotBlank
 	@Length(max = 100)
-	protected String			abstract$;
+	protected String			projectAbstract;
 
 	//Business rule: Projects containing fatal errors must be rejected by the system
 	protected boolean			hasErrors;
