@@ -30,6 +30,7 @@ manager.project.form.button.publish = Publicar
 
 manager.project.form.error.duplicated-code = Código duplicado
 manager.project.form.error.negative-total-cost = El coste total debe ser positivo o cero
+manager.project.form.error.exceed-limit-total-cost = El coste total no debe ser mayor que 9999999999.99
 manager.project.form.error.currency-not-supported = Divisa no permitida
 manager.project.form.error.hasErrors = El proyecto tiene errores
 manager.project.form.error.userStories-draft = Hay historias de usuario no publicadas asignadas a este proyecto

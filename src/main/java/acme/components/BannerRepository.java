@@ -1,46 +1,45 @@
 
 package acme.components;
 
-import java.util.Date;
 import java.util.List;
-import java.util.Random;
 
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.domain.Sort.Direction;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import acme.client.helpers.MomentHelper;
+import acme.client.helpers.RandomHelper;
 import acme.client.repositories.AbstractRepository;
 import acme.entities.banner.Banner;
 
 @Repository
 public interface BannerRepository extends AbstractRepository {
 
-	public static Random RANDOM = new Random();
+	@Query("select count(a) from Banner a")
+	int countAdvertisements();
 
-
-	@Query("select count(b) from Banner b WHERE b.startDisplayPeriod < :date AND b.endDisplayPeriod > :date")
-	int countBanners(Date date);
-
-	@Query("select b from Banner b WHERE b.startDisplayPeriod < :date AND b.endDisplayPeriod > :date")
-	List<Banner> findManyBanners(Date date);
+	@Query("select a from Banner a")
+	List<Banner> findManyAdvertisements(PageRequest pageRequest);
 
 	default Banner findRandomBanner() {
 		Banner result;
-		int count;
+		int count, index;
+		PageRequest page;
 		List<Banner> list;
-		int randomNumber = 0;
 
-		count = this.countBanners(MomentHelper.getCurrentMoment());
+		count = this.countAdvertisements();
 		if (count == 0)
 			result = null;
 		else {
-			list = this.findManyBanners(MomentHelper.getCurrentMoment());
-			if (!list.isEmpty())
-				randomNumber = BannerRepository.RANDOM.nextInt(list.size());
+			index = RandomHelper.nextInt(0, count);
 
-			result = list.isEmpty() ? null : list.get(randomNumber);
+			page = PageRequest.of(index, 1, Sort.by(Direction.ASC, "id"));
+			list = this.findManyAdvertisements(page);
+			result = list.isEmpty() ? null : list.get(0);
 		}
 
 		return result;
 	}
+
 }

@@ -18,7 +18,10 @@
 <acme:form>				
 	<jstl:choose>
 		<jstl:when test="${_command == 'show'}">
-			<acme:submit code="manager.assignment.form.button.delete" action="/manager/assignment/delete?projectId=${projectId}"/>
+			<h3>
+				<acme:print value="${title}"/>
+			</h3>
+			<acme:submit code="manager.assignment.form.button.delete" action="/manager/assignment/delete"/>
 		</jstl:when>		
 
 		<jstl:when test="${_command == 'create'}">

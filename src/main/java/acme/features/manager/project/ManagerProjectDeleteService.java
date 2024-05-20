@@ -5,7 +5,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.accounts.Principal;
-import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.entities.project.Project;
 import acme.roles.Manager;
@@ -30,8 +29,7 @@ public class ManagerProjectDeleteService extends AbstractService<Manager, Projec
 
 		masterId = super.getRequest().getData("id", int.class);
 		Project project = this.repository.findProjectById(masterId);
-		Manager manager = project == null ? null : project.getManager();
-		status = project != null && project.isDraftMode() && principal.hasRole(manager) && project.getManager().getUserAccount().getId() == userAccountId;
+		status = project != null && project.getManager().getUserAccount().getId() == userAccountId && project.isDraftMode();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -49,7 +47,7 @@ public class ManagerProjectDeleteService extends AbstractService<Manager, Projec
 	public void bind(final Project object) {
 		assert object != null;
 
-		super.bind(object, "code", "title", "abstract$", "link", "totalCost", "hasErrors");
+		super.bind(object, "code", "title", "projectAbstract", "link", "totalCost", "hasErrors");
 	}
 
 	@Override
@@ -61,9 +59,9 @@ public class ManagerProjectDeleteService extends AbstractService<Manager, Projec
 		// In case the other students implement wrong their part
 		super.state(this.repository.codeAuditExist(id) == 0, "*", "manager.project.form.error.has-code-audit");
 		super.state(this.repository.contractExist(id) == 0, "*", "manager.project.form.error.has-contract");
-		super.state(this.repository.sponsorshipExist(id) == 0, "*", "manager.project.form.error.has-sponsorship");
+		super.state(this.repository.sponsorshipExist(id) == 0, "*", "manager.project.form.error.has-sponsorship");// este
 		super.state(this.repository.trainingModuleExist(id) == 0, "*", "manager.project.form.error.has-training-module");
-		super.state(this.repository.riskExist(id) == 0, "*", "manager.project.form.error.has-risk");
+		super.state(this.repository.riskExist(id) == 0, "*", "manager.project.form.error.has-risk"); // este
 		super.state(this.repository.objectiveExist(id) == 0, "*", "manager.project.form.error.has-objective");
 	}
 
@@ -72,15 +70,6 @@ public class ManagerProjectDeleteService extends AbstractService<Manager, Projec
 		assert object != null;
 
 		this.repository.delete(object);
-	}
-
-	@Override
-	public void unbind(final Project object) {
-		assert object != null;
-
-		Dataset dataset = super.unbind(object, "code", "title", "abstract$", "link", "totalCost", "draftMode", "hasErrors");
-
-		super.getResponse().addData(dataset);
 	}
 
 }

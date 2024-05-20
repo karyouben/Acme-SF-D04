@@ -5,10 +5,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.accounts.Principal;
-import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
-import acme.client.views.SelectChoices;
-import acme.entities.project.Priority;
 import acme.entities.project.UserStory;
 import acme.roles.Manager;
 
@@ -30,7 +27,7 @@ public class ManagerUserStoryPublishService extends AbstractService<Manager, Use
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = userStory != null && userStory.isDraftMode() && userStory.getManager().getUserAccount().getId() == userAccountId;
+		final boolean authorise = userStory != null && userStory.getManager().getUserAccount().getId() == userAccountId && userStory.isDraftMode();
 
 		super.getResponse().setAuthorised(authorise);
 	}
@@ -47,7 +44,7 @@ public class ManagerUserStoryPublishService extends AbstractService<Manager, Use
 	public void bind(final UserStory object) {
 		assert object != null;
 
-		super.bind(object, "title", "description", "cost", "acceptanceCriteria", "link", "priority");
+		//super.bind(object, "title", "description", "cost", "acceptanceCriteria", "link", "priority");
 	}
 
 	@Override
@@ -64,17 +61,19 @@ public class ManagerUserStoryPublishService extends AbstractService<Manager, Use
 		this.repository.save(object);
 	}
 
-	@Override
-	public void unbind(final UserStory object) {
-		assert object != null;
-
-		SelectChoices choices = SelectChoices.from(Priority.class, object.getPriority());
-
-		Dataset dataset = super.unbind(object, "title", "description", "cost", "acceptanceCriteria", "link", "priority", "draftMode");
-
-		dataset.put("priorityOptions", choices);
-
-		super.getResponse().addData(dataset);
-	}
+	/*
+	 * @Override
+	 * public void unbind(final UserStory object) {
+	 * assert object != null;
+	 * 
+	 * SelectChoices choices = SelectChoices.from(Priority.class, object.getPriority());
+	 * 
+	 * Dataset dataset = super.unbind(object, "title", "description", "cost", "acceptanceCriteria", "link", "priority", "draftMode");
+	 * 
+	 * dataset.put("priorityOptions", choices);
+	 * 
+	 * super.getResponse().addData(dataset);
+	 * }
+	 */
 
 }

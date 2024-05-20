@@ -30,7 +30,7 @@ public class ManagerUserStoryUpdateService extends AbstractService<Manager, User
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = userStory != null && userStory.isDraftMode() && userStory.getManager().getUserAccount().getId() == userAccountId;
+		final boolean authorise = userStory != null && userStory.getManager().getUserAccount().getId() == userAccountId && userStory.isDraftMode();
 
 		super.getResponse().setAuthorised(authorise);
 	}

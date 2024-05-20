@@ -33,7 +33,7 @@ public class ManagerAssignmentCreateService extends AbstractService<Manager, Ass
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = project != null && project.isDraftMode() && principal.hasRole(Manager.class) && project.getManager().getUserAccount().getId() == userAccountId;
+		final boolean authorise = project != null && project.isDraftMode() && project.getManager().getUserAccount().getId() == userAccountId;
 
 		super.getResponse().setAuthorised(authorise);
 	}
@@ -59,13 +59,15 @@ public class ManagerAssignmentCreateService extends AbstractService<Manager, Ass
 	@Override
 	public void validate(final Assignment object) {
 		assert object != null;
-		final int projectId = super.getRequest().getData("projectId", int.class);
-
-		if (!super.getBuffer().getErrors().hasErrors("userStory")) {
-			final boolean duplicatedUS = this.repository.findAssignmentsByProjectId(projectId).stream().anyMatch(a -> a.getUserStory().equals(object.getUserStory()));
-
-			super.state(!duplicatedUS, "userStory", "manager.project.form.error.duplicated-userStory");
-		}
+		/*
+		 * final int projectId = super.getRequest().getData("projectId", int.class);
+		 * 
+		 * if (!super.getBuffer().getErrors().hasErrors("userStory")) {
+		 * final boolean duplicatedUS = this.repository.findAssignmentsByProjectId(projectId).stream().anyMatch(a -> a.getUserStory().equals(object.getUserStory()));
+		 * 
+		 * super.state(!duplicatedUS, "userStory", "manager.project.form.error.duplicated-userStory");
+		 * }
+		 */
 
 	}
 

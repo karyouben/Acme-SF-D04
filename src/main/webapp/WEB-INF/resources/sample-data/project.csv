@@ -1,4 +1,4 @@
-key,code,title,abstract$,has-errors,draft-mode,link,total-cost,remaining-cost,key:manager
+key,code,title,projectAbstract,has-errors,draft-mode,link,total-cost,remaining-cost,key:manager
 project-01,ABC-0001,Title,Abstract,false,false,https://www.example.com,EUR 100,EUR 100,manager-01
 project-02,ABC-0002,1,Abstract,false,false,https://www.example.com,EUR 100,EUR 100,manager-01
 project-03,ABC-0003,12,Abstract,false,false,https://www.example.com,EUR 100,EUR 100,manager-01
@@ -41,3 +41,16 @@ project-41,ABC-0041,Title,Abstract,false,false,https://www.example.com,EUR 100,E
 project-42,ABC-0042,Title,Abstract,false,false,https://www.example.com,EUR 100,EUR 9999999999.99,manager-01
 project-43,ABC-0043,Title,Abstract,false,false,https://www.example.com,EUR 100,EUR 9999999999.98,manager-01
 project-44,ABC-0044,Title,Abstract,false,false,https://www.example.com,EUR 100,EUR 100,manager-02
+project-45,ABC-0045,Title,Abstract,false,false,http://www.lorem-ipsum.org/dolor/sit.html,EUR 100,EUR 100,manager-01
+project-46,ABC-0046,Title,Abstract,false,false,http://www.lorem-ipsum.org/dolor/sit.html/sit.html,EUR 100,EUR 100,manager-01
+project-47,ABC-0047,Title,Abstract,false,false,http://www.lorem-ipsum.org/dolor/sit.html#dolor,EUR 100,EUR 100,manager-01
+project-48,ABC-0048,Title,Abstract,false,false,http://example.org?a=1&b=2,EUR 100,EUR 100,manager-01
+project-49,ABC-0049,Title,Abstract,false,false,http://example.org?,EUR 100,EUR 100,manager-01
+project-50,ABC-0050,Title,Abstract,false,false,http://example.org?a,EUR 100,EUR 100,manager-01
+project-51,ABC-0051,Title,Abstract,false,false,http://example.org?a&b,EUR 100,EUR 100,manager-01
+project-52,ABC-0052,Title,Abstract,false,false,http://example.org/,EUR 100,EUR 100,manager-01
+project-53,ABC-0053,Title,Abstract,false,false,http://example.org/a,EUR 100,EUR 100,manager-01
+project-54,ABC-0054,Title,Abstract,false,false,http://example.org/a/b,EUR 100,EUR 100,manager-01
+project-55,ABC-0055,Title,Abstract,false,false,http://example.org/a/b?,EUR 100,EUR 100,manager-01
+project-56,ABC-0056,Title,Abstract,false,false,http://example.org/a/b?,EUR 100,EUR 100,manager-01
+project-57,ABC-0057,Title,Abstract,false,false,http://example.org/a/b?a&b,EUR 100,EUR 100,manager-01

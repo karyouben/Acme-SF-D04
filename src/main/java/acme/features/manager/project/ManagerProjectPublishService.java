@@ -2,7 +2,6 @@
 package acme.features.manager.project;
 
 import java.util.List;
-import java.util.stream.Stream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +12,6 @@ import acme.client.services.AbstractService;
 import acme.entities.project.Assignment;
 import acme.entities.project.Project;
 import acme.entities.project.UserStory;
-import acme.entities.systemconf.SystemConfiguration;
 import acme.roles.Manager;
 
 @Service
@@ -33,10 +31,7 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 
 		int masterId = super.getRequest().getData("id", int.class);
 		Project project = this.repository.findProjectById(masterId);
-
-		//CAMBIAR LO DE DRAFT MODE PARA EL VALIDATE y lo de haserrors
-
-		boolean status = project != null && project.isDraftMode() && project.getManager().getUserAccount().getId() == userAccountId;
+		boolean status = project != null && project.getManager().getUserAccount().getId() == userAccountId && project.isDraftMode();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -54,36 +49,43 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 	public void bind(final Project object) {
 		assert object != null;
 
-		super.bind(object, "code", "title", "abstract$", "link", "totalCost", "hasErrors");
+		//super.bind(object, /* "code", "title", "projectAbstract", "link", "totalCost", */ "hasErrors");
 	}
 
 	@Override
 	public void validate(final Project object) {
 		assert object != null;
 
-		if (!super.getBuffer().getErrors().hasErrors("code")) {
-			final int proyectId = super.getRequest().getData("id", int.class);
-			final boolean duplicatedCode = this.repository.findAllProjects().stream().filter(e -> e.getId() != proyectId).anyMatch(e -> e.getCode().equals(object.getCode()));
+		/*
+		 * if (!super.getBuffer().getErrors().hasErrors("code")) {
+		 * final int proyectId = super.getRequest().getData("id", int.class);
+		 * final boolean duplicatedCode = this.repository.findAllProjects().stream().filter(e -> e.getId() != proyectId).anyMatch(e -> e.getCode().equals(object.getCode()));
+		 * 
+		 * super.state(!duplicatedCode, "code", "manager.project.form.error.duplicated-code");
+		 * }
+		 * 
+		 * if (!super.getBuffer().getErrors().hasErrors("totalCost")) {
+		 * final boolean negative = object.getTotalCost().getAmount() < 0;
+		 * 
+		 * super.state(!negative, "totalCost", "manager.project.form.error.negative-total-cost");
+		 * 
+		 * final boolean tooBig = object.getTotalCost().getAmount() > 9999999999.99;
+		 * 
+		 * super.state(!tooBig, "totalCost", "manager.project.form.error.exceed-limit-total-cost");
+		 * 
+		 * List<SystemConfiguration> sc = this.repository.findSystemConfiguration();
+		 * final boolean foundCurrency = Stream.of(sc.get(0).acceptedCurrencies.split(",")).anyMatch(c -> c.equals(object.getTotalCost().getCurrency()));
+		 * 
+		 * super.state(foundCurrency, "totalCost", "manager.project.form.error.currency-not-supported");
+		 * 
+		 * }
+		 */
 
-			super.state(!duplicatedCode, "code", "manager.project.form.error.duplicated-code");
-		}
+		//if (!super.getBuffer().getErrors().hasErrors("hasErrors")) {
+		final boolean hasErrors = object.isHasErrors();
 
-		if (!super.getBuffer().getErrors().hasErrors("totalCost")) {
-			final boolean duplicatedCode = object.getTotalCost().getAmount() < 0;
-
-			super.state(!duplicatedCode, "totalCost", "manager.project.form.error.negative-total-cost");
-
-			List<SystemConfiguration> sc = this.repository.findSystemConfiguration();
-			final boolean foundCurrency = Stream.of(sc.get(0).acceptedCurrencies.split(",")).anyMatch(c -> c.equals(object.getTotalCost().getCurrency()));
-
-			super.state(foundCurrency, "totalCost", "manager.project.form.error.currency-not-supported");
-		}
-
-		if (!super.getBuffer().getErrors().hasErrors("hasErrors")) {
-			final boolean hasErrors = object.isHasErrors();
-
-			super.state(!hasErrors, "hasErrors", "manager.project.form.error.hasErrors");
-		}
+		super.state(!hasErrors, "hasErrors", "manager.project.form.error.hasErrors");
+		//}
 
 		int masterId = super.getRequest().getData("id", int.class);
 		List<UserStory> ls = this.repository.findAssignmentsByProjectId(masterId).stream().map(Assignment::getUserStory).toList();
@@ -92,14 +94,13 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 		super.state(!noUS, "*", "manager.project.form.error.userStories-empty");
 		super.state(!someDraftUserStory, "*", "manager.project.form.error.userStories-draft");
 
-		//vincular con asterisco lo de draft
 	}
 
 	@Override
 	public void perform(final Project object) {
 		assert object != null;
 
-		object.setRemainingCost(object.getTotalCost());
+		//object.setRemainingCost(object.getTotalCost());
 		object.setDraftMode(false);
 
 		this.repository.save(object);
@@ -109,7 +110,7 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 	public void unbind(final Project object) {
 		assert object != null;
 
-		Dataset dataset = super.unbind(object, "code", "title", "abstract$", "link", "totalCost", "draftMode", "hasErrors");
+		Dataset dataset = super.unbind(object, "code", "title", "projectAbstract", "link", "totalCost", "draftMode", "hasErrors");
 
 		super.getResponse().addData(dataset);
 	}
