@@ -25,6 +25,7 @@ manager.userstory.form.button.delete = Eliminar
 manager.userstory.form.button.publish = Publicar
 
 manager.userstory.form.error.negative-total-cost = El coste debe ser positivo
+manager.userstory.form.error.hasAssignment = La historia de usuario está asignada a un proyecto
 
 manager.user-story.list.title = Historia de usuario
 manager.user-story.list.title = Historias de usuario

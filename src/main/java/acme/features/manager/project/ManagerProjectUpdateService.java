@@ -34,8 +34,7 @@ public class ManagerProjectUpdateService extends AbstractService<Manager, Projec
 
 		masterId = super.getRequest().getData("id", int.class);
 		Project project = this.repository.findProjectById(masterId);
-		Manager manager = project == null ? null : project.getManager();
-		status = project != null && project.isDraftMode() && principal.hasRole(manager) && project.getManager().getUserAccount().getId() == userAccountId;
+		status = project != null && project.getManager().getUserAccount().getId() == userAccountId && project.isDraftMode();
 
 		super.getResponse().setAuthorised(status);
 	}
@@ -53,7 +52,7 @@ public class ManagerProjectUpdateService extends AbstractService<Manager, Projec
 	public void bind(final Project object) {
 		assert object != null;
 
-		super.bind(object, "code", "title", "abstract$", "link", "totalCost", "hasErrors");
+		super.bind(object, "code", "title", "projectAbstract", "link", "totalCost", "hasErrors");
 	}
 
 	@Override
@@ -68,9 +67,13 @@ public class ManagerProjectUpdateService extends AbstractService<Manager, Projec
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("totalCost")) {
-			final boolean duplicatedCode = object.getTotalCost().getAmount() < 0;
+			final boolean negative = object.getTotalCost().getAmount() < 0;
 
-			super.state(!duplicatedCode, "totalCost", "manager.project.form.error.negative-total-cost");
+			super.state(!negative, "totalCost", "manager.project.form.error.negative-total-cost");
+
+			final boolean tooBig = object.getTotalCost().getAmount() > 9999999999.99;
+
+			super.state(!tooBig, "totalCost", "manager.project.form.error.exceed-limit-total-cost");
 
 			List<SystemConfiguration> sc = this.repository.findSystemConfiguration();
 			final boolean foundCurrency = Stream.of(sc.get(0).acceptedCurrencies.split(",")).anyMatch(c -> c.equals(object.getTotalCost().getCurrency()));
@@ -93,7 +96,7 @@ public class ManagerProjectUpdateService extends AbstractService<Manager, Projec
 	public void unbind(final Project object) {
 		assert object != null;
 
-		Dataset dataset = super.unbind(object, "code", "title", "abstract$", "link", "totalCost", "draftMode", "hasErrors");
+		Dataset dataset = super.unbind(object, "code", "title", "projectAbstract", "link", "totalCost", "draftMode", "hasErrors");
 
 		super.getResponse().addData(dataset);
 	}

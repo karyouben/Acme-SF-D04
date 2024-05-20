@@ -46,6 +46,7 @@ public class ManagerAssignmentShowService extends AbstractService<Manager, Assig
 		assert object != null;
 
 		Dataset dataset = super.unbind(object, "userStory");
+		dataset.put("title", object.getUserStory().getTitle());
 
 		super.getResponse().addData(dataset);
 	}

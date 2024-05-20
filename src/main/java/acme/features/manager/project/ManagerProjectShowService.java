@@ -28,7 +28,7 @@ public class ManagerProjectShowService extends AbstractService<Manager, Project>
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = project != null && principal.hasRole(Manager.class) && project.getManager().getUserAccount().getId() == userAccountId;
+		final boolean authorise = project != null && project.getManager().getUserAccount().getId() == userAccountId;
 
 		super.getResponse().setAuthorised(authorise);
 	}
@@ -45,7 +45,7 @@ public class ManagerProjectShowService extends AbstractService<Manager, Project>
 	public void unbind(final Project object) {
 		assert object != null;
 
-		Dataset dataset = super.unbind(object, "code", "title", "abstract$", "link", "totalCost", "draftMode", "hasErrors");
+		Dataset dataset = super.unbind(object, "code", "title", "projectAbstract", "link", "totalCost", "draftMode", "hasErrors");
 
 		//		if (object.isHasErrors()) {
 		//			final Locale local = super.getRequest().getLocale();

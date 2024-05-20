@@ -25,6 +25,7 @@ manager.userstory.form.button.delete = Delete
 manager.userstory.form.button.publish = Publish
 
 manager.userstory.form.error.negative-total-cost = Cost must be positive
+manager.userstory.form.error.hasAssignment = The user story is assigned to a proyect
 
 manager.user-story.list.title = User story
 manager.user-story.list.title = User stories

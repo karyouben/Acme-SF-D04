@@ -9,6 +9,7 @@
 # they accept any liabilities with respect to them.
 
 manager.assignment.form.label.userStory = User story
+manager.assignment.form.label.isDraftMode = Draft mode
 
 manager.assignment.form.button.create = Assign
 manager.assignment.form.button.delete = Unassign

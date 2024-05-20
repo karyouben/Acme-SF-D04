@@ -30,7 +30,7 @@ public class ManagerUserStoryDeleteService extends AbstractService<Manager, User
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = userStory != null && userStory.isDraftMode() && principal.hasRole(Manager.class) && userStory.getManager().getUserAccount().getId() == userAccountId;
+		final boolean authorise = userStory != null && userStory.getManager().getUserAccount().getId() == userAccountId && userStory.isDraftMode();
 
 		super.getResponse().setAuthorised(authorise);
 	}
@@ -53,6 +53,12 @@ public class ManagerUserStoryDeleteService extends AbstractService<Manager, User
 	@Override
 	public void validate(final UserStory object) {
 		assert object != null;
+
+		int masterId = super.getRequest().getData("id", int.class);
+		long num = this.repository.findAssignmentsByUserId(masterId).stream().count();
+		final boolean assignmentExists = num > 0;
+		super.state(!assignmentExists, "*", "manager.userstory.form.error.hasAssignment");
+
 	}
 
 	@Override
@@ -74,5 +80,4 @@ public class ManagerUserStoryDeleteService extends AbstractService<Manager, User
 
 		super.getResponse().addData(dataset);
 	}
-
 }

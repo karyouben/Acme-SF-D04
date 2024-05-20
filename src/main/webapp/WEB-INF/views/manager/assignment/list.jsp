@@ -16,6 +16,7 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="manager.assignment.form.label.userStory" path="userStory"/>
+	<acme:list-column code="manager.assignment.form.label.userStory" path="title"/>
+	<acme:list-column code="manager.assignment.form.label.isDraftMode" path="isDraftMode"/>
 </acme:list>
 
