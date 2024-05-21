@@ -1,5 +1,37 @@
-key,record,completeness,comment,registration,responsable,key:contract
-progress-01,PG-OL-9067,10.0,El progreso va bien,2022/01/01 00:00,Tomas,contract-01
-progress-02,PG-JR-6287,10.0,El progreso va mal,2022/01/01 00:00,William,contract-01
-progress-03,PG-JR-6297,100,nzzrrctpkayewycdmczqdjzgulnyjuqflzrmrljvnjhpuihswtuccvzbbsvyrxdgijdgvyrhczrigngjadhgywsgzaravlogupft,1970/01/01 00:01,rgmfajstiledofnicfupchirujdvwuisgrlnsfthbxukyxbeotilhzdtwnuumvcfuzblgpvpnao,contract-02
-progress-04,PG-JR-6397,0,a,1970/01/01 00:01,a,contract-02
+key,record,completeness,comment,registration,responsable,draftMode,key:contract
+progress-log-01,PG-SA-0001,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-02,PG-A-0000,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-03,PG-Z-9999,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-04,PG-AA-0001,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-05,PG-ZZ-9999,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-06,PG-SA-0002,00.00,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-07,PG-SA-0003,00.01,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-08,PG-SA-0004,100.00,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-09,PG-SA-0005,99.99,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-10,PG-SA-0006,1,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-11,PG-SA-0007,33.75,A,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-12,PG-SA-0008,33.75,AA,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-13,PG-SA-0009,33.75,Filler abstract to reach one hundred (100) characters in the attribute called as abstractDescription,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-14,PG-SA-0010,33.75,Filler abstract to reach one hundred (99) characters in the attribute called as abstractDescription,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-16,PG-SA-0012,33.75,貸んい建濯よ芝弾テソ,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-17,PG-SA-0013,33.75,Λορεμ ιπσθμ δολορ 123,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-18,PG-SA-0014,33.75,<script> window.location = ‘https://example.com’; </script>,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-15,PG-SA-0011,33.75,' OR '1,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-19,PG-SA-0015,33.75,This is a generic comment,2000/01/01 00:00,Fernando Marino,false,contract-01
+progress-log-20,PG-SA-0016,33.75,This is a generic comment,2000/01/01 00:01,Fernando Marino,false,contract-01
+progress-log-21,PG-SA-0017,33.75,This is a generic comment,2022/07/30 00:00,Fernando Marino,false,contract-01
+progress-log-22,PG-SA-0018,33.75,This is a generic comment,2022/07/29 23:59,Fernando Marino,false,contract-01
+progress-log-40,PG-SA-0051,33.75,This is a generic comment,2021/12/31 23:59,Fernando Marino,false,contract-01
+progress-log-41,PG-SA-0052,33.75,This is a generic comment,2020/02/29 21:39,Fernando Marino,false,contract-01
+progress-log-23,PG-SA-0019,33.75,This is a generic comment,2022/04/11 00:00,B,false,contract-01
+progress-log-24,PG-SA-0020,33.75,This is a generic comment,2022/04/11 00:00,BB,false,contract-01
+progress-log-25,PG-SA-0021,33.75,This is a generic comment,2022/04/11 00:00,Filler  title of project to reach seventy five characters in attribute name,false,contract-01
+progress-log-26,PG-SA-0022,33.75,This is a generic comment,2022/04/11 00:00,Filler  title of project to reach seventy four characters in attribute nam,false,contract-01
+progress-log-27,PG-SA-0023,33.75,This is a generic comment,2022/04/11 00:00,' OR '1,false,contract-01
+progress-log-28,PG-SA-0024,33.75,This is a generic comment,2022/04/11 00:00,<script> window.location = ‘https://example.com’; </script>,false,contract-01
+progress-log-29,PG-SA-0025,33.75,This is a generic comment,2022/04/11 00:00,貸んい建濯よ芝弾,false,contract-01
+progress-log-30,PG-SA-0026,33.75,This is a generic comment,2022/04/11 00:00,Λορεμ ιπσθμ δολορ 123,false,contract-01
+progress-log-34,PG-SA-0050,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,true,contract-01
+progress-log-31,PG-SA-0027,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-02
+progress-log-32,PG-SA-0028,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-21
+progress-log-33,PG-SA-0029,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-42
