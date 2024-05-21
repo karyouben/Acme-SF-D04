@@ -1,7 +1,7 @@
 key,code,creation-moment,details,difficulty-level,update-moment,link,total-time,draft-mode,key:project,key:developer
-training-module-01,AA-000,2000/01/01 00:00,detalles1,ADVANCED,2022/07/29 23:59,https://www.sport.es,10,true,project-01,developer-01
-training-module-02,AA-001,2000/01/01 00:01,detalles2,ADVANCED,2022/07/29 23:58,https://www.pocketpair.jp,11,true,project-01,developer-01
-training-module-03,A-000,2000/01/01 00:00,detalles3,BASIC,2022/07/02 06:22,https://www.nintendo.com,1,true,project-01,developer-01
+training-module-01,AA-000,1970/01/01 00:00,detalles1,ADVANCED,2022/07/29 23:59,https://www.sport.es,10,true,project-01,developer-01
+training-module-02,AA-001,1970/01/01 00:00,detalles2,ADVANCED,2022/07/29 23:58,https://www.pocketpair.jp,11,true,project-01,developer-01
+training-module-03,A-000,1970/01/01 00:01,detalles3,BASIC,2022/07/02 06:22,https://www.nintendo.com,1,true,project-01,developer-01
 training-module-04,A-001,2012/11/22 16:22,detalle,BASIC,2022/07/02 18:37,https://twitter.com/avogado6,12,true,project-01,developer-01
 training-module-05,AAA-001,2000/01/01 00:00,detalles,BASIC,2022/07/02 00:00,https://twitter.com/avogado6,12,false,project-01,developer-01
 training-module-06,AB-000,2015/05/26 23:58,detallesdetallesdetalles,BASIC,2022/07/29 23:59,https://twitter.com/elonmusk,100,true,project-01,developer-01
@@ -19,8 +19,8 @@ training-module-17,ZY-001,2001/01/01 23:58,Лос-единороги домин�
 training-module-18,AB-012,2001/01/01 23:59,detalles,INTERMEDIATE,2001/01/02 00:00,https://twitter.com/GoogleAI,1,true,project-01,developer-01
 training-module-19,AC-013,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,http://第1节.com,2,true,project-01,developer-01
 training-module-20,AD-998,2022/07/02 00:00,detalles,ADVANCED,2022/07/03 00:00,https://module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1modul.com,3,true,project-02,developer-01
-training-module-21,AB-523,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,https://module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1modu.com,4,true,project-01,developer-02
-training-module-22,AJ-999,2022/07/01 00:00,detallesdetallesdetallesdetallesdetallesdetallesde,BASIC,2022/07/02 00:00,http://S.com,40,true,project-01,developer-01
+training-module-21,AB-523,2022/07/29 23:59,detalles,BASIC,2022/07/02 00:00,https://module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1modu.com,4,true,project-01,developer-02
+training-module-22,AJ-999,2022/07/29 23:58,detallesdetallesdetallesdetallesdetallesdetallesde,BASIC,2022/07/02 00:00,http://S.com,40,true,project-01,developer-01
 training-module-23,AH-099,2022/07/01 00:00,d,BASIC,2022/07/02 00:00,,48,true,project-01,developer-01
 training-module-24,AB-018,2022/07/01 00:00,de,BASIC,2022/07/02 00:00,http://se.com,10,true,project-01,developer-01
 training-module-25,AN-009,2022/07/01 08:22,detallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdeta,BASIC,2022/07/02 15:00,http://Андрей.com,6,true,project-01,developer-01
