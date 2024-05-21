@@ -85,7 +85,7 @@ public class DeveloperTrainingSessionListByTrainingModuleService extends Abstrac
 
 		trainingModuleId = super.getRequest().getData("trainingModuleId", int.class);
 		trainingModule = this.repository.findTrainingModuleById(trainingModuleId);
-		showCreate = trainingModule.isDraftMode() && super.getRequest().getPrincipal().hasRole(trainingModule.getDeveloper());
+		showCreate = trainingModule.isDraftMode();
 
 		super.getResponse().addGlobal("trainingModuleId", trainingModuleId);
 		super.getResponse().addGlobal("showCreate", showCreate);
