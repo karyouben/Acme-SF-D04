@@ -34,7 +34,7 @@ public class DeveloperTrainingModuleShowService extends AbstractService<Develope
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = trainingModule.getDeveloper().getUserAccount().getId() == userAccountId && trainingModule != null;
+		final boolean authorise = trainingModule != null && trainingModule.getDeveloper().getUserAccount().getId() == userAccountId;
 
 		super.getResponse().setAuthorised(authorise);
 	}

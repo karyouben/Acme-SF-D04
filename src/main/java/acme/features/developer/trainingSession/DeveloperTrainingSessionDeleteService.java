@@ -28,7 +28,7 @@ public class DeveloperTrainingSessionDeleteService extends AbstractService<Devel
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = trainingSession.getTrainingModule().getDeveloper().getUserAccount().getId() == userAccountId && trainingSession != null && trainingSession.isDraftMode();
+		final boolean authorise = trainingSession != null && trainingSession.getTrainingModule().getDeveloper().getUserAccount().getId() == userAccountId && trainingSession.isDraftMode();
 
 		super.getResponse().setAuthorised(authorise);
 	}
