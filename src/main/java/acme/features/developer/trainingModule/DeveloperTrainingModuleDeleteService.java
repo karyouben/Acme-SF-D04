@@ -38,7 +38,7 @@ public class DeveloperTrainingModuleDeleteService extends AbstractService<Develo
 
 		masterId = super.getRequest().getData("id", int.class);
 		TrainingModule trainingModule = this.repository.findTrainingModuleById(masterId);
-		status = trainingModule != null && trainingModule.isDraftMode() && trainingModule.getDeveloper().getUserAccount().getId() == userAccountId;
+		status = trainingModule.getDeveloper().getUserAccount().getId() == userAccountId && trainingModule != null && trainingModule.isDraftMode();
 
 		super.getResponse().setAuthorised(status);
 	}

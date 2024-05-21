@@ -34,7 +34,7 @@ public class DeveloperTrainingSessionListByTrainingModuleService extends Abstrac
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = trainingModule != null && trainingModule.getDeveloper().getUserAccount().getId() == userAccountId;
+		final boolean authorise = trainingModule.getDeveloper().getUserAccount().getId() == userAccountId && trainingModule != null;
 
 		super.getResponse().setAuthorised(authorise);
 	}
