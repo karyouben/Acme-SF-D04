@@ -28,7 +28,7 @@ public class ManagerAssignmentShowService extends AbstractService<Manager, Assig
 		final Principal principal = super.getRequest().getPrincipal();
 		final int userAccountId = principal.getAccountId();
 
-		final boolean authorise = assignment != null && assignment.getProject().getManager().getUserAccount().getId() == userAccountId;
+		final boolean authorise = assignment != null && assignment.getProject().getManager().getUserAccount().getId() == userAccountId && assignment.getProject().isDraftMode();
 
 		super.getResponse().setAuthorised(authorise);
 	}
