@@ -90,7 +90,7 @@ public class DeveloperTrainingSessionPublishService extends AbstractService<Deve
 			if (endBeforeCreation) {
 				final boolean createOneWeekBeforeEndMinimum = MomentHelper.isLongEnough(object.getTrainingModule().getCreationMoment(), object.getEndPeriod(), 7, ChronoUnit.DAYS);
 
-				super.state(createOneWeekBeforeEndMinimum, PERIOD_START, "developer.trainingSession.form.error.end-before-creation");
+				super.state(createOneWeekBeforeEndMinimum, PERIOD_END, "developer.trainingSession.form.error.end-before-creation");
 			}
 		}
 
