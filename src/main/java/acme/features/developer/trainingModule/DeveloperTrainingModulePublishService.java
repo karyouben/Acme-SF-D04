@@ -72,12 +72,6 @@ public class DeveloperTrainingModulePublishService extends AbstractService<Devel
 			super.state(!duplicatedCode, "code", "developer.trainingModule.form.error.duplicated-code");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("totalTime")) {
-			final boolean duplicatedCode = object.getTotalTime() < 0;
-
-			super.state(!duplicatedCode, "totalTime", "developer.trainingModule.form.error.negative-total-time");
-		}
-
 		int masterId = super.getRequest().getData("id", int.class);
 		List<TrainingSession> ls = this.repository.findTrainingSessionsByTrainingModuleId(masterId).stream().toList();
 		final boolean someDraftTrainingSession = ls.stream().anyMatch(Session -> Session.isDraftMode());
