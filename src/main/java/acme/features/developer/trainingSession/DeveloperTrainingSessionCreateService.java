@@ -2,6 +2,7 @@
 package acme.features.developer.trainingSession;
 
 import java.time.temporal.ChronoUnit;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -81,11 +82,23 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 		if (!super.getBuffer().getErrors().hasErrors(CREATION_MOMENT) && !super.getBuffer().getErrors().hasErrors(PERIOD_START)) {
 			final boolean startBeforeCreation = MomentHelper.isAfter(object.getStartPeriod(), object.getTrainingModule().getCreationMoment());
 			super.state(startBeforeCreation, PERIOD_START, "developer.trainingSession.form.error.start-before-creation");
+
+			if (startBeforeCreation) {
+				final boolean createOneWeekBeforeStartMinimum = MomentHelper.isLongEnough(object.getTrainingModule().getCreationMoment(), object.getStartPeriod(), 7, ChronoUnit.DAYS);
+
+				super.state(createOneWeekBeforeStartMinimum, PERIOD_START, "developer.trainingSession.form.error.start-before-creation");
+			}
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors(CREATION_MOMENT) && !super.getBuffer().getErrors().hasErrors(PERIOD_END)) {
 			final boolean endBeforeCreation = MomentHelper.isAfter(object.getEndPeriod(), object.getTrainingModule().getCreationMoment());
 			super.state(endBeforeCreation, PERIOD_END, "developer.trainingSession.form.error.end-before-creation");
+
+			if (endBeforeCreation) {
+				final boolean createOneWeekBeforeEndMinimum = MomentHelper.isLongEnough(object.getTrainingModule().getCreationMoment(), object.getEndPeriod(), 7, ChronoUnit.DAYS);
+
+				super.state(createOneWeekBeforeEndMinimum, PERIOD_START, "developer.trainingSession.form.error.end-before-creation");
+			}
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
@@ -98,6 +111,30 @@ public class DeveloperTrainingSessionCreateService extends AbstractService<Devel
 		TrainingModule trainingModule = this.repository.findTrainingModuleById(masterId);
 		final boolean noDraftTrainingModule = trainingModule.isDraftMode();
 		super.state(noDraftTrainingModule, "*", "developer.trainingSession.form.error.trainingModule-noDraft");
+
+		Date minDate;
+		Date maxDate;
+
+		minDate = MomentHelper.parse("2000-01-01 00:00", "yyyy-MM-dd HH:mm");
+		maxDate = MomentHelper.parse("2200-12-31 23:59", "yyyy-MM-dd HH:mm");
+
+		if (!super.getBuffer().getErrors().hasErrors(PERIOD_START))
+			super.state(MomentHelper.isAfterOrEqual(object.getStartPeriod(), minDate), PERIOD_START, "developer.training-session.form.error.before-min-date");
+
+		if (!super.getBuffer().getErrors().hasErrors(PERIOD_START))
+			super.state(MomentHelper.isBeforeOrEqual(object.getStartPeriod(), maxDate), PERIOD_START, "developer.training-session.form.error.after-max-date");
+
+		if (!super.getBuffer().getErrors().hasErrors(PERIOD_START))
+			super.state(MomentHelper.isBeforeOrEqual(object.getStartPeriod(), MomentHelper.deltaFromMoment(maxDate, -7, ChronoUnit.DAYS)), PERIOD_START, "developer.training-session.form.error.no-room-for-min-period-duration");
+
+		if (!super.getBuffer().getErrors().hasErrors(PERIOD_END))
+			super.state(MomentHelper.isAfterOrEqual(object.getEndPeriod(), minDate), PERIOD_END, "developer.training-session.form.error.before-min-date");
+
+		if (!super.getBuffer().getErrors().hasErrors(PERIOD_END))
+			super.state(MomentHelper.isBeforeOrEqual(object.getEndPeriod(), maxDate), PERIOD_END, "developer.training-session.form.error.after-max-date");
+
+		if (!super.getBuffer().getErrors().hasErrors(PERIOD_END))
+			super.state(MomentHelper.isAfterOrEqual(object.getEndPeriod(), MomentHelper.deltaFromMoment(minDate, 7, ChronoUnit.DAYS)), PERIOD_END, "developer.training-session.form.error.no-time-for-min-period-duration");
 	}
 
 	@Override
