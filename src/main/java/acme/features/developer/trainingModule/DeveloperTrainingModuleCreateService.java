@@ -71,7 +71,7 @@ public class DeveloperTrainingModuleCreateService extends AbstractService<Develo
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("totalTime")) {
-			final boolean duplicatedCode = object.getTotalTime() < 0;
+			final boolean duplicatedCode = object.getTotalTime() < 1;
 
 			super.state(!duplicatedCode, "totalTime", "developer.trainingModule.form.error.negative-total-time");
 		}
