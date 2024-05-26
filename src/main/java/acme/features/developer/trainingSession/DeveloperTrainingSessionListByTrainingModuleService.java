@@ -59,7 +59,6 @@ public class DeveloperTrainingSessionListByTrainingModuleService extends Abstrac
 		dataset.put("trainingModule", trainingModulesChoices.getSelected().getLabel());
 		dataset.put("trainingModules", trainingModulesChoices);
 
-		// TODO internacionalizar de isDraft a publish en el front
 		if (!object.isDraftMode()) {
 			final Locale local = super.getRequest().getLocale();
 			dataset.put("draftMode", local.equals(Locale.ENGLISH) ? "Yes" : "Sí");

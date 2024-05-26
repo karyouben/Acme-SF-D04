@@ -46,7 +46,8 @@ public class AdministratorBannerCreateService extends AbstractService<Administra
 	public void load() {
 		final Banner banner = new Banner();
 
-		final Date instantiation = MomentHelper.getCurrentMoment();
+		final Date currentMoment = MomentHelper.getCurrentMoment();
+		Date instantiation = new Date(currentMoment.getTime() - 600000); //Substracts 9 minutes to ensure the moment is in the past
 
 		banner.setInstantiation(instantiation);
 
@@ -82,6 +83,30 @@ public class AdministratorBannerCreateService extends AbstractService<Administra
 				super.state(startAfterInstantiation, PERIOD_START, "administrator.banner.form.error.start-before-instantiation");
 			}
 		}
+
+		Date minDate;
+		Date maxDate;
+
+		minDate = MomentHelper.parse("2000-01-01 00:00", "yyyy-MM-dd HH:mm");
+		maxDate = MomentHelper.parse("2200-12-31 23:59", "yyyy-MM-dd HH:mm");
+
+		if (!super.getBuffer().getErrors().hasErrors(PERIOD_START))
+			super.state(MomentHelper.isAfterOrEqual(object.getStartDisplayPeriod(), minDate), PERIOD_START, "administrator.banner.form.error.before-min-date");
+
+		if (!super.getBuffer().getErrors().hasErrors(PERIOD_START))
+			super.state(MomentHelper.isBeforeOrEqual(object.getStartDisplayPeriod(), maxDate), PERIOD_START, "administrator.banner.form.error.after-max-date");
+
+		if (!super.getBuffer().getErrors().hasErrors(PERIOD_START))
+			super.state(MomentHelper.isBeforeOrEqual(object.getStartDisplayPeriod(), MomentHelper.deltaFromMoment(maxDate, -7, ChronoUnit.DAYS)), PERIOD_START, "administrator.banner.form.error.no-room-for-min-period-duration");
+
+		if (!super.getBuffer().getErrors().hasErrors(PERIOD_END))
+			super.state(MomentHelper.isAfterOrEqual(object.getEndDisplayPeriod(), minDate), PERIOD_END, "administrator.banner.form.error.before-min-date");
+
+		if (!super.getBuffer().getErrors().hasErrors(PERIOD_END))
+			super.state(MomentHelper.isBeforeOrEqual(object.getEndDisplayPeriod(), maxDate), PERIOD_END, "administrator.banner.form.error.after-max-date");
+
+		if (!super.getBuffer().getErrors().hasErrors(PERIOD_END))
+			super.state(MomentHelper.isAfterOrEqual(object.getEndDisplayPeriod(), MomentHelper.deltaFromMoment(minDate, 7, ChronoUnit.DAYS)), PERIOD_END, "administrator.banner.form.error.no-room-for-min-period-duration");
 
 	}
 

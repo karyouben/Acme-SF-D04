@@ -23,6 +23,9 @@ administrator.banner.list.button.delete = Eliminar
 administrator.banner.form.error.end-before-start = El fin del periodo de visualización debe ser una fecha posterior al inicio del periodo
 administrator.banner.form.error.small-display-period = El periodo de visualización debe durar mínimo una semana
 administrator.banner.form.error.start-before-instantiation = El inicio del periodo de visualización debe ser posterior al momento de instanciación 
+administrator.banner.form.error.before-min-date = La fecha está por debajo del límite del sistema (01-01-2000 00:00)
+administrator.banner.form.error.after-max-date = La fecha está por encima del límite del sistema (31-12-2200 23:59)
+administrator.banner.form.error.no-room-for-min-period-duration = Está fecha fuerza a la otra a salirse de los límites para cumplir con la mínima duración del periodo
 
 administrator.banner.list.title = Pancartas
 administrator.banner.form.title = Pancartas
