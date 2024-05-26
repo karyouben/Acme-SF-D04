@@ -8,9 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.accounts.Principal;
-import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
-import acme.client.views.SelectChoices;
 import acme.entities.contract.Contract;
 import acme.entities.contract.Progress;
 import acme.entities.project.Project;
@@ -80,21 +78,6 @@ public class ClientContractDeleteService extends AbstractService<Client, Contrac
 		this.repository.deleteAll(progress);
 
 		this.repository.delete(object);
-	}
-
-	@Override
-	public void unbind(final Contract object) {
-		assert object != null;
-
-		Collection<Project> projects = this.repository.findAllProjects();
-		SelectChoices projectsChoices = SelectChoices.from(projects, "code", object.getProject());
-
-		Dataset dataset = super.unbind(object, "code", "instantiation", "providerName", "customerName", "goals", "budget", "project", "draftMode");
-
-		dataset.put("project", projectsChoices.getSelected().getKey());
-		dataset.put("projects", projectsChoices);
-
-		super.getResponse().addData(dataset);
 	}
 
 }

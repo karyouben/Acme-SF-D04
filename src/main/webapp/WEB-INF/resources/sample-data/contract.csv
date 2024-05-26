@@ -2,7 +2,7 @@ key,code,instantiation,providerName,customerName,goals,budget,draftMode,key:proj
 contract-01,DAN-001,2022/04/03 00:00,Tomás Huecas,BillY El Niño,Algunas de nuestras metas son...,EUR 1,false,project-01,client-01
 contract-02,AAA-000,2022/04/03 00:00,Tomás Huecas,BillY El Niño,Algunas de nuestras metas son...,EUR 1,false,project-01,client-01
 contract-03,A-000,2022/04/03 00:00,Tomás Huecas,BillY El Niño,Algunas de nuestras metas son...,EUR 1,false,project-01,client-01
-contract-04,AB-000,2022/04/03 00:00,Tomás Huecas,BillY El Niño,Algunas de nuestras metas son...,EUR 1,false,project-01,client-01
+contract-04,AB-000,2022/04/03 00:00,Tomás Huecas,BillY El Niño,Algunas de nuestras metas son...,EUR 1,true,project-01,client-01
 contract-05,ZZZ-999,2022/04/03 00:00,Tomás Huecas,BillY El Niño,Algunas de nuestras metas son...,EUR 1,false,project-01,client-01
 contract-06,DAN-002,2022/07/30 00:00,Tomás Huecas,BillY El Niño,Algunas de nuestras metas son...,EUR 1,false,project-01,client-01
 contract-07,DAN-003,2022/07/29 23:59,Tomás Huecas,BillY El Niño,Algunas de nuestras metas son...,EUR 1,false,project-01,client-01

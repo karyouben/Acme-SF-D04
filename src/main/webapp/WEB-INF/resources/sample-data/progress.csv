@@ -1,6 +1,6 @@
 key,record,completeness,comment,registration,responsable,draftMode,key:contract
-progress-log-01,PG-SA-0001,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
-progress-log-02,PG-A-0000,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
+progress-log-01,PG-SA-0001,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,true,contract-39
+progress-log-02,PG-A-0000,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,true,contract-04
 progress-log-03,PG-Z-9999,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
 progress-log-04,PG-AA-0001,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
 progress-log-05,PG-ZZ-9999,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
@@ -31,7 +31,7 @@ progress-log-27,PG-SA-0023,33.75,This is a generic comment,2022/04/11 00:00,' OR
 progress-log-28,PG-SA-0024,33.75,This is a generic comment,2022/04/11 00:00,<script> window.location = ‘https://example.com’; </script>,false,contract-01
 progress-log-29,PG-SA-0025,33.75,This is a generic comment,2022/04/11 00:00,貸んい建濯よ芝弾,false,contract-01
 progress-log-30,PG-SA-0026,33.75,This is a generic comment,2022/04/11 00:00,Λορεμ ιπσθμ δολορ 123,false,contract-01
-progress-log-34,PG-SA-0050,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,true,contract-01
+progress-log-34,PG-SA-0050,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-01
 progress-log-31,PG-SA-0027,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-02
 progress-log-32,PG-SA-0028,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-21
 progress-log-33,PG-SA-0029,33.75,This is a generic comment,2022/04/11 00:00,Fernando Marino,false,contract-42
