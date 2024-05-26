@@ -1,9 +1,9 @@
 key,code,start-period,end-period,location,instructor,contact-email,link,draft-mode,key:trainingModule
-training-session-01,TS-AA-000,2000/01/07 00:00,2022/12/31 23:59,Sevilla,Pochita,evangelion@acme.com,https://www.sport.es,false,training-module-01
-training-session-02,TS-AA-001,2000/01/07 00:01,2022/12/31 23:58,Sevilla,Pochita,CarlFriedrichGauss@hotmail.com,https://www.pocketpair.jp,true,training-module-01
-training-session-03,TS-AZB-001,2000/01/07 00:02,2000/01/14 00:02,Madrid,Asuka,Euclides@hotmail.es,https://www.nintendo.com,false,training-module-05
+training-session-01,TS-AA-000,2000/01/08 00:00,2022/12/31 23:59,Sevilla,Pochita,evangelion@acme.com,https://www.sport.es,false,training-module-01
+training-session-02,TS-AA-001,2000/01/08 00:01,2022/12/31 23:58,Sevilla,Pochita,CarlFriedrichGauss@hotmail.com,https://www.pocketpair.jp,true,training-module-01
+training-session-03,TS-AZB-001,2000/01/08 00:02,2000/01/15 00:02,Madrid,Asuka,Euclides@hotmail.es,https://www.nintendo.com,false,training-module-05
 training-session-04,TS-A-000,2022/07/03 00:00,2022/07/10 00:01,Sevilla,Pochita,RenéDescartes@gmail.com,https://twitter.com/avogado6,false,training-module-01
-training-session-05,TS-A-001,2000/01/07 00:00,2000/01/14 00:00,Tokyo,Denji,AlanTuring@acme.com,,false,training-module-02
+training-session-05,TS-A-001,2000/01/08 00:00,2000/01/15 00:00,Tokyo,Denji,AlanTuring@acme.com,,false,training-module-02
 training-session-06,TS-AAA-000,2012/07/03 00:00,2013/07/10 00:00,Pochita,Juanito,IsaacNewton@outlook.com,https://twitter.com/elonmusk,false,training-module-01
 training-session-07,TS-AB-000,2015/07/22 23:59,2017/07/29 23:59,日本,A,LeonhardEuler@acme.com,https://twitter.com/elonmusk,false,training-module-02
 training-session-08,TS-AB-001,2015/07/22 23:58,2015/08/17 23:59,Sevilla,Pochita,BillGates@acme.com,,false,training-module-01
@@ -16,7 +16,7 @@ training-session-14,TS-AK-007,2022/07/04 17:00,2022/07/18 06:00,SevillaSevillaSe
 training-session-15,TS-AB-972,2022/07/22 23:59,2022/07/29 23:59,SevillaSevillaSevillaSevillaSevillaSevillaSevillaSevillaSevillaSevillaSevi,Pochita,BrianBehlendorf@acme.com,https://twitter.com/Windows,false,training-module-01
 training-session-16,TS-AB-666,2022/07/22 23:58,2022/07/29 23:58,SevillaSevillaSevillaSevillaSevi,Pochita,FredCohen@acme.com,https://twitter.com/NVIDIAGeForce,false,training-module-01
 training-session-17,TS-AB-010,2022/07/04 20:00,2022/07/11 20:00,Sevilla,Pochita,Sócrates@acme.com,https://twitter.com/OpenAI,false,training-module-01
-training-session-18,TS-AB-011,2000/01/07 00:00,2200/12/31 23:59,Sevilla,AsukaAsukaAsukaAsukaAsukaAsuka,母鹿@acme.com,https://twitter.com/GoogleAI,true,training-module-01
+training-session-18,TS-AB-011,2000/01/08 00:00,2200/12/31 23:59,Sevilla,AsukaAsukaAsukaAsukaAsukaAsuka,母鹿@acme.com,https://twitter.com/GoogleAI,true,training-module-01
 training-session-19,TS-AB-012,2022/07/04 08:00,2022/07/18 23:00,Sevilla,Po,Platón@acme.com,http://第1节.com,false,training-module-01
 training-session-20,TS-AB-999,2022/07/04 09:33,2022/07/18 23:59,Sevilla,DenjiDenjiDenjiDenjiDenjiDenji,Aristóteles@acme.com,https://twitter.com/Mangafest,false,training-module-02
 training-session-21,TS-AZ-014,2022/07/04 23:59,2022/07/11 23:59,Sevilla,P,SanAgustín@acme.com,http://sesion3.com,false,training-module-01
@@ -30,7 +30,7 @@ training-session-28,TS-YY-264,2022/01/01 00:00,2022/01/08 00:00,საქარ�
 training-session-29,TS-Z-014,2022/07/04 23:59,2022/07/11 23:59,Sevilla,P,SanAgustín@acme.com,http://sesion3.com,false,training-module-01
 training-session-30,TS-ABH-015,2022/07/04 22:00,2022/07/11 22:00,Р,J,D@acme.com,http://S.com,true,training-module-01
 training-session-31,TS-ABZ-009,2022/01/01 00:01,2022/07/11 22:00,Ро,Ju,Da@acme.com,http://se.com,false,training-module-09
-training-session-32,TS-BZ-099,2000/01/07 00:00,2022/07/11 22:00,Ро,Ju,Da@acme.com,,false,training-module-02
+training-session-32,TS-BZ-099,2000/01/08 00:00,2022/07/11 22:00,Ро,Ju,Da@acme.com,,false,training-module-02
 training-session-33,TS-A-018,2022/07/04 22:00,2022/07/11 22:00,Ро,Ju,Da@acme.com,http://se.com,false,training-module-02
 training-session-34,TS-AAA-019,2022/09/01 10:00,2022/09/08 10:00,L,Lorem ipsum,acme@lorem-ipsum.org,ftp://a,false,training-module-02
 training-session-35,TS-AA-020,2022/08/05 23:59,2022/08/12 23:59,Lo,L,a@b.es,ftp://a.b,false,training-module-02
@@ -39,7 +39,7 @@ training-session-37,TS-BB-022,2022/08/06 00:01,2022/08/13 00:01,"Lorem ipsum dol
 training-session-38,TS-BBB-023,2200/12/24 23:58,2200/12/31 23:58,국민경제의 발전을,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem",a@b.esx,https://www.lorem-ipsum.org,false,training-module-02
 training-session-39,TS-ABC-024,2200/12/24 23:59,2200/12/31 23:59,العظمى واعتلاء,국민경제의 발전을,a@b.esx,ftp://www.lorem-ipsum.org,false,training-module-02
 training-session-40,TS-ZA-025,2028/02/28 00:00,2028/03/06 00:00,საქართველოს,العظمى واعتلاء,TeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTesl@acmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacm.outlookoutlookoutlookoutlookoutlookoutlookoutlookoutlookoutloo.comcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomco,http://www.lorem-ipsum.org/dolor/sit.html,false,training-module-02
-training-session-41,TS-ZAZ-026,2000/01/07 00:00,2000/01/14 00:00,국민경제의 발전을,საქართველოს,TeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTesl@acmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacm.outlookoutlookoutlookoutlookoutlookoutlookoutlookoutlookoutloo.comcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcom,http://www.lorem-ipsum.org/dolor/sit.html#dolor,false,training-module-02
+training-session-41,TS-ZAZ-026,2000/01/08 00:00,2000/01/15 00:00,국민경제의 발전을,საქართველოს,TeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTeslaTesl@acmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacmeacm.outlookoutlookoutlookoutlookoutlookoutlookoutlookoutlookoutloo.comcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcomcom,http://www.lorem-ipsum.org/dolor/sit.html#dolor,false,training-module-02
 training-session-42,TS-AZA-027,2200/12/24 23:59,2200/12/31 23:59,Ро,Ju,Da@acme.com,http://example.org?a=1&b=2,false,training-module-02
 training-session-43,TS-BZB-028,2022/07/30 00:00,2022/08/06 00:00,РоREto,JuLi,Da@acme.com,http://example.org?,false,training-module-02
 training-session-44,TS-BZ-029,2022/07/30 00:01,2022/08/06 00:01,РоR,Ju,a@b.es,http://example.org?a,false,training-module-02
@@ -51,10 +51,10 @@ training-session-49,TS-WW-034,2022/07/30 00:01,2022/08/06 00:01,Ро,Ju,acme@lor
 training-session-50,TS-P-035,2022/07/30 00:02,2022/08/06 00:02,Ро,Ju,MariaSalomeaSkłodowska-Curie@acme.com,http://example.org/a/b?a&b,false,training-module-02
 training-session-51,TS-PA-036,2022/07/30 04:00,2022/08/06 04:00,العظمى واعتلاء,Ju,SanAgustín@acme.com,http://www.lorem-ipsum.org,false,training-module-02
 training-session-52,TS-QRA-037,2022/07/30 04:01,2022/08/06 04:01,Ро,Ju,ElonMusk@acme.com,ftp://a,false,training-module-02
-training-session-53,TS-ZZZ-999,2000/01/07 0:01,2000/01/14 0:01,L,L,FriedrichNietzsche@acme.com,ftp://a.b,false,training-module-02
-training-session-54,TS-ZZZ-998,2000/01/07 0:02,2022/12/31 23:58,Lo,Lo,DavidHume@acme.com,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",false,training-module-02
-training-session-55,TS-YZZ-000,2000/01/07 0:02,2000/01/14 0:02,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te",Aristóteles@acme.com,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",false,training-module-02
-training-session-56,TS-ZZZ-000,2000/01/07 0:00,2000/01/14 0:00,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem",母鹿@acme.com,https://www.lorem-ipsum.org,false,training-module-02
+training-session-53,TS-ZZZ-999,2000/01/08 0:01,2000/01/15 0:01,L,L,FriedrichNietzsche@acme.com,ftp://a.b,false,training-module-02
+training-session-54,TS-ZZZ-998,2000/01/08 0:02,2022/12/31 23:58,Lo,Lo,DavidHume@acme.com,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",false,training-module-02
+training-session-55,TS-YZZ-000,2000/01/08 0:02,2000/01/15 0:02,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te",Aristóteles@acme.com,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",false,training-module-02
+training-session-56,TS-ZZZ-000,2000/01/08 0:00,2000/01/15 0:00,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem",母鹿@acme.com,https://www.lorem-ipsum.org,false,training-module-02
 training-session-57,TS-ZZZ-001,2200/12/24 23:58,2200/12/31 23:58,국민경제의 발전을,국민경제의 발전을,Sócrates@acme.com,ftp://www.lorem-ipsum.org,false,training-module-02
 training-session-58,TS-YZY-000,2200/12/24 23:59,2200/12/31 23:59,العظمى واعتلاء,العظمى واعتلاء,FredCohen@acme.com,http://www.lorem-ipsum.org/dolor/sit.html,false,training-module-02
 training-session-59,TS-AAA-001,2028/02/28 0:00,2028/03/06 0:00,สวัสดีชาวโลก,สวัสดีชาวโลก,BrianBehlendorf@acme.com,http://www.lorem-ipsum.org/dolor/sit.html#dolor,false,training-module-02
@@ -70,10 +70,10 @@ training-session-68,TS-B-999,2012/01/01 23:59,2012/01/08 23:59,Tengo muchos lesl
 training-session-69,TS-B-998,2011/01/04 0:00,2011/01/11 0:00,Los unicornios dominaran el mundo,Los unicornios dominaran el mundo,MariaSalomeaSkłodowska-Curie@acme.com,ftp://a,false,training-module-02
 training-session-70,TS-BB-000,2022/07/04 0:00,2022/07/12 0:00,Me gustan los gatos,Me gustan los gatos,SanAgustín@acme.com,ftp://a.b,false,training-module-02
 training-session-71,TS-BB-001,2022/07/04 17:00,2022/07/11 17:00,detalles3,detalles3,ElonMusk@acme.com,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",false,training-module-02
-training-session-72,TS-BB-999,2000/01/07 0:00,2000/01/14 0:00,deTAILS,deTAILS,FriedrichNietzsche@acme.com,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",false,training-module-02
-training-session-73,TS-BB-998,2000/01/07 0:01,2022/12/31 23:58,L,de,DavidHume@acme.com,https://www.lorem-ipsum.org,false,training-module-02
-training-session-74,TS-BBB-000,2000/01/07 0:01,2000/01/14 0:01,Lo,Ju,Aristóteles@acme.com,ftp://www.lorem-ipsum.org,false,training-module-02
-training-session-75,TS-BBB-001,2000/01/07 0:00,2000/01/14 0:00,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te",Lo,Da@acme.com,http://www.lorem-ipsum.org/dolor/sit.html,false,training-module-02
+training-session-72,TS-BB-999,2000/01/08 0:00,2000/01/15 0:00,deTAILS,deTAILS,FriedrichNietzsche@acme.com,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",false,training-module-02
+training-session-73,TS-BB-998,2000/01/08 0:01,2022/12/31 23:58,L,de,DavidHume@acme.com,https://www.lorem-ipsum.org,false,training-module-02
+training-session-74,TS-BBB-000,2000/01/08 0:01,2000/01/15 0:01,Lo,Ju,Aristóteles@acme.com,ftp://www.lorem-ipsum.org,false,training-module-02
+training-session-75,TS-BBB-001,2000/01/08 0:00,2000/01/15 0:00,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te",Lo,Da@acme.com,http://www.lorem-ipsum.org/dolor/sit.html,false,training-module-02
 training-session-76,TS-BBB-999,2200/12/24 23:58,2200/12/31 23:58,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem","Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te",母鹿@acme.com,http://www.lorem-ipsum.org/dolor/sit.html#dolor,false,training-module-02
 training-session-77,TS-BBB-998,2200/12/24 23:59,2200/12/31 23:59,국민경제의 발전을,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem",Sócrates@acme.com,http://example.org?a=1&b=2,false,training-module-02
 training-session-78,TS-Y-000,2028/02/28 0:00,2028/03/06 0:00,العظمى واعتلاء,국민경제의 발전을,Da@acme.com,http://example.org?,false,training-module-02
