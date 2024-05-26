@@ -51,7 +51,6 @@ public class DeveloperTrainingModuleListService extends AbstractService<Develope
 		final Dataset dataset = super.unbind(object, "code", "project");
 		dataset.put("project", projectsChoices.getSelected().getLabel());
 		dataset.put("projects", projectsChoices);
-		// TODO internacionalizar de isDraft a publish en el front
 		if (!object.isDraftMode()) {
 			final Locale local = super.getRequest().getLocale();
 			dataset.put("draftMode", local.equals(Locale.ENGLISH) ? "Yes" : "Sí");

@@ -30,8 +30,8 @@ developer.trainingSession.form.error.small-display-period = The period must last
 developer.trainingSession.form.error.start-before-creation = The start period must be at least one week ahead the training module creation moment
 developer.trainingSession.form.error.end-before-creation = The end period must be at least one week ahead the training module creation moment
 developer.trainingSession.form.error.trainingModule-noDraft = The training module assigned is published
-developer.training-session.form.error.before-min-date = The date is before the minimum possible date
-developer.training-session.form.error.after-max-date = The date is after the maximum possible date
+developer.training-session.form.error.before-min-date = The date is before the minimum date allowed by the system (2000-01-01 00:00)
+developer.training-session.form.error.after-max-date = The date is after the maximum date allowed by the system (2200-12-31 23:59)
 developer.training-session.form.error.no-room-for-min-period-duration = This date forces the other to be off limits for minimum period duration
 
 developer.training-session.list.title = Training session
