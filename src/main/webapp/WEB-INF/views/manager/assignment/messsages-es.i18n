@@ -10,6 +10,7 @@
 
 
 manager.assignment.form.label.userStory = Historia de usuario
+manager.assignment.form.label.isDraftMode = Es boceto
 
 manager.assignment.form.button.create = Asignar
 manager.assignment.form.button.delete = Desasignar
