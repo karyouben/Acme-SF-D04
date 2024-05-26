@@ -1,17 +1,11 @@
 
 package acme.features.auditor.auditRecord;
 
-import java.util.Collection;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
-import acme.client.views.SelectChoices;
 import acme.entities.auditRecords.AuditRecord;
-import acme.entities.auditRecords.Mark;
-import acme.entities.codeAudits.CodeAudit;
 import acme.roles.Auditor;
 
 @Service
@@ -75,19 +69,5 @@ public class AuditorAuditRecordPublishService extends AbstractService<Auditor, A
 	public void unbind(final AuditRecord object) {
 		assert object != null;
 
-		SelectChoices choices;
-		SelectChoices codeAudits;
-		Dataset dataset;
-
-		Collection<CodeAudit> allCodeAudits = this.repository.findAllCodeAudits();
-		codeAudits = SelectChoices.from(allCodeAudits, "code", object.getCodeAudit());
-		choices = SelectChoices.from(Mark.class, object.getMark());
-
-		dataset = super.unbind(object, "code", "draftMode", "link", "mark", "initialMoment", "finalMoment");
-		dataset.put("codeAudit", codeAudits.getSelected().getKey());
-		dataset.put("codeaudits", codeAudits);
-		dataset.put("marks", choices);
-
-		super.getResponse().addData(dataset);
 	}
 }

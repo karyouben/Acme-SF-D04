@@ -60,6 +60,7 @@ public class AuditorAuditRecordCreateService extends AbstractService<Auditor, Au
 	@Override
 	public void validate(final AuditRecord object) {
 		assert object != null;
+		Date pastMostDate = MomentHelper.parse("2000/01/01 00:00", "yyyy/MM/dd HH:mm");
 
 		if (!super.getBuffer().getErrors().hasErrors("codeAudit"))
 			super.state(object.getCodeAudit().isDraftMode(), "codeAudit", "validation.auditrecord.published.audit-is-published");
@@ -69,14 +70,26 @@ public class AuditorAuditRecordCreateService extends AbstractService<Auditor, Au
 			isCodeUnique = this.repository.findAuditRecordByCode(object.getCode());
 			super.state(isCodeUnique == null, "code", "validation.auditrecord.code.duplicate");
 		}
-		if (!super.getBuffer().getErrors().hasErrors("initialMoment"))
-			super.state(MomentHelper.isAfter(object.getFinalMoment(), object.getInitialMoment()), "initialMoment", "validation.auditrecord.moment.initial-after-final");
+		if (object.getInitialMoment() != null && !super.getBuffer().getErrors().hasErrors("initialMoment"))
+			super.state(MomentHelper.isAfterOrEqual(object.getInitialMoment(), pastMostDate), "initialMoment", "validation.auditrecord.moment.minimum-date");
+		if (object.getFinalMoment() != null && !super.getBuffer().getErrors().hasErrors("finalMoment"))
+			super.state(MomentHelper.isAfterOrEqual(object.getFinalMoment(), pastMostDate), "finalMoment", "validation.auditrecord.moment.minimum-date");
+		if (object.getInitialMoment() != null && object.getFinalMoment() != null) {
+			if (!super.getBuffer().getErrors().hasErrors("initialMoment"))
+				super.state(MomentHelper.isAfterOrEqual(object.getInitialMoment(), pastMostDate), "initialMoment", "validation.auditrecord.moment.minimum-date");
 
-		if (!super.getBuffer().getErrors().hasErrors("finalMoment")) {
-			Date minimumEnd;
+			if (!super.getBuffer().getErrors().hasErrors("finalMoment"))
+				super.state(MomentHelper.isAfterOrEqual(object.getFinalMoment(), pastMostDate), "finalMoment", "validation.auditrecord.moment.minimum-date");
 
-			minimumEnd = MomentHelper.deltaFromMoment(object.getInitialMoment(), 1, ChronoUnit.HOURS);
-			super.state(MomentHelper.isAfterOrEqual(object.getFinalMoment(), minimumEnd), "finalMoment", "validation.auditrecord.moment.minimum-one-hour");
+			if (!super.getBuffer().getErrors().hasErrors("initialMoment"))
+				super.state(MomentHelper.isAfter(object.getFinalMoment(), object.getInitialMoment()), "initialMoment", "validation.auditrecord.moment.initial-after-final");
+
+			if (!super.getBuffer().getErrors().hasErrors("finalMoment")) {
+				Date minimumEnd;
+
+				minimumEnd = MomentHelper.deltaFromMoment(object.getInitialMoment(), 1, ChronoUnit.HOURS);
+				super.state(MomentHelper.isAfterOrEqual(object.getFinalMoment(), minimumEnd), "finalMoment", "validation.auditrecord.moment.minimum-one-hour");
+			}
 		}
 	}
 

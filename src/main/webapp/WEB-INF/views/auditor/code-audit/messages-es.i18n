@@ -34,3 +34,4 @@ validation.codeaudit.mode.empty = Esta auditoría de código no tiene registros 
 validation.codeaudit.publish.unpublished-audit-records = No se puede publicar una auditoría de código con registros de auditoría no publicados
 validation.codeaudit.mode.less-than-c = La nota debe ser al menos una C para ser publicada
 validation.codeaudit.auditRecordDraftMode = No se puede eliminar una auditoría de código con registros publicados
+validation.codeaudit.published = No puedes modificar ni eliminar una auditoría publicada

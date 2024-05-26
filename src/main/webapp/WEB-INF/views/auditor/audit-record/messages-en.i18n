@@ -29,3 +29,4 @@ validation.auditrecord.moment.initial-after-final = The start date must be befor
 validation.auditrecord.moment.minimum-one-hour = The time between the start and the end date must be of at least an hour long
 validation.auditrecord.published = You cannot delete nor modify a published code audit
 validation.auditrecord.published.audit-is-draftMode = This code audit has already been published
+validation.auditrecord.moment.minimum-date = The minimum date is 2000/01/01 00:00
