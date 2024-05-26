@@ -28,7 +28,8 @@ public class AnyClaimCreateService extends AbstractService<Any, Claim> {
 	public void load() {
 		Claim claim = new Claim();
 
-		final Date instantiation = MomentHelper.getCurrentMoment();
+		Date currentMoment = MomentHelper.getCurrentMoment();
+		Date instantiation = new Date(currentMoment.getTime() - 1000); //Substracts one second to ensure the moment is in the past
 
 		claim.setInstantiationMoment(instantiation);
 
