@@ -2,16 +2,16 @@ key,code,creation-moment,details,difficulty-level,update-moment,link,total-time,
 training-module-01,AA-000,2000/01/01 00:00,detalles1,ADVANCED,2022/07/29 23:59,https://www.sport.es,10,true,project-01,developer-01
 training-module-02,AA-001,2000/01/01 00:00,detalles2,ADVANCED,2022/07/29 23:58,https://www.pocketpair.jp,11,true,project-01,developer-01
 training-module-03,A-000,2000/01/01 00:01,detalles3,BASIC,2022/07/02 06:22,https://www.nintendo.com,1,true,project-01,developer-01
-training-module-04,A-001,2012/11/22 16:22,detalle,BASIC,2022/07/02 18:37,http://example.org/a/b?a&b,12,true,project-01,developer-01
+training-module-04,A-001,2012/11/22 16:22,detalle,INTERMEDIATE,2022/07/02 18:37,http://example.org/a/b?a&b,12,true,project-01,developer-01
 training-module-05,AAA-001,2000/01/01 00:00,detalles,BASIC,2022/07/02 00:00,https://twitter.com/avogado6,12,false,project-01,developer-01
-training-module-06,AB-000,2015/05/26 23:58,detallesdetallesdetalles,BASIC,2022/07/29 23:59,http://example.org/a/b?,100,true,project-01,developer-01
+training-module-06,AB-000,2015/05/26 23:58,detallesdetallesdetalles,INTERMEDIATE,2022/07/29 23:59,http://example.org/a/b?,100,true,project-01,developer-01
 training-module-07,AZB-001,2018/02/26 23:57,deta,BASIC,2022/07/29 23:59,http://example.org/a/b,324,true,project-01,developer-01
 training-module-08,AB-002,2010/07/29 23:58,detalles,BASIC,2022/07/29 23:59,http://example.org/a,666,true,project-01,developer-01
-training-module-09,AAA-000,2001/07/29 23:58,สวัสดีชาวโลก,BASIC,2022/07/29 23:59,https://twitter.com/Google,9,false,project-01,developer-01
+training-module-09,AAA-000,2001/07/29 23:58,สวัสดีชาวโลก,INTERMEDIATE,2022/07/29 23:59,https://twitter.com/Google,9,false,project-01,developer-01
 training-module-10,AB-004,2001/07/29 23:57,fGhI三AbCdEfGhI四AbCdEfGhI五AbCdEfGhI六Ab,BASIC,2022/07/29 23:59,https://twitter.com/X,99,true,project-01,developer-01
 training-module-11,YYY-000,2005/03/01 00:00,detalles,INTERMEDIATE,2022/03/02 00:00,http://example.org/,999,true,project-01,developer-01
 training-module-12,YYY-001,2004/03/01 00:00,detalles,ADVANCED,2022/03/02 00:00,http://example.org?a&b,573,true,project-01,developer-01
-training-module-13,ZZZ-000,2007/07/01 00:00,世界多米纳兰独角兽,BASIC,,,9998,true,project-01,developer-01
+training-module-13,ZZZ-000,2007/07/01 00:00,世界多米纳兰独角兽,ADVANCED,,,9998,true,project-01,developer-01
 training-module-14,ZZZ-001,2000/01/01 00:01,detalles,BASIC,2010/07/29 23:59,http://example.org?a,9999,true,project-01,developer-01
 training-module-15,YY-000,2000/01/01 00:00,detalles,INTERMEDIATE,2000/01/01 00:01,http://example.org?,10000,true,project-01,developer-01
 training-module-16,ZZ-000,2000/01/01 00:01,detalles,BASIC,2000/01/01 00:02,http://example.org?a=1&b=2,32,true,project-01,developer-01
@@ -20,9 +20,9 @@ training-module-18,AB-012,2001/01/01 23:59,detalles,INTERMEDIATE,2001/01/02 00:0
 training-module-19,AC-013,2022/07/01 00:00,detalles,BASIC,2022/07/02 00:00,http://第1节.com,2,true,project-01,developer-01
 training-module-20,AD-998,2022/07/02 00:00,detalles,ADVANCED,2022/07/03 00:00,https://module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1modul.com,3,true,project-02,developer-01
 training-module-21,AB-523,2022/07/29 23:59,detalles,BASIC,,https://module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1module1modu.com,4,true,project-01,developer-02
-training-module-22,AJ-999,2022/07/29 23:58,detallesdetallesdetallesdetallesdetallesdetallesde,BASIC,2022/07/29 23:59,http://S.com,40,true,project-01,developer-01
+training-module-22,AJ-999,2022/07/29 23:58,detallesdetallesdetallesdetallesdetallesdetallesde,INTERMEDIATE,2022/07/29 23:59,http://S.com,40,true,project-01,developer-01
 training-module-23,AH-099,2022/07/01 00:00,d,BASIC,2022/07/02 00:00,,48,true,project-01,developer-01
-training-module-24,AB-018,2022/07/01 00:00,de,BASIC,2022/07/02 00:00,http://se.com,10,true,project-01,developer-01
+training-module-24,AB-018,2022/07/01 00:00,de,ADVANCED,2022/07/02 00:00,http://se.com,10,true,project-01,developer-01
 training-module-25,AN-009,2022/07/01 08:22,detallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdeta,BASIC,2022/07/02 15:00,http://Андрей.com,6,true,project-01,developer-01
 training-module-26,AB-920,2000/01/01 00:00,detallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdetallesdet,INTERMEDIATE,2000/01/01 00:01,,4000,true,project-01,developer-01
 training-module-27,Z-123,2022/07/01 00:00,deTAILS,BASIC,,ftp://a,333,true,project-02,developer-02
@@ -30,6 +30,45 @@ training-module-28,ZZ-264,2022/07/29 23:00,Lorem ipsum,ADVANCED,2022/07/29 23:01
 training-module-29,B-265,2000/01/01 00:00,L,BASIC,2000/01/01 00:01,http://www.lorem-ipsum.org,1234,true,project-02,developer-02
 training-module-30,BB-266,2000/01/01 00:01,Lo,INTERMEDIATE,2022/07/29 23:59,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",8888,true,project-02,developer-02
 training-module-31,BBB-267,2022/07/29 23:59,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",BASIC,2022/07/30 00:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",7777,true,project-02,developer-02
-training-module-32,AZA-268,2022/07/30 00:00,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore*",INTERMEDIATE,,https://www.lorem-ipsum.org,9678,true,project-02,developer-02
+training-module-32,AZA-268,2022/07/29 23:59,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore*",INTERMEDIATE,,,9678,true,project-02,developer-02
 training-module-33,ABC-269,2020/02/28 00:00,국민경제의 발전을,BASIC,2020/02/28 00:01,ftp://www.lorem-ipsum.org,5432,true,project-02,developer-02
-training-module-34,Y-270,2020/02/27 23:59,العظمى واعتلاء,ADVANCED,2020/02/28 00:00,http://www.lorem-ipsum.org/dolor/sit.html,1020,true,project-02,developer-02
+training-module-34,B-001,2000/01/01 00:00,العظمى واعتلاء,ADVANCED,2000/01/01 00:01,ftp://a,1,true,project-02,developer-02
+training-module-35,B-000,2022/07/29 23:59,L,INTERMEDIATE,2022/07/30 00:00,ftp://a.b,12,true,project-02,developer-02
+training-module-36,B-999,2022/07/29 23:59,Lo,ADVANCED,,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",100,true,project-02,developer-02
+training-module-37,B-998,2022/07/29 23:00,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te",ADVANCED,2022/07/29 23:01,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",9,true,project-02,developer-02
+training-module-38,BB-001,2020/02/27 23:59,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem",INTERMEDIATE,2020/02/28 00:00,https://www.lorem-ipsum.org,99,true,project-02,developer-02
+training-module-39,BB-000,2000/01/01 00:00,국민경제의 발전을,ADVANCED,2000/01/01 00:01,ftp://www.lorem-ipsum.org,999,true,project-02,developer-02
+training-module-40,BB-999,2000/01/01 00:01,العظمى واعتلاء,BASIC,2000/01/01 00:02,http://www.lorem-ipsum.org/dolor/sit.html,5432,true,project-02,developer-02
+training-module-41,BB-998,2022/07/29 23:59,สวัสดีชาวโลก,BASIC,2020/02/28 00:00,http://www.lorem-ipsum.org/dolor/sit.html#dolor,9998,true,project-02,developer-02
+training-module-42,BBB-001,2022/07/30 00:00,fGhI三AbCdEfGhI四AbCdEfGhI五AbCdEfGhI六Ab,ADVANCED,,http://example.org?a=1&b=2,9999,true,project-02,developer-02
+training-module-43,BBB-000,2020/02/27 23:59,世界多米纳兰独角兽,ADVANCED,2020/02/28 00:00,http://example.org?,10000,true,project-02,developer-02
+training-module-44,BBB-999,2020/02/28 00:00,d,INTERMEDIATE,2020/02/28 00:01,http://example.org?a,2,true,project-02,developer-02
+training-module-45,BBB-998,2020/02/27 23:59,de,ADVANCED,2020/02/28 00:00,http://example.org?a&b,3,true,project-02,developer-02
+training-module-46,A-999,2000/05/31 23:59,국민경제의 발전을,ADVANCED,2000/06/01 00:00,http://example.org/,1020,true,project-02,developer-02
+training-module-47,A-998,2000/06/30 23:59,Lorem ipsum,BASIC,2000/07/01 00:00,http://example.org/a,333,true,project-02,developer-02
+training-module-48,AA-999,2000/02/29 23:59,Pochita feroz,INTERMEDIATE,2000/03/01 00:00,http://example.org/a/b,1020,true,project-02,developer-02
+training-module-49,AA-998,2000/02/29 23:58,Tengo muchos leslies en mi grupo,ADVANCED,2000/02/29 23:59,http://example.org/a/b?,1234,true,project-02,developer-02
+training-module-50,AAA-999,2022/07/29 23:58,Los unicornios dominaran el mundo,BASIC,2022/07/29 23:59,http://example.org/a/b?a&b,9678,true,project-02,developer-02
+training-module-51,AAA-998,2020/02/27 23:58,detalles3,ADVANCED,2020/02/27 23:59,ftp://a,666,true,project-02,developer-02
+training-module-52,Z-000,2000/05/31 23:58,deTAILS,BASIC,2000/05/31 23:59,ftp://a.b,48,true,project-02,developer-02
+training-module-53,Z-001,2000/06/30 23:58,deTAILS2,INTERMEDIATE,2000/06/30 23:59,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",8888,true,project-02,developer-02
+training-module-54,Z-999,2020/02/27 23:59,L,ADVANCED,2020/02/28 00:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",5432,true,project-02,developer-02
+training-module-55,Z-998,2020/02/27 23:59,Lo,BASIC,2020/02/28 00:00,https://www.lorem-ipsum.org,1,true,project-02,developer-02
+training-module-56,ZZ-001,2020/02/27 23:59,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod te",ADVANCED,2020/02/28 00:00,,12,true,project-02,developer-02
+training-module-57,ZZ-998,2020/02/27 23:59,"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tem",BASIC,2020/02/28 00:00,http://www.lorem-ipsum.org/dolor/sit.html,9,true,project-02,developer-02
+training-module-58,ZZZ-999,2020/02/27 23:59,국민경제의 발전을,BASIC,2020/02/28 00:00,http://www.lorem-ipsum.org/dolor/sit.html#dolor,99,true,project-02,developer-02
+training-module-59,ZZZ-998,2020/02/27 23:59,สวัสดีชาวโลก,ADVANCED,2020/02/28 00:00,http://example.org?a=1&b=2,100,true,project-02,developer-02
+training-module-60,Y-999,2020/02/27 23:59,fGhI三AbCdEfGhI四AbCdEfGhI五AbCdEfGhI六Ab,BASIC,2020/02/28 00:00,http://example.org?,999,true,project-02,developer-02
+training-module-61,Y-998,2020/02/27 23:59,世界多米纳兰独角兽,ADVANCED,2020/02/28 00:00,http://example.org?a,5432,true,project-02,developer-02
+training-module-62,Y-000,2020/02/27 23:59,d,ADVANCED,2020/02/28 00:00,http://example.org?a&b,9998,true,project-02,developer-02
+training-module-63,Y-001,2020/02/27 23:59,de,INTERMEDIATE,2020/02/28 00:00,http://example.org/,9999,true,project-02,developer-02
+training-module-64,YZ-000,2020/02/27 23:59,국민경제의 발전을,ADVANCED,2020/02/28 00:00,http://example.org/a,10000,true,project-02,developer-02
+training-module-65,YY-001,2020/02/27 23:59,العظمى واعتلاء,BASIC,2020/02/28 00:00,http://example.org/a/b,2,true,project-02,developer-02
+training-module-66,YY-999,2020/02/27 23:59,Pochita feroz,ADVANCED,2020/02/28 00:00,http://example.org/a/b?,3,true,project-02,developer-02
+training-module-67,YY-998,2020/02/27 23:59,Lorem ipsum,INTERMEDIATE,2020/02/28 00:00,http://example.org/a/b?a&b,1020,true,project-02,developer-02
+training-module-68,ZZY-000,2020/02/27 23:59,Tengo muchos leslies en mi grupo,BASIC,2020/02/28 00:00,ftp://a,333,true,project-02,developer-02
+training-module-69,ZZY-001,2020/02/27 23:59,Los unicornios dominaran el mundo,ADVANCED,2020/02/28 00:00,ftp://a.b,1234,true,project-02,developer-02
+training-module-70,YYY-999,2020/02/27 23:59,Me gustan los gatos,INTERMEDIATE,2020/02/28 00:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/",9678,true,project-02,developer-02
+training-module-71,YYY-998,2020/02/27 23:59,detalles3,BASIC,2020/02/28 00:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/X",666,true,project-02,developer-02
+training-module-72,YZY-000,2020/02/27 23:59,deTAILS,ADVANCED,2020/02/28 00:00,https://www.lorem-ipsum.org,5432,true,project-02,developer-02
+training-module-73,ZYZ-000,2020/02/27 23:59,deTAILS0,INTERMEDIATE,2020/02/28 00:00,ftp://www.lorem-ipsum.org,8888,true,project-02,developer-02
