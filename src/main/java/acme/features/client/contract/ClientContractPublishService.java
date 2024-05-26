@@ -33,8 +33,6 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 		int masterId = super.getRequest().getData("id", int.class);
 		Contract contract = this.repository.findContractById(masterId);
 
-		List<Progress> ls = this.repository.findProgresssByContractId(masterId).stream().toList();
-
 		boolean status = contract != null && contract.isDraftMode() && principal.hasRole(contract.getClient()) && contract.getClient().getUserAccount().getId() == userAccountId;
 
 		super.getResponse().setAuthorised(status);
