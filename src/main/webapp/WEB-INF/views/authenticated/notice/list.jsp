@@ -18,7 +18,6 @@
 <acme:list>
 	<acme:list-column code="authenticated.notice.list.label.title" path="title" width="10%"/>
 	<acme:list-column code="authenticated.notice.list.label.author" path="author" width="10%"/>
-	<acme:list-column code="authenticated.notice.list.label.message" path="message" width="10%"/>
 </acme:list>
 
 <acme:button code ="authenticated.notice.list.button.create" action ="/authenticated/notice/create"/>

@@ -24,11 +24,15 @@
 	
 	<jstl:choose>
 		<jstl:when test="${_command == 'show' || _command == 'update'|| _command == 'delete'}">
+			<acme:input-moment code="administrator.banner.form.label.instantiation" path="instantiation" readonly="true"/>
 			<acme:submit code="administrator.banner.list.button.update" action="/administrator/banner/update"/>
 			<acme:submit code="administrator.banner.list.button.delete" action="/administrator/banner/delete"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
 			<acme:submit code="administrator.banner.list.button.create" action="/administrator/banner/create"/>
 		</jstl:when>
+		<jstl:otherwise>
+			<acme:input-moment code="administrator.banner.form.label.instantiation" path="instantiation" readonly="true"/>
+		</jstl:otherwise>
 	</jstl:choose>
 </acme:form>

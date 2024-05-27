@@ -20,12 +20,15 @@ administrator.objective.form.label.startDurationPeriod = Fecha de comienzo
 administrator.objective.form.label.endDurationPeriod = Fecha de finalización
 administrator.objective.form.label.link = Enlace
 administrator.objective.form.label.confirmation = Confirmación
+administrator.objective.form.label.project = Projecto
+administrator.objective.form.label.instantiation = Momento de instanciación
 
 administrator.objective.form.button.create = Publicar
 
 administrator.objective.form.error.confirmation = Debes confirmar el objetivo antes de publicarlo
-validation.objective.moment.startDurationPeriod = La fecha de cominezo debe estar en el futuro
-validation.objective.moment.start-after-end = La fecha de cominezo debe ser anterior a la fecha de finalización
-validation.objective.moment.minimum-one-hour = El tiempo entre la fecha de comienzo y la fecha de finalización debe ser de al menos una hora
-admininstrator.objective.form.error.dateOutOfBounds =  Todas las fechas deben ser anteriores a 2200/12/31 23:59
-validation.objective.moment.endDurationPeriod = La fecha de finalización debe estar en el futuro
+administrator.objetive.form.error.end-before-start = El fin del periodo debe ser una fecha posterior al inicio del periodo
+administrator.objetive.form.error.small-display-period = El periodo debe durar mínimo una semana
+administrator.objetive.form.error.start-before-instantiation = El inicio del periodo debe estar en el futuro 
+administrator.objetive.form.error.before-min-date = La fecha está por debajo del límite del sistema (30-07-2022 00:00)
+administrator.objetive.form.error.after-max-date = La fecha está por encima del límite del sistema (31-12-2200 23:59)
+administrator.objetive.form.error.no-room-for-min-period-duration = Está fecha fuerza a la otra a salirse de los límites para cumplir con la mínima duración del periodo

@@ -1,12 +1,16 @@
 
 package acme.features.authenticated.risk;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.accounts.Authenticated;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
+import acme.client.views.SelectChoices;
+import acme.entities.project.Project;
 import acme.entities.risks.Risk;
 
 @Service
@@ -41,9 +45,13 @@ public class AuthenticatedRiskShowService extends AbstractService<Authenticated,
 		assert object != null;
 
 		Dataset dataset;
+		Collection<Project> projects = this.repository.findAllProjects();
+		SelectChoices projectsChoices = SelectChoices.from(projects, "code", object.getProject());
 
-		dataset = super.unbind(object, "reference", "identificationDate", "impact", "probability", "description", "link");
+		dataset = super.unbind(object, "reference", "identificationDate", "impact", "probability", "description", "link", "project");
 		dataset.put("value", object.getValue());
+		dataset.put("project", projectsChoices.getSelected().getKey());
+		dataset.put("projects", projectsChoices);
 
 		super.getResponse().addData(dataset);
 	}

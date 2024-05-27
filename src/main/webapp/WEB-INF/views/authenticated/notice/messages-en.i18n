@@ -16,7 +16,7 @@ authenticated.notice.list.label.author = Author
 authenticated.notice.list.label.message = Message
 authenticated.notice.list.button.create = Create
 
-authenticated.notice.form.label.instantiationMoment = Instantiation Moment
+authenticated.notice.form.label.instantiation = Instantiation Moment
 authenticated.notice.form.label.title = Title
 authenticated.notice.form.label.message = Message
 authenticated.notice.form.label.email = Email

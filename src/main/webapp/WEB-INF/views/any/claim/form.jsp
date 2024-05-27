@@ -21,14 +21,21 @@
 	<acme:input-textbox code="any.claim.form.label.description" path="description"/>
 	<acme:input-textbox code="any.claim.form.label.department" path="department"/>
 	<acme:input-url code="any.claim.form.label.link" path="link"/>
-	<acme:input-email code="any.claim.form.label.email" path="email"/>	
+	<acme:input-email code="any.claim.form.label.email" path="email"/>
 
-	<acme:input-checkbox code="any.claim.form.label.confirm" path="confirm"/>	
+
 
 	<jstl:choose>
+		<jstl:when test="${_command == 'show'}">
+			<acme:input-moment code="any.claim.form.label.instantiationMoment" path="instantiationMoment" readonly="true"/>
+		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
-			<acme:submit code="any.claim.form.button.publish" action="/any/claim/create"/>
-		</jstl:when>		
+			<acme:input-checkbox code="any.claim.form.label.confirm" path="confirm"/>
+			<acme:submit code="any.claim.form.button.publish" action="/any/claim/create"/>	
+		</jstl:when>
+		<jstl:otherwise>
+			<acme:input-moment code="any.claim.form.label.instantiationMoment" path="instantiationMoment" readonly="true"/>
+		</jstl:otherwise>		
 	</jstl:choose>	
 
 </acme:form>

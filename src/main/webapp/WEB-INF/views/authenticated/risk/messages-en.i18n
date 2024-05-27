@@ -15,6 +15,7 @@ authenticated.risk.list.label.reference = Reference
 authenticated.risk.list.label.identificationDate = Identification date
 authenticated.risk.list.label.impact = Impact
 authenticated.risk.list.label.probability = Probability
+authenticated.risk.list.label.project = Project
 
 authenticated.risk.form.label.reference = Reference
 authenticated.risk.form.label.identificationDate = Identification date
@@ -23,3 +24,4 @@ authenticated.risk.form.label.probability = Probability
 authenticated.risk.form.label.value = Value
 authenticated.risk.form.label.description = Description
 authenticated.risk.form.label.link = Link
+authenticated.risk.form.label.project = Project

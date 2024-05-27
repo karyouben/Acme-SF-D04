@@ -20,4 +20,5 @@
 	<acme:list-column code="authenticated.risk.list.label.identificationDate" path="identificationDate" width="10%"/>
 	<acme:list-column code="authenticated.risk.list.label.impact" path="impact" width="10%"/>
 	<acme:list-column code="authenticated.risk.list.label.probability" path="probability" width="10%"/>
+	<acme:list-column code="authenticated.risk.list.label.project" path="project" width="10%"/>
 </acme:list>

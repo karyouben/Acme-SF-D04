@@ -31,7 +31,6 @@ public class AuthenticatedNoticeCreateService extends AbstractService<Authentica
 	@Override
 	public void load() {
 		Notice object;
-		Date moment;
 		String username;
 		String name;
 		String author;
@@ -42,10 +41,11 @@ public class AuthenticatedNoticeCreateService extends AbstractService<Authentica
 		username = super.getRequest().getPrincipal().getUsername();
 		author = username + "-" + name;
 
-		moment = MomentHelper.getCurrentMoment();
+		Date currentMoment = MomentHelper.getCurrentMoment();
+		Date updateMoment = new Date(currentMoment.getTime() - 1000); //Substracts one second to ensure the moment is in the past
 
 		object = new Notice();
-		object.setInstantiation(moment);
+		object.setInstantiation(updateMoment);
 		object.setAuthor(author);
 
 		super.getBuffer().addData(object);

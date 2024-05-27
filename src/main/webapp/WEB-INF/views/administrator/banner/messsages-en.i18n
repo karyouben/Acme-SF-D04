@@ -19,11 +19,12 @@ administrator.banner.list.button.create = Create
 administrator.banner.list.button.banners = List Banners
 administrator.banner.list.button.update = Update
 administrator.banner.list.button.delete = Delete
+administrator.banner.form.label.instantiation = Instantiation moment
 
 administrator.banner.form.error.end-before-start = The end display period must be after the start display period
 administrator.banner.form.error.small-display-period = The display period must be 1 week minimum
-administrator.banner.form.error.start-before-instantiation = The start display period must be after the instantiation moment
-administrator.banner.form.error.before-min-date = The date is before the minimum date allowed by the system (2000-01-01 00:00)
+administrator.banner.form.error.start-before-instantiation = The start display period must be in the future
+administrator.banner.form.error.before-min-date = The date is before the minimum date allowed by the system (2022-07-30 00:00)
 administrator.banner.form.error.after-max-date = The date is after the maximum date allowed by the system (2200-12-31 23:59)
 administrator.banner.form.error.no-room-for-min-period-duration = This date forces the other to be off limits for minimum period duration
 

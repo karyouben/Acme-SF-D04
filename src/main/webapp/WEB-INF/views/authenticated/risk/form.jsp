@@ -23,4 +23,5 @@
 	<acme:input-double code="authenticated.risk.form.label.value" path="value"/>
 	<acme:input-textbox code="authenticated.risk.form.label.description" path="description"/>
 	<acme:input-url code="authenticated.risk.form.label.link" path="link"/>
+	<acme:input-select code="authenticated.risk.form.label.project" path="project" choices="${projects}"/>
 </acme:form>

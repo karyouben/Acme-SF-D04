@@ -23,4 +23,15 @@
 	<acme:input-moment code="authenticated.objective.form.label.startDurationPeriod" path="startDurationPeriod"/>
 	<acme:input-moment code="authenticated.objective.form.label.endDurationPeriod" path="endDurationPeriod"/>
 	<acme:input-url code="authenticated.objective.form.label.link" path="link"/>
+	<acme:input-select code="authenticated.objective.form.label.project" path="project" choices="${projects}"/>
+
+	<jstl:choose>
+		<jstl:when test="${_command == 'show'}">
+			<acme:input-moment code="authenticated.objective.form.label.instantiation" path="instantiation" readonly="true"/>
+		</jstl:when>
+		<jstl:otherwise>
+			<acme:input-moment code="authenticated.objective.form.label.instantiation" path="instantiation" readonly="true"/>
+		</jstl:otherwise>
+	</jstl:choose>
+	
 </acme:form>

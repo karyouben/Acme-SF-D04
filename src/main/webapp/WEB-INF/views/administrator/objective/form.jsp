@@ -23,13 +23,21 @@
 	<acme:input-moment code="administrator.objective.form.label.startDurationPeriod" path="startDurationPeriod"/>
 	<acme:input-moment code="administrator.objective.form.label.endDurationPeriod" path="endDurationPeriod"/>
 	<acme:input-url code="administrator.objective.form.label.link" path="link"/>
+	<acme:input-select code="administrator.objective.form.label.project" path="project" choices="${projects}"/>
+
 
 
 	<jstl:choose>
+		<jstl:when test="${_command == 'show'}">
+			<acme:input-moment code="administrator.objective.form.label.instantiation" path="instantiation" readonly="true"/>
+		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
 			<acme:input-checkbox code="administrator.objective.form.label.confirmation" path="confirmation"/>
 			<acme:submit code="administrator.objective.form.button.create" action="/administrator/objective/create"/>
 		</jstl:when>
+		<jstl:otherwise>
+			<acme:input-moment code="administrator.objective.form.label.instantiation" path="instantiation" readonly="true"/>
+		</jstl:otherwise>
 	</jstl:choose>
 	
 </acme:form>

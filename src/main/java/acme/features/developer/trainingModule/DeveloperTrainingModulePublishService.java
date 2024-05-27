@@ -57,7 +57,7 @@ public class DeveloperTrainingModulePublishService extends AbstractService<Devel
 		int projectId = super.getRequest().getData("project", int.class);
 		Project project = this.repository.findProjectById(projectId);
 
-		super.bind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "totalTime", "project");
+		super.bind(object, "code", "details", "difficultyLevel", "link", "totalTime", "project");
 		object.setProject(project);
 	}
 

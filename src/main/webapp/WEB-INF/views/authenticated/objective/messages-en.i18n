@@ -15,6 +15,7 @@ authenticated.objective.list.label.title = Title
 authenticated.objective.list.label.startDurationPeriod = Start date
 authenticated.objective.list.label.endDurationPeriod = End date
 authenticated.objective.list.label.priority = Priority
+authenticated.objective.list.label.project = Project
 
 authenticated.objective.form.label.instantiationMoment = Instantiation Moment
 authenticated.objective.form.label.title = Title
@@ -24,3 +25,5 @@ authenticated.objective.form.label.isCritical = Critical
 authenticated.objective.form.label.startDurationPeriod = Start Date
 authenticated.objective.form.label.endDurationPeriod = End Date
 authenticated.objective.form.label.link = Link
+authenticated.objective.form.label.project = Project
+authenticated.objective.form.label.instantiation = Instantiation moment
