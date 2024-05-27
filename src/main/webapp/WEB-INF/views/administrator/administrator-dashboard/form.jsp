@@ -127,16 +127,16 @@
 			<acme:message code="administrator.dashboard.form.label.statistics-object-claim"/>
 		</td>
 		<td>
-			<acme:print value="${claimPosted10Statistics.getAverageString()}"/>
+			<acme:print value="${avgNumberOfClaims}"/>
 		</td>
 		<td>
-			<acme:print value="${claimPosted10Statistics.getDeviationString()}"/>
+			<acme:print value="${stdNumberOfClaims}"/>
 		</td>
 		<td>
-			<acme:print value="${claimPosted10Statistics.getMaximumString()}"/>
+			<acme:print value="${maxNumberOfClaims}"/>
 		</td>
 		<td>
-			<acme:print value="${claimPosted10Statistics.getMinimumString()}"/>
+			<acme:print value="${minNumberOfClaims}"/>
 		</td>
 	</tr>	
 </table>	

@@ -1,6 +1,9 @@
 
 package acme.features.administrator.administratordashboard;
 
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
@@ -64,16 +67,10 @@ public interface AdministratorDashboardRepository extends AbstractRepository {
 	@Query("select min(r.impact * r.probability) FROM Risk r")
 	Double findMinimumRiskValue();
 
-	@Query("select COUNT(c) FROM Claim c")
-	Double findAverageClaimPosted10();
+	@Query("select day(c.instantiationMoment), count(c) from Claim c where c.instantiationMoment > :thresholdDate group by day(c.instantiationMoment)")
+	List<Object[]> numberOfClaimsByDay(Date thresholdDate);
 
-	@Query("select COUNT(c) FROM Claim c")
-	Double findDeviationClaimPosted10();
-
-	@Query("select COUNT(c) FROM Claim c")
-	Double findMaximumClaimPosted10();
-
-	@Query("select COUNT(c) FROM Claim c")
-	Double findMinimumClaimPosted10();
+	@Query("select count(c) from Claim c where c.instantiationMoment >= :startDate and c.instantiationMoment < :endDate")
+	Long numberOfClaimsBetweenDates(Date startDate, Date endDate);
 
 }
