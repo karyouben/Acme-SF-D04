@@ -1,3 +1,14 @@
+/*
+ * EmployerApplicationShowService.java
+ *
+ * Copyright (C) 2012-2024 Rafael Corchuelo.
+ *
+ * In keeping with the traditional purpose of furthering education and research, it is
+ * the policy of the copyright owner to permit non-commercial use and redistribution of
+ * this software. It has been tested carefully, but it is not guaranteed for any particular
+ * purposes. The copyright owner does not offer any warranties or representations, nor do
+ * they accept any liabilities with respect to them.
+ */
 
 package acme.features.sponsor.sponsorship;
 
@@ -6,11 +17,9 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
-import acme.components.AuxiliarService;
 import acme.entities.project.Project;
 import acme.entities.sponsorships.Sponsorship;
 import acme.entities.sponsorships.SponsorshipType;
@@ -19,24 +28,25 @@ import acme.roles.Sponsor;
 @Service
 public class SponsorSponsorshipShowService extends AbstractService<Sponsor, Sponsorship> {
 
-	@Autowired
-	protected SponsorSponsorshipRepository	repository;
+	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuxiliarService				auxiliarService;
+	private SponsorSponsorshipRepository repository;
 
 	// AbstractService interface ----------------------------------------------
 
 
 	@Override
 	public void authorise() {
-		Sponsorship object;
-		int id;
-		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findSponsorshipById(id);
-		final Principal principal = super.getRequest().getPrincipal();
-		final int userAccountId = principal.getAccountId();
-		super.getResponse().setAuthorised(object.getSponsor().getUserAccount().getId() == userAccountId);
+		boolean status;
+		int sponsorshipId;
+		Sponsorship sponsorship;
+
+		sponsorshipId = super.getRequest().getData("id", int.class);
+		sponsorship = this.repository.findOneSponsorshipById(sponsorshipId);
+		status = sponsorship != null && super.getRequest().getPrincipal().hasRole(sponsorship.getSponsor());
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
@@ -45,7 +55,7 @@ public class SponsorSponsorshipShowService extends AbstractService<Sponsor, Spon
 		int id;
 
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findSponsorshipById(id);
+		object = this.repository.findOneSponsorshipById(id);
 
 		super.getBuffer().addData(object);
 	}
@@ -53,23 +63,21 @@ public class SponsorSponsorshipShowService extends AbstractService<Sponsor, Spon
 	@Override
 	public void unbind(final Sponsorship object) {
 		assert object != null;
+
 		Dataset dataset;
-		dataset = super.unbind(object, "id", "code", "moment", "startPeriod", "endPeriod", "amount", "type", "email", "link", "draftMode", "sponsor");
-		SelectChoices types = SelectChoices.from(SponsorshipType.class, object.getType());
-		final SelectChoices choices = new SelectChoices();
-		Collection<Project> projects;
-		projects = this.repository.findAllPublishedProjects();
+		SelectChoices choices;
+		SelectChoices projects;
 
-		for (final Project c : projects)
-			if (object.getProject() != null && object.getProject().getId() == c.getId())
-				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), true);
-			else
-				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
+		choices = SelectChoices.from(SponsorshipType.class, object.getType());
+		Collection<Project> unpublishedProjects = this.repository.findAllUnpublishedProjects();
+		projects = SelectChoices.from(unpublishedProjects, "code", object.getProject());
 
-		dataset.put("project", choices.getSelected().getKey());
-		dataset.put("projects", choices);
-		dataset.put("types", types);
-		dataset.put("money", this.auxiliarService.changeCurrency(object.getAmount()));
+		dataset = super.unbind(object, "code", "moment", "startDate", "endDate", "amount", "email", "link", "published");
+		dataset.put("project", projects.getSelected().getKey());
+		dataset.put("projects", projects);
+		dataset.put("types", choices);
+
 		super.getResponse().addData(dataset);
 	}
+
 }

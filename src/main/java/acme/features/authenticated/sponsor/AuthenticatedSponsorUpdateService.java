@@ -1,3 +1,14 @@
+/*
+ * AuthenticatedConsumerUpdateService.java
+ *
+ * Copyright (C) 2012-2024 Rafael Corchuelo.
+ *
+ * In keeping with the traditional purpose of furthering education and research, it is
+ * the policy of the copyright owner to permit non-commercial use and redistribution of
+ * this software. It has been tested carefully, but it is not guaranteed for any particular
+ * purposes. The copyright owner does not offer any warranties or representations, nor do
+ * they accept any liabilities with respect to them.
+ */
 
 package acme.features.authenticated.sponsor;
 
@@ -9,7 +20,6 @@ import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.PrincipalHelper;
 import acme.client.services.AbstractService;
-import acme.components.AuxiliarService;
 import acme.roles.Sponsor;
 
 @Service
@@ -18,19 +28,14 @@ public class AuthenticatedSponsorUpdateService extends AbstractService<Authentic
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedSponsorRepository	repository;
+	private AuthenticatedSponsorRepository repository;
 
-	@Autowired
-	protected AuxiliarService					auxiliarService;
-
-	// AbstractService interface ----------------------------------------------
+	// AbstractService interface ----------------------------------------------ç
 
 
 	@Override
 	public void authorise() {
-		boolean status;
-		status = super.getRequest().getPrincipal().hasRole(Sponsor.class);
-		super.getResponse().setAuthorised(status);
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
@@ -38,9 +43,11 @@ public class AuthenticatedSponsorUpdateService extends AbstractService<Authentic
 		Sponsor object;
 		Principal principal;
 		int userAccountId;
+
 		principal = super.getRequest().getPrincipal();
 		userAccountId = principal.getAccountId();
 		object = this.repository.findOneSponsorByUserAccountId(userAccountId);
+
 		super.getBuffer().addData(object);
 	}
 
@@ -48,29 +55,28 @@ public class AuthenticatedSponsorUpdateService extends AbstractService<Authentic
 	public void bind(final Sponsor object) {
 		assert object != null;
 
-		super.bind(object, "name", "benefits", "link", "email");
+		super.bind(object, "name", "expectedBenefitsList", "email", "link");
 	}
 
 	@Override
 	public void validate(final Sponsor object) {
 		assert object != null;
-		if (!super.getBuffer().getErrors().hasErrors("name"))
-			super.state(this.auxiliarService.validateTextImput(object.getName()), "name", "authenticated.sponsor.form.error.spam");
-		if (!super.getBuffer().getErrors().hasErrors("benefits"))
-			super.state(this.auxiliarService.validateTextImput(object.getBenefits()), "benefits", "authenticated.sponsor.form.error.spam");
 	}
 
 	@Override
 	public void perform(final Sponsor object) {
 		assert object != null;
+
 		this.repository.save(object);
 	}
 
 	@Override
 	public void unbind(final Sponsor object) {
 		assert object != null;
+
 		Dataset dataset;
-		dataset = super.unbind(object, "name", "benefits", "link", "email");
+
+		dataset = super.unbind(object, "name", "expectedBenefitsList", "email", "link");
 		super.getResponse().addData(dataset);
 	}
 
@@ -79,4 +85,5 @@ public class AuthenticatedSponsorUpdateService extends AbstractService<Authentic
 		if (super.getRequest().getMethod().equals("POST"))
 			PrincipalHelper.handleUpdate();
 	}
+
 }

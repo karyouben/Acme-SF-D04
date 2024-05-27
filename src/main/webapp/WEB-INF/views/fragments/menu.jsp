@@ -29,7 +29,7 @@
 			<acme:menu-suboption code="master.menu.any.list.trainingModule" action="/any/training-module/list"/>
 			<acme:menu-suboption code="master.menu.any.list.contract" action="/any/contract/list"/>
 			<acme:menu-suboption code="master.menu.any.list.claim" action="/any/claim/list"/>
-			<acme:menu-suboption code="master.menu.any.sponsorship" action="/any/sponsorship/list"/>
+			<acme:menu-suboption code="master.menu.any.sponsorships" action="/any/sponsorship/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
@@ -37,7 +37,6 @@
 			<acme:menu-suboption code="master.menu.authenticated.trainingModule" action="/any/training-module/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.contract" action="/any/contract/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.claim" action="/any/claim/list"/>
-			<acme:menu-suboption code="master.menu.authenticated.sponsorship" action="/any/sponsorship/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.risks" action="/authenticated/risk/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.notices" action="/authenticated/notice/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.objectives" action="/authenticated/objective/list"/>
@@ -65,8 +64,11 @@
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.sponsor" access="hasRole('Sponsor')">
-			<acme:menu-suboption code="master.menu.sponsor.sponsorship" action="/sponsor/sponsorship/list"/>
-			<acme:menu-suboption code="master.menu.sponsor.sponsor-dashboard" action="/sponsor/sponsor-dashboard/show"/>
+			<acme:menu-suboption code="master.menu.sponsor.sponsorships" action="/sponsor/sponsorship/list-mine"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.sponsor.invoices" action="/sponsor/invoice/list-mine"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.sponsor.dashboard" action="/sponsor/sponsor-dashboard/show"/>
 		</acme:menu-option>
 	
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">

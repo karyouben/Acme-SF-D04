@@ -1,5 +1,5 @@
 
-package acme.features.sponsor.dashboard;
+package acme.features.sponsor.sponsorDashboard;
 
 import javax.annotation.PostConstruct;
 
@@ -12,10 +12,11 @@ import acme.roles.Sponsor;
 
 @Controller
 public class SponsorDashboardController extends AbstractController<Sponsor, SponsorDashboard> {
+
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected SponsorDashboardShowService showService;
+	private SponsorDashboardShowService showService;
 
 	// Constructors -----------------------------------------------------------
 
@@ -24,4 +25,5 @@ public class SponsorDashboardController extends AbstractController<Sponsor, Spon
 	protected void initialise() {
 		super.addBasicCommand("show", this.showService);
 	}
+
 }

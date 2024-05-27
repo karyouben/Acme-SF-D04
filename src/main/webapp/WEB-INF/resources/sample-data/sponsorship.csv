@@ -1,4 +1,4 @@
-key,code,moment,start_period,end_period,amount,type,email,link,draft_mode,key:project,key:sponsor
+key,code,moment,startDate,endDate,amount,type,email,link,published,key:project,key:sponsor
 sponsorship-01,ABC-123,2021/08/21 17:00,2022/08/21 17:00,2022/09/21 17:01,EUR 10.0,FINANCIAL,sponsor@acme.com,https://es.linkedin.com,false,project-01,sponsor-01
 sponsorship-02,A-123,2021/08/21 17:00,2022/08/21 17:00,2022/09/21 17:01,EUR 10.0,FINANCIAL,sponsor@acme.com,https://es.linkedin.com,false,project-01,sponsor-01
 sponsorship-03,AB-123,2021/08/21 17:00,2022/08/21 17:00,2022/09/21 17:01,EUR 10.0,FINANCIAL,sponsor@acme.com,https://es.linkedin.com,true,project-01,sponsor-01

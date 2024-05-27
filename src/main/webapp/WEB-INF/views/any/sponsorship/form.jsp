@@ -1,15 +1,19 @@
-<%@page language="java"%>
+
+
+<%@page%>
 
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form>
-	<acme:input-textbox code="any.sponsorship.form.label.code" path="code"/>	
-	<acme:input-moment code="any.sponsorship.form.label.moment" path="moment"/>	
-	<acme:input-moment code="any.sponsorship.form.label.startPeriod" path="startPeriod"/>	
-	<acme:input-moment code="any.sponsorship.form.label.endPeriod" path="endPeriod"/>	
-	<acme:input-money code="any.sponsorship.form.label.amount" path="amount"/>	
-	<acme:input-url code="any.sponsorship.form.label.link" path="link"/>	
-	<acme:input-textbox code="any.sponsorship.form.label.email" path="email"/>	
-	<acme:input-money code="sponsor.sponsorship.form.label.money" path="money" readonly="true"/>
+	<acme:input-textbox code="sponsor.sponsorship.form.label.code" path="code" readonly="True"/>
+	<acme:input-moment code="sponsor.sponsorship.form.label.startDate" path="startDate" readonly="True"/>
+	<acme:input-moment code="sponsor.sponsorship.form.label.endDate" path="endDate" readonly="True"/>
+	<acme:input-select code="sponsor.sponsorship.form.label.type" path="type"  choices="${types}" readonly="True"/>
+	<acme:input-money code="sponsor.sponsorship.form.label.amount" path="amount" readonly="True"/>
+	<acme:input-url code="sponsor.sponsorship.form.label.link" path="link" readonly="True"/>
+	<acme:input-email code="sponsor.sponsorship.form.label.email" path="email" readonly="True"/>
+	<acme:input-select code="sponsor.sponsorship.form.label.project" path="project"  choices="${projects}" readonly="True"/>
+	<acme:input-checkbox code="sponsor.sponsorship.form.label.published" path="published" readonly="True" />
+	
 </acme:form>

@@ -10,29 +10,22 @@ import acme.client.data.accounts.UserAccount;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.PrincipalHelper;
 import acme.client.services.AbstractService;
-import acme.components.AuxiliarService;
 import acme.roles.Sponsor;
 
 @Service
 public class AuthenticatedSponsorCreateService extends AbstractService<Authenticated, Sponsor> {
+
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected AuthenticatedSponsorRepository	repository;
+	private AuthenticatedSponsorRepository repository;
 
-	@Autowired
-	protected AuxiliarService					auxiliarService;
-
-	// AbstractService interface ----------------------------------------------
+	// AbstractService interface ---------------------------
 
 
 	@Override
 	public void authorise() {
-		boolean status;
-
-		status = !super.getRequest().getPrincipal().hasRole(Sponsor.class);
-
-		super.getResponse().setAuthorised(status);
+		super.getResponse().setAuthorised(true);
 	}
 
 	@Override
@@ -56,31 +49,26 @@ public class AuthenticatedSponsorCreateService extends AbstractService<Authentic
 	public void bind(final Sponsor object) {
 		assert object != null;
 
-		super.bind(object, "name", "benefits", "link", "email");
+		super.bind(object, "name", "expectedBenefitsList", "email", "link");
 	}
 
 	@Override
 	public void validate(final Sponsor object) {
 		assert object != null;
-		if (!super.getBuffer().getErrors().hasErrors("name"))
-			super.state(this.auxiliarService.validateTextImput(object.getName()), "name", "authenticated.sponsor.form.error.spam");
-		if (!super.getBuffer().getErrors().hasErrors("benefits"))
-			super.state(this.auxiliarService.validateTextImput(object.getBenefits()), "benefits", "authenticated.sponsor.form.error.spam");
 	}
 
 	@Override
 	public void perform(final Sponsor object) {
 		assert object != null;
+
 		this.repository.save(object);
 	}
 
 	@Override
 	public void unbind(final Sponsor object) {
-		assert object != null;
+		Dataset dataset;
 
-		final Dataset dataset;
-
-		dataset = super.unbind(object, "name", "benefits", "link", "email");
+		dataset = super.unbind(object, "name", "expectedBenefitsList", "email", "link");
 
 		super.getResponse().addData(dataset);
 	}
@@ -90,4 +78,5 @@ public class AuthenticatedSponsorCreateService extends AbstractService<Authentic
 		if (super.getRequest().getMethod().equals("POST"))
 			PrincipalHelper.handleUpdate();
 	}
+
 }

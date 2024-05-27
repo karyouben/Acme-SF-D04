@@ -2,21 +2,20 @@
 package acme.features.sponsor.sponsorship;
 
 import java.time.temporal.ChronoUnit;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.Date;
-import java.util.stream.Collectors;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
-import acme.components.AuxiliarService;
-import acme.entities.invoices.Invoice;
 import acme.entities.project.Project;
+import acme.entities.sponsorships.Invoice;
 import acme.entities.sponsorships.Sponsorship;
 import acme.entities.sponsorships.SponsorshipType;
 import acme.roles.Sponsor;
@@ -27,23 +26,25 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected SponsorSponsorshipRepository	repository;
+	private SponsorSponsorshipRepository repository;
 
-	@Autowired
-	protected AuxiliarService				auxiliarService;
-
-	// AbstractService interface -------------------------------------
+	// AbstractService interface ---------------------------
 
 
 	@Override
 	public void authorise() {
-		Sponsorship object;
+		boolean status;
 		int id;
+		Sponsor sponsor;
+		Sponsorship sponsorship;
+
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findSponsorshipById(id);
-		final Principal principal = super.getRequest().getPrincipal();
-		final int userAccountId = principal.getAccountId();
-		super.getResponse().setAuthorised(object.getSponsor().getUserAccount().getId() == userAccountId && object.isDraftMode());
+		sponsorship = this.repository.findOneSponsorshipById(id);
+
+		sponsor = sponsorship == null ? null : sponsorship.getSponsor();
+		status = sponsorship != null && !sponsorship.isPublished() && super.getRequest().getPrincipal().hasRole(sponsor);
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
@@ -52,7 +53,11 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 		int id;
 
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findSponsorshipById(id);
+		object = this.repository.findOneSponsorshipById(id);
+
+		Date instantiationMoment;
+		instantiationMoment = MomentHelper.getCurrentMoment();
+		object.setMoment(instantiationMoment);
 
 		super.getBuffer().addData(object);
 	}
@@ -60,51 +65,89 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 	@Override
 	public void bind(final Sponsorship object) {
 		assert object != null;
-		super.bind(object, "code", "amount", "startPeriod", "endPeriod", "type", "email", "link");
-		int projectId = super.getRequest().getData("project", int.class);
-		Project project = this.repository.findProjectbyId(projectId);
-		object.setProject(project);
+		super.bind(object, "code", "startDate", "endDate", "type", "amount", "email", "link", "project");
+
 	}
 
 	@Override
 	public void validate(final Sponsorship object) {
 		assert object != null;
-		final Collection<Invoice> invoices = this.repository.findInvoicesBySponsorship(object);
-		super.state(!invoices.isEmpty(), "*", "sponsor.sponsorship.form.error.noInvoices");
-		if (!invoices.isEmpty()) {
-			double totalAmount;
-			totalAmount = invoices.stream().collect(Collectors.summingDouble(x -> x.totalAmount().getAmount()));
 
-			super.state(totalAmount == object.getAmount().getAmount(), "*", "sponsor.sponsorship.form.error.invoicestotalamount");
+		if (!super.getBuffer().getErrors().hasErrors("amount")) {
+			Double amount = object.getAmount().getAmount();
+			Double total = 0.0;
+			boolean allPublished = true;
+			Collection<Invoice> invoices = this.repository.findAllInvoicesBySponsorshipId(object.getId());
+			for (Invoice invoice : invoices)
+				if (invoice.isPublished())
+					total += invoice.getValue().getAmount();
+				else
+					allPublished = false;
+
+			super.state(amount.equals(total) && allPublished, "amount", "sponsor.sponsorship.form.error.invoices");
+
 		}
-		if (!super.getBuffer().getErrors().hasErrors("amount"))
-			super.state(this.auxiliarService.validatePrice(object.getAmount(), 0, 1000000), "amount", "sponsor.sponsorship.form.error.amount");
+
+		String dateString = "2201/01/01 00:00";
+		Date futureMostDate = MomentHelper.parse(dateString, "yyyy/MM/dd HH:mm");
+		dateString = "2200/12/1 00:00";
+		Date latestStartDate = MomentHelper.parse(dateString, "yyyy/MM/dd HH:mm");
+
+		String acceptedCurrencies = this.repository.findSystemConfiguration().getAcceptedCurrencies();
+		List<String> acceptedCurrencyList = Arrays.asList(acceptedCurrencies.split("\\s*,\\s*"));
+
 		if (!super.getBuffer().getErrors().hasErrors("code")) {
-			Sponsorship existing;
-			existing = this.repository.findSponsorshipByCode(object.getCode());
-			final Sponsorship sponsorship2 = object.getCode().equals("") || object.getCode().equals(null) ? null : this.repository.findSponsorshipById(object.getId());
-			super.state(existing == null || sponsorship2.equals(existing), "code", "sponsor.sponsorship.form.error.code");
-		}
-		if (!super.getBuffer().getErrors().hasErrors("amount"))
-			super.state(this.auxiliarService.validateCurrency(object.getAmount()), "amount", "sponsor.sponsorship.form.error.amount");
-		if (!super.getBuffer().getErrors().hasErrors("startPeriod")) {
-			super.state(MomentHelper.isAfterOrEqual(object.getStartPeriod(), MomentHelper.getCurrentMoment()), "startPeriod", "sponsor.sponsorship.form.error.start-period");
-			super.state(this.auxiliarService.validateDate(object.getStartPeriod()), "startPeriod", "sponsor.sponsorship.form.error.dates");
-		}
-		if (!super.getBuffer().getErrors().hasErrors("endPeriod")) {
-			Date minimumEndDate;
-			super.state(this.auxiliarService.validateDate(object.getEndPeriod()), "endPeriod", "sponsor.sponsorship.form.error.dates");
-			if (object.getStartPeriod() != null) {
-				minimumEndDate = MomentHelper.deltaFromMoment(object.getStartPeriod(), 30, ChronoUnit.DAYS);
-				super.state(MomentHelper.isAfterOrEqual(object.getEndPeriod(), minimumEndDate), "endPeriod", "sponsor.sponsorship.form.error.end-period");
+			Sponsorship sponsorshipSameCode;
+			sponsorshipSameCode = this.repository.findSponsorshipByCode(object.getCode());
+			if (sponsorshipSameCode != null) {
+				int id = sponsorshipSameCode.getId();
+				super.state(id == object.getId(), "code", "sponsor.sponsorship.form.error.duplicate");
 			}
 		}
+
+		if (object.getStartDate() != null) {
+
+			if (!super.getBuffer().getErrors().hasErrors("startDate"))
+				super.state(MomentHelper.isAfter(object.getStartDate(), object.getMoment()), "startDate", "sponsor.sponsorship.form.error.startDate");
+
+			if (!super.getBuffer().getErrors().hasErrors("startDate"))
+				super.state(MomentHelper.isBefore(object.getStartDate(), latestStartDate), "startDate", "sponsor.sponsorship.form.error.startDateOutOfBounds");
+
+			if (object.getEndDate() != null) {
+
+				if (!super.getBuffer().getErrors().hasErrors("endDate"))
+					super.state(MomentHelper.isAfter(object.getEndDate(), object.getMoment()), "endDate", "sponsor.sponsorship.form.error.endDate");
+
+				if (!super.getBuffer().getErrors().hasErrors("startDate"))
+					super.state(MomentHelper.isBefore(object.getStartDate(), object.getEndDate()), "startDate", "sponsor.sponsorship.form.error.startDateBeforeEndDate");
+
+				if (!super.getBuffer().getErrors().hasErrors("endDate"))
+					super.state(MomentHelper.isBefore(object.getEndDate(), futureMostDate), "endDate", "sponsor.sponsorship.form.error.dateOutOfBounds");
+
+				if (!super.getBuffer().getErrors().hasErrors("endDate"))
+					super.state(MomentHelper.isLongEnough(object.getStartDate(), object.getEndDate(), 1, ChronoUnit.MONTHS), "endDate", "sponsor.sponsorship.form.error.period");
+
+			}
+		}
+
+		if (object.getAmount() != null) {
+			if (!super.getBuffer().getErrors().hasErrors("amount"))
+				super.state(object.getAmount().getAmount() <= 1000000.00 && object.getAmount().getAmount() >= 0.00, "amount", "sponsor.sponsorship.form.error.amountOutOfBounds");
+
+			if (!super.getBuffer().getErrors().hasErrors("amount"))
+				super.state(this.repository.countPublishedInvoicesBySponsorshipId(object.getId()) == 0 || object.getAmount().getCurrency().equals(this.repository.findOneSponsorshipById(object.getId()).getAmount().getCurrency()), "amount",
+					"sponsor.sponsorship.form.error.currencyChange");
+
+			if (!super.getBuffer().getErrors().hasErrors("amount"))
+				super.state(acceptedCurrencyList.contains(object.getAmount().getCurrency()), "amount", "sponsor.sponsorship.form.error.currencyNotSupported");
+		}
+
 	}
 
 	@Override
 	public void perform(final Sponsorship object) {
 		assert object != null;
-		object.setDraftMode(false);
+		object.setPublished(true);
 		this.repository.save(object);
 	}
 
@@ -112,22 +155,21 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 	public void unbind(final Sponsorship object) {
 		assert object != null;
 		Dataset dataset;
-		dataset = super.unbind(object, "code", "amount", "startPeriod", "endPeriod", "type", "email", "link", "draftMode", "sponsor");
-		SelectChoices types = SelectChoices.from(SponsorshipType.class, object.getType());
-		final SelectChoices choices = new SelectChoices();
-		Collection<Project> projects;
-		projects = this.repository.findAllPublishedProjects();
+		SelectChoices choices;
+		SelectChoices projects;
 
-		for (final Project c : projects)
-			if (object.getProject() != null && object.getProject().getId() == c.getId())
-				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), true);
-			else
-				choices.add(Integer.toString(c.getId()), c.getCode() + "-" + c.getTitle(), false);
+		Collection<Project> unpublishedProjects = this.repository.findAllUnpublishedProjects();
+		projects = SelectChoices.from(unpublishedProjects, "code", object.getProject());
 
-		dataset.put("project", choices.getSelected().getKey());
-		dataset.put("projects", choices);
-		dataset.put("types", types);
-		dataset.put("money", this.auxiliarService.changeCurrency(object.getAmount()));
+		choices = SelectChoices.from(SponsorshipType.class, object.getType());
+
+		dataset = super.unbind(object, "code", "moment", "startDate", "endDate", "type", "amount", "email", "link", "published");
+		dataset.put("types", choices);
+
+		dataset.put("project", projects.getSelected().getKey());
+		dataset.put("projects", projects);
+
 		super.getResponse().addData(dataset);
 	}
+
 }

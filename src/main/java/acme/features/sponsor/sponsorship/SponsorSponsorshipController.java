@@ -1,3 +1,14 @@
+/*
+ * AuthenticatedConsumerController.java
+ *
+ * Copyright (C) 2012-2024 Rafael Corchuelo.
+ *
+ * In keeping with the traditional purpose of furthering education and research, it is
+ * the policy of the copyright owner to permit non-commercial use and redistribution of
+ * this software. It has been tested carefully, but it is not guaranteed for any particular
+ * purposes. The copyright owner does not offer any warranties or representations, nor do
+ * they accept any liabilities with respect to them.
+ */
 
 package acme.features.sponsor.sponsorship;
 
@@ -13,33 +24,38 @@ import acme.roles.Sponsor;
 @Controller
 public class SponsorSponsorshipController extends AbstractController<Sponsor, Sponsorship> {
 
-	@Autowired
-	protected SponsorSponsorshipListService		listAllService;
+	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected SponsorSponsorshipShowService		showService;
+	private SponsorSponsorshipListMineService	listService;
 
 	@Autowired
-	protected SponsorSponsorshipCreateService	createService;
+	private SponsorSponsorshipShowService		showService;
 
 	@Autowired
-	protected SponsorSponsorshipDeleteService	deleteService;
+	private SponsorSponsorshipUpdateService		updateService;
 
 	@Autowired
-	protected SponsorSponsorshipUpdateService	updateService;
+	private SponsorSponsorshipDeleteService		deleteService;
 
 	@Autowired
-	protected SponsorSponsorshipPublishService	publishService;
+	private SponsorSponsorshipCreateService		createService;
+
+	@Autowired
+	private SponsorSponsorshipPublishService	publishService;
+
+	// Constructors -----------------------------------------------------------
 
 
 	@PostConstruct
 	protected void initialise() {
-		super.addBasicCommand("list", this.listAllService);
+		super.addCustomCommand("list-mine", "list", this.listService);
 		super.addBasicCommand("show", this.showService);
-		super.addBasicCommand("create", this.createService);
-		super.addBasicCommand("delete", this.deleteService);
 		super.addBasicCommand("update", this.updateService);
+		super.addBasicCommand("delete", this.deleteService);
+		super.addBasicCommand("create", this.createService);
 		super.addCustomCommand("publish", "update", this.publishService);
+
 	}
 
 }

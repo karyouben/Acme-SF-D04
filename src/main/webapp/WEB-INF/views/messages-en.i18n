@@ -1,0 +1,2 @@
+
+validation.invoice.code	= The code must be in the format 'IN-' followed by four digits, '-', and another four digits

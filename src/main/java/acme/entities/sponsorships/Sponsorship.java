@@ -5,14 +5,16 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.Index;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Past;
+import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Length;
@@ -28,53 +30,58 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@Table(indexes = {
+	@Index(columnList = "id"), @Index(columnList = "sponsor_id"), @Index(columnList = "code"), @Index(columnList = "sponsor_id, published")
+})
 public class Sponsorship extends AbstractEntity {
 
-	protected static final long	serialVersionUID	= 1L;
+	// Serialisation identifier -----------------------------------------------------------------
 
-	@NotBlank
+	private static final long	serialVersionUID	= 1L;
+
+	// Attributes -------------------------------------------------------------------------------
+
 	@Column(unique = true)
-	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$")
-	protected String			code;
+	@Pattern(regexp = "^[A-Z]{1,3}-[0-9]{3}$", message = "{validation.sponsorship.code}")
+	@NotBlank
+	private String				code;
 
-	@NotNull
 	@Temporal(TemporalType.TIMESTAMP)
-	@Past
-	protected Date				moment;
-
+	@PastOrPresent
 	@NotNull
+	private Date				moment;
+
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				startPeriod;
-
 	@NotNull
+	private Date				startDate;
+
 	@Temporal(TemporalType.TIMESTAMP)
-	protected Date				endPeriod;
-
-	@Valid
 	@NotNull
-	protected Money				amount;
+	private Date				endDate;
 
 	@NotNull
-	protected SponsorshipType	type;
+	private Money				amount;
+
+	@NotNull
+	private SponsorshipType		type;
 
 	@Email
-	@Length(max = 255)
-	protected String			email;
+	private String				email;
 
 	@URL
 	@Length(max = 255)
-	protected String			link;
+	private String				link;
 
-	protected boolean			draftMode;
+	private boolean				published;
+
+	// Relationships  ------------------------------------------------------------
+	@NotNull
+	@Valid
+	@ManyToOne(optional = false)
+	private Project				project;
 
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)
-	protected Project			project;
-
-	@NotNull
-	@Valid
-	@ManyToOne(optional = false)
-	protected Sponsor			sponsor;
-
+	private Sponsor				sponsor;
 }

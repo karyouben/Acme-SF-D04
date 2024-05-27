@@ -6,12 +6,11 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
-import acme.components.AuxiliarService;
-import acme.entities.invoices.Invoice;
+import acme.entities.sponsorships.Invoice;
 import acme.entities.sponsorships.Sponsorship;
+import acme.features.sponsor.invoice.SponsorInvoiceRepository;
 import acme.roles.Sponsor;
 
 @Service
@@ -20,23 +19,25 @@ public class SponsorSponsorshipDeleteService extends AbstractService<Sponsor, Sp
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	protected SponsorSponsorshipRepository	repository;
+	private SponsorSponsorshipRepository	repository;
 
 	@Autowired
-	protected AuxiliarService				auxiliarService;
+	private SponsorInvoiceRepository		invoiceRepository;
 
 	// AbstractService interface ----------------------------------------------
 
 
 	@Override
 	public void authorise() {
-		Sponsorship object;
-		int id;
-		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findSponsorshipById(id);
-		final Principal principal = super.getRequest().getPrincipal();
-		final int userAccountId = principal.getAccountId();
-		super.getResponse().setAuthorised(object.getSponsor().getUserAccount().getId() == userAccountId && object.isDraftMode());
+		boolean status;
+		int sponsorshipId;
+		Sponsorship sponsorship;
+
+		sponsorshipId = super.getRequest().getData("id", int.class);
+		sponsorship = this.repository.findOneSponsorshipById(sponsorshipId);
+		status = !sponsorship.isPublished() && sponsorship != null && super.getRequest().getPrincipal().hasRole(sponsorship.getSponsor());
+
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
@@ -45,28 +46,32 @@ public class SponsorSponsorshipDeleteService extends AbstractService<Sponsor, Sp
 		int id;
 
 		id = super.getRequest().getData("id", int.class);
-		object = this.repository.findSponsorshipById(id);
-
+		object = this.repository.findOneSponsorshipById(id);
 		super.getBuffer().addData(object);
 	}
 
 	@Override
 	public void bind(final Sponsorship object) {
 		assert object != null;
-		super.bind(object, "id", "startPeriod", "endPeriod", "amount", "type", "email", "link");
+
+		super.bind(object, "code", "moment", "startDate", "endDate", "amount", "email", "link", "type", "project");
 	}
 
 	@Override
 	public void validate(final Sponsorship object) {
 		assert object != null;
+
+		if (!super.getBuffer().getErrors().hasErrors("code"))
+			super.state(this.repository.countPublishedInvoicesBySponsorshipId(object.getId()) == 0, "code", "sponsor.sponsorship.form.error.deleteWithPublishedInvoices");
 	}
 
 	@Override
 	public void perform(final Sponsorship object) {
 		assert object != null;
-		final Collection<Invoice> Invoice = this.repository.findInvoicesBySponsorship(object);
-		for (final Invoice pus : Invoice)
-			this.repository.delete(pus);
+		Collection<Invoice> invoices = this.repository.findAllInvoicesBySponsorshipId(object.getId());
+		for (Invoice i : invoices)
+			this.invoiceRepository.delete(i);
+
 		this.repository.delete(object);
 	}
 
@@ -74,8 +79,8 @@ public class SponsorSponsorshipDeleteService extends AbstractService<Sponsor, Sp
 	public void unbind(final Sponsorship object) {
 		assert object != null;
 		Dataset dataset;
-		dataset = super.unbind(object, "startPeriod", "endPeriod", "amount", "type", "email", "link");
-		dataset.put("money", this.auxiliarService.changeCurrency(object.getAmount()));
+		dataset = super.unbind(object, "code", "moment", "startDate", "endDate", "amount", "type", "email", "link", "published", "project");
 		super.getResponse().addData(dataset);
 	}
+
 }

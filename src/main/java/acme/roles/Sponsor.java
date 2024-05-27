@@ -23,19 +23,20 @@ public class Sponsor extends AbstractRole {
 
 	// Attributes -------------------------------------------------------------
 
-	@NotBlank
 	@Length(max = 75)
+	@NotBlank
 	private String				name;
 
-	@NotBlank
 	@Length(max = 100)
-	private String				benefits;
+	@NotBlank
+	private String				expectedBenefitsList;
 
 	@URL
+	@Length(max = 255)
 	private String				link;
 
 	@Email
+	@Length(max = 255)
 	private String				email;
 
-	// Constructors, getters, and setters
 }

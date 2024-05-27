@@ -28,7 +28,7 @@ master.menu.any.list.project = Listar proyectos publicados
 master.menu.any.list.trainingModule = Listar módulos de entrenamiento publicados
 master.menu.any.list.claim = Listar reclamaciones
 master.menu.any.list.contract = Listar módulos de contratos publicados
-master.menu.any.sponsorship = Listar Patrocinios
+master.menu.any.sponsorships = Listar Patrocinios
 
 # master.menu.authenticated ###################################################
 
@@ -39,7 +39,7 @@ master.menu.authenticated.project = Listar proyectos publicados
 master.menu.authenticated.trainingModule = Listar módulos de entrenamiento publicados
 master.menu.authenticated.claim = Listar reclamaciones
 master.menu.authenticated.contract = Listar módulos de contratos publicados
-master.menu.authenticated.sponsorship = Listar Patrocinios
+master.menu.authenticated.sponsorships = Listar Patrocinios
 master.menu.authenticated.objectives = Listar objetivos
 
 # master.menu.administrator ###################################################
@@ -89,9 +89,9 @@ master.menu.show.client-dashboard = Mostrar panel
 
 # master.menu.sponsor #######################################################
 master.menu.sponsor = Patrocinador
-master.menu.sponsor.sponsorship = Mis patrocinios
-master.menu.sponsor.invoice = Mis facturas
-master.menu.sponsor.sponsor-dashboard = Panel de Patrocinador
+master.menu.sponsor.sponsorships = Mis patrocinios
+master.menu.sponsor.invoices = Mis facturas
+master.menu.sponsor.dashboard = Panel de Patrocinador
 
 # master.menu.auditor ########################################################
 

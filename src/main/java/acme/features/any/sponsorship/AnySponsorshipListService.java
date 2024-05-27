@@ -1,3 +1,14 @@
+/*
+ * EmployerApplicationListService.java
+ *
+ * Copyright (C) 2012-2024 Rafael Corchuelo.
+ *
+ * In keeping with the traditional purpose of furthering education and research, it is
+ * the policy of the copyright owner to permit non-commercial use and redistribution of
+ * this software. It has been tested carefully, but it is not guaranteed for any particular
+ * purposes. The copyright owner does not offer any warranties or representations, nor do
+ * they accept any liabilities with respect to them.
+ */
 
 package acme.features.any.sponsorship;
 
@@ -14,8 +25,10 @@ import acme.entities.sponsorships.Sponsorship;
 @Service
 public class AnySponsorshipListService extends AbstractService<Any, Sponsorship> {
 
+	// Internal state ---------------------------------------------------------
+
 	@Autowired
-	protected AnySponsorshipRepository repository;
+	private AnySponsorshipRepository repository;
 
 	// AbstractService interface ----------------------------------------------
 
@@ -28,19 +41,16 @@ public class AnySponsorshipListService extends AbstractService<Any, Sponsorship>
 	@Override
 	public void load() {
 		Collection<Sponsorship> objects;
-		objects = this.repository.findPublishedSponsorships();
-
+		objects = this.repository.findAllPublishedSponsorships();
 		super.getBuffer().addData(objects);
 	}
 
 	@Override
 	public void unbind(final Sponsorship object) {
 		assert object != null;
-
 		Dataset dataset;
-
-		dataset = super.unbind(object, "code", "amount", "type");
-
+		dataset = super.unbind(object, "code", "amount", "type", "published", "project.title");
 		super.getResponse().addData(dataset);
 	}
+
 }
