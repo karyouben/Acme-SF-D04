@@ -33,7 +33,7 @@ public class AnyClaimShowService extends AbstractService<Any, Claim> {
 	public void unbind(final Claim object) {
 		assert object != null;
 
-		final Dataset dataset = super.unbind(object, "code", "heading", "description", "department", "email", "link");
+		final Dataset dataset = super.unbind(object, "code", "heading", "description", "department", "email", "link", "instantiationMoment");
 
 		super.getResponse().addData(dataset);
 	}

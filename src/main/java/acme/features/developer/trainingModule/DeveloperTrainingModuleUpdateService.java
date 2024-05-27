@@ -62,7 +62,7 @@ public class DeveloperTrainingModuleUpdateService extends AbstractService<Develo
 		Date currentMoment = MomentHelper.getCurrentMoment();
 		Date updateMoment = new Date(currentMoment.getTime() - 1000); //Substracts one second to ensure the moment is in the past
 
-		super.bind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "totalTime", "project");
+		super.bind(object, "code", "details", "difficultyLevel", "link", "totalTime", "project");
 
 		object.setUpdateMoment(updateMoment);
 		object.setProject(project);

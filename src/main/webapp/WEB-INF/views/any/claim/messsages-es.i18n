@@ -17,6 +17,7 @@ any.claim.form.label.description = Descripción
 any.claim.form.label.link = Link
 any.claim.form.label.department = Deparmento
 any.claim.form.label.email = Email
+any.claim.form.label.instantiationMoment = Momento de instanciación
 
 any.claim.form.button.publish = Publicar
 any.claim.form.button.create = Crear

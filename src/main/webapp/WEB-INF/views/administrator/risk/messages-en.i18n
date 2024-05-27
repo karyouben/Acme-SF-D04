@@ -15,6 +15,7 @@ administrator.risk.list.label.reference = Reference
 administrator.risk.list.label.identificationDate = Identification date
 administrator.risk.list.label.impact = Impact
 administrator.risk.list.label.probability = Probability
+administrator.risk.list.label.project = Project
 
 administrator.risk.form.label.reference = Reference
 administrator.risk.form.label.identificationDate = Identification date
@@ -23,6 +24,7 @@ administrator.risk.form.label.probability = Probability
 administrator.risk.form.label.value = Value
 administrator.risk.form.label.description = Description
 administrator.risk.form.label.link = Link
+administrator.risk.form.label.project = Project
 
 administrator.risk.list.button.create = Create
 administrator.risk.form.button.create = Create

@@ -20,6 +20,7 @@
 	<acme:list-column code="administrator.risk.list.label.identificationDate" path="identificationDate" width="10%"/>
 	<acme:list-column code="administrator.risk.list.label.impact" path="impact" width="10%"/>
 	<acme:list-column code="administrator.risk.list.label.probability" path="probability" width="10%"/>
+	<acme:list-column code="administrator.risk.list.label.project" path="project" width="10%"/>
 </acme:list>
 
 <acme:button code="administrator.risk.list.button.create" action="/administrator/risk/create"/>

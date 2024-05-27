@@ -15,6 +15,7 @@ authenticated.objective.list.label.title = Título
 authenticated.objective.list.label.startDurationPeriod = Fecha de comienzo
 authenticated.objective.list.label.endDurationPeriod = Fecha de finalización
 authenticated.objective.list.label.priority = Prioridad
+authenticated.objective.list.label.project = Project
 
 authenticated.objective.form.label.instantiation = Momento de Creación
 authenticated.objective.form.label.title = Título
@@ -24,3 +25,5 @@ authenticated.objective.form.label.isCritical = Crítico
 authenticated.objective.form.label.startDurationPeriod = Fecha de comienzo
 authenticated.objective.form.label.endDurationPeriod = Fecha de finalización
 authenticated.objective.form.label.link = Enlace
+authenticated.objective.form.label.project = Projecto
+authenticated.objective.form.label.instantiation = Momento de instanciación

@@ -20,4 +20,5 @@
 	<acme:list-column code="authenticated.objective.list.label.startDurationPeriod" path="startDurationPeriod" width="10%"/>
 	<acme:list-column code="authenticated.objective.list.label.endDurationPeriod" path="endDurationPeriod" width="10%"/>
 	<acme:list-column code="authenticated.objective.list.label.priority" path="priority" width="10%"/>
+	<acme:list-column code="authenticated.objective.list.label.project" path="project" width="10%"/>
 </acme:list>

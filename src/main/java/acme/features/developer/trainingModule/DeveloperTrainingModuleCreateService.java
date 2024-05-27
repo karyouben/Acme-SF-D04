@@ -51,7 +51,7 @@ public class DeveloperTrainingModuleCreateService extends AbstractService<Develo
 		int projectId = super.getRequest().getData("project", int.class);
 		Project project = this.repository.findProjectById(projectId);
 
-		super.bind(object, "code", "creationMoment", "details", "difficultyLevel", "updateMoment", "link", "totalTime", "project");
+		super.bind(object, "code", "details", "difficultyLevel", "link", "totalTime", "project");
 
 		Date currentMoment = MomentHelper.getCurrentMoment();
 		Date creationMoment = new Date(currentMoment.getTime() - 600000); //Substracts 9 minutes to ensure the moment is in the past
@@ -83,7 +83,7 @@ public class DeveloperTrainingModuleCreateService extends AbstractService<Develo
 		assert object != null;
 
 		Collection<Project> projects = this.repository.findAllProjects();
-		SelectChoices projectsChoices = SelectChoices.from(projects, "code", object.getProject());
+		SelectChoices projectsChoices;
 
 		projectsChoices = SelectChoices.from(projects, "code", object.getProject());
 
