@@ -77,10 +77,8 @@ public class AdministratorBannerUpdateService extends AbstractService<Administra
 				super.state(startOneWeekBeforeEndMinimum, PERIOD_END, "administrator.banner.form.error.small-display-period");
 			}
 
-			if (!super.getBuffer().getErrors().hasErrors("instantiation")) {
-				final boolean startAfterInstantiation = MomentHelper.isAfter(object.getStartDisplayPeriod(), object.getInstantiation());
-				super.state(startAfterInstantiation, PERIOD_START, "administrator.banner.form.error.start-before-instantiation");
-			}
+			final boolean startAfterInstantiation = MomentHelper.isAfter(object.getStartDisplayPeriod(), object.getInstantiation());
+			super.state(startAfterInstantiation, PERIOD_START, "administrator.banner.form.error.start-before-instantiation");
 		}
 
 		Date minDate;
