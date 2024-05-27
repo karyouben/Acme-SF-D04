@@ -23,15 +23,15 @@
 		path="customerName" />
 	<acme:input-textbox code="any.contract.form.label.goals" path="goals" />
 	<acme:input-money code="any.contract.form.label.budget" path="budget" />
-	<acme:input-select code="client.contract.form.label.project"
-		path="project" choices="${projects}" />
 
 
 	<jstl:choose>
 		<jstl:when
 			test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
-										<acme:input-moment code="any.contract.form.label.instantiation"
+		<acme:input-moment code="any.contract.form.label.instantiation"
 		path="instantiation" readonly = "true"/>
+				<acme:input-select code="client.contract.form.label.project"
+		path="project" choices="${projects}" readonly = "true"/>
 			<acme:button code="client.contract.form.button.add-progress"
 				action="/client/progress/create?contractId=${id}" />
 			<acme:button code="client.contract.form.button.progress"
@@ -44,6 +44,8 @@
 				action="/client/contract/publish?id=${id}" />
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
+			<acme:input-select code="client.contract.form.label.project"
+		path="project" choices="${projects}" readonly = "false"/>
 			<acme:submit code="client.contract.form.button.create"
 				action="/client/contract/create" />
 		</jstl:when>

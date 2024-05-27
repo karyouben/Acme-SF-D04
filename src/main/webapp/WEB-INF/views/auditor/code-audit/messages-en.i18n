@@ -33,3 +33,4 @@ validation.codeaudit.mode.empty = This code audit does not have any audit record
 validation.codeaudit.mode.less-than-c = The mark must be at least a C to be published
 validation.codeaudit.publish.unpublished-audit-records = You cannot publish a code audit with unpublished audit records
 validation.codeaudit.auditRecordDraftMode = You cannot delete a code audit with published audit records.
+validation.codeaudit.published = You cannot delete nor modify a published code audit
