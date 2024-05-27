@@ -38,4 +38,9 @@ public class AdministratorDashboard extends AbstractForm {
 	// average, minimum, maximum, and standard deviation of the number of claims posted over the last 10 weeks
 	private Statistics			claimPosted10Statistics;
 
+	private Double				avgNumberOfClaims;
+	private Integer				minNumberOfClaims;
+	private Integer				maxNumberOfClaims;
+	private Double				stdNumberOfClaims;
+
 }

@@ -1,11 +1,17 @@
 
 package acme.features.administrator.administratordashboard;
 
+import java.time.temporal.ChronoUnit;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.data.accounts.Administrator;
 import acme.client.data.models.Dataset;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.datatypes.Statistics;
 import acme.forms.AdministratorDashboard;
@@ -29,6 +35,14 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 	@Override
 	public void load() {
 
+		Integer minNumberOfClaims;
+		Integer maxNumberOfClaims;
+		Double stdNumberOfClaims;
+
+		Date startDate;
+		Date endDate;
+		List<Integer> numberOfClaimsPerWeek;
+
 		Integer totalAdministrators = this.repository.totalAdministrators();
 		Integer totalAuditors = this.repository.totalAuditors();
 		Integer totalConsumers = this.repository.totalConsumers();
@@ -48,15 +62,18 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		minimumRiskValue = minimumRiskValue != null ? minimumRiskValue : 0.0;
 		maximumRiskValue = maximumRiskValue != null ? maximumRiskValue : 0.0;
 
-		Double averageClaimPosted10 = this.repository.findAverageClaimPosted10();
-		Double deviationClaimPosted10 = this.repository.findDeviationClaimPosted10();
-		Double minimumClaimPosted10 = this.repository.findMinimumClaimPosted10();
-		Double maximumClaimPosted10 = this.repository.findMaximumClaimPosted10();
+		endDate = MomentHelper.getCurrentMoment();
+		numberOfClaimsPerWeek = new ArrayList<>();
+		for (int i = 0; i < 10; i++) {
+			startDate = MomentHelper.deltaFromMoment(endDate, -1, ChronoUnit.WEEKS);
+			numberOfClaimsPerWeek.add(this.repository.numberOfClaimsBetweenDates(startDate, endDate).intValue());
+			endDate = startDate;
+		}
 
-		averageClaimPosted10 = averageClaimPosted10 != null ? averageClaimPosted10 : 0.0;
-		deviationClaimPosted10 = deviationClaimPosted10 != null ? deviationClaimPosted10 : 0.0;
-		minimumClaimPosted10 = minimumClaimPosted10 != null ? minimumClaimPosted10 : 0.0;
-		maximumClaimPosted10 = maximumClaimPosted10 != null ? maximumClaimPosted10 : 0.0;
+		Double avgNumberOfClaims = numberOfClaimsPerWeek.stream().mapToDouble(x -> x).average().orElse(0.);
+		minNumberOfClaims = numberOfClaimsPerWeek.stream().mapToInt(x -> x).min().orElse(0);
+		maxNumberOfClaims = numberOfClaimsPerWeek.stream().mapToInt(x -> x).max().orElse(0);
+		stdNumberOfClaims = numberOfClaimsPerWeek.stream().mapToDouble(x -> x).map(x -> Math.pow(x - avgNumberOfClaims, 2) / 2).sum();
 
 		double totalNoticeWithEmailAndLink = this.repository.totalNoticeWithEmailAndLink();
 		double totalNotice = this.repository.totalNotice();
@@ -75,12 +92,6 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		riskValueStatistics.setMaximum(maximumRiskValue);
 		riskValueStatistics.setMinimum(minimumRiskValue);
 
-		final Statistics claimPosted10Statistics = new Statistics();
-		claimPosted10Statistics.setAverage(averageClaimPosted10);
-		claimPosted10Statistics.setDeviation(deviationClaimPosted10);
-		claimPosted10Statistics.setMaximum(maximumClaimPosted10);
-		claimPosted10Statistics.setMinimum(minimumClaimPosted10);
-
 		final AdministratorDashboard dashboard = new AdministratorDashboard();
 
 		dashboard.setLinkAndEmailNoticesRatio(linkAndEmailNoticesRatio);
@@ -96,7 +107,10 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 		dashboard.setTotalSponsors(totalSponsors);
 		dashboard.setTotalClients(totalClients);
 		dashboard.setRiskValueStatistics(riskValueStatistics);
-		dashboard.setClaimPosted10Statistics(claimPosted10Statistics);
+		dashboard.setAvgNumberOfClaims(avgNumberOfClaims);
+		dashboard.setMinNumberOfClaims(minNumberOfClaims);
+		dashboard.setMaxNumberOfClaims(maxNumberOfClaims);
+		dashboard.setStdNumberOfClaims(stdNumberOfClaims);
 
 		super.getBuffer().addData(dashboard);
 
@@ -111,7 +125,8 @@ public class AdministratorDashboardShowService extends AbstractService<Administr
 			"nonCriticalObjectivesRatio", "totalAdministrators", "totalAuditors", // 
 			"totalConsumers", "totalDevelopers", "totalManagers", // 
 			"totalProviders", "totalSponsors", "totalClients", // 
-			"riskValueStatistics", "claimPosted10Statistics");
+			"riskValueStatistics", "avgNumberOfClaims", "minNumberOfClaims", //
+			"maxNumberOfClaims", "stdNumberOfClaims");
 
 		super.getResponse().addData(dataset);
 	}
