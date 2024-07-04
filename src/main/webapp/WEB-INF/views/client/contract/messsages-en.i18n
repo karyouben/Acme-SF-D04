@@ -32,6 +32,7 @@ client.contract.form.error.budget-total-cost = Error budget must be less than th
 client.contract.form.error.budget-negative = Error budget must be greater than 0
 client.contract.form.error.projectnull = Please select a project
 client.contract.form.error.child-draft = Error, publish first all of this contract`s progress
+client.contract.form.error.one-draft = Error, create at least 1 progress log for this contract before its published
 client.contract.form.error.some-publish = Error, there are already some publish progress for this contract
 
 
