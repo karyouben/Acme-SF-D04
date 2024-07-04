@@ -69,6 +69,11 @@ public class ClientContractUpdateService extends AbstractService<Client, Contrac
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("budget")) {
+			final boolean budgetNegative = object.getBudget() != null && object.getBudget().getAmount() > 0;
+			super.state(budgetNegative, "budget", "client.contract.form.error.budget-negative");
+		}
+
+		if (!super.getBuffer().getErrors().hasErrors("budget")) {
 			final boolean budget = object.getBudget().getAmount() > object.getProject().getTotalCost().getAmount();
 
 			super.state(!budget, "budget", "client.contract.form.error.budget-total-cost");

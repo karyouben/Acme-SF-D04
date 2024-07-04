@@ -69,9 +69,9 @@ public class ClientContractCreateService extends AbstractService<Client, Contrac
 			super.state(projectNull, "project", "client.contract.form.error.projectnull");
 		}
 
-		if (!super.getBuffer().getErrors().hasErrors("negativeBudget")) {
+		if (!super.getBuffer().getErrors().hasErrors("budget")) {
 			final boolean budgetNegative = object.getBudget() != null && object.getBudget().getAmount() > 0;
-			super.state(budgetNegative, "negativeBudget", "client.contract.form.error.budget-negative");
+			super.state(budgetNegative, "budget", "client.contract.form.error.budget-negative");
 		}
 
 		if (!super.getBuffer().getErrors().hasErrors("budget"))
