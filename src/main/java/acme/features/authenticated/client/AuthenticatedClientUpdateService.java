@@ -9,7 +9,9 @@ import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.helpers.PrincipalHelper;
 import acme.client.services.AbstractService;
+import acme.client.views.SelectChoices;
 import acme.roles.client.Client;
+import acme.roles.client.ClientType;
 
 @Service
 public class AuthenticatedClientUpdateService extends AbstractService<Authenticated, Client> {
@@ -62,8 +64,9 @@ public class AuthenticatedClientUpdateService extends AbstractService<Authentica
 		assert object != null;
 
 		Dataset dataset;
-
+		SelectChoices choices = SelectChoices.from(ClientType.class, object.getType());
 		dataset = super.unbind(object, "identification", "companyName", "type", "email", "link");
+		dataset.put("typeOptions", choices);
 		super.getResponse().addData(dataset);
 	}
 
