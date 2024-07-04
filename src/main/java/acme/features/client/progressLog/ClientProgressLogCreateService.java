@@ -24,7 +24,17 @@ public class ClientProgressLogCreateService extends AbstractService<Client, Prog
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		int clientId;
+		int contractId;
+		Contract contract;
+		Boolean status;
+
+		clientId = super.getRequest().getPrincipal().getActiveRoleId();
+		contractId = super.getRequest().getData("contractId", int.class);
+		contract = this.repository.findContractById(contractId);
+
+		status = clientId == contract.getClient().getId() && contract.isDraftMode();
+		super.getResponse().setAuthorised(status);
 	}
 
 	@Override
