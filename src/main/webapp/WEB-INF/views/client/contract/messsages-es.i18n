@@ -26,6 +26,7 @@ client.contract.list.button.create = Crear
 client.contract.form.button.delete = Eliminar
 client.contract.form.button.publish = Publicar
 client.contract.form.error.duplicated-code = Código duplicado
+client.contract.form.error.duplicated-record = Record duplicado
 client.contract.form.error.budget-total-cost = Error: el presupuesto debe ser menor que el costo total del proyecto
 client.contract.form.error.budget-negative = Error: el presupuesto debe ser mayor a 0
 client.contract.form.error.projectnull = Seleccione un proyecto

@@ -70,10 +70,19 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 
 		int masterId = super.getRequest().getData("id", int.class);
 		List<Progress> ls = this.repository.findProgresssByContractId(masterId).stream().toList();
-		if (!super.getBuffer().getErrors().hasErrors("*")) {
+		if (!super.getBuffer().getErrors().hasErrors("*"))
 			if (ls.isEmpty())
 				super.state(false, "*", "client.contract.form.error.one-draft");
+		if (!super.getBuffer().getErrors().hasErrors("budget")) {
+			final boolean budgetNegative = object.getBudget() != null && object.getBudget().getAmount() > 0;
+			super.state(budgetNegative, "budget", "client.contract.form.error.budget-negative");
 		}
+
+		if (!super.getBuffer().getErrors().hasErrors("budget"))
+			if (object.getProject() != null && object.getBudget() != null) {
+				final boolean budget = object.getBudget().getAmount() > object.getProject().getTotalCost().getAmount();
+				super.state(!budget, "budget", "client.contract.form.error.budget-total-cost");
+			}
 		if (!super.getBuffer().getErrors().hasErrors("*")) {
 			final boolean someDraftProgress = ls.stream().anyMatch(progress -> progress.isDraftMode());
 			super.state(!someDraftProgress, "*", "client.contract.form.error.child-draft");
