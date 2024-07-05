@@ -20,4 +20,7 @@ public interface AuthenticatedClientRepository extends AbstractRepository {
 	@Query("select c from Client c where c.id = :id")
 	Client findOneClientById(int id);
 
+	@Query("SELECT CASE WHEN COUNT(c) > 0 THEN true ELSE false END FROM Client c WHERE c.identification = :identification")
+	boolean existsByIdentification(String identification);
+
 }

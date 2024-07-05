@@ -70,8 +70,14 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 
 		int masterId = super.getRequest().getData("id", int.class);
 		List<Progress> ls = this.repository.findProgresssByContractId(masterId).stream().toList();
-		final boolean someDraftProgress = ls.stream().anyMatch(progress -> progress.isDraftMode());
-		super.state(!someDraftProgress, "*", "client.contract.form.error.child-draft");
+		if (!super.getBuffer().getErrors().hasErrors("*")) {
+			if (ls.isEmpty())
+				super.state(false, "*", "client.contract.form.error.one-draft");
+		}
+		if (!super.getBuffer().getErrors().hasErrors("*")) {
+			final boolean someDraftProgress = ls.stream().anyMatch(progress -> progress.isDraftMode());
+			super.state(!someDraftProgress, "*", "client.contract.form.error.child-draft");
+		}
 	}
 
 	@Override

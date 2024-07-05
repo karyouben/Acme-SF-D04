@@ -18,3 +18,5 @@ authenticated.client.form.label.link = Link:
 
 authenticated.client.form.button.create = Register
 authenticated.client.form.button.update = Update
+
+authenticated.client.form.label.identificationerror = This identification already exists. Use another one

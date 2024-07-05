@@ -38,15 +38,15 @@ public class ClientDashboardsShowService extends AbstractService<Client, ClientD
 		final Principal principal = super.getRequest().getPrincipal();
 		int userAccountId = principal.getAccountId();
 
-		Integer totalNumProgressLogLessThan25 = this.repository.totalNumProgressLogLessThan25(userAccountId);
-		Integer totalNumProgressLogLessBetween25And50 = this.repository.totalNumProgressLogLessBetween25And50(userAccountId);
-		Integer totalNumProgressLogLessBetween50And75 = this.repository.totalNumProgressLogLessBetween50And75(userAccountId);
-		Integer totalNumProgressLogAbove75 = this.repository.totalNumProgressLogAbove75(userAccountId);
+		Integer totalNumProgressLogLessThan25 = this.repository.totalNumProgressLogLessThan25(userAccountId).orElse(0);
+		Integer totalNumProgressLogLessBetween25And50 = this.repository.totalNumProgressLogLessBetween25And50(userAccountId).orElse(0);
+		Integer totalNumProgressLogLessBetween50And75 = this.repository.totalNumProgressLogLessBetween50And75(userAccountId).orElse(0);
+		Integer totalNumProgressLogAbove75 = this.repository.totalNumProgressLogAbove75(userAccountId).orElse(0);
 
-		Double findAverageContractBudget = this.repository.findAverageContractBudget(userAccountId);
-		Double findDeviationContractBudget = this.repository.findDeviationContractBudget(userAccountId);
-		Double findMaximumContractBudget = this.repository.findMaximumContractBudget(userAccountId);
-		Double findMinimumContractBudget = this.repository.findMinimumContractBudget(userAccountId);
+		Double findAverageContractBudget = this.repository.findAverageContractBudget(userAccountId).orElse(0.0);
+		Double findDeviationContractBudget = this.repository.findDeviationContractBudget(userAccountId).orElse(0.0);
+		Double findMaximumContractBudget = this.repository.findMaximumContractBudget(userAccountId).orElse(0.0);
+		Double findMinimumContractBudget = this.repository.findMinimumContractBudget(userAccountId).orElse(0.0);
 
 		final Statistics contractTimeStatistics = new Statistics();
 		contractTimeStatistics.setAverage(findAverageContractBudget);
