@@ -28,16 +28,32 @@ public class Statistics {
 
 
 	public String getAverageString() {
-		return this.formatter.format(this.average);
+		try {
+			return this.formatter.format(this.average);
+		} catch (Exception e) {
+			return "-";
+		}
 	}
 	public String getDeviationString() {
-		return this.formatter.format(this.deviation);
+		try {
+			return this.formatter.format(this.deviation);
+		} catch (Exception e) {
+			return "-";
+		}
 	}
 	public String getMinimumString() {
-		return this.formatter.format(this.minimum);
+		try {
+			return this.formatter.format(this.minimum);
+		} catch (Exception e) {
+			return "-";
+		}
 	}
 	public String getMaximumString() {
-		return this.formatter.format(this.maximum);
+		try {
+			return this.formatter.format(this.maximum);
+		} catch (Exception e) {
+			return "-";
+		}
 	}
 
 }

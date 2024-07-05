@@ -65,30 +65,30 @@
 <table class="table table-sm">
 	<tr>
 		<th>
-			<acme:message code="manager.dashboard.form.label.statistics-average"/>
+			<acme:message code="manager.dashboard.form.label.statistics-average-hours"/>
 		</th>
 		<th>
-			<acme:message code="manager.dashboard.form.label.statistics-deviation"/>
+			<acme:message code="manager.dashboard.form.label.statistics-deviation-hours"/>
 		</th>
 		<th>
-			<acme:message code="manager.dashboard.form.label.statistics-maximum"/>
+			<acme:message code="manager.dashboard.form.label.statistics-maximum-hours"/>
 		</th>
 		<th>
-			<acme:message code="manager.dashboard.form.label.statistics-minimum"/>
+			<acme:message code="manager.dashboard.form.label.statistics-minimum-hours"/>
 		</th>
 	</tr>
 	<tr>
 		<td>
-			<acme:print value="${userStoryCostStatistics.getAverageString()} hours"/>
+			<acme:print value="${userStoryCostStatistics.getAverageString()}"/>
 		</td>
 		<td>
-			<acme:print value="${userStoryCostStatistics.getDeviationString()} hours"/>
+			<acme:print value="${userStoryCostStatistics.getDeviationString()}"/>
 		</td>
 		<td>
-			<acme:print value="${userStoryCostStatistics.getMaximumString()} hours"/>
+			<acme:print value="${userStoryCostStatistics.getMaximumString()}"/>
 		</td>
 		<td>
-			<acme:print value="${userStoryCostStatistics.getMinimumString()} hours"/>
+			<acme:print value="${userStoryCostStatistics.getMinimumString()}"/>
 		</td>
 	</tr>
 </table>
