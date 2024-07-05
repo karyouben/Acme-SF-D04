@@ -8,6 +8,7 @@ import acme.client.data.accounts.Principal;
 import acme.client.data.models.Dataset;
 import acme.client.services.AbstractService;
 import acme.client.views.SelectChoices;
+import acme.entities.project.Assignment;
 import acme.entities.project.Priority;
 import acme.entities.project.UserStory;
 import acme.roles.Manager;
@@ -64,6 +65,9 @@ public class ManagerUserStoryDeleteService extends AbstractService<Manager, User
 	@Override
 	public void perform(final UserStory object) {
 		assert object != null;
+
+		for (Assignment a : this.repository.findAssignmentsByUserId(object.getId()))
+			this.repository.delete(a);
 
 		this.repository.delete(object);
 	}

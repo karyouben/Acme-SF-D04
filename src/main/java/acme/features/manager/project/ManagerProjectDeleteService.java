@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 
 import acme.client.data.accounts.Principal;
 import acme.client.services.AbstractService;
+import acme.entities.project.Assignment;
 import acme.entities.project.Project;
 import acme.roles.Manager;
 
@@ -68,6 +69,9 @@ public class ManagerProjectDeleteService extends AbstractService<Manager, Projec
 	@Override
 	public void perform(final Project object) {
 		assert object != null;
+
+		for (Assignment a : this.repository.findAssignmentsByProjectId(object.getId()))
+			this.repository.delete(a);
 
 		this.repository.delete(object);
 	}
