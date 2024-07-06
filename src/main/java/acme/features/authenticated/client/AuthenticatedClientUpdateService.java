@@ -50,6 +50,11 @@ public class AuthenticatedClientUpdateService extends AbstractService<Authentica
 	@Override
 	public void validate(final Client object) {
 		assert object != null;
+		if (!super.getBuffer().getErrors().hasErrors("identification")) {
+			final int clientId = super.getRequest().getData("id", int.class);
+			final boolean duplicatedCode = this.repository.findAllClients().stream().filter(e -> e.getId() != clientId).anyMatch(e -> e.getIdentification().equals(object.getIdentification()));
+			super.state(!duplicatedCode, "identification", "authenticated.client.form.label.identificationerror");
+		}
 	}
 
 	@Override

@@ -62,6 +62,12 @@ public class ClientContractPublishService extends AbstractService<Client, Contra
 	public void validate(final Contract object) {
 		assert object != null;
 
+		if (!super.getBuffer().getErrors().hasErrors("code")) {
+			final int contractId = super.getRequest().getData("id", int.class);
+			final boolean duplicatedCode = this.repository.findAllContracts().stream().filter(e -> e.getId() != contractId).anyMatch(e -> e.getCode().equals(object.getCode()));
+			super.state(!duplicatedCode, "code", "client.contract.form.error.duplicated-code");
+		}
+
 		if (!super.getBuffer().getErrors().hasErrors("budget")) {
 			Collection<Contract> contracts = this.repository.findAllContractsByProjectId(object.getProject().getId());
 			final boolean budget = object.getBudget().getAmount() + contracts.stream().mapToDouble(x -> x.getBudget().getAmount()).sum() > object.getProject().getTotalCost().getAmount();

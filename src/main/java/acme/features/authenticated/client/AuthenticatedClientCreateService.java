@@ -25,7 +25,11 @@ public class AuthenticatedClientCreateService extends AbstractService<Authentica
 
 	@Override
 	public void authorise() {
-		super.getResponse().setAuthorised(true);
+		final Principal principal = super.getRequest().getPrincipal();
+
+		final boolean authorise = principal.hasRole(Client.class);
+
+		super.getResponse().setAuthorised(!authorise);
 	}
 
 	@Override
